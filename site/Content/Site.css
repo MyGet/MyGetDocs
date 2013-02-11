@@ -101,7 +101,7 @@ nav {
 }
 
 #layout-footer {
-    background:#404040;
+    background:#333;
     color: #787878;
     border-top: 1px solid #A3A3A3;   
     padding-top: 0;
@@ -141,10 +141,11 @@ nav {
             footer#footer ul.recommended li a {
                 display: block;
                 font-size: 1.3em;
-                color: #FFFFFF;
+                color: #a3a3a3;
             }
 
             footer#footer ul.recommended li a:hover {
+                color: #ffffff;
                 text-decoration: underline;
             }
 
@@ -158,10 +159,11 @@ nav {
     }
 
     footer#footer div.license a {
-        color: #FFFFFF;
+        color: #787878;
     }
 
     footer#footer div.license a:hover {
+        color: #ffffff;
         text-decoration: underline;
     }
 

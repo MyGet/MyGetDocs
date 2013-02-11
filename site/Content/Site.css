@@ -2,9 +2,8 @@
 **************************************************************
 Background: #fff
 Borders: #ccc
-Text: #666
-Main Accent: #39922C
-Links: #0071BC
+Text: #333
+Links: #008000
 *************************************************************/
 
 /* General
@@ -191,8 +190,8 @@ nav {
 ***************************************************************/
 
 nav ul {
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
 }
 
     nav ul li {
@@ -214,21 +213,21 @@ nav ul {
             top: -4px;
         }
 
-        nav ul a {
-            color: #fff;
-            display: block;
-            font-size: 1.2em;
-            height: 42px;
-            line-height: 44px;
-            margin: 0 5px;
-            padding: 0 10px;
-            text-decoration: none;
-            
-            /*CSS3 properties*/
-            border-radius: 4px 4px 0 0;
-            -moz-border-radius: 4px 4px 0 0;
-            -webkit-border-radius: 4px 4px 0 0;
-        }
+    nav ul a {
+        color: #fff;
+        display: block;
+        font-size: 1.2em;
+        height: 42px;
+        line-height: 44px;
+        margin: 0 5px;
+        padding: 0 10px;
+        text-decoration: none;
+
+        /*CSS3 properties*/
+        -moz-border-radius: 4px 4px 0 0;
+        -webkit-border-radius: 4px 4px 0 0;
+        border-radius: 4px 4px 0 0;
+    }
 
         nav ul a:hover {
             background-color: #3c3d44;
@@ -238,7 +237,7 @@ nav ul {
         
 /* Document Structure
 ***************************************************************/
-aside#toc{
+aside#toc {
     background-color: #ebebeb;
     border: solid 1px #cfcfcf;
     float: right;
@@ -247,12 +246,11 @@ aside#toc{
     margin: 0 -20px 10px 15px;
     padding: 9px 5px 9px 10px;
     width: 225px;
-    
-    
+
     /*CSS3 properties*/
-    border-radius: 4px;
     -moz-border-radius: 4px;
     -webkit-border-radius: 4px;
+    border-radius: 4px;
 }
 
     aside#toc h2 {
@@ -261,7 +259,7 @@ aside#toc{
     }
 
         aside#toc h2 a {
-            background: url(../images/outline.png) 0% 50% no-repeat; 
+            background: url(../images/outline.png) 0 50% no-repeat; 
             display: block;
             padding-left: 40px;
         }
@@ -306,7 +304,7 @@ ol.topics {
 }
 
     ol.topics a {
-        color: green;
+        color: #008000;
         text-decoration: underline;
     }
 
@@ -339,61 +337,59 @@ ol.topics {
 
 /* Multiline Code */
 pre > code, .code {
-    display:block;
+    display: block;
     border: 1px solid #666;
-    margin: 20px 0px;
+    margin: 20px 0;
     padding: 15px 15px 15px 25px;
     background: #fff url(../images/tutorial.png) 3px 5px no-repeat;
     overflow: auto;
-    font: 1em 'andale mono', 'lucida console', monospace; 
+    font: 1em 'andale mono', 'lucida console', monospace;
     line-height: 1.462em;
     word-wrap: break-word;
-    
-     /*CSS3 properties*/
-    border-radius: 4px;
+    /*CSS3 properties*/
     -moz-border-radius: 4px;
     -webkit-border-radius: 4px;
-    box-shadow: 2px 2px 5px #888;
+    border-radius: 4px;
     -webkit-box-shadow: 2px 2px 5px #888;
     -moz-box-shadow: 2px 2px 5px #888;
+    box-shadow: 2px 2px 5px #888;
 }
 
 /* Output */
 .output {
-    display:block;
+    display: block;
     color: #c0c0c0;
     border: 1px solid #666;
-    margin: 20px 0px;
+    margin: 20px 0;
     padding: 15px 15px 5px 25px;
     background: #202020 url(../images/output.png) 3px 5px no-repeat;
     overflow: auto;
-    font: 1em 'andale mono', 'lucida console', monospace; 
+    font: 1em 'andale mono', 'lucida console', monospace;
     line-height: 1.462em;
-    
-     /*CSS3 properties*/
-    border-radius: 4px;
+    /*CSS3 properties*/
     -moz-border-radius: 4px;
     -webkit-border-radius: 4px;
-    box-shadow: 2px 2px 5px #888;
+    border-radius: 4px;
     -webkit-box-shadow: 2px 2px 5px #888;
     -moz-box-shadow: 2px 2px 5px #888;
+    box-shadow: 2px 2px 5px #888;
 }
 
 /* Information */
 .info, .caution, .error {
-    display:block;
+    display: block;
     border: 1px solid #666;
-    margin: 20px 0px;
+    margin: 20px 0;
     padding: 15px 15px 15px 25px;
     overflow: auto;
-    
-     /*CSS3 properties*/
-    border-radius: 4px;
+
+    /*CSS3 properties*/
     -moz-border-radius: 4px;
     -webkit-border-radius: 4px;
-    box-shadow: 2px 2px 5px #888;
+    border-radius: 4px;
     -webkit-box-shadow: 2px 2px 5px #888;
     -moz-box-shadow: 2px 2px 5px #888;
+    box-shadow: 2px 2px 5px #888;
 }
 
 .info {
@@ -437,6 +433,7 @@ pre > code, .code {
     border-top: none;
     width: 700px;
     z-index: 100;
+
     /*CSS3 properties*/
     -moz-border-radius: 0 0 4px 4px;
     -webkit-border-radius: 0 0 4px 4px;
@@ -515,35 +512,34 @@ pre > code, .code {
     width:165px;
 }
 
-    #searchBoxInput {
-        border: solid 1px #ccc;
-        color: #333;
-        height: 28px;
-        margin-right: -5px;
-        padding: 0 5px;
-        width: 120px;
-    
-        /*CSS3 properties*/
-        border-radius: 4px 0 0 4px;
-        -moz-border-radius: 4px 0 0 4px;
-    }
+#searchBoxInput {
+    border: solid 1px #ccc;
+    color: #333;
+    height: 28px;
+    margin-right: -5px;
+    padding: 0 5px;
+    width: 120px;
 
-    #searchBoxSubmit {
-        border: none;
-        background-image: url("../images/searchbutton.png");
-        cursor: pointer;
-        height: 30px;
-        margin-left: 0;
-        text-indent: -9999px;
-        vertical-align:bottom;
-        width: 30px;
-        
-    
-        /*CSS3 properties*/
-        border-radius: 0 4px 4px 0;
-        -moz-border-radius: 0 4px 4px 0;
-        -webkit-border-radius: 0 4px 4px 0;
-    }
+    /*CSS3 properties*/
+    -moz-border-radius: 4px 0 0 4px;
+    border-radius: 4px 0 0 4px;
+}
+
+#searchBoxSubmit {
+    border: none;
+    background-image: url("../images/searchbutton.png");
+    cursor: pointer;
+    height: 30px;
+    margin-left: 0;
+    text-indent: -9999px;
+    vertical-align: bottom;
+    width: 30px;
+
+    /*CSS3 properties*/
+    -moz-border-radius: 0 4px 4px 0;
+    -webkit-border-radius: 0 4px 4px 0;
+    border-radius: 0 4px 4px 0;
+}
     
 
 .result {

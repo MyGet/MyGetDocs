@@ -422,7 +422,7 @@ pre > code, .code {
     margin-right: 0;
 }
 
-#overview {
+.overview {
     display: none;
     position: absolute;
     border: 1px solid #ccc;
@@ -443,12 +443,12 @@ pre > code, .code {
     box-shadow: 2px 2px 5px #888;
 }
 
-    #overview ol {
+    .overview ol {
         margin: 0;
         padding: 0;
     }
 
-        #overview ol li {
+        .overview ol li {
             margin: 0;
             padding: 0 0 5px 0;
             float:none;
@@ -458,17 +458,17 @@ pre > code, .code {
             color: #333;
         }
         
-            #overview ol li ol li {
+            .overview ol li ol li {
                 padding-left: 10px;
                 font-size: 1em;
             }
 
-            #overview ol li ol li:hover {
+            .overview ol li ol li:hover {
                 border-left: 3px solid #008000;
                 padding-left: 7px;
             }
  
-            #overview ol li a {
+            .overview ol li a {
                 font-weight: normal;
                 line-height: .9em;
                 margin: 3px 0 3px -10px;
@@ -482,13 +482,13 @@ pre > code, .code {
                 text-decoration: none;
             }
             
-            #overview ol li a:hover {
+            .overview ol li a:hover {
                 color:#333;
                 text-decoration: underline;
                 border-radius: 0;
             }
             
-#overview-trigger.active {
+.overview-trigger.active {
     background-color: #fff;
     border: 1px solid #ccc;
     border-bottom: none;

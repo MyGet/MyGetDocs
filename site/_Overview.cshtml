@@ -1,6 +1,6 @@
 ﻿@using Docs.Core
 
-<div id="overview">
+<div id="overview" class="overview">
     <ol>
         @foreach (var topic in Topic.GetTopics("~/docs")) {
             <li>
@@ -14,5 +14,12 @@
             }
             </li>
         }
+        <li>
+            MyGet Reference
+            <ol>
+                <li><a href="http://blog.myget.org">MyGet Blog</a></li>
+                <li><a href="http://status.myget.org">MyGet Service Status</a></li>
+            </ol>
+        </li>
     </ol>
 </div>

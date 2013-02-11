@@ -20,13 +20,16 @@
             <ul id="menu">
                 <li><a href="@Href("~/")">Home</a> </li>
                 <li>
-                    <a id="overview-trigger" href="#">Quick View</a>
+                    <a id="overview-trigger" class="overview-trigger" href="#">Quick View</a>
                     @RenderPage("~/_Overview.cshtml")
                 </li>
-                <li><a href="@Href("~/docs/Contribute/Contributing-to-MyGet-Documentation")">Contribute</a></li>
                 <li><a href="http://www.myget.org/gallery">MyGet Gallery</a> </li>
-                <li><a href="http://docs.nuget.org/">NuGet Docs</a> </li>
+                <li><a href="@Href("~/docs/Contribute/Contributing-to-MyGet-Documentation")">Contribute</a></li>
                 <li><a href="http://visualstudiogallery.msdn.microsoft.com/27077b70-9dad-4c64-adcf-c7cf6bc9970c">Install NuGet</a></li>
+                <li>
+                    <a id="nugetoverview-trigger" class="overview-trigger" href="#">NuGet Docs</a>
+                    @RenderPage("~/_NuGetOverview.cshtml")
+                </li>
             </ul>
             @RenderPage("~/_searchbox.cshtml")
         </nav>
@@ -79,7 +82,8 @@
 </div>
     <script type="text/javascript">
         $(document).ready(function () {
-            SetUpQuickView("#overview-trigger", "#overview");
+            SetUpQuickView("#overview-trigger", "#overview", 3);
+            SetUpQuickView("#nugetoverview-trigger", "#nugetoverview", 2);
         });
     </script>
     @Microsoft.Web.Helpers.Analytics.GetGoogleAsyncHtml("UA-576836-11")

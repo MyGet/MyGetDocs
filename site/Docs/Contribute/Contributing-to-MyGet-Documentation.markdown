@@ -1,16 +1,16 @@
-﻿# Contributing to NuGet Documentation
+﻿# Contributing to MyGet Documentation
 
 These docs are written in markdown. For an introduction to markdown, see [our sample markdown](#Sample_Markdown). For documentation conventions, see [our documentation  conventions](#Documentation_Conventions).
 
 ## Making a change to existing documentation
-The basic workflow for contributing to NuGet Docs is simple.
+The basic workflow for contributing to MyGet Docs is simple.
 
-1. Visit the [NuGet Docs project on Github](https://github.com/NuGet/NuGetDocs/)
+1. Visit the [MyGet Docs project on Github](https://github.com/myget/MyGetDocs/)
 
 2. Fork the project. There's a big Fork button towards the upper right. That creates a copy of this project under your account. It's really fast and lets you make edits without worrying that you're affecting the real site.
 
 3. Find the page you want to edit within the /site/Docs folder. This folder contains all of the documentation markdown files. 
-For example, the page you're [reading is here](https://github.com/NuGet/NuGetDocs/blob/master/site/Docs/Contribute/Contributing-to-NuGet-Documentation.markdown).
+For example, the page you're [reading is here](https://github.com/myget/MyGetDocs/blob/master/site/Docs/Contribute/Contributing-to-MyGet-Documentation.markdown).
 
 4. Click the link labelled "Edit this file".
 
@@ -20,7 +20,7 @@ For example, the page you're [reading is here](https://github.com/NuGet/NuGetDoc
 
 ## Adding a new document
 Adding a new document requires that you use Git to clone the repository and send a pull request. 
-If you don't know what that means or how to use Git, feel free to propose that the NuGet team add a new page for you to edit.
+If you don't know what that means or how to use Git, feel free to propose that the MyGet team add a new page for you to edit.
 
 ## Documentation Conventions
 

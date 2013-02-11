@@ -14,7 +14,7 @@ html, body { height: 100%; margin: 0; padding: 0;}
 body {
     font-size: .85em;
     color: #333; 
-    background:url('../Images/headerbackground.png') repeat-x top left #f6f6f6;
+    background:url('../Images/headerbackground.png') repeat-x top left #ffffff;
     font-family: "Segoe UI", "Trebuchet MS" , Verdana, Helvetica, Sans-Serif;
 }
     
@@ -49,7 +49,7 @@ p           { margin: 0 0 1em; line-height: 1.538em; }
 p img.left  { float: left; margin: 0.923em 0.923em 0.923em 0; padding: 0; }
 p img.right { float: right; margin: 0.923em 0 0.923em 0.923em; }
 
-a                 { color:#0071bc; text-decoration: none; outline: none; }
+a                 { color:green; text-decoration: none; outline: none; }
 #body a:visited   { color:#777; }
 #body a:hover     { text-decoration: underline;}
 
@@ -306,7 +306,7 @@ ol.topics {
 }
 
     ol.topics a {
-        color: #0071BC;
+        color: green;
         text-decoration: underline;
     }
 
@@ -429,22 +429,21 @@ pre > code, .code {
 #overview {
     display: none;
     position: absolute;
-    border: 1px solid #666;
+    border: 1px solid #ccc;
     padding: 15px;
-    background-color: #e4f1f7;
+    background-color: #fff;
     font-size: 1em;
     margin-left: 5px;
     border-top: none;
     width: 700px;
     z-index: 100;
-    
     /*CSS3 properties*/
-    border-radius: 0 0 4px 4px;
     -moz-border-radius: 0 0 4px 4px;
     -webkit-border-radius: 0 0 4px 4px;
-    box-shadow: 2px 2px 5px #888;
+    border-radius: 0 0 4px 4px;
     -webkit-box-shadow: 2px 2px 5px #888;
     -moz-box-shadow: 2px 2px 5px #888;
+    box-shadow: 2px 2px 5px #888;
 }
 
     #overview ol {
@@ -459,36 +458,44 @@ pre > code, .code {
             height: auto;
             font-weight:bold;
             font-size:1.2em;
+            color: #333;
         }
         
             #overview ol li ol li {
                 padding-left: 10px;
                 font-size: 1em;
             }
+
+            #overview ol li ol li:hover {
+                border-left: 3px solid #008000;
+                padding-left: 7px;
+            }
  
             #overview ol li a {
                 font-weight: normal;
                 line-height: .9em;
-                margin: 3px 0;
-                padding: 0;
+                margin: 3px 0 3px -10px;
+                text-indent: -3px;
+                padding: 2px 10px;
                 height: auto;
                 display: inline;
                 background:none;
-                color: #666;
+                color: #333;
                 font-size: 1em;
                 text-decoration: none;
             }
             
             #overview ol li a:hover {
-                color:#0071bc;
+                color:#333;
                 text-decoration: underline;
+                border-radius: 0;
             }
             
 #overview-trigger.active {
-    background-color: #e4f1f7;
-    border: 1px solid #666;
+    background-color: #fff;
+    border: 1px solid #ccc;
     border-bottom: none;
-    color: #195670;
+    color: #333;
     height: 46px;
     line-height: 44px;
     position: relative;

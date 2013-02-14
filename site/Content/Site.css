@@ -18,14 +18,11 @@ body {
 }
     
 /* Headings */
-h1,h2,h3,h4,h5,h6 { font-weight: normal; margin:.6em 0;}
-
-h1 { font-size: 2.6em; }
-h2 { font-size: 2em; margin-bottom: 2px;}
-h3 { font-size: 1.6em; margin-bottom: 0; }
-h4 { font-size: 1.4em; }
-h5 { font-size: 1.1em; }
-h6 { font-size: 1em; }
+h1, h2, h3, h4, h5, h6 { color:#008000;font-weight: lighter; }
+h1 { font-size:2.6em;padding:0;text-transform: lowercase;}
+h2 { font-size:1.8em; }
+h3 { font-size:1.2em; }
+h4, h5, h6{ font-size:1em; }
 
 h1 img, h2 img, h3 img,
 h4 img, h5 img, h6 img {
@@ -191,6 +188,8 @@ nav {
 nav ul {
     padding: 0;
     margin: 0;
+
+    font-weight: lighter;font-variant:small-caps;
 }
 
     nav ul li {
@@ -221,11 +220,6 @@ nav ul {
         margin: 0 5px;
         padding: 0 10px;
         text-decoration: none;
-
-        /*CSS3 properties*/
-        -moz-border-radius: 4px 4px 0 0;
-        -webkit-border-radius: 4px 4px 0 0;
-        border-radius: 4px 4px 0 0;
     }
 
         nav ul a:hover {

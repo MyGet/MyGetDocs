@@ -89,7 +89,6 @@ header {
 
 nav {
     height: 42px;
-    padding-left: 30px;
     margin-top: 10px;
     margin-bottom: 1px;
 }
@@ -173,7 +172,7 @@ nav {
 /* Header
 ***************************************************************/
 #logo {
-    padding: 20px;
+    padding: 20px 20px 20px 0;
 }
 
 #logo a {

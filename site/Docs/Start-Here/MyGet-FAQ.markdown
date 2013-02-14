@@ -1,112 +1,85 @@
-﻿# NuGet Frequently Asked Questions
+﻿# MyGet Frequently Asked Questions
 
-## What is required to run NuGet?
+## What is required to be able to use MyGet?
 
-NuGet requires Visual Studio 2010 or Visual Web Developer Express 2010.
-The NuGet Package Manager Console requires that [PowerShell 2.0](http://support.microsoft.com/kb/968929) be installed. 
-Powershell 2.0 is already installed if you have the following operating system:
+MyGet is fully compatible with all NuGet clients. This means that we support all NuGet Visual Studio extensions as well as the NuGet commandline or NuGet Package Explorer.
+That also means we are compatible with Chocolatey, Orchard, SymbolSource and OctopusDeploy!
 
-* Windows 7 
-* Windows Server 2008 R2 
+## What version of NuGet is required to use MyGet?
 
-If you have the following operating systems, you must [manually install Powershell 2.0](http://support.microsoft.com/kb/968929/en-us).
+MyGet really is a NuGet-as-a-Service platform, so we'll make sure our feeds will be upgraded to the latest NuGet format.
+This effectively means you can safely upgrade your NuGet client to the latest version and benefit from new features whenever they're added into the NuGet.Server or NuGet.Core packages.
 
-* Windows XP SP3 
-* Windows Server 2003 SP2 
-* Windows Vista SP1 
-* Windows Server 2008 
-
-## Do I have to install ASP.NET MVC 3 to get NuGet?
-
-**Not at all**. For information about how to install NuGet without MVC 3, see [Installing NuGet](Installing-NuGet).
-
-## Why does the Package Manager Console or the Manage NuGet Packages dialog box crash or show an exception?
-
-Check the [Known Issues](../Reference/Known-Issues) page. Typically, the issue is due to having an older version of the Reflector add-in installed or not having PowerShell 2.0 installed (as in the case of Windows XP).
+For backwards compatibility with older NuGet clients and Orchard, we also still expose the NuGet v1 API. Check your feed settings to see the available endpoints for your feed.
 
 ## How do I get my package in the feed?
 
-See the [Creating and publishing a package](../creating-packages/creating-and-publishing-a-package) page.
+See the [Creating and publishing a package](http://docs.nuget.org/creating-packages/creating-and-publishing-a-package) page on the NuGet Documentation for details on how to create NuGet packages.
 
-## What is the difference between a project-level package and a solution-level package?
+In order to publish them onto your MyGet feeds, you'll need to create a MyGet account first.
+//todo
 
-A solution-level package has to be installed only once in a solution to be available for all projects in the solution. 
-A project-level package must be installed separately in each project where you want to use it.
-For solution-level packages, NuGet doesn't change anything in a project, whereas in a project-level package it does. 
-Typically, a solution-level package installs new commands that can be called from within the **Package Manager Console** window.
+## Does MyGet support Mono?
 
-## I have multiple versions of my library that target different versions of the .NET Framework. How do I build a single package that supports this?
-
-See the section titled "Supporting Multiple .NET Framework Versions and Profiles" in [Creating a Package](http://nuget.codeplex.com/wikipage?title=Creating a Package#supporting-multiple-framework-versions).
-
-## How do I check the exact version of NuGet installed?
-
-In Visual Studio go to the _Help_ > _About Microsoft Visual Studio_ menu and look for NuGet Package Manager. The version is 
-displayed next to that entry.
-
-![NuGet Version in the Visual Studio Extension Manager](images/nuget-version.png)
-
-Alternatively, you can launch the Package Manager Console and type in `$host` to output information about NuGet 
-Powershell host including the version.
-
-## How do I get access to the DTE object in the Package Manager console?
-
-The console provides a variable named `$DTE` that returns the `DTE` object. See the `Get-Project` command in 
-[Package Manager Console Powershell Reference](../Reference/Package-Manager-Console-PowerShell-Reference).
-
-## Why do I get an "Unable to resolve dependency error" when installing a local package with remote dependencies?
-
-**Select the *All* node when installing your local package.** The *all** node aggregates all the feeds. 
-When you select a specific repository under the Online tab, that restricts installation to just that node. 
-The reason for this behavior is that in many cases, users of a local repository don't want to accidentally 
-install a remote package due to corporate polices.
-
-## I try to cast the $DTE variable to the type DTE2, but I get an error: Cannot convert the "EnvDTE.DTEClass" value of type "EnvDTE.DTEClass" to type "EnvDTE80.DTE2". What's wrong?
-
-This is a known issue with how PowerShell interacts with a COM object. Try the following:
-`$dte2 = Get-Interface $dte ([EnvDTE80.DTE2])`
-`Get-Interface` is a helper function added by the NuGet PowerShell host.
-
-## How do I set up a local repository or feed?
-See [Hosting Your Own NuGet Feeds](../Creating-Packages/Hosting-Your-Own-NuGet-Feeds).
-
-## Does NuGet work with Nu Gems, or does NuGet supersede Nu Gems?
-
-**Sorry, no. But keep reading.** NuGet does not work with Nu Gems directly, because NuGet uses its own package format 
-(based on OPC) and cannot read *.gemspec* files directly. In essence, NuGet can be considered Nu Gems Version 2 and an 
-evolution of package management for Visual Studio and the .NET Framework platform.
-If you liked the Nu behavior of dealing with packages, 
-note that NuGet.exe behaves very similarly for those who want to 
-use NuGet outside of Visual Studio.
-
-## Does NuGet support Mono?
+As long as NuGet.Core and the NuGet CLI support Mono, we'll do the same.
 
 The command-line application (*nuget.exe*) builds and runs under Mono and allows you to create packages in Mono.
 This is especially true for Mono on Windows, but there are some known issues for Mono on Linux and OS X.  To review
-the known issues, [search for Mono in our issue list](http://nuget.codeplex.com/workitem/list/basic?field=Votes&direction=Descending&issuesToDisplay=Open&keywords=mono&emailSubscribedItemsOnly=false).
+the known issues, [search for Mono in the NuGet issue list](http://nuget.codeplex.com/workitem/list/basic?field=Votes&direction=Descending&issuesToDisplay=Open&keywords=mono&emailSubscribedItemsOnly=false).
 
-## Is there a command-line tool for NuGet?
+## Is there a command-line tool for MyGet?
 
-**Yes there is!** See David Ebbo's Blog post entitled [Installing NuGet Packages directly from the command line](http://blog.davidebbo.com/2011/01/installing-nuget-packages-directly-from.html).
+**Yes there is!** It's called nuget.exe :)
 
-Keep in mind that the focus of NuGet is to let you modify your projects and add references to Visual Studio projects. 
-The command line tool, NuGet.exe, will download and unpack packages, but it won't automate Visual Studio and 
-modify your project files.
-Within Visual Studio, there are two clients for NuGet: 
-the PowerShell-based **Package Manager Console** and the **Manage NuGet Packages** dialog box. 
-Both are wrappers around the NuGet API, which is written in managed code.
-NuGet.exe is also used to create and publish packages.
+Simply use the official NuGet CLI to target MyGet from the command-line.
+You can read more on [the NuGet Command-Line Reference](http://docs.nuget.org/docs/reference/command-line-reference).
 
-## What languages are supported by NuGet?
+## Can I use MyGet outside of Visual Studio?
 
-NuGet currently supports C#, F# and Visual Basic projects.
+**You sure can!** 
 
-## Can I use NuGet outside of Visual Studio?
-
-**You sure can!** As discussed in the question on command line tools for NuGet, the primary focus 
-of NuGet is Visual Studio, but the core NuGet API has no dependencies on Visual Studio. 
 There are multiple NuGet clients that work completely outside of Visual Studio:
 
 * [SharpDevelop Alpha](http://community.sharpdevelop.net/blogs/mattward/archive/2011/01/23/NuGetSupportInSharpDevelop.aspx). (See a demo of this in [Phil Haack's MvcConf talk](http://bit.ly/fzrJDa).) 
 * ASP.NET Web Pages in WebMatrix. (See a demo of this in [Phil Haack's MvcConf talk](http://bit.ly/fzrJDa).) 
 * [NuGet.exe](http://blog.davidebbo.com/2011/01/installing-nuget-packages-directly-from.html) 
+
+## How does MyGet secure my private NuGet feeds?
+
+MyGet offers you private NuGet feeds. In order for them to be private, they obviously need to be secured somehow. Security is a large word with many nuances and many possible scenarios, many which are supported by MyGet.
+For example, some users can manage users and packages, while others can only manage packages and others can only consume packages.
+
+We dedicated an entire page on this topic to guide you through MyGet’s security model and to show you how to set up security and permissions in MyGet.
+Read more on <a href="Faq-Security">MyGet's Security Model Explained</a>.
+
+## I'm trying to get my build server to push packages to my private feed but having to enter a username/password every time I push is a no go. Can I set that somewhere in the sources for nuget?
+
+Since NuGet v1.7 there is support for storing username and password credentials in your NuGet configuration. 
+
+Run the following command to do so:
+
+    nuget.exe source Update -Name <name> -UserName <username> -Password <password>
+
+The credentials are encrypted (using DPAPI the same as your APIKey) and stored in the nuget.config file in `%LocalAppData%\NuGet`.
+
+`<Name>` is the name of the package source in the nuget.config file that corresponds with the MyGet feed for which you want to register these credentials.
+
+## If I put a package on MyGet with a dependency that's on NuGet, do I need to copy it over?
+
+**No. You don't have to, but you can.** NuGet performs cross-feed checking for package dependencies.
+
+For the package being installed, NuGet looks in the current package source (if specified, otherwise all). Regardless of wether a package source is specified or not, NuGet will look for the package's dependencies in all configured package sources.
+
+## Are there any articles about MyGet out there?
+
+Sure! We have a lot of content available [on our blog](http://blog.myget.org).
+
+You can also check these:
+
+* [Get your local NuGet repository online in a private MyGet feed](http://www.xavierdecoster.com/post/2011/06/08/Get-your-local-NuGet-repository-online-in-a-private-MyGet-feed.aspx)
+* [Adding NuGet packages from the official feed to your MyGet feed: some improvements](http://www.xavierdecoster.com/post/2011/06/14/Adding-NuGet-packages-from-the-official-feed-to-your-MyGet-feed-some-improvements.aspx)
+* [MyGet now supports pushing from the command line](http://blog.maartenballiauw.be/post/2011/06/01/MyGet-now-supports-pushing-from-the-command-line.aspx)
+* [Delegate feed privileges to other users on MyGet](http://blog.maartenballiauw.be/post/2011/06/29/Delegate-feed-privileges-to-other-users-on-MyGet.aspx)
+* [3 simple steps to publish a nupkg to MyGet using NuGet Package Explorer 1.6](http://www.xavierdecoster.com/post/2011/07/11/3-simple-steps-to-publish-a-nupkg-to-MyGet-using-NuGet-Package-Explorer-16.aspx)
+* [How to help yourself when NuGet goes down?](http://www.xavierdecoster.com/post/2012/03/09/How-to-help-yourself-when-NuGet-goes-down.aspx)
+* [MyGet tops vanilla NuGet feeds with a Chocolatey flavor](http://www.xavierdecoster.com/post/2012/03/01/MyGet-tops-Vanilla-NuGet-feeds-with-a-Chocolatey-flavor.aspx)

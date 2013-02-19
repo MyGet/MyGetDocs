@@ -34,7 +34,7 @@ MyGet 1.6 was released on March X, 2013.
 * Copy to clipboard on feed details page did not work in Chrome version 24.0.1312.57 and up.
 * Feed statistics are not updated in some situations.
 * NuGet Package Explorer always shows prerelease packages in the feed list.
-* Build Services: building from protected SVN repositories isn't alzays working.
+* Build Services: building from protected SVN repositories isn't always working.
 * Build Services: GitHub API only returns 30 repositories.
 
 _Happy packaging!_

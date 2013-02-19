@@ -16,7 +16,7 @@ MyGet 1.6 was released on March X, 2013.
 ### MyGet Enterprise
 * Block e-mail addresses not belonging to the organization.
 * Users can be made administrator.
-* User removal (with the option of transfering their resources to another user).
+* User removal (with the option of transferring their resources to another user).
 
 ### MyGet Build Services
 * Copy build log to clipboard.

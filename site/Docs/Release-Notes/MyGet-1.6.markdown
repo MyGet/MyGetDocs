@@ -12,6 +12,7 @@ MyGet 1.6 was released on March 1, 2013.
 * Dashes and underscores in feed names are supported. Feeds can be named _foo-prod_ for example.
 * Download feed as ZIP.
 * Package Sources are out of beta.
+* API key in package source configuration is now masked.
 
 ### MyGet Enterprise
 * Block e-mail addresses not belonging to the organization.

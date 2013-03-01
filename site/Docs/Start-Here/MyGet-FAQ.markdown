@@ -52,6 +52,12 @@ For example, some users can manage users and packages, while others can only man
 We dedicated an entire page on this topic to guide you through MyGet’s security model and to show you how to set up security and permissions in MyGet.
 Read more on <a href="Faq-Security">MyGet's Security Model Explained</a>.
 
+## What happens to my private feeds when my subscription expires?
+In short, the following will happen:
+* Your public feeds will continue working
+* Your community feeds will continue working
+* Your private feeds will continue working in a read-only mode: you can consume packages but not add or push packages to this feed
+
 ## I'm trying to get my build server to push packages to my private feed but having to enter a username/password every time I push is a no go. Can I set that somewhere in the sources for nuget?
 
 Since NuGet v1.7 there is support for storing username and password credentials in your NuGet configuration. 

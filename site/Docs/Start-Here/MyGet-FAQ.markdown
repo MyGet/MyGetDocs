@@ -54,6 +54,7 @@ Read more on <a href="Faq-Security">MyGet's Security Model Explained</a>.
 
 ## What happens to my private feeds when my subscription expires?
 In short, the following will happen:
+
 * Your public feeds will continue working
 * Your community feeds will continue working
 * Your private feeds will continue working in a read-only mode: you can consume packages but not add or push packages to this feed

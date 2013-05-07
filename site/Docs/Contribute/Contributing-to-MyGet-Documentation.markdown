@@ -1,4 +1,4 @@
-﻿# Contributing to MyGet Documentation
+# Contributing to MyGet Documentation
 
 These docs are written in markdown. For an introduction to markdown, see [our sample markdown](#Sample_Markdown). For documentation conventions, see [our documentation  conventions](#Documentation_Conventions).
 
@@ -7,7 +7,7 @@ The basic workflow for contributing to MyGet Docs is simple.
 
 1. Visit the [MyGet Docs project on Github](https://github.com/myget/MyGetDocs/)
 
-2. Fork the project. There's a big Fork button towards the upper right. That creates a copy of this project under your account. It's really fast and lets you make edits without worrying that you're affecting the real site.
+2. [Fork the project](https://help.github.com/articles/fork-a-repo). There's a big Fork button towards the upper right. That creates a copy of this project under your account. It's really fast and lets you make edits without worrying that you're affecting the real site.
 
 3. Find the page you want to edit within the /site/Docs folder. This folder contains all of the documentation markdown files. 
 For example, the page you're [reading is here](https://github.com/myget/MyGetDocs/blob/master/site/Docs/Contribute/Contributing-to-MyGet-Documentation.markdown).
@@ -16,7 +16,7 @@ For example, the page you're [reading is here](https://github.com/myget/MyGetDoc
 
 5. Edit the markdown, type in a commit message below, and click "Commit Changes".
 
-6. Send a pull request for your change. There's a button near the top of the page that says "Pull Request". That's it!
+6. [Send a pull request](https://help.github.com/articles/creating-a-pull-request) for your change. There's a button near the top of the page that says "Pull Request". That's it!
 
 ## Adding a new document
 Adding a new document requires that you use Git to clone the repository and send a pull request. 
@@ -49,7 +49,7 @@ Markdown and HTML is ignored within a code block:
 
 ### Message Boxes
 We have added support for some well know classes to add styles to draw attention to items you want 
-to call out in a document. Unfortunately mark down does not have a way to added class attributes 
+to call out in a document. Unfortunately markdown does not have a way to add class attributes 
 so you will have to write the HTML by hand and embed it.
 
 #### Information
@@ -90,11 +90,11 @@ Italics and Bold
 **This is bold**, and so is __this__.
 Use ***italics and bold together*** if you ___have to___.
 
-###Basic Links
+### Basic Links
 
 There are three ways to write links. Each is easier to read than the last:
 
-Here's an inline link to [Google](http://www.google.com/).
+Here's an in-line link to [Google](http://www.google.com/).
 Here's a reference-style link to [Google][1].
 Here's a very readable link to [Yahoo!][yahoo].
 
@@ -119,6 +119,7 @@ Visit [us][web].
 You can also use standard HTML hyperlink syntax.
 
 <a href="http://example.com" title="example">example</a>
+
 ### Bare URLs
 
 We have modified our Markdown parser to support "naked" URLs (in most but not all cases -- beware of 
@@ -153,24 +154,27 @@ Rule #4
 
 - - - -
 
-### Simple lists
+### Lists
 
-A bulleted &lt;ul&gt; list:
+#### A bulleted &lt;ul&gt; list:
 
 - Use a minus sign for a bullet
 + Or plus sign
 * Or an asterisk
-A numbered &lt;ol&gt; list:
+
+#### A numbered &lt;ol&gt; list:
 
 1. Numbered lists are easy
 2. Markdown keeps track of the numbers for you
 7. So this will be item 3.
-A double-spaced list:
+
+#### A double-spaced list:
 
 - This list gets wrapped in &lt;p&gt; tags
  
 - So there will be extra space between items
-Advanced lists: Nesting
+
+#### Advanced lists: Nesting
 
 To put other Markdown blocks in a list; just indent four spaces for each nesting level:
 
@@ -201,14 +205,16 @@ To put other Markdown blocks in a list; just indent four spaces for each nesting
         Skip a line and indent eight spaces.
         That's four spaces for the list
         and four to trigger the code block.
-### Simple Blockquotes
+
+### Blockquotes
 
 Add a > to the beginning of any line to create a &lt;blockquote&gt;.
 
 > The syntax is based on the way email programs
 > usually do quotations. You don't need to hard-wrap
 > the paragraphs in your blockquotes, but it looks much nicer if you do.  Depends how lazy you feel.
-Advanced blockquotes: Nesting
+
+#### Advanced blockquotes: Nesting
 
 To put other Markdown blocks in a &lt;blockquote&gt;, just add a &gt; followed by a space:
 
@@ -218,21 +224,25 @@ To put other Markdown blocks in a &lt;blockquote&gt;, just add a &gt; followed b
 > But your plain text looks better to
 > humans if you include the extra `>`
 > between paragraphs.
-Blockquotes within a blockquote:
+
+#### Blockquotes within a blockquote:
 
 > A standard blockquote is indented
 > > A nested blockquote is indented more
 > > > > You can nest to any depth.
-Lists in a blockquote:
+
+#### Lists in a blockquote:
 
 > - A list in a blockquote
 > - With a > and space in front of it
 >    * A sublist
-Preformatted text in a blockquote:
+
+#### Preformatted text in a blockquote:
 
 >     Indent five spaces total.  The first
 >     one is part of the blockquote designator.
-Images
+
+### Images
 
 Images are exactly like links, but they have an exclamation point in front of them:
 
@@ -242,11 +252,11 @@ the image. Be sure to include meaningful alt text for screen-reading software.
 
 Just like links, images work with reference syntax and titles:
 
-This page is ![valid XHTML][checkmark].
+This page is ![Valid XHTML][checkmark].
  
 [checkmark]: http://w3.org/Icons/valid-xhtml10
              "What are you smiling at?"
-Note: Markdown does not currently support the shortest reference syntax for images:
+__Note:__ Markdown does not currently support the shortest reference syntax for images:
 
 Here's a broken ![checkmark].
 But you can use a slightly more verbose version of implicit reference names:
@@ -258,15 +268,18 @@ The reference name is also used as the alt text.
 
 If you need to do something that Markdown can't handle, use HTML. Note that we only support a very strict subset of HTML!
 
- Strikethrough humor is <strike>funny</strike>.
+Strikethrough humor is <strike>funny</strike>.
+
 Markdown is smart enough not to mangle your span-level HTML:
 
 <u>Markdown works *fine* in here.</u>
+
 Block-level HTML elements have a few restrictions:
 
-They must be separated from surrounding text by blank lines.
-The begin and end tags of the outermost block element must not be indented.
-Markdown can't be used within HTML blocks.
+* They must be separated from surrounding text by blank lines.
+* The begin and end tags of the outermost block element must not be indented.
+* Markdown can't be used within HTML blocks.
+
 <pre>
     You can <em>not</em> use Markdown in here.
 </pre>

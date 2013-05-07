@@ -15,7 +15,7 @@ If you feel something's missing or want to suggest a new item, just create a new
 Also, if you just want to share the world how you used MyGet, we welcome you to do so!
 
 ###What's in it for you?
-For each accepted Pull Request, you can claim a **free one month extension of your current plan**. 
+For each accepted Pull Request that closes an issue, you can claim a **free one month extension of your current plan**. 
 
 If you're on the free plan you can claim a **voucher for a free month on the Starter plan**.
 

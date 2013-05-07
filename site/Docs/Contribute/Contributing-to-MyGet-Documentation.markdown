@@ -197,7 +197,7 @@ To put other Markdown blocks in a list; just indent four spaces for each nesting
  
 3. Blockquotes in a list item:
  
-> Skip a line and
+    > Skip a line and
     > indent the >'s four spaces.
  
 4. Preformatted text in a list item:

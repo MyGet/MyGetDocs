@@ -1,3 +1,4 @@
+[![MyGet Docs](http://docs.myget.org/images/mygetlogo.png)](http://docs.myget.org)
 #MyGet Documentation
 Markdown based ASP.NET Web Pages documentation system for MyGet.
 This project is a fork of the original NuGetDocs project.

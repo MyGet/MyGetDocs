@@ -148,7 +148,7 @@ nav {
                 font-size: .9em;
             }
     
-    footer#footer div.license, footer#footer div.pagesource {
+    footer#footer div.license {
         clear: both;
         font-size: .7em;
     }
@@ -162,8 +162,17 @@ nav {
         text-decoration: underline;
     }
 
-    footer#footer div.pagesource {
+    div.pagesource {
         margin-top: .7em;
+        clear: both;
+        font-size: .7em;
+    }
+
+    div.pagesource-container {
+        color:#999999; 
+        font-style: italic; 
+        margin-top:75px; 
+        border-top:1px solid #EEEEEE;
     }
 
 /* Header

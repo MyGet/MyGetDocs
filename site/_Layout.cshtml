@@ -35,14 +35,15 @@
         </nav>
         <div id="body">
             @RenderBody()
-        </div>
-        <div>
             @if (Page.Source != null)
             {
-                <div class="pagesource">
-                    Found an issue with the documentation on this page? We accept contributions!<br />
-                    View or edit this page's source on GitHub:     
-                <a href="https://github.com/myget/MyGetDocs/tree/master/site/@HttpUtility.UrlPathEncode(Page.Source)" target="edit">https://github.com/myget/MyGetDocs/tree/master/site/@HttpUtility.UrlPathEncode(Page.Source)</a>
+                <div class="pagesource-container">
+                    <div class="pagesource">
+                        Found an issue with the documentation on this page? We accept contributions!<br />
+                        Read our <a href="http://docs.myget.org/docs/Contribute/Contributing-to-MyGet-Documentation">contribution guidance</a> or 
+                        edit this page's source on GitHub:     
+                        <a href="https://github.com/myget/MyGetDocs/tree/master/site/@HttpUtility.UrlPathEncode(Page.Source)" target="edit">https://github.com/myget/MyGetDocs/tree/master/site/@HttpUtility.UrlPathEncode(Page.Source)</a>
+                    </div>
                 </div>
             }
         </div>

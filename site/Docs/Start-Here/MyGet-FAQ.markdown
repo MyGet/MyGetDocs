@@ -50,7 +50,7 @@ MyGet offers you private NuGet feeds. In order for them to be private, they obvi
 For example, some users can manage users and packages, while others can only manage packages and others can only consume packages.
 
 We dedicated an entire page on this topic to guide you through MyGet’s security model and to show you how to set up security and permissions in MyGet.
-Read more on <a href="Faq-Security">MyGet's Security Model Explained</a>.
+Read more on [MyGet's Security Model Explained](MyGet-Security-FAQ)</a>.
 
 ## What happens to my private feeds when my subscription expires?
 In short, the following will happen:

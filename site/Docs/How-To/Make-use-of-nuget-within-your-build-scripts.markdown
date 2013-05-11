@@ -25,7 +25,7 @@ MyGet Build Services actually provides a number of other environment variables t
 
 For a complete example of how this can be used within a build script, check out the [build.bat file for the ReSharper.RazorExtensions nuget package](https://github.com/xavierdecoster/ReSharper.RazorExtensions/blob/master/build.bat "Example build.bat file using the nuget environment variable").
 
-## Use nuget from within source code
+## Use nuget from within your source code repository
 
 Although you _can_ make use of the local nuget executable that is available on the MyGet Build Server, this may not work for you.  For instance, you may need to target a specific version of nuget, which the MyGet Build Servers may not have installed.  In this case, one option that you would have would be to include the necessary files within your Source Control Repository, and call the nuget executable directly from there.  This is possible due to the fact that the MyGet Build Server downloads all the source code from your repository before executing the build.
 
@@ -41,3 +41,8 @@ Once in place, you can then call the nuget executable directly by first locating
     exec { 
 	    .$nugetExe pack "projectA.nuspec" -NoPackageAnalysis -OutputDirectory $buildArtifactsDirectory 
 	}
+
+Alternative ways to include a specific version of nuget.exe into your source code repository are:
+
+* use the .nuget\nuget.exe version you use for package restore
+* install a specific version of the [NuGet.CommandLine package](http://nuget.org/packages/NuGet.CommandLine/) on the solution level and use the nuget.exe from the Packages\NuGet.CommandLine.{version} folder

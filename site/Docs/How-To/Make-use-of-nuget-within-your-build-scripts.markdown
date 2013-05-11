@@ -21,7 +21,7 @@ The MyGet Build Server already has a maintained version of the nuget executable 
 
     %nuget% pack "projectA.nuspec" -NoPackageAnalysis -OutputDirectory $buildArtifactsDirectory
 
-MyGet Build Services actually provides a number of other environment variables that can be consumed within your build scripts.  A complete list of these environment variables can be found on the [Build Services Reference page](http://docs.myget.org/site/docs/reference/build-services "Build Services Reference Page").
+MyGet Build Services actually provides a number of other environment variables that can be consumed within your build scripts.  A complete list of these environment variables can be found on the [Build Services Reference page](../reference/build-services "Build Services Reference Page").
 
 For a complete example of how this can be used within a build script, check out the [build.bat file for the ReSharper.RazorExtensions nuget package](https://github.com/xavierdecoster/ReSharper.RazorExtensions/blob/master/build.bat "Example build.bat file using the nuget environment variable").
 

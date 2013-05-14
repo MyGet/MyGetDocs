@@ -16,10 +16,8 @@ For all  scenarios, a simple feed discovery mechanism could facilitate this. Suc
 
 As an example, we've implemented the above. Open Visual Studio and open any solution. Then issue the following in the Package Manager Console:
 
-```powershell
-Install-Package DiscoverPackageSources
-Discover-PackageSources -Url "http://www.myget.org/gallery"
-```
+    Install-Package DiscoverPackageSources
+    Discover-PackageSources -Url "http://www.myget.org/gallery"
 
 Close and re-open Visual Studio and check your package sources. The URL has been verified for a PSD manifest URL and the manifest has been parsed. Matching feeds have been installed into the NuGet.config file, in this case all feeds listed in the MyGet gallery.
 
@@ -35,36 +33,32 @@ Vendors and open source projects are allowed to add their own schema to the PSD 
 
 An example manifest could be:
 
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<rsd version="1.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
-  <service>
-    <engineName>MyGet</engineName>
-    <engineLink>http://www.myget.org</engineLink>
-    
-    <dc:identifier>http://www.myget.org/F/googleanalyticstracker</dc:identifier>    
-    <dc:creator>maartenba</dc:creator>    
-    <dc:owner>maartenba</dc:owner>
-    <dc:title>Staging feed for GoogleAnalyticsTracker</dc:title>
-    <dc:description>Staging feed for GoogleAnalyticsTracker</dc:description> 
-    <homePageLink>http://www.myget.org/gallery/googleanalyticstracker</homePageLink>
-        
-    <apis>
-      <api name="nuget-v2-packages" preferred="true" apiLink="http://www.myget.org/F/googleanalyticstracker/api/v2" blogID="" />
-      <api name="nuget-v2-push" preferred="true" apiLink="http://www.myget.org/F/googleanalyticstracker/api/v2/package" blogID="">
-        <settings>
-          <setting name="apiKey">abcdefghijkl</setting>
-        </settings>
-      </api>
-      <api name="nuget-v1-packages" preferred="false" apiLink="http://www.myget.org/F/googleanalyticstracker/api/v1" blogID="" />
-    </apis>
-  </service>
-</rsd>
-```
+    <?xml version="1.0" encoding="utf-8"?>
+    <rsd version="1.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+	    <service>
+		    <engineName>MyGet</engineName>
+		    <engineLink>http://www.myget.org</engineLink>
+		    <dc:identifier>http://www.myget.org/F/googleanalyticstracker</dc:identifier>
+		    <dc:creator>maartenba</dc:creator>
+		    <dc:owner>maartenba</dc:owner>
+		    <dc:title>Staging feed for GoogleAnalyticsTracker</dc:title>
+		    <dc:description>Staging feed for GoogleAnalyticsTracker</dc:description> 
+		    <homePageLink>http://www.myget.org/gallery/googleanalyticstracker</homePageLink>
+		    <apis>
+		    	<api name="nuget-v2-packages" preferred="true" apiLink="http://www.myget.org/F/googleanalyticstracker/api/v2" blogID="" />
+		    	<api name="nuget-v2-push" preferred="true" apiLink="http://www.myget.org/F/googleanalyticstracker/api/v2/package" blogID="">
+				    <settings>
+				      <setting name="apiKey">abcdefghijkl</setting>
+				    </settings>
+		    	</api>
+		    	<api name="nuget-v1-packages" preferred="false" apiLink="http://www.myget.org/F/googleanalyticstracker/api/v1" blogID="" />
+		    </apis>
+	    </service>
+    </rsd>
 
 The following table describes the elements in the data format:
 
-<table>
+<table class="reference">
 <tr>
 <th>Element</th>
 <th>Description</th>
@@ -78,7 +72,7 @@ The following table describes the elements in the data format:
 <td>Optional: the URL to the website of the software on which the feed is running</td>
 </tr>
 <tr>
-<td>dc:identifier</td>
+<td><strong>dc:identifier</strong></td>
 <td><b>Required</b> - a globally unique URN/URL identifying he feed</td>
 </tr>
 <tr>
@@ -90,7 +84,7 @@ The following table describes the elements in the data format:
 <td>Optional: the creator of the feed</td>
 </tr>
 <tr>
-<td>dc:title</td>
+<td><strong>dc:title</strong></td>
 <td><b>Required</b> - feed name</td>
 </tr>
 <tr>
@@ -102,11 +96,11 @@ The following table describes the elements in the data format:
 <td>Optional: link to an HTML representation of the feed</td>
 </tr>
 <tr>
-<td><span style="padding-left:10px">apis</span></td>
+<td><strong>apis</strong></td>
 <td><b>Required</b> - a list of endpoints for the feed</td>
 </tr>
 <tr>
-<td><span style="padding-left:20px">name</span></td>
+<td><strong>api name</strong></td>
 <td>
 <b>Required</b> - the feed protocol used<br/><br/>
 Proposed values:<br/>
@@ -121,15 +115,15 @@ Note that this list can be extended at will (e.g. chocolatey-v1 or proget-v2). C
 </td>
 </tr>
 <tr>
-<td><span style="padding-left:20px">preferred</span></td>
+<td><strong>api preferred</strong></td>
 <td><b>Required</b> - is this the preferred endpoint to communicate with the feed?</td>
 </tr>
 <tr>
-<td><span style="padding-left:20px">apiLink</span></td>
+<td><strong>apiLink</strong></td>
 <td><b>Required</b> - the GET URL</td>
 </tr>
 <tr>
-<td><span style="padding-left:20px">blogID</span></td>
+<td><strong>blogID</strong></td>
 <td><b>Required</b> - for compatibility with RSD spec, not used: leave BLANK</td>
 </tr>
 </table>
@@ -150,7 +144,7 @@ All feeds that the requesting user has read access to should be returned. If the
 
 If the user is logged in, either controlled by basic authentication or using the `NuGet-ApiKey` HttpHeader, the server should return every feed the user has access to as well as feed specific settings such as API keys and so on. The PSD client can use these specifics to preconfigure the NuGet.config file on the user's machine.
 
-## Client / Consumer Implementation Guidelines
+## Client or Consumer Implementation Guidelines
 
 The client should respect the following flow of discovering feeds:
 
@@ -158,18 +152,16 @@ The client should respect the following flow of discovering feeds:
 * The PSD URL is accessed and downloaded. It can contain:
   * HTML containing a tag such as 
 
-	```html
-    <link rel="nuget" 
+	```<link rel="nuget" 
           type="application/rsd+xml" 
           title="GoogleAnalyticsTracker feed on MyGet" 
-          href="http://myget.org/discovery/feed/googleanalyticstracker"/>
-	```
+          href="http://myget.org/discovery/feed/googleanalyticstracker"/>```
 
 	This URL should be followed and the PSD manifest parsed. Note that multiple tags may exist and should all be parsed.
 	
   * HTML containing a tag such as
 
-	```html
+	```
     <link rel="nuget" 
     	  type="application/atom+xml" 
     	  title="WebMatrix Package Source" 
@@ -186,63 +178,61 @@ URLs specified in `<link rel="nuget"/>` tags can be absolute or relative.
 
 Depending on security, consuming an PSD manifest using the `NuGet-ApiKey` header or using basic authentication may yield additional endpoints and API settings. For example, MyGet produces the following manifest on an anonymous call to https://www.myget.org/Discovery/Feed/googleanalyticstracker:
 
-```xml
-<rsd version="1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns="http://archipelago.phrasewise.com/rsd">
-  <service>
-    <engineName>MyGet</engineName>
-    <engineLink>http://www.myget.org/</engineLink>
-    <dc:identifier>http://www.myget.org/F/googleanalyticstracker/</dc:identifier>
-    <dc:owner>maartenba</dc:owner>
-    <dc:creator>maartenba</dc:creator>
-    <dc:title>Staging feed for GoogleAnalyticsTracker</dc:title>
-    <dc:description>Staging feed for GoogleAnalyticsTracker</dc:description>
-    <homePageLink>http://www.myget.org/Feed/Details/googleanalyticstracker/</homePageLink>
-    <apis>
-      <api name="nuget-v2-packages" blogID="" preferred="true" apiLink="http://www.myget.org/F/googleanalyticstracker/" />
-      <api name="nuget-v1-packages" blogID="" preferred="false" apiLink="http://www.myget.org/F/googleanalyticstracker/api/v1/" />
-    </apis>
-  </service>
-</rsd>
-```
+    <rsd version="1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns="http://archipelago.phrasewise.com/rsd">
+	    <service>
+		    <engineName>MyGet</engineName>
+		    <engineLink>http://www.myget.org/</engineLink>
+		    <dc:identifier>http://www.myget.org/F/googleanalyticstracker/</dc:identifier>
+		    <dc:owner>maartenba</dc:owner>
+		    <dc:creator>maartenba</dc:creator>
+		    <dc:title>Staging feed for GoogleAnalyticsTracker</dc:title>
+		    <dc:description>Staging feed for GoogleAnalyticsTracker</dc:description>
+		    <homePageLink>http://www.myget.org/Feed/Details/googleanalyticstracker/</homePageLink>
+		    <apis>
+		    	<api name="nuget-v2-packages" blogID="" preferred="true" apiLink="http://www.myget.org/F/googleanalyticstracker/" />
+		    	<api name="nuget-v1-packages" blogID="" preferred="false" apiLink="http://www.myget.org/F/googleanalyticstracker/api/v1/" />
+		    </apis>
+	    </service>
+    </rsd>
 
 The authenticated version of https://www.myget.org/Discovery/Feed/googleanalyticstracker yields:
 
-```xml
-<rsd version="1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns="http://archipelago.phrasewise.com/rsd">
-  <service>
-    <engineName>MyGet</engineName>
-    <engineLink>http://www.myget.org/</engineLink>
-    <dc:identifier>http://www.myget.org/F/googleanalyticstracker/</dc:identifier>
-    <dc:owner>maartenba</dc:owner>
-    <dc:creator>maartenba</dc:creator>
-    <dc:title>Staging feed for GoogleAnalyticsTracker</dc:title>
-    <dc:description>Staging feed for GoogleAnalyticsTracker</dc:description>
-    <homePageLink>http://www.myget.org/Feed/Details/googleanalyticstracker/</homePageLink>
-    <apis>
-      <api name="nuget-v2-packages" blogID="" preferred="true" apiLink="http://www.myget.org/F/googleanalyticstracker/" />
-      <api name="nuget-v1-packages" blogID="" preferred="false" apiLink="http://www.myget.org/F/googleanalyticstracker/api/v1/" />
-      <api name="nuget-v2-push" blogID="" preferred="true" apiLink="http://www.myget.org/F/googleanalyticstracker/">
-        <settings>
-          <setting name="apiKey">530c14a6-6ce5-47d0-8f14-9daab627aa38</setting>
-        </settings>
-      </api>
-      <api name="symbols-v1-push" blogID="" preferred="true" apiLink="http://nuget.gw.symbolsource.org/MyGet/googleanalyticstracker">
-        <settings>
-          <setting name="apiKey">abcdefghijklmnop</setting>
-        </settings>
-      </api>
-    </apis>
-  </service>
-</rsd>
-```
+    <rsd version="1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns="http://archipelago.phrasewise.com/rsd">
+	    <service>
+		    <engineName>MyGet</engineName>
+		    <engineLink>http://www.myget.org/</engineLink>
+		    <dc:identifier>http://www.myget.org/F/googleanalyticstracker/</dc:identifier>
+		    <dc:owner>maartenba</dc:owner>
+		    <dc:creator>maartenba</dc:creator>
+		    <dc:title>Staging feed for GoogleAnalyticsTracker</dc:title>
+		    <dc:description>Staging feed for GoogleAnalyticsTracker</dc:description>
+		    <homePageLink>http://www.myget.org/Feed/Details/googleanalyticstracker/</homePageLink>
+		    <apis>
+		    	<api name="nuget-v2-packages" blogID="" preferred="true" apiLink="http://www.myget.org/F/googleanalyticstracker/" />
+		    	<api name="nuget-v1-packages" blogID="" preferred="false" apiLink="http://www.myget.org/F/googleanalyticstracker/api/v1/" />
+		    	<api name="nuget-v2-push" blogID="" preferred="true" apiLink="http://www.myget.org/F/googleanalyticstracker/">
+				    <settings>
+				      <setting name="apiKey">530c14a6-6ce5-47d0-8f14-9daab627aa38</setting>
+				    </settings>
+		    	</api>
+			    <api name="symbols-v1-push" blogID="" preferred="true" apiLink="http://nuget.gw.symbolsource.org/MyGet/googleanalyticstracker">
+				    <settings>
+				      <setting name="apiKey">abcdefghijklmnop</setting>
+				    </settings>
+			    </api>
+		    </apis>
+	    </service>		
+    </rsd>
 
-## Example Client / Consumer implementation
+## Example Client or Consumer implementation
 
 Example Client / Consumer implementations can be found in the [PackageSourceDiscovery][2] repository.
+
 * [A PowerShell CmdLet implementing the PSD spec][3]
 * [A NuGet.exe extension implementing the PSD spec][4]
 
 Note that these sample implementations support:
+
 * Querying HTML containing `<link rel="nuget"/>`
 * Querying RSD manifests
 * Querying NuGet feeds
@@ -259,6 +249,7 @@ This repository, including the PSD spec and clients, are licensed under the [Apa
 
 ## Comparing PSD with NuGet Feed Discovery (NFD)
 Another package source discovery specification exists, [NuGet Feed Discovery (NFD)][7]. NFD differs from PSD in that both specs have a different intent.
+
 * NFD is a convention-based API endpoint for listing feeds on a server
 * PSD is a means of discovering feeds from any URL given
 

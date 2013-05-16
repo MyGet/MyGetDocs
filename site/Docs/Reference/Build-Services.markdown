@@ -1,12 +1,17 @@
 # Build Services
 
-MyGet Build Services allows you to connect to three separate Source Control Repositories:
+MyGet Build Services allows you to connect to different types of source control systems:
+* Git
+* Mercurial (Hg)
+* Subversion
+
+Next to that, integration with several Source Control Repositories is available as well:
 
 * [GitHub](https://github.com/ "GitHub")
 * [BitBucket](https://bitbucket.org "BitBucket")
 * [CodePlex](http://www.codeplex.com/ "CodePlex")
 
-And once downloaded, the source code can then be built using a number of different methodologies.
+Once downloaded, source code can then be built using a number of different methodologies.
 
 <p class="info">
     <strong>NOTE:</strong> Although fully operational, MyGet Build Services is currently still in the Beta Stage.  While in Beta, you can't trigger a Build, manually or otherwise, faster then one every 5 minutes
@@ -17,11 +22,25 @@ And once downloaded, the source code can then be built using a number of differe
 
 Using MyGet Build Services, you have the opportunity to control exactly how your project gets built.  MyGet Build Services will scan the contents of your Source Control Repository looking for a file which it can work with.  In order of precedence, the following files are searched for:
 
-* build.bat
+* build.bat, build.cmd or build.ps1
 * MyGet.sln
 * Any other *.sln file
 * *.csproj (and *.vbproj, etc)
 * *.nuspec (yep, we support packaging simple [convention-based NuGet directories](http://docs.nuget.org/docs/creating-packages/creating-and-publishing-a-package#From_a_convention_based_working_directory "Convention Based Nuget Directories") as well)
+
+
+## AssemblyVersion patching
+
+When enabled for the build, MyGet Build Services will patch AssemblyVersion attributes in C# or VB.NET code.
+Two attributes will be patched: AssemblyVersion and AssemblyInformationalVersion.
+* The patched AssemblyVersion version is always in the form major.minor.revision.
+* The patched AssemblyInformationalVersion version supports semantic versioning and can be in the form major.minor.revision as well as major.minor.revision-prerelease.
+
+Patching of these attributes will occur whenever the feature is enabled, no matter which build process is used (solution, project or build.bat).
+
+## Pushing symbols
+
+By default, when symbols packages (*.sympols.nupkg) are created, MyGet Build Services will push symbols packages to [SymbolSource](http://www.symbolsource.org). When disabled for the build, nosymbols packages will be pushed.
 
 ## Available Environment Variables
 

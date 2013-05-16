@@ -14,7 +14,7 @@ Next to that, integration with several Source Control Repositories is available 
 Once downloaded, source code can then be built using a number of different methodologies.
 
 <p class="info">
-    <strong>NOTE:</strong> Although fully operational, MyGet Build Services is currently still in the Beta Stage.  While in Beta, you can't trigger a Build, manually or otherwise, faster then one every 5 minutes
+    <strong>Note:</strong> Although fully operational, MyGet Build Services is currently still in the Beta Stage.  While in Beta, you can't trigger a Build, manually or otherwise, faster then one every 5 minutes
 </p>
 
 

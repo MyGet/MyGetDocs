@@ -77,6 +77,21 @@ The credentials are encrypted (using DPAPI the same as your APIKey) and stored i
 
 For the package being installed, NuGet looks in the current package source (if specified, otherwise all). Regardless of wether a package source is specified or not, NuGet will look for the package's dependencies in all configured package sources.
 
+## What is the SLA for MyGet?
+
+We provide our service best-effort and [have achieved 99.9% availability or more during for months in row](http://status.myget.org/519401/history).
+Being hosted on Windows Azure, our level of availability is also subject to the levels [Microsoft provides us](http://www.windowsazure.com/en-us/support/legal/).
+
+## Where is my data?
+
+MyGet makes use of Microsoft's Windows Azure platform in the West Europe datacenter (primary) and North Europe datacenter (secondary).
+Withregards of data and privacy compliance, we are subject to the terms listed in the [Windows Azure Trust Center](http://www.windowsazure.com/en-us/support/trust-center/). We make use of Cloud Services, Storage and the Access Control Service.
+Windows Azure follows the [EU Data Protection Directive](http://www.windowsazure.com/en-us/support/trust-center/privacy/).
+
+## Is my data backed up?
+
+Yes! We run backups several times a week and retain weekly backups for 3 months. Data is backed up to our North Europe location.
+
 ## Are there any articles about MyGet out there?
 
 Sure! We have a lot of content available [on our blog](http://blog.myget.org).

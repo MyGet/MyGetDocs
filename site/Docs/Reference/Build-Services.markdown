@@ -45,6 +45,30 @@ Patching of these attributes will occur whenever the feature is enabled, no matt
 
 By default, when symbols packages (*.sympols.nupkg) are created, MyGet Build Services will push symbols packages to [SymbolSource](http://www.symbolsource.org). When disabled for the build, nosymbols packages will be pushed.
 
+## Supported project types and SDK's
+
+Build services supports the following frameworks and SDK’s:
+
+* .NET 2.0, .NET 3.0, .NET * 3.5, .NET 4.0 and ,NET 4.5
+* PCL support (2012)
+* Windows Azure SDK 1.7, 1.8, 20.0
+* Windows Identity Foundation SDK
+* Silverlight 4, Silverlight 5
+* TypeScript SDK
+* psake
+
+The following test runners are supported:
+
+* MsTest
+* MbUnit 2, MbUnit 3
+* NBehave
+* NUnit (up to 2.6.2)
+* xUnit.net
+* csUnit
+* RSpec
+
+We believe adding frameworks and SDK’s out-of-the-box provides a lot of value to our users and we want to continue investing in expanding the number of supported SDK’s.
+
 ## Available Environment Variables
 
 If you provide your own build.bat script or MyGet.sln, you can specifically instruct MyGet Build Services on how to act on your sources. This also means you'll need to take care of applying a version number to your build. That's why we provide you with the following set of parameters so you can benefit from using the version scheme you have already defined within the MyGet User Interface, as well as the build-counter attached to your build source. 

@@ -37,14 +37,16 @@
             @RenderBody()
             @if (Page.Source != null)
             {
+                <text>
                 <div class="pagesource-container">
                     <div class="pagesource">
                         Found an issue with the documentation on this page? We accept contributions!<br />
                         Read our <a href="http://docs.myget.org/docs/Contribute/Contributing-to-MyGet-Documentation">contribution guidance</a> or 
-                        edit this page's source on GitHub:     
-                        <a href="https://github.com/myget/MyGetDocs/tree/master/site/@HttpUtility.UrlPathEncode(Page.Source)" target="edit">https://github.com/myget/MyGetDocs/tree/master/site/@HttpUtility.UrlPathEncode(Page.Source)</a>
+                    edit this page's source on GitHub:     
+                    <a href="https://github.com/myget/MyGetDocs/tree/master/site/@HttpUtility.UrlPathEncode(Page.Source)" target="edit">https://github.com/myget/MyGetDocs/tree/master/site/@HttpUtility.UrlPathEncode(Page.Source)</a>
                     </div>
                 </div>
+                </text>
             }
         </div>
     </div>
@@ -56,11 +58,11 @@
                     <p>MyGet allows you to create and host your own NuGet feed. Include packages from the official NuGet feed or upload your own NuGet packages...</p>
                 </li>
                 <li>
-                    <a href="http://docs.nuget.org/docs/start-here/installing-nuget">Install</a>
+                    <a href="http://docs.nuget.org/docs/start-here/installing-nuget">Install NuGet</a>
                     <p>NuGet can be installed and updated using the Visual Studio Extension Manager. To check if your copy...</p>
                 </li>
                 <li>
-                    <a href="http://docs.nuget.org//docs/start-here/videos">Videos</a>
+                    <a href="http://docs.nuget.org/docs/start-here/videos">Videos</a>
                     <p>Watch screencasts and presentations about anything and everything NuGet.</p>
                 </li>
                 <li>

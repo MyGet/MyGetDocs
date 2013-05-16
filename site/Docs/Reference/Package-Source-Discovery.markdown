@@ -4,17 +4,17 @@
     <strong>NOTE:</strong> You can contribute or comment on this specification on the GitHub repository at <a href="https://github.com/myget/PackageSourceDiscovery" target="_blank">https://github.com/myget/PackageSourceDiscovery</a>.
 </p>
 
-NuGet Package Source Discovery (PSD) allows for NuGet-based clients tools to discover the feeds that are hosted by a user or organization by using the blog or website URL.
+NuGet Package Source Discovery (PSD) allows for NuGet-based client tools to discover the feeds that are hosted by a user, or organization, by using, for instance a blog, any website URL.
 
 NuGet Package Source Discovery is an attempt to remove friction from the following scenarios:
 
 * An individual user may have several NuGet feeds spread across the Internet. Some may be on NuGet.org (including curated feeds), some on MyGet and maybe some on my corporate network. How do I easily point my Visual Studio to all my feeds accross different machines? And how do I maintain this configuration?
-* An organization may have several feeds internally as well as one on MyGet and some CI packages on TeamCity. How can this organization tell his developers what feeds they can/should use?
+* An organization may have several feeds internally, as well as one on MyGet, and some CI packages on TeamCity. How can this organization tell a developer what feeds they can/should use?
 * An organization may have a NuGet server containing multiple feeds. How will developers in this organization get a list of available feeds and services?
 
 For all  scenarios, a simple feed discovery mechanism could facilitate this. Such feed discovery mechanism could be any URL out there (even multiple per host).
 
-As an example, we've implemented the above. Open Visual Studio and open any solution. Then issue the following in the Package Manager Console:
+In order to make MyGet Gallery Feeds more discoverable, the MyGet Team have implemented the Package Source Discovery Specification on the MyGet Gallery page. To see this in action, open Visual Studio and open any solution.  Then, using the Package Manager Console, type the following commands:
 
     Install-Package DiscoverPackageSources
     Discover-PackageSources -Url "http://www.myget.org/gallery"
@@ -27,9 +27,9 @@ A PSD request is an HTTP GET to a URL with optional authentication and an option
 
 ## Response
 
-The response will be an XML document following the **Really Simple Discovery** (RSD) RFC as described on https://github.com/danielberlinger/rsd. Since not all required metadata can be obtained from the RSD format, the [Dublin Core schema](http://dublincore.org/documents/2012/06/14/dcmi-terms/?v=elements) is present in the PSD response as well.
+The response will be an XML document following the **Really Simple Discovery** (RSD) RFC as described on [https://github.com/danielberlinger/rsd](https://github.com/danielberlinger/rsd "RSD Specification"). Since not all required metadata can be obtained from the RSD format, the [Dublin Core schema](http://dublincore.org/documents/2012/06/14/dcmi-terms/?v=elements) is present in the PSD response as well.
 
-Vendors and open source projects are allowed to add their own schema to the PSD discovery document however the manifest described below should be respected at all times.
+Vendors and open source projects are allowed to add their own schema to the PSD discovery document however, the manifest described below should be respected at all times.
 
 An example manifest could be:
 
@@ -172,7 +172,7 @@ The client should respect the following flow of discovering feeds:
 	
 * If the URL directly points to a NuGet Package Source Discovery Manifest, we can immediately parse it.
 
-The client should support entry of a complete PSD URL `<protocol>://<host name>:<port>/<path>` but require only that the host name be entered. When less than a full URL is entered, the client should verify if the host returns a PSD manifest or contains a `<link rel="nuget"/>` tag.
+The client should support entry of a complete PSD URL `<protocol>://<host name>:<port>/<path>`, but require only that the host name be entered. When less than a full URL is entered, the client should verify if the host returns a PSD manifest or contains a `<link rel="nuget"/>` tag.
 
 URLs specified in `<link rel="nuget"/>` tags can be absolute or relative.
 

@@ -36,8 +36,8 @@ When enabled for the build, MyGet Build Services will patch AssemblyVersion attr
 
 Two attributes will be patched: AssemblyVersion and AssemblyInformationalVersion.
 
-* The patched AssemblyVersion version is always in the form major.minor.revision. A package version 1.0.0 as well as 1.0.0-pre will yield an AssemblyVersion of 1.0.0.
-* The patched AssemblyInformationalVersion version supports semantic versioning and can be in the form major.minor.revision as well as major.minor.revision-prerelease.
+* The patched AssemblyVersion version is always in the form major.minor.patch. A package version 1.0.0 as well as 1.0.0-pre will yield an AssemblyVersion of 1.0.0.
+* The patched AssemblyInformationalVersion version supports semantic versioning and can be in the form major.minor.patch as well as major.minor.patch-prerelease.
 
 Patching of these attributes will occur whenever the feature is enabled, no matter which build process is used (solution, project or build.bat).
 

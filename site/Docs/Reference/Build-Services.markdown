@@ -49,11 +49,12 @@ By default, when symbols packages (*.sympols.nupkg) are created, MyGet Build Ser
 
 Build services supports the following frameworks and SDK’s:
 
-* .NET 2.0, .NET 3.0, .NET * 3.5, .NET 4.0 and ,NET 4.5
+* .NET 2.0, .NET 3.0, .NET 3.5, .NET 4.0 and ,NET 4.5
 * PCL support (2012)
 * Windows Azure SDK 1.7, 1.8, 20.0
 * Windows Identity Foundation SDK
 * Silverlight 4, Silverlight 5
+* Windows Phone 7.1 SDK, Windows Phone 8 SDK
 * TypeScript SDK
 * psake
 

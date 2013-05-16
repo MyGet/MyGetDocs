@@ -32,10 +32,11 @@ Using MyGet Build Services, you have the opportunity to control exactly how your
 
 ## AssemblyVersion patching
 
-When enabled for the build, MyGet Build Services will patch AssemblyVersion attributes in C# or VB.NET code.
+When enabled for the build, MyGet Build Services will patch AssemblyVersion attributes in C# and VB.NET code. We are using Roslyn as the engine for parsing and updating attribute values. This approach is much more reliable than the regular expression based approaches most build systems use.
+
 Two attributes will be patched: AssemblyVersion and AssemblyInformationalVersion.
 
-* The patched AssemblyVersion version is always in the form major.minor.revision.
+* The patched AssemblyVersion version is always in the form major.minor.revision. A package version 1.0.0 as well as 1.0.0-pre will yield an AssemblyVersion of 1.0.0.
 * The patched AssemblyInformationalVersion version supports semantic versioning and can be in the form major.minor.revision as well as major.minor.revision-prerelease.
 
 Patching of these attributes will occur whenever the feature is enabled, no matter which build process is used (solution, project or build.bat).

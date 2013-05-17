@@ -1,1 +1,5 @@
-﻿How To Articles for MyGet
+﻿Register MyGet Feeds in Visual Studio
+Add new owner to a feed
+Auto trigger a MyGet Build using an HTTP POST Hook URL
+Make use of nuget within your build scripts
+Make use of psake within your build scripts

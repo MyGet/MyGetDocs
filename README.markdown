@@ -38,13 +38,14 @@ Open source contributions - and especially documentation contributions - deserve
 	</tr>
 	<tr>
 		<td>@gep13</td>
-		<td>4</td>
+		<td>5</td>
 		<td>
 			<ul>
 				<li>Issue #1: How to: use %nuget% in build scripts</li>
 				<li>Issue #10: How to: Use psake in your build scripts</li>
 				<li>Issue #13: How to: auto-trigger MyGet build services using POST hook URL</li>
 				<li>Issue #20: Build Services Reference page</li>
+				<li>Issue #21: How to: add a feed owner</li>
 			</ul>
 		</td>
 	</tr>

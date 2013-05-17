@@ -47,7 +47,7 @@ By default, when symbols packages (*.sympols.nupkg) are created, MyGet Build Ser
 
 ## Supported project types and SDK's
 
-Build services supports the following frameworks and SDK’s:
+Build services supports the following frameworks and SDK's:
 
 * .NET 2.0, .NET 3.0, .NET 3.5, .NET 4.0 and ,NET 4.5
 * PCL support (2012)
@@ -68,7 +68,7 @@ The following test runners are supported:
 * csUnit
 * RSpec
 
-We believe adding frameworks and SDK’s out-of-the-box provides a lot of value to our users and we want to continue investing in expanding the number of supported SDK’s.
+We believe adding frameworks and SDK's out-of-the-box provides a lot of value to our users and we want to continue investing in expanding the number of supported SDK's.
 
 ## Available Environment Variables
 

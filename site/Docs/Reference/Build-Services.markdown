@@ -132,5 +132,9 @@ If you provide your own build.bat script or MyGet.sln, you can specifically inst
     	    <td><strong>%EnableNuGetPackageRestore%</strong></td>
     	    <td>NuGet package restore enabled? Always true.</td>
     	</tr>
+    	<tr>
+    	    <td><strong>%GallioEcho%</strong></td>
+    	    <td>Path to the Gallio.Echo.exe test runner</td>
+    	</tr>
 	</tbody>
 </table>

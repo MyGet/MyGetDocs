@@ -13,6 +13,8 @@ The following build.bat executes several steps:
 * Compile the solution using msbuild
 * Create NuGet packages for specific projects in the solution, also creating symbols packages. Package version will come from %PackageVersion% environment variable, if set.
 
+build.bat:
+
     @echo Off
     set config=%1
     if "%config%" == "" (
@@ -38,6 +40,8 @@ The following build.bat executes several steps:
 
 * Compile the solution using msbuild
 * Create a single NuGet package containing all referenced projects, also creating symbols packages. Package version will come from %PackageVersion% environment variable, if set.
+
+build.bat:
 
     @echo Off
     set config=%1
@@ -66,6 +70,8 @@ The following build.bat executes several steps:
 * Create a single NuGet package containing all referenced projects, also creating symbols packages. Package version will come from %PackageVersion% environment variable, if set.
 
 This build.bat also verifies error level after every step and reports build success/failure back to MyGet.
+
+build.bat:
 
     @echo Off
     set config=%1
@@ -106,6 +112,8 @@ The following build.bat executes several steps:
 * Create a single NuGet package containing all referenced projects, also creating symbols packages. Package version will come from %PackageVersion% environment variable, if set.
 
 This build.bat also verifies error level after every step and reports build success/failure back to MyGet.
+
+build.bat:
 
     @echo Off
     set config=%1
@@ -148,6 +156,8 @@ The following build.bat executes several steps:
 * Create NuGet packages for specific projects in the solution, also creating symbols packages. Package version will come from %PackageVersion% environment variable, if set.
 
 Note that the nuget.exe used is provided by the project itself through its source control, hence the calls to .nuget\nuget.exe.
+
+build.bat:
 
     @echo Off
     set config=%1

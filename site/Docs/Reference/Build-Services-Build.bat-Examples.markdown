@@ -39,7 +39,7 @@ build.bat:
 The following build.bat executes several steps:
 
 * Compile the solution using msbuild
-* Create a single NuGet package containing all referenced projects, also creating symbols packages. Package version will come from %PackageVersion% environment variable, if set.
+* Create a single NuGet package containing all referenced projects. Package version will come from %PackageVersion% environment variable, if set.
 
 build.bat:
 
@@ -59,7 +59,7 @@ build.bat:
 
     REM Package
     mkdir Build
-	cmd /c %nuget% pack "YourSolution\ProjectA.csproj" -IncludeReferencedProjects -symbols -o Build -p Configuration=%config% %version%
+	cmd /c %nuget% pack "YourSolution\ProjectA.csproj" -IncludeReferencedProjects -o Build -p Configuration=%config% %version%
 	
 ## build.bat manually running unit tests using default test runner
 

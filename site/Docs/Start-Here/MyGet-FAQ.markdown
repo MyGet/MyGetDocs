@@ -77,9 +77,9 @@ The credentials are encrypted (using DPAPI the same as your APIKey) and stored i
 
 For the package being installed, NuGet looks in the current package source (if specified, otherwise all). Regardless of wether a package source is specified or not, NuGet will look for the package's dependencies in all configured package sources.
 
-# Can I push packages without listing them?
+## Can I push packages without listing them?
 
-Yes, you can. In earlier NuGet clients, it was possible to push a package to a NuGet server without publishing it. Later NuGet clients no longer support this scenario using one command. However by using both the `push` command followed by `delete`, this behaviour can be mimicked with later clients.
+**Yes, you can.** In earlier NuGet clients, it was possible to push a package to a NuGet server without publishing it. Later NuGet clients no longer support this scenario using one command. However by using both the `push` command followed by `delete`, this behaviour can be mimicked with later clients.
 
     nuget push MyPackage-1.0.nupkg -Source <feed> <apikey>
 	nuget delete MyPackage 1.0 -Source <feed> <apikey>

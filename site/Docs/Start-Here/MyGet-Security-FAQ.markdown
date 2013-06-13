@@ -4,7 +4,7 @@ MyGet supports a lot of scenarios based on a set of configurable privileges. We 
 
 ## User Permissions
 
-MyGet features a rich security model around your feeds. You, as a feed owner, always have the richest set of permissions possible. You can assign privileges to specific users also known on MyGet as well as to the anonymous “Everyone” user.
+MyGet features a rich security model around your feeds. You, as a feed owner, always have the richest set of permissions possible. You can assign privileges to specific users on MyGet using their email address or username.
 
 The table below lists all possible permissions and their meaning:
 
@@ -22,77 +22,40 @@ The table below lists all possible permissions and their meaning:
             <td style="vertical-align: top;">Owns the feed</td>
             <td>Can only be assigned to the feed owner.<br />Can manage this feed, its users and its packages.</td>
             <td style="text-align:center;vertical-align: middle">yes</td>
-            <td style="text-align:center;vertical-align: middle">no*</td>
+            <td style="text-align:center;vertical-align: middle">no</td>
         </tr>
         <tr>
             <td style="vertical-align: top;">Can manage users and all packages for this feed</td>
             <td>Can be assigned to any registered MyGet user.<br />Allows the user to manage all packages and all user permissions on the feed.</td>
             <td style="text-align:center;vertical-align: middle">yes</td>
-            <td style="text-align:center;vertical-align: middle">no*</td>
+            <td style="text-align:center;vertical-align: middle">no</td>
         </tr>
         <tr>
             <td style="vertical-align: top;">Can manage all packages for this feed</td>
             <td>Can be assigned to any registered MyGet user.<br />Allows the user to manage all packages on the feed.</td>
             <td style="text-align:center;vertical-align: middle">yes</td>
-            <td style="text-align:center;vertical-align: middle">no*</td>
+            <td style="text-align:center;vertical-align: middle">no</td>
         </tr>
         <tr>
             <td style="vertical-align: top;">Can contribute own packages to this feed</td>
             <td>Can be assigned to any registered MyGet user.<br />Allows the user to publish packages on the feed.<br /><br />Users with this privilege will only be able to manage their own packages. This security setting is identical to the security settings on the official NuGet package source.</td>
             <td style="text-align:center;vertical-align: middle">yes</td>
-            <td style="text-align:center;vertical-align: middle">no*</td>
+            <td style="text-align:center;vertical-align: middle">no</td>
         </tr>
         <tr>
             <td style="vertical-align: top;">Can consume this feed</td>
             <td>Can be assigned to any registered MyGet user as well as anonymous users.<br />Allows the user to consume packages.</td>
             <td style="text-align:center;vertical-align: middle">no</td>
-            <td style="text-align:center;vertical-align: middle">no*</td>
+            <td style="text-align:center;vertical-align: middle">no</td>
         </tr>
         <tr>
             <td style="vertical-align: top;">Has no access to the feed</td>
             <td>Can be assigned to any registered MyGet user as well as anonymous users.<br />Denies access to the feed.</td>
             <td style="text-align:center;vertical-align: middle">N/A</td>
-            <td style="text-align:center;vertical-align: middle">yes*</td>
+            <td style="text-align:center;vertical-align: middle">yes</td>
         </tr>
     </tbody>
-    <tfoot>
-        <tr>
-            <td colspan="4" style="font-size: 0.9em;">* Unless <i>&quot;Everyone&quot;</i> is assigned the <i>&quot;Has no access to the feed&quot;</i> privilege</td>
-        </tr>
-    </tfoot>
 </table>
-
-## Private Feeds
-
-All of these privileges can be combined at will to create your unique security configuration.
-
-A common scenario is the so-called <i>&quot;private feed&quot;</i> scenario, where you want to create a private feed to which only you can add and consume packages.
-
-Configuring this one is easy and consists of the following list of privileges configured:
-
-* **You** –  Owns this feed (this can not be changed)
-* **Everyone** – Has no access to this feed
-
-Now imagine you want to keep these settings and want to give some colleagues the privilege to consume packages *after authenticating* using their MyGet username and password. 
- 
-The following configuration should do the trick:
-
-* **You** – Owns this feed (this can not be changed)
-* **Colleague X** – Can consume this feed
-* **Colleague Y** – Can consume this feed
-* **Everyone** - Has no access to this feed
-
-If you want to allow &quot;Colleague X&quot; to manage all packages on this feed, you can assign him. 
-Optionally, the <i>&quot;Can manage users and all packages for this feed&quot;</i> privilege will enable him to manage user permisisons as well.
-
-## Simulate the official NuGet.org feed
-
-Another interesting scenario may be simulating the official NuGet package source: everyone can publish and manage their own packages on the feed while everyone can consume every other user’s packages.
-
-This can be easily configured using the following permission set:
-
-* **You** –  Owns this feed (this can not be changed)
-* **Everyone** – Can contribute own packages to this feed
 
 ## Inviting other users to your feed
 

@@ -26,13 +26,13 @@ The table below lists all possible permissions and their meaning:
         </tr>
         <tr>
             <td style="vertical-align: top;">Can manage users and all packages for this feed</td>
-            <td>Can be assigned to any registered MyGet user.<br />Allows the user to manage all packages and all user permissions on the feed.</td>
+            <td>Allows the user to manage all packages and all user permissions on the feed. Similar to "Owns the feed" except that deleting the feed is not permitted.</td>
             <td style="text-align:center;vertical-align: middle">yes</td>
             <td style="text-align:center;vertical-align: middle">no</td>
         </tr>
         <tr>
             <td style="vertical-align: top;">Can manage all packages for this feed</td>
-            <td>Can be assigned to any registered MyGet user.<br />Allows the user to manage all packages on the feed.</td>
+            <td>Allows the user to manage all packages on the feed.</td>
             <td style="text-align:center;vertical-align: middle">yes</td>
             <td style="text-align:center;vertical-align: middle">no</td>
         </tr>

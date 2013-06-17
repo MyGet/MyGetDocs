@@ -38,19 +38,19 @@ The table below lists all possible permissions and their meaning:
         </tr>
         <tr>
             <td style="vertical-align: top;">Can contribute own packages to this feed</td>
-            <td>Can be assigned to any registered MyGet user.<br />Allows the user to publish packages on the feed.<br /><br />Users with this privilege will only be able to manage their own packages. This security setting is identical to the security settings on the official NuGet package source.</td>
+            <td>Allows the user to publish packages on the feed.<br /><br />Users with this privilege will only be able to manage their own packages. This security setting is identical to the security settings on the official NuGet package source.</td>
             <td style="text-align:center;vertical-align: middle">yes</td>
             <td style="text-align:center;vertical-align: middle">no</td>
         </tr>
         <tr>
             <td style="vertical-align: top;">Can consume this feed</td>
-            <td>Can be assigned to any registered MyGet user as well as anonymous users.<br />Allows the user to consume packages.</td>
+            <td>Allows the user to consume packages.</td>
             <td style="text-align:center;vertical-align: middle">no</td>
             <td style="text-align:center;vertical-align: middle">no</td>
         </tr>
         <tr>
             <td style="vertical-align: top;">Has no access to the feed</td>
-            <td>Can be assigned to any registered MyGet user as well as anonymous users.<br />Denies access to the feed.</td>
+            <td>Denies access to the feed.</td>
             <td style="text-align:center;vertical-align: middle">N/A</td>
             <td style="text-align:center;vertical-align: middle">yes</td>
         </tr>

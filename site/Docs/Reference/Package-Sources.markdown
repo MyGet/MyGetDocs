@@ -4,6 +4,8 @@ Package sources play a key role in the MyGet Build Services workflow. By default
 
 These upstream package sources allow you to reference or mirror packages onto your own feed. It also allows you to easily push packages from your feed to the the upstream package source, given you configured your API key in the package source configuration.
 
+Another scenario for package sources is making MyGet your only NuGet feed. By forwarding package searches and proxying upstream packages, your MyGet feed is a one-stop feed for all packages you are using in your projects.
+
 ## Adding a package source
 To configure a package source for your MyGet feed, navigate to the feed settings and browse the *Package Sources* tab. Then click *Add Package Source*.
 
@@ -28,3 +30,20 @@ Another major scenario made possible by using package sources is the *package pr
 Choose the package you want to promote and with a click of a button you can push it upstream. A dialog will provide you with additional options, e.g. configure the package version to be used upstream.
 
 ![Push Package Upstream](Images/push_package_upstream.png)
+
+## Scenario: Proxying upstream feeds and packages
+One use case for MyGet is to create your own NuGet feed on MyGet and upload your own packages to that hosted feed. MyGet can also be used as the central NuGet feed in your development team, including your own packages and proxying search results and packages from an upstream package source.
+
+![Proxy upstream feed](Images/proxy-schema.png)
+
+When creating a package source, two options are available:
+
+![Proxy settings](Images/proxy-settings.png)
+
+These options will do the following:
+
+* **Include packages from the package source in search results**: the upstream package source will be searched and packages that match the search will be displayed when consuming the feed from Visual Studio. Packages from the upstream source can be installed into a project but will be downloaded from the upstream package source.
+
+* **Automatically add downloaded upstream packages to the current feed**: when the above option is enabled, packages that are downloaded will automatically be mirrored on your feed, ensuring the package is available all the time (even when the upstream package source experiences an outage).
+
+Enabling both options will ensure that the MyGet feed is always up-to-date with the packages you are consuming in your organization.

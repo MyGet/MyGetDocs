@@ -1,5 +1,5 @@
 # Make MyGet list and automatically mirror packages from other feeds
-Many teams like to make MyGet the only feed that they use. Developers can upload their own packages to that hosted feed and consume them from Visual Studio or a build server. MyGet can also proxy search results and packages from an upstream package source, making management of feeds in a team much easier.
+Many teams like to make MyGet the only feed that they use. Developers can upload their own packages to that hosted feed and consume them from Visual Studio or a build server. MyGet can also proxy search results and packages from an [upstream package source](http://docs.myget.org/docs/reference/package-sources), making management of feeds in a team much easier.
 
 ![Proxy upstream feed](Images/proxy-schema.png)
 

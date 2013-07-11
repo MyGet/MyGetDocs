@@ -42,15 +42,26 @@ The following 6 steps provide information about how to use the MyGet HTTP POST H
 
 1. Log into Bitbucket and navigate to the repository that is to be configured  
 2. In the right hand corner of the page, click the __Settings__ button  
-![The Project Settings button within your GitHub Repository](Images/bitbucket_hook_settings_button.png)  
+![The Project Settings button within your BitBucket Repository](Images/bitbucket_hook_settings_button.png)  
 3. Within the Settings page, click on the __Services__ link, located down the left hand side of the page  
-![The Service Hooks button within your GitHub Project Settings](Images/bitbucket_hook_service_hooks_button.png)  
-4. Within the Service page, find the POST option within the __Select a service...__ drop down list, and click the __Add Service__ button  
-![The WebHook URLs link within Service Hooks for your GitHub Project](Images/bitbucket_hook_webhook_dropdown.png)  
+![The Service Hooks button within your BitBucket Project Settings](Images/bitbucket_hook_service_hooks_button.png)  
+4. Within the Services page, find the POST option within the __Select a service...__ drop down list, and click the __Add Service__ button  
+![The WebHook URLs link within Service Hooks for your BitBucket Project](Images/bitbucket_hook_webhook_dropdown.png)  
 5. Using the form that appears, paste in the HTTP POST Hook URL that was copied from MyGet above into the __URL__ field and click the __Save__ button  
-![Adding a new WebHook URL to your GitHub Project](Images/bitbucket_hook_add_webhook_url.png)  
+![Adding a new WebHook URL to your BitBucket Project](Images/bitbucket_hook_add_webhook_url.png)  
 6. At this point in time, there is no automatic way of testing to ensure that the URL that you have entered works correctly.  In order to achieve this though, you can follow the [Troubleshooting Bitbucket Service](https://confluence.atlassian.com/display/BITBUCKET/Troubleshooting+Bitbucket+Services "Troubleshooting Bitbucket Services") page on the Atlassian Wiki.  In addition, make sure to add comments on the [issue that has been raised](https://bitbucket.org/site/master/issue/4667/add-ability-to-test-services-bb-5436 "Bitbucket Issue for adding ability to test Services") to add this feature to Bitbucket to show that it is popular.
 
 ## Setting up CodePlex
 
-At this time, there is no way to configure an HTTP POST from a project that is hosted on CodePlex.
+The following 6 steps provide information about how to use the MyGet HTTP POST Hook URL within a CodePlex project.
+
+1. Log into CodePlex and navigate to the project that is to be configured  
+2. In the right hand corner of the page, click the __Settings__ link  
+![The Project Settings button within your CodePlex project](Images/codeplex_hook_settings_button.png)  
+3. Within the Settings page, click on the __Services__ link, located at the top of the page  
+![The Service Hooks button within your CodePlex Project Settings](Images/codeplex_hook_service_hooks_button.png)  
+4. Within the Services page, click the __AppHarbor__ option on the left (yes, this is a trick)
+![The AppHarbor service for your CodePlex Project](Images/codeplex_appharbor_hook.png)  
+5. Using the form that appears, check the __Enable code change events__ option and paste in the HTTP POST Hook URL that was copied from MyGet above into the __URL__ field and click the __Save__ button  
+![Adding a new WebHook URL to your CodePlex Project](Images/codeplex_hook_add_webhook_url.png)  
+6. At this point in time, there is no automatic way of testing to ensure that the URL that you have entered works correctly other than commiting code to your CodePlex repository.

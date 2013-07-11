@@ -60,7 +60,7 @@ The following 6 steps provide information about how to use the MyGet HTTP POST H
 ![The Project Settings button within your CodePlex project](Images/codeplex_hook_settings_button.png)  
 3. Within the Settings page, click on the __Services__ link, located at the top of the page  
 ![The Service Hooks button within your CodePlex Project Settings](Images/codeplex_hook_service_hooks_button.png)  
-4. Within the Services page, click the __AppHarbor__ option on the left (yes, this is a trick)
+4. Within the Services page, click the __AppHarbor__ option on the left (yes, this is a trick)  
 ![The AppHarbor service for your CodePlex Project](Images/codeplex_appharbor_hook.png)  
 5. Using the form that appears, check the __Enable code change events__ option and paste in the HTTP POST Hook URL that was copied from MyGet above into the __URL__ field and click the __Save__ button  
 ![Adding a new WebHook URL to your CodePlex Project](Images/codeplex_hook_add_webhook_url.png)  

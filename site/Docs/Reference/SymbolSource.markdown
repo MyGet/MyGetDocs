@@ -43,3 +43,28 @@ MyGet keeps the following in sync with SymbolSource:
 * Feed permissions
 
 This means that if you give a user access to a feed you own, the same persmission set will apply to SymbolSource. If a user gets read-only access to a feed, he will also get read-only access to the symbols. When permissions for a user are revoked on MyGet, they will also be revoked on SymbolSource.
+
+## Quick command cheatsheet
+
+Here's a quick cheatsheet of the commands related to symbol feeds:
+
+* Storing your nuget.org key, which also enables pushing to symbolsource.org:
+```nuget.exe setapikey <nuget-key>```
+
+* Storing your myget.org key:
+```nuget.exe setapikey <myget-key> -Source https://www.myget.org/F/<feed-name>```
+
+* Storing your myget.org key for symbolsource.org (this one you need to do explicitly):
+```nuget.exe setapikey <myget-key> -Source https://nuget.gw.symbolsource.org/MyGet/<feed-name>```
+
+* Pushing a package to nuget.org (a symbol package will be detected and pushed to symbolsource.org automatically):
+``nuget.exe push <package-file>```
+
+* Pushing a symbol package to symbolsource.org explicitly (if you want to test it first):
+```nuget.exe push <package-file> -Source https://nuget.gw.symbolsource.org/Public/NuGet```
+
+* Pushing a package to myget.org:
+```nuget.exe push <package-file> -Source https://nuget.gw.symbolsource.org/MyGet/<feed-name>```
+
+* Pushing a symbol package to symbolsource.org:
+```nuget.exe push <package-file> -Source https://nuget.gw.symbolsource.org/MyGet/<feed-name>```

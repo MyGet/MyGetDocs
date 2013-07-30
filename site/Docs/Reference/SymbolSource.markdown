@@ -9,7 +9,8 @@ With [NuGet.org](http://www.nuget.org), the NuGet client automatically recognize
 The publish workflow to publish the SamplePackage.1.0.0.nupkg to a MyGet feed, including symbols, would be issuing the following two commands from the console:
 
 ```
-nuget push SamplePackage.1.0.0.nupkg 00000000-0000-0000-0000-00000000000 -Source http://www.myget.org/F/somefeed/api/v1 
+nuget push SamplePackage.1.0.0.nupkg 00000000-0000-0000-0000-00000000000 -Source http://www.myget.org/F/somefeed/api/v1
+
 nuget push SamplePackage.1.0.0.Symbols.nupkg 00000000-0000-0000-0000-00000000000 -Source http://nuget.gw.SymbolSource.org/MyGet/somefeed
 ```
 
@@ -19,7 +20,7 @@ nuget push SamplePackage.1.0.0.Symbols.nupkg 00000000-0000-0000-0000-00000000000
 
 ## Consuming symbol packages in Visual Studio
 
-When logging in to MyGet, you can find the symbols URL compatible with Visual Studio under the Feed Details tab for your MyGet feed. This URL will be the same for all feeds you are allowed to consume, so no need to configure 10+ symbol servers in Visual Studio. Here’s how to configure it.
+When logging in to MyGet, you can find the symbols URL compatible with Visual Studio under the Feed Details tab for your MyGet feed. This URL will be the same for all feeds you are allowed to consume, so no need to configure 10+ symbol servers in Visual Studio. Here's how to configure it.
 
 First of all, Visual Studio typically will only debug your own source code, the source code of the project or projects that are currently opened in Visual Studio. To disable this behavior and to instruct Visual Studio to also try to debug code other than the projects that are currently opened, open the Options dialog (under the menu Tools > Options). Find the Debugging node on the left and click the General node underneath. Turn off the option Enable Just My Code. Also turn on the option Enable source server support. This usually triggers a warning message but it is safe to just click Yes and continue with the settings specified.
 
@@ -36,6 +37,7 @@ Keep the Options dialog opened and find the Symbols node under the Debugging nod
 Each MyGet user and feed automatically gets its counterpart on SymbolSource, so you don't need to do anything apart from checking out the feed details page to discover what your push URL for symbol packages is and how to configure Visual Studio to download PDBs from your repositories. Your account's API key will enable you to push to both MyGet and SymbolSource, just as with NuGet.
 
 MyGet keeps the following in sync with SymbolSource:
+
 * Users
 * User API keys
 * User passwords
@@ -52,19 +54,25 @@ Here's a quick cheatsheet of the commands related to symbol feeds:
 ```nuget.exe setapikey <nuget-key>```
 
 * Storing your myget.org key:
+
 ```nuget.exe setapikey <myget-key> -Source https://www.myget.org/F/<feed-name>```
 
 * Storing your myget.org key for symbolsource.org (this one you need to do explicitly):
+
 ```nuget.exe setapikey <myget-key> -Source https://nuget.gw.symbolsource.org/MyGet/<feed-name>```
 
 * Pushing a package to nuget.org (a symbol package will be detected and pushed to symbolsource.org automatically):
+
 ``nuget.exe push <package-file>```
 
 * Pushing a symbol package to symbolsource.org explicitly (if you want to test it first):
+
 ```nuget.exe push <package-file> -Source https://nuget.gw.symbolsource.org/Public/NuGet```
 
 * Pushing a package to myget.org:
+
 ```nuget.exe push <package-file> -Source https://nuget.gw.symbolsource.org/MyGet/<feed-name>```
 
 * Pushing a symbol package to symbolsource.org:
+
 ```nuget.exe push <package-file> -Source https://nuget.gw.symbolsource.org/MyGet/<feed-name>```

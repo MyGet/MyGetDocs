@@ -94,7 +94,7 @@ Being hosted on Windows Azure, our level of availability is also subject to the 
 ## Where is my data?
 
 MyGet makes use of Microsoft's Windows Azure platform in the West Europe datacenter (primary) and North Europe datacenter (secondary).
-Withregards of data and privacy compliance, we are subject to the terms listed in the [Windows Azure Trust Center](http://www.windowsazure.com/en-us/support/trust-center/). We make use of Cloud Services, Storage and the Access Control Service.
+With regards of data and privacy compliance, we are subject to the terms listed in the [Windows Azure Trust Center](http://www.windowsazure.com/en-us/support/trust-center/). We make use of Cloud Services, Storage and the Access Control Service.
 Windows Azure follows the [EU Data Protection Directive](http://www.windowsazure.com/en-us/support/trust-center/privacy/).
 
 ## Is my data backed up?

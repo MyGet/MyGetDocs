@@ -13,7 +13,7 @@ The publish workflow to publish the SamplePackage.1.0.0.nupkg to a MyGet feed, i
 
 <p class="info">
     <strong>Note:</strong> MyGet and SymbolSource share the feed's API key which can be found on the feed's details page. The same is true for passwords. If you modify your <a href="https://www.myget.org/profile/Me#!/Edit">MyGet profile</a> and update the password, you'll be able to <a href="https://www.SymbolSource.org/MyGet/Account/LogIn">log in to SymbolSource</a> as well.
-	<br /><br /><em>Troubleshiooting tip: if login at SymbolSource.org fails, update your password on MyGet to re-synchronize the connection with SymbolSource</em>
+	<br /><br /><em>Troubleshooting tip: if login at SymbolSource.org fails, update your password on MyGet to re-synchronize the connection with SymbolSource</em>
 </p>
 
 ## Consuming symbol packages in Visual Studio

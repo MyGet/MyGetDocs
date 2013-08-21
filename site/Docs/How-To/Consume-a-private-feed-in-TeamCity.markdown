@@ -16,7 +16,7 @@ In older versions of TeamCity, two additional buildsteps can be added. One right
 
 The following command line should be run before consuming the feed:
 
-	nuget sources add -Name <some name for the feed> -Url <feed URL> -Username <username> -Password <password>
+	nuget sources add -Name <some name for the feed> -Source <feed URL> -Username <username> -Password <password>
 
 After consuming the build: (do note that you want to run this step regardless of the build status of previous steps)
 

@@ -23,6 +23,7 @@ Once downloaded, source code can then be built using a number of different metho
 
 Using MyGet Build Services, you have the opportunity to control exactly how your project gets built.  MyGet Build Services will scan the contents of your Source Control Repository looking for a file which it can work with.  In order of precedence, the following files are searched for:
 
+* MyGet.bat, MyGet.cmd or MyGet.ps1
 * build.bat, build.cmd or build.ps1
 * MyGet.sln
 * Any other *.sln file

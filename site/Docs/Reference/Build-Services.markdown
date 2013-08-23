@@ -18,10 +18,9 @@ Once downloaded, source code can then be built using a number of different metho
     <strong>Note:</strong> Although fully operational, MyGet Build Services is currently still in the Beta Stage.  While in Beta, you can't trigger a Build, manually or otherwise, faster then one every 5 minutes
 </p>
 
+## The Build Process
 
-## Tapping into the Build Process
-
-Using MyGet Build Services, you have the opportunity to control exactly how your project gets built.  MyGet Build Services will scan the contents of your Source Control Repository looking for a file which it can work with.  In order of precedence, the following files are searched for:
+Using MyGet Build Services, you have the opportunity to control exactly how your project gets built. MyGet Build Services works based on several conventions to run builds. It will scan the contents of your Source Control Repository looking for a file which it can work with.  In order of precedence, the following files are searched for:
 
 * MyGet.bat, MyGet.cmd or MyGet.ps1
 * build.bat, build.cmd or build.ps1
@@ -30,6 +29,30 @@ Using MyGet Build Services, you have the opportunity to control exactly how your
 * *.csproj (and *.vbproj, etc)
 * *.nuspec (yep, we support packaging simple [convention-based NuGet directories](http://docs.nuget.org/docs/creating-packages/creating-and-publishing-a-package#From_a_convention_based_working_directory "Convention Based Nuget Directories") as well)
 
+Based on the files found, the build process will be slightly different.
+
+### Build process for solution files and project files
+
+The following build steps will be run when building from solution or project files:
+
+* Fetch source code
+* Run package restore
+* Patch AssemblyInfo (if enabled)
+* Build solution or project file(s)
+* Run unit tests
+* Create NuGet packages
+* Push packages to your MyGet feed
+* Label sources (if enabled)
+
+### Build process for batch / PowerShell based builds
+
+The following build steps will be run when building from batch or PowerShell scripts:
+
+* Fetch source code
+* Patch AssemblyInfo (if enabled)
+* Run batch or PowerShell script
+* Push packages to your MyGet feed
+* Label sources (if enabled)
 
 ## AssemblyVersion patching
 
@@ -44,7 +67,45 @@ Patching of these attributes will occur whenever the feature is enabled, no matt
 
 ## Pushing symbols
 
-By default, when symbols packages (*.sympols.nupkg) are created, MyGet Build Services will push symbols packages to [SymbolSource](http://www.symbolsource.org). When disabled for the build, nosymbols packages will be pushed.
+By default, when symbols packages (*.sympols.nupkg) are created, MyGet Build Services will push symbols packages to [SymbolSource](http://www.symbolsource.org). When disabled for the build, no symbols packages will be pushed.
+
+## Source labeling (tagging)
+
+When enabled in the build source configuration on MyGet, source code can be labeled with the build number. This can be done for successful builds only (recommended) as well as for failed builds.
+
+The label originating from MyGet will always be named in the form ```vX.Y.Z```, ```vX.Y.Z.P``` or ```v.X.Y.Z-pre```. The description for the label will always be the label name (the version number), followed by "- MyGet Build Services".
+
+Note that for labeling sources, you must provide credentials that can commit to the originating source repository. If omitted, labeling will fail.
+
+The labeling scheme is compatible with [GitHub releases](https://help.github.com/articles/about-releases) and can link a given NuGet package version number to a GitHub release.
+
+## Package Restore
+
+Since NuGet 2.7 was released, MyGet Build Services runs NuGet Package Restore as part of every build of solution or project files. Note that package restore is _not_ run for builds making use of batch or PowerShell scripts. In those cases, you are the onresponsible for running package restore.
+
+In order of precedence, the following package restore commands are run. When one succeeds, package other commands will be skipped.
+
+* ```nuget restore MyGet.sln -NoCache -NonInteractive -ConfigFile MyGet.NuGet.config```
+* ```nuget restore MyGet.sln -NoCache -NonInteractive -ConfigFile NuGet.config```
+* ```nuget restore <your solution file> -NoCache -NonInteractive -ConfigFile MyGet.NuGet.config```
+* ```nuget restore <your solution file> -NoCache -NonInteractive -ConfigFile NuGet.config```
+* ```nuget restore packages.config -NoCache -NonInteractive -ConfigFile MyGet.NuGet.config```
+* ```nuget restore packages.config -NoCache -NonInteractive -ConfigFile NuGet.config```
+* ```nuget restore MyGet.sln -NoCache -NonInteractive```
+* ```nuget restore <your solution file> -NoCache -NonInteractive```
+* ```nuget restore packages.config -NoCache -NonInteractive```
+
+If you want MyGet Build Services to restore packages from a specific feed, adding a ```MyGet.NuGet.config``` file to your repository is the key to success. See the [NuGet docs](http://docs.nuget.org/docs/reference/nuget-config-file) for more information on how such file can be created. The following is a sample registering a custom NuGet feed for package restore.
+
+	<?xml version="1.0" encoding="utf-8"?>
+	<configuration>
+	  <packageSources>
+	    <add key="Chuck Norris feed" value="https://www.myget.org/F/chucknorris/api/v2/" />
+	  </packageSources>
+	  <activePackageSource>
+	    <add key="All" value="(Aggregate source)" />
+	  </activePackageSource>
+	</configuration>
 
 ## Supported project types and SDK's
 

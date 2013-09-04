@@ -107,6 +107,13 @@ If you want MyGet Build Services to restore packages from a specific feed, addin
 	  </activePackageSource>
 	</configuration>
 
+## Package sources
+
+MyGet gives you the option to specify one or more package sources for a feed. Package sources for a feed are also available during build. This can be useful in the following scenarios:
+
+* An additional package source is needed during build. MyGet will make the package source available during build if it has been added to the feed's package sources.
+* If you have an authenticated feed but do not wish to add credentials to source control, credentials can be added to the feed's package source. These credentials will be available during build and allow you to consume a protected feed with ease.
+
 ## Supported project types and SDK's
 
 Build services supports the following frameworks and SDK's:

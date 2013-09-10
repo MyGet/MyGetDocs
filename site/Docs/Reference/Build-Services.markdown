@@ -85,7 +85,7 @@ The labeling scheme is compatible with [GitHub releases](https://help.github.com
 
 ## Package Restore
 
-Since NuGet 2.7 was released, MyGet Build Services runs NuGet Package Restore as part of every build of solution or project files. Note that package restore is _not_ run for builds making use of batch or PowerShell scripts. In those cases, you are the onresponsible for running package restore.
+Since NuGet 2.7 was released, MyGet Build Services runs NuGet Package Restore as part of every build of solution or project files. Note that package restore is _not_ run for builds making use of batch or PowerShell scripts. In those cases, you are the responsible for running package restore.
 
 In order of precedence, the following package restore commands are run. When one succeeds, package other commands will be skipped.
 

@@ -9,7 +9,7 @@ MyGet 1.8 was released on September 10, 2013.
 * Metadata for packages is auto-updated from upstream feeds
 * Retention policies: pin packages so they don't get deleted
 * Retention policies: packages that are depended on will no longer be deleted (unless explicitly enabled)
-* Push upstream: package source code repositories can be labeled when pushign packages upstream
+* Push upstream: package source code repositories can be labeled when pushing packages upstream
 * Send e-mail when feed permissions change
 * Users can revoke their own access from a feed
 * Automatic mirroring for packages from upstream feeds when feed proxy is enabled
@@ -28,7 +28,7 @@ MyGet 1.8 was released on September 10, 2013.
 
 ## Bug Fixes
 * Fixed an issue with copy to clipboard
-* Fixed an issue when pusing packages upstream to authenticated feeds
+* Fixed an issue when pushing packages upstream to authenticated feeds
 * Support page is no longer behind an authentication wall
 * Fixed an issue when build services used @ in the username
 * Various performance improvements

@@ -21,6 +21,7 @@ MyGet 1.8 was released on September 10, 2013.
 * Repositories from GitHub organizations are now shown
 * The latest build version is shown in the UI
 * Package sources added at the feed level are available on the build server
+* Automatic support for NuGet package restore even if it's not enabled for the solution
 * Support for NuGet 2.7 package restore - see [http://docs.myget.org/docs/reference/build-services#Package_Restore](http://docs.myget.org/docs/reference/build-services#Package_Restore)
 * Package sources added at the feed level are available on the build server for package restore
 * Build labeling: on succesful or failed builds, a label can be added to the sources. This is compatible with GitHub Releases. - see [http://docs.myget.org/docs/reference/build-services#Source_labeling_(tagging)](http://docs.myget.org/docs/reference/build-services#Source_labeling_(tagging))

@@ -80,7 +80,7 @@ Note that for labeling sources, you must provide credentials that can commit to 
 The labeling scheme is compatible with [GitHub releases](https://help.github.com/articles/about-releases) and can link a given NuGet package version number to a GitHub release.
 
 <p class="info">
-    <strong>Note:</strong> If you enable build labeling on build configurations that have been created before 2013-09-11, <strong>you will have to<strong> add the build configuration again or specify credentials to connect to the remote repository. Builds with labeling enabled will fail if this is neglected.
+    <strong>Note:</strong> If you enable build labeling on build configurations that have been created before 2013-09-11, <strong>you will have to</strong> add the build configuration again or specify credentials to connect to the remote repository. Builds with labeling enabled will fail if this is neglected.
 </p>
 
 ## Package Restore

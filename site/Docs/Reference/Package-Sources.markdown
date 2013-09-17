@@ -31,6 +31,8 @@ Choose the package you want to promote and with a click of a button you can push
 
 ![Push Package Upstream](Images/push_package_upstream.png)
 
+It is also possible to label sources when pushing a package upstream. When enabled, MyGet will find the build from which the package originated and will add a label to the source control revision it was built from.
+
 ## Scenario: Proxying upstream feeds and packages
 One use case for MyGet is to create your own NuGet feed on MyGet and upload your own packages to that hosted feed. MyGet can also be used as the central NuGet feed in your development team, including your own packages and proxying search results and packages from an upstream package source.
 

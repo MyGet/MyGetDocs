@@ -99,7 +99,7 @@ In order of precedence, the following package restore commands are run. When one
 * ```nuget restore <your solution file> -NoCache -NonInteractive```
 * ```nuget restore packages.config -NoCache -NonInteractive```
 
-If you want MyGet Build Services to restore packages from a specific feed, adding a ```MyGet.NuGet.config``` file to your repository is the key to success. See the [NuGet docs](http://docs.nuget.org/docs/reference/nuget-config-file) for more information on how such file can be created. The following is a sample registering a custom NuGet feed for package restore.
+If you want MyGet Build Services to restore packages from a specific feed, there are two available options. One is to add package sources to your feed through the MyGet UI, the other is adding a ```MyGet.NuGet.config``` file to your repository is the key to success. See the [NuGet docs](http://docs.nuget.org/docs/reference/nuget-config-file) for more information on how such file can be created. The following is a sample registering a custom NuGet feed for package restore.
 
 	<?xml version="1.0" encoding="utf-8"?>
 	<configuration>

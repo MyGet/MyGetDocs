@@ -196,7 +196,7 @@ build.bat:
 
 From the [GoogleAnalyticsTracker](https://github.com/maartenba/GoogleAnalyticsTracker) project on GitHub.
 
-## PowerShell Build.ps1 example
+## PowerShell Build.ps1 example building for different target framework versions
 
 The following is an advanced PowerShell build script which was contributed by [Aspose](http://www.aspose.com). It allows building multiple NuGet packages for different target frameworks and CPU versions.
 

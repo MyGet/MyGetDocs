@@ -111,14 +111,14 @@ If you want MyGet Build Services to restore packages from a specific feed, there
 	  </activePackageSource>
 	</configuration>
 
-## Package sources
+## Package Sources
 
 MyGet gives you the option to specify one or more package sources for a feed. Package sources for a feed are also available during build. This can be useful in the following scenarios:
 
 * An additional package source is needed during build. MyGet will make the package source available during build if it has been added to the feed's package sources.
 * If you have an authenticated feed but do not wish to add credentials to source control, credentials can be added to the feed's package source. These credentials will be available during build and allow you to consume a protected feed with ease.
 
-## Supported project types and SDK's
+## Supported project types and SDK
 
 Build services supports the following frameworks and SDK's:
 
@@ -212,3 +212,11 @@ If you provide your own build.bat script or MyGet.sln, you can specifically inst
     	</tr>
 	</tbody>
 </table>
+
+## GitHub Status API
+
+When a build source is linked to a GitHub repository and has credentials specified, MyGet Build Services will make use of the [GitHub Commit Status API](https://github.com/blog/1227-commit-status-api) to report status messages about a build back to GitHub and makign them visible with commits and pull requests on GitHub. The status message posted to GitHub reflects the build status and links to the build log on MyGet.
+
+![GitHub Commit Status](Images/github_commit_status.png)
+
+To enable GitHub Commit Status messages on your builds, make sure the build configuration has credentials specified. Specifying credentials can be done by removing and adding the build configuration again, a method which doesn't require you to enter your password. You can also specify credentials manually by editing the build source.

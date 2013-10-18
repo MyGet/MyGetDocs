@@ -122,7 +122,7 @@ MyGet gives you the option to specify one or more package sources for a feed. Pa
 
 Build services supports the following frameworks and SDK's:
 
-* .NET 2.0, .NET 3.0, .NET 3.5, .NET 4.0 and .NET 4.5
+* .NET 2.0, .NET 3.0, .NET 3.5, .NET 4.0, .NET 4.5 and .NET 4.5.1
 * PCL support (2012)
 * Windows Azure SDK 1.7, 1.8, 2.0, 2.1
 * Windows Identity Foundation SDK

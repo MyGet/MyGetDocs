@@ -1,11 +1,15 @@
 ﻿# Why Should I Use MyGet?
 
-There are quite a few usage scenarios out there where MyGet fits in very well:
+There are quite a few usage scenarios out there where MyGet fits in very well.
 
 * A feed containing only the packages you or your company often use
 * A feed containing only your (open-source?) project and its dependencies
 * A feed containing just a few packages that you want to use for a certain project: tell your developers to just install them all
 * A feed creating and pushing packages on itself by watching your GitHub/Codeplex/Bitbucket repository and triggering our Build Services
+
+MyGet also plays nice and provides integration with the tools listed in the MyGet cloud below.
+
+![The MyGet Cloud](Images/the-myget-cloud.png)
 
 ## What's the difference between MyGet and NuGet.Server, Orchard Gallery or NuGet Gallery?
 

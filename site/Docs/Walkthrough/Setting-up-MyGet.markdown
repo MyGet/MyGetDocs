@@ -1,8 +1,8 @@
-﻿# Walktrough #1 - Set up MyGet
+﻿# Walktrough #1 - Setting up MyGet
 
 Setting up your own NuGet repository has never been easier. MyGet allows you to create your own public or private NuGet feeds in just a few clicks. This section will guide you through it.
 
-## Setting up a new MyGet feed
+## Creating up a new MyGet feed
 
 1. **Browse to [MyGet.org][1] and log in** using your preferred identity provider. We currently support Google, Live ID, Yahoo!, Facebook, StackOverflow, GitHub and OpenID.
 
@@ -16,10 +16,12 @@ Setting up your own NuGet repository has never been easier. MyGet allows you to 
 
 ## Setting up collaboration
 
-1. **Invite collaborators** through the *feed security* settings.
+1. **Invite collaborators** through the *[feed security][2]* settings.
 
-2. **Register the feed** in your NuGet client: add the package source in Visual Studio, or store it in your NuGet.config for instance.
+2. **Register the feed** in your NuGet client: add the package source in Visual Studio, or store it in your NuGet.config for instance. ([how to?][3])
 
 3. **Add packages** to the feed by either uploading them through the web site, referencing/mirroring them from nuget.org, or pushing them using your preferred NuGet client tools.
 
 [1]: http://www.myget.org
+[2]: http://docs.myget.org/docs/reference/feed-security
+[3]: http://docs.myget.org/docs/how-to/register-myget-feeds-in-visual-studio

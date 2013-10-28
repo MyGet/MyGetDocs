@@ -1,4 +1,4 @@
-﻿# MyGet Frequently Asked Questions
+﻿# Frequently Asked Questions
 
 ## What is required to be able to use MyGet?
 

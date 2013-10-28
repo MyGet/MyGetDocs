@@ -1,4 +1,4 @@
-# Build Services - Build.bat examples
+# Custom Build Script Examples
 
 As described in the [Build Services Reference](/docs/reference/build-services), MyGet Build Services supports scripting your own build using a batch file named build.bat, build.cmd or using a PowerShell script. This page lists several example build.bat files which can be used in other projects as well.
 

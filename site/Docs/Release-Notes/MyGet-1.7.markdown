@@ -21,7 +21,7 @@ MyGet 1.7 was released on May 17, 2013.
 * Redesign of home page when authenticated
 * Activity streams on home page when authenticated
 * Activity stream on own user profile when authenticated
-* Links to the FAQ page are now pointing to http://docs.myget.org/docs/start-here/myget-faq
+* Links to the FAQ page are now pointing to http://docs.myget.org/docs/Reference/myget-faq
 * New feed setting: auto-publish symbols
 * Added username and subscription ID to Subscription Reminder emails
 * Added link on the plans page to request a free trial of one of the paid plans

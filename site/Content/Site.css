@@ -606,7 +606,7 @@ pre > code, .code {
 
 /* MISC
 ***************************************************************/
-table.reference {
+table.reference, table.feedprivileges {
     border-collapse: collapse;
 }
 
@@ -636,4 +636,24 @@ table.reference tr td:first-child {
     top: 0;
     text-indent: -9999px;
     width: 220px;
+}
+
+table.feedprivileges th {
+    text-align: left;
+    padding: 5px;
+    background-color: #008000;
+    color: #ffffff;
+    border-bottom: #333333 solid 1px;
+}
+table.feedprivileges td {
+    padding: 5px;
+    border-bottom: #eeeeee solid 1px;
+}
+table.feedprivileges td:first-child {
+    vertical-align: top;
+    font-weight: bold;
+}
+img {
+    max-width: 650px;
+    border: #eeeeee solid 1px;
 }

@@ -10,6 +10,10 @@ MyGet offers 3 standard feed types supporting various scenarios. You can change 
 * **Community** feeds - Everyone can search and download packages from this feed. Additionally, any user can push and manage their **own** packages on this feed. Community feeds listed in the Gallery have the *Community* tag. Community feeds are free (quota may apply based on your subscription plan).
 * **Private** feeds - Nobody except the feed owner has access by default. The feed owner will invite people to this feed and assign feed privileges (see below). Private feeds are available on all paid subscription plans (quota may apply based on your subscription plan).
 
+If you are a MyGet Enterprise user, a fourth feed type is available:
+
+* **Enterprise** feeds - Everyone in your organization gets read access to this feed unless other privileges are given to specific users.
+
 ## Personal security: access tokens
 
 There are several credentials linked to your MyGet profile. Every user gets at least one the primary API key, which can be used when publishing packages with NuGet.exe or NuGet Package Explorer and a username and password for consuming private feeds from Visual Studio or a build server.

@@ -13,7 +13,7 @@ A dialog will prompt your for package source information and will also expose a 
 
 ![Add Package Source Dialog](Images/add_package_source.png)
 
-## Scenario: Add package from feed
+## Scenario - Add package from feed
 This is the first scenario that makes use of upstream package sources. If you want to add a package from another feed onto your MyGet feed, the other feed needs to be configured as a package source to that feed.
 
 Adding a package can happen in two ways: referencing or mirroring.
@@ -24,7 +24,7 @@ Adding a package can happen in two ways: referencing or mirroring.
 
 ![Package Source Aggregation](Images/Aggregate_Package_Sources.png)
 
-## Scenario: Pushing a package upstream
+## Scenario - Pushing a package upstream
 Another major scenario made possible by using package sources is the *package promotion* workflow: pushing a package from one feed to another.
 
 Choose the package you want to promote and with a click of a button you can push it upstream. A dialog will provide you with additional options, e.g. configure the package version to be used upstream.
@@ -33,7 +33,7 @@ Choose the package you want to promote and with a click of a button you can push
 
 It is also possible to label sources when pushing a package upstream. When enabled, MyGet will find the build from which the package originated and will add a label to the source control revision it was built from.
 
-## Scenario: Proxying upstream feeds and packages
+## Scenario - Proxying upstream feeds and packages
 One use case for MyGet is to create your own NuGet feed on MyGet and upload your own packages to that hosted feed. MyGet can also be used as the central NuGet feed in your development team, including your own packages and proxying search results and packages from an upstream package source.
 
 ![Proxy upstream feed](Images/proxy-schema.png)
@@ -49,3 +49,12 @@ These options will do the following:
 * **Automatically add downloaded upstream packages to the current feed**: when the above option is enabled, packages that are downloaded will automatically be mirrored on your feed, ensuring the package is available all the time (even when the upstream package source experiences an outage).
 
 Enabling both options will ensure that the MyGet feed is always up-to-date with the packages you are consuming in your organization.
+
+## Scenario - Automatically updating packages from upstream
+Sometimes it would be nice if we could automatically update packages on our feed that originate from upstream package sources. When adding or editing a package source, we can enable this behaviour per package source, as well as an interval when MyGet should check for updates.
+
+* **Automatically update packages to their latest versions**: Enables the behaviour of automatically updating packages from the package source.
+* **Allow automatic updates to prerelease versions**: By default, MyGet will only update to stable packages. When enabled, we will also get prerelease packages from the upstream package source.
+* **Update interval**: Depending on your subscription plan, we can specify how often MyGet should check for updates (up to every 5 minutes on a [Professional subscription](http://www.myget.org/plans))
+
+![Package auto update](Images/auto-update.png)

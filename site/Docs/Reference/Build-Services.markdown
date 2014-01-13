@@ -117,6 +117,7 @@ MyGet gives you the option to specify one or more package sources for a feed. Pa
 
 * An additional package source is needed during build. MyGet will make the package source available during build if it has been added to the feed's package sources.
 * If you have an authenticated feed but do not wish to add credentials to source control, credentials can be added to the feed's package source. These credentials will be available during build and allow you to consume a protected feed with ease.
+* The API key for a package source is also transferred to the build server. This means during a build, you can call into ```nuget.exe push``` and push packages to configured package sources.
 
 ## Supported project types and SDK
 

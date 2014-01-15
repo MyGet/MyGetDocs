@@ -215,6 +215,26 @@ If you provide your own build.bat script or MyGet.sln, you can specifically inst
 	</tbody>
 </table>
 
+## Build Status Badges
+
+You can embed a status image for a build into any web page out there, including your project’s README file or documentation. Your users will be immediately updated about the status of the last build performed. Here’s an example badge for a successful build:
+
+![Successful Build](/Images/successful.png)
+
+Badges will be shown for pending builds (queued or building) as well as successful and failed builds. The URL for a build badge can be obtained through the Build Services configuration:
+
+![Where to get the URL](/Images/build-badge.png)
+
+It can then be used in HTML, for example with a hyperlink to your feed on the [MyGet Gallery](http://www.myget.org/gallery):
+
+<pre>&lt;a href="https://www.myget.org/gallery/googleanalyticstracker"&gt;&lt;img alt="GoogleAnalyticsTracker Nightly Build Status" src="https://www.myget.org/BuildSource/Hook/googleanalyticstracker?identifier=479ff619-28f2-47c0-9574-2774ed0cd855" /&gt;&lt;/a&gt;</pre>
+
+You can do the same in Markdown:
+
+<pre>[![GoogleAnalyticsTracker Nightly Build Status](https://www.myget.org/BuildSource/Hook/googleanalyticstracker?identifier=479ff619-28f2-47c0-9574-2774ed0cd855)](https://www.myget.org/gallery/googleanalyticstracker)</pre>
+
+Of course, you can also use it in any other markup language that supports embedding images.
+
 ## GitHub Status API
 
 When a build source is linked to a GitHub repository and has credentials specified, MyGet Build Services will make use of the [GitHub Commit Status API](https://github.com/blog/1227-commit-status-api) to report status messages about a build back to GitHub and makign them visible with commits and pull requests on GitHub. The status message posted to GitHub reflects the build status and links to the build log on MyGet.

@@ -219,11 +219,11 @@ If you provide your own build.bat script or MyGet.sln, you can specifically inst
 
 You can embed a status image for a build into any web page out there, including your project’s README file or documentation. Your users will be immediately updated about the status of the last build performed. Here’s an example badge for a successful build:
 
-![Successful Build](/Images/successful.png)
+![Successful Build](Images/successful.png)
 
 Badges will be shown for pending builds (queued or building) as well as successful and failed builds. The URL for a build badge can be obtained through the Build Services configuration:
 
-![Where to get the URL](/Images/build-badge.png)
+![Where to get the URL](Images/build-badge.png)
 
 It can then be used in HTML, for example with a hyperlink to your feed on the [MyGet Gallery](http://www.myget.org/gallery):
 

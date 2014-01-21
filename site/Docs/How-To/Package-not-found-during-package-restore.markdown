@@ -32,3 +32,5 @@ We can take this one step further and instead of configuring your MyGet feed glo
 	    <add key="All" value="(Aggregate source)" />
 	  </activePackageSource>
 	</configuration>
+
+This really makes working with multiple feeds a breeze. But we can go even further and use only MyGet, proxying packages from NuGet.org along the way. For more info on how that works, check the [documentation on upstream package sources](/docs/reference/package-sources#Scenario_-_Proxying_upstream_feeds_and_packages).

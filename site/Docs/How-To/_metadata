@@ -1,6 +1,7 @@
 ﻿Register MyGet Feeds In Visual Studio
 Add new owner to a feed
 Consume a private feed in TeamCity
+Package not found during package restore
 Auto Trigger a MyGet Build using an HTTP POST Hook URL
 Make use of nuget within your build scripts
 Make use of psake within your build scripts

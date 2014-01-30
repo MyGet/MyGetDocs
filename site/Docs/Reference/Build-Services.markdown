@@ -87,7 +87,7 @@ The labeling scheme is compatible with [GitHub releases](https://help.github.com
 
 Since NuGet 2.7 was released, MyGet Build Services runs NuGet Package Restore as part of every build of solution or project files even if it's not enabled for the solution. Note that package restore is _not_ run for builds making use of batch or PowerShell scripts. In those cases, you are the responsible for running package restore.
 
-In order of precedence, the following package restore commands are run. When one succeeds, package other commands will be skipped.
+In order of precedence, the following package restore commands are run. When one succeeds, other commands will be skipped.
 
 * ```nuget restore MyGet.sln -NoCache -NonInteractive -ConfigFile MyGet.NuGet.config```
 * ```nuget restore MyGet.sln -NoCache -NonInteractive -ConfigFile NuGet.config```
@@ -95,9 +95,12 @@ In order of precedence, the following package restore commands are run. When one
 * ```nuget restore <your solution file> -NoCache -NonInteractive -ConfigFile NuGet.config```
 * ```nuget restore packages.config -NoCache -NonInteractive -ConfigFile MyGet.NuGet.config```
 * ```nuget restore packages.config -NoCache -NonInteractive -ConfigFile NuGet.config```
+* ```nuget restore packages.<project>.config -NoCache -NonInteractive -ConfigFile MyGet.NuGet.config```
+* ```nuget restore packages.<project>..config -NoCache -NonInteractive -ConfigFile NuGet.config```
 * ```nuget restore MyGet.sln -NoCache -NonInteractive```
 * ```nuget restore <your solution file> -NoCache -NonInteractive```
 * ```nuget restore packages.config -NoCache -NonInteractive```
+* ```nuget restore packages.<project>.config -NoCache -NonInteractive```
 
 If you want MyGet Build Services to restore packages from a specific feed, there are two available options. One is to add package sources to your feed through the MyGet UI, the other is adding a ```MyGet.NuGet.config``` file to your repository is the key to success. See the [NuGet docs](http://docs.nuget.org/docs/reference/nuget-config-file) for more information on how such file can be created. The following is a sample registering a custom NuGet feed for package restore.
 

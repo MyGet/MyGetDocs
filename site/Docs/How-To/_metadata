@@ -6,3 +6,4 @@ Auto Trigger a MyGet Build using an HTTP POST Hook URL
 Make use of nuget within your build scripts
 Make use of psake within your build scripts
 Make MyGet list and automatically mirror packages from other feeds
+Migrating to MyGet

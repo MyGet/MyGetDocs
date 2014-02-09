@@ -11,24 +11,15 @@ MyGet has the following feed endpoints available:
 
 The following table lists which endpoint can be used with which client:
 
-<style>
-.table {
-	border: 1px solid #ccc;
-}
-
-.table thead tr th {
-	text-align: left;
-}
-</style>
-<table class="table">
+<table class="reference">
     <thead>
         <tr>
-            <th>Endpoint</th>
-            <th>NuGet &lt; v1.6</th>
-            <th>NuGet &gt; v1.6</th>
-            <th>NuGet Package Explorer</th>
-            <th>Orchard CMS</th>
-            <th>Web browser</th>
+            <td><strong>Endpoint</strong></td>
+            <td><strong>NuGet &lt; v1.6</strong></td>
+            <td><strong>NuGet &gt; v1.6</strong></td>
+            <td><strong>NuGet Package Explorer</strong></td>
+            <td><strong>Orchard CMS</strong></td>
+            <td><strong>Web browser</strong></td>
         </tr>
     </thead>
     <tbody>

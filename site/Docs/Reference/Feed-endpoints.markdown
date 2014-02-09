@@ -3,6 +3,7 @@
 This page explains the different feed endpoints available on MyGet. Depending on the client you are using (NuGet.exe, Orchard CMS, ...), these endpoints can be configured as the package source or as the publish endpoint.
 
 MyGet has the following feed endpoints available:
+
 * /F/<your_feed_name> - the NuGet v2 API endpoint
 * /F/<your_feed_name>/api/v2 - the NuGet v2 API endpoint for consuming packages
 * /F/<your_feed_name>/api/v2/package - the NuGet v2 API endpoint for pushing packages

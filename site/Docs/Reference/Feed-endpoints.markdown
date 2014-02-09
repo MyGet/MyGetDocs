@@ -11,7 +11,16 @@ MyGet has the following feed endpoints available:
 
 The following table lists which endpoint can be used with which client:
 
-<table>
+<style>
+.table {
+	border: 1px solid #ccc;
+}
+
+.table thead tr th {
+	text-align: left;
+}
+</style>
+<table class="table">
     <thead>
         <tr>
             <th>Endpoint</th>

@@ -190,6 +190,10 @@ If you provide your own build.bat script or MyGet.sln, you can specifically inst
     	    </td>
     	</tr>
     	<tr>
+    	    <td><strong>%Targets%</strong></td>
+    	    <td>Build targets (defaults to Rebuild)</td>
+    	</tr>
+    	<tr>
     	    <td><strong>%VersionFormat%</strong></td>
     	    <td>
     	        Version format specified in build configuration

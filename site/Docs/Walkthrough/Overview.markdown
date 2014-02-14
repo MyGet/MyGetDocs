@@ -8,7 +8,7 @@ There are quite a few usage scenarios out there where MyGet fits in very well.
 * A feed creating and pushing packages on itself by watching your GitHub/Codeplex/Bitbucket repository and triggering our Build Services
 
 MyGet also plays nice and provides integration with the tools listed in the MyGet cloud below.
-If you're interested in migrating to MyGet, then take a look at our [how-to migrate to MyGet](docs/how-to/migrating-to-myget) page.
+If you're interested in migrating to MyGet, then take a look at our [how-to migrate to MyGet](../how-to/migrating-to-myget) page.
 
 ![The MyGet Cloud](Images/the-myget-cloud.png)
 

@@ -22,7 +22,7 @@ Once downloaded, source code can then be built using a number of different metho
 
 Using MyGet Build Services, you have the opportunity to control exactly how your project gets built. MyGet Build Services works based on several conventions to run builds. It will scan the contents of your Source Control Repository looking for a file which it can work with.  In order of precedence, the following files are searched for:
 
-* Project files (*.csproj, *.vbproj, ...) [specified in the build configuration](#Configuring_Projects_To_Build).
+* Project files (*.csproj, *.vbproj, ...) [specified in the build source configuration](#Configuring_Projects_To_Build).
 * MyGet.bat, MyGet.cmd or MyGet.ps1
 * build.bat, build.cmd or build.ps1
 * MyGet.sln
@@ -235,7 +235,7 @@ If you provide your own build.bat script or MyGet.sln, you can specifically inst
 
 ## Configuring Projects to Build
 
-When needed, the project file to build can be specified in the build configuration. If this setting is omitted, the [default build process conventions](#The_Build_Process) will be used.
+When needed, the project file to build can be specified in the build source configuration. If this setting is omitted, the [default build process conventions](#The_Build_Process) will be used.
 
 ![Configure Projects to Build](Images/configure-projects-to-build.png)
 

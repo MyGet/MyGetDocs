@@ -14,7 +14,7 @@ Next to that, integration with several Source Control Repositories is available 
 
 Once downloaded, source code can then be built using a number of different methodologies.
 
-<p class="info">
+<p class="info">ou
     <strong>Note:</strong> Although fully operational, MyGet Build Services is currently still in the Beta Stage.  While in Beta, you can't trigger a Build, manually or otherwise, faster then one every 5 minutes
 </p>
 
@@ -68,9 +68,9 @@ Patching of these attributes will occur whenever the feature is enabled, no matt
 
 ## Which packages are pushed to my feed?
 
-By default, MyGet will push all NuGet packages generated during build to your feed, except for packages generated in a folder named *packages*. The reason for this is that the *packages* folder may contain packages that were used during the build process and are not necessarily to be added to your feed.
+By default, MyGet will push all NuGet packages generated during build to your feed, except for packages generated in a folder named *packages*. The reason for this is that the *packages* folder is reserved by NuGet itself and may contain packages that were used during the build process and are not necessarily to be added to your feed.
 
-When creating a batch-based build, make sure to generate packages in a folder not named *packages*. A good example would be output.
+When creating a batch-based build, make sure to generate packages in a folder not named *packages*. A good example would be *output*.
 
 To override this behaviour, a series of wildcard matches can be specified in the build configuration. When omitted, all packages generated during build will be pushed to your feed. When specified, only packages matching any of the specified package names or wildcards will be pushed to your feed.
 

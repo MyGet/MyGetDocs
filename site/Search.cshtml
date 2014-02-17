@@ -66,9 +66,9 @@ else {
     <section class="results">
         @foreach (var result in jsonResult.SearchResponse.Web.Results) {
             <section class="result">
-                <h2><a href="@result.Url">@result.Title</a></h2>
+                <h2><a href="@result.Url.Replace("https://", "http://")">@result.Title</a></h2>
                 <p>@result.Description</p>
-                <aside>@result.DisplayUrl</aside>
+                <aside>@result.DisplayUrl.Replace("https://", "http://")</aside>
             </section>
         }
         <footer>

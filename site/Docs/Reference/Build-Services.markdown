@@ -22,6 +22,7 @@ Once downloaded, source code can then be built using a number of different metho
 
 Using MyGet Build Services, you have the opportunity to control exactly how your project gets built. MyGet Build Services works based on several conventions to run builds. It will scan the contents of your Source Control Repository looking for a file which it can work with.  In order of precedence, the following files are searched for:
 
+* Project files (*.csproj, *.vbproj, ...) [specified in the build configuration](#Configuring_Projects_To_Build).
 * MyGet.bat, MyGet.cmd or MyGet.ps1
 * build.bat, build.cmd or build.ps1
 * MyGet.sln
@@ -64,6 +65,16 @@ Two attributes will be patched: AssemblyVersion and AssemblyInformationalVersion
 * The patched AssemblyInformationalVersion version supports semantic versioning and can be in the form major.minor.patch as well as major.minor.patch-prerelease.
 
 Patching of these attributes will occur whenever the feature is enabled, no matter which build process is used (solution, project or build.bat).
+
+## Which packages are pushed to my feed?
+
+By default, MyGet will push all NuGet packages generated during build to your feed, except for packages generated in a folder named *packages*. The reason for this is that the *packages* folder may contain packages that were used during the build process and are not necessarily to be added to your feed.
+
+When creating a batch-based build, make sure to generate packages in a folder not named *packages*. A good example would be output.
+
+To override this behaviour, a series of wildcard matches can be specified in the build configuration. When omitted, all packages generated during build will be pushed to your feed. When specified, only packages matching any of the specified package names or wildcards will be pushed to your feed.
+
+![Configure Packages to Push](Images/configure-packages-to-push.png)
 
 ## Pushing symbols
 
@@ -221,6 +232,12 @@ If you provide your own build.bat script or MyGet.sln, you can specifically inst
     	</tr>
 	</tbody>
 </table>
+
+## Configuring Projects to Build
+
+When needed, the project file to build can be specified in the build configuration. If this setting is omitted, the [default build process conventions](#The_Build_Process) will be used.
+
+![Configure Projects to Build](Images/configure-projects-to-build.png)
 
 ## Build Status Badges
 

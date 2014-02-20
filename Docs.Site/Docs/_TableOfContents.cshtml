@@ -1,0 +1,56 @@
+﻿@using Docs.Core
+@{
+    List<Heading> headings = Page.Headings;
+    int previousLevel = 1;
+    Stack<string> toClose = new Stack<string>();
+}
+
+<ul class="nav nav-list">
+    @for (int i = 0; i < headings.Count; i++)
+    {
+        var heading = headings[i];
+        int lvlDiff = previousLevel - heading.Level;
+        if (heading.Level == 1)
+        {
+            <h4>On this page</h4>
+        }
+        else if (lvlDiff > 0)
+        {
+            int foo = lvlDiff * 2;
+            while (foo-- >= 0)
+            {
+                WriteLiteral(toClose.Pop());
+            }
+            toClose.Push("</li>");
+            WriteLiteral("<li>");
+            <a href="#@heading.ID">@heading.Text</a>
+        }
+        else if (lvlDiff < 0)
+        {
+            toClose.Push("</ul>");
+            toClose.Push("</li>");
+            WriteLiteral("<ul>");
+            WriteLiteral("<li>");
+            <a href="#@heading.ID">@heading.Text</a>
+        }
+        else
+        {
+            if (toClose.Any())
+            {
+                WriteLiteral(toClose.Pop());
+            }
+            toClose.Push("</li>");
+            WriteLiteral("<li>");
+            <a href="#@heading.ID">@heading.Text</a>
+        }
+        previousLevel = heading.Level;
+    }
+
+
+    @while (toClose.Any())
+    {
+        WriteLiteral(toClose.Pop());
+    }
+</ul>
+
+<hr noshade="noshade"/>

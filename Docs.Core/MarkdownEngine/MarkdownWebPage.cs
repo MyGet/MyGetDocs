@@ -25,7 +25,7 @@ namespace Docs.Core.MarkdownEngine {
         public override void Execute() {
             InitalizeCache();
 
-            Page.Title = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(Path.GetFileNameWithoutExtension(VirtualPath).Replace('-', ' ')).Replace("Nuget", "NuGet");
+            Page.Title = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(Path.GetFileNameWithoutExtension(VirtualPath).Replace('-', ' ')).Replace("Nuget", "NuGet").Replace("Myget", "MyGet");
             Page.Source = GetSourcePath();
 
             // Get the page content
@@ -63,18 +63,23 @@ namespace Docs.Core.MarkdownEngine {
             doc.OptionUseIdAttribute = true;
             doc.LoadHtml(content);
 
-            var allNodes = doc.DocumentNode.DescendantNodes();
+            var allNodes = doc.DocumentNode.Descendants();
             var allHeadingNodes = allNodes.Where(node =>
                 node.Name.Length == 2
                 && node.Name.StartsWith("h", System.StringComparison.InvariantCultureIgnoreCase)
                 && !node.Name.Equals("hr", StringComparison.InvariantCultureIgnoreCase)).ToList();
 
             var headings = new List<Heading>();
-            foreach (var heading in allHeadingNodes) {
+            foreach (var heading in allHeadingNodes)
+            {
+                var headerLevel = Convert.ToInt32(heading.Name.Remove(0, 1));
+
                 var id = heading.InnerHtml.Replace(" ", "_");
                 id = HttpUtility.HtmlAttributeEncode(HttpUtility.UrlEncode(id)); // TODO: What encoding should happen here?
                 heading.SetAttributeValue("id", id);
-                headings.Add(new Heading(id, Convert.ToInt32(heading.Name.Remove(0, 1)), heading.InnerText));
+                headings.Add(new Heading(id, headerLevel, heading.InnerText));
+
+                heading.Name = "h" + (headerLevel + 1);
             }
 
             Page.Headings = headings;

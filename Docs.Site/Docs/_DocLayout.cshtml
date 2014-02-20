@@ -1,0 +1,34 @@
+﻿@{
+    Layout = "~/_Layout.cshtml";
+}
+
+@section LeftMenu {
+    @RenderPage("~/docs/_TableOfContents.cshtml")
+}
+
+<article id="doc">
+    @RenderBody()
+
+    @if (Page.Source != null)
+    {
+        <div class="alert alert-success">
+            <strong><i class="icon-edit"></i> Found an issue with the documentation on this page? We accept contributions!</strong><br />
+            Read our <a href="http://docs.myget.org/docs/Contribute/Contributing-to-MyGet-Documentation">contribution guidance</a> or
+            <a href="https://github.com/myget/MyGetDocs/edit/master/Docs.Site/@HttpUtility.UrlPathEncode(Page.Source)" target="edit">edit this page's source on GitHub</a>.
+        </div>
+        
+        <div>
+            @{ Disqus.Initialize("mygetdocs"); }
+            @Disqus.ShowComments( HttpUtility.UrlPathEncode(Page.Source) )
+        </div>
+    }
+</article>
+
+<script>
+    $(document).ready(function () {
+        if ($('pre').attr('class') != 'none') {
+            $('pre').addClass('prettyprint');
+        }
+        prettyPrint();
+    });
+</script>

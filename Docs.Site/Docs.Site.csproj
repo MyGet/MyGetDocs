@@ -1,0 +1,367 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E0EB495C-179E-499A-A021-EA639B747B83}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Docs.Site</RootNamespace>
+    <AssemblyName>Docs.Site</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxMin, Version=4.84.4790.14405, Culture=neutral, PublicKeyToken=21ef50ce11b5d80f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AjaxMin.4.84.4790.14417\lib\net40\AjaxMin.dll</HintPath>
+    </Reference>
+    <Reference Include="Cassette, Version=2.4.0.18555, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Cassette.2.4.0\lib\net40-client\Cassette.dll</HintPath>
+    </Reference>
+    <Reference Include="Cassette.Aspnet, Version=2.4.0.18555, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Cassette.Aspnet.2.4.0\lib\net40\Cassette.Aspnet.dll</HintPath>
+    </Reference>
+    <Reference Include="Cassette.Less, Version=2.4.0.18555, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Cassette.Less.2.4.0\lib\net40-client\Cassette.Less.dll</HintPath>
+    </Reference>
+    <Reference Include="Cassette.Views, Version=2.4.0.18555, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Cassette.Views.2.4.0\lib\net40\Cassette.Views.dll</HintPath>
+    </Reference>
+    <Reference Include="dotless.ClientOnly, Version=1.4.0.0, Culture=neutral, PublicKeyToken=96b446c9e63eae34, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotlessClientOnly.1.4.0.0\lib\dotless.ClientOnly.dll</HintPath>
+    </Reference>
+    <Reference Include="MarkdownSharp, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MarkdownSharp.1.13.0.0\lib\35\MarkdownSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebHelpers.3.1.1\lib\net45\Microsoft.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.1\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.1.1\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.1\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.1\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.1\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WebMatrix.Data, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.Data.3.1.1\lib\net45\WebMatrix.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.WebData, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.WebData.3.1.1\lib\net45\WebMatrix.WebData.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="404.cshtml" />
+    <Content Include="App_Code\PaginationHelper.cshtml" />
+    <Content Include="Content\less\accordion.less" />
+    <Content Include="Content\less\alerts.less" />
+    <Content Include="Content\less\bootstrap.less" />
+    <Content Include="Content\less\breadcrumbs.less" />
+    <Content Include="Content\less\button-groups.less" />
+    <Content Include="Content\less\buttons.less" />
+    <Content Include="Content\less\carousel.less" />
+    <Content Include="Content\less\close.less" />
+    <Content Include="Content\less\code.less" />
+    <Content Include="Content\less\component-animations.less" />
+    <Content Include="Content\less\dropdowns.less" />
+    <Content Include="Content\less\forms.less" />
+    <Content Include="Content\less\grid.less" />
+    <Content Include="Content\less\hero-unit.less" />
+    <Content Include="Content\less\labels-badges.less" />
+    <Content Include="Content\less\layouts.less" />
+    <Content Include="Content\less\media.less" />
+    <Content Include="Content\less\mixins.less" />
+    <Content Include="Content\less\modals.less" />
+    <Content Include="Content\less\myget.less" />
+    <Content Include="Content\less\navbar.less" />
+    <Content Include="Content\less\navs.less" />
+    <Content Include="Content\less\pager.less" />
+    <Content Include="Content\less\pagination.less" />
+    <Content Include="Content\less\popovers.less" />
+    <Content Include="Content\less\progress-bars.less" />
+    <Content Include="Content\less\reset.less" />
+    <Content Include="Content\less\responsive-1200px-min.less" />
+    <Content Include="Content\less\responsive-767px-max.less" />
+    <Content Include="Content\less\responsive-768px-979px.less" />
+    <Content Include="Content\less\responsive-navbar.less" />
+    <Content Include="Content\less\responsive-utilities.less" />
+    <Content Include="Content\less\responsive.less" />
+    <Content Include="Content\less\scaffolding.less" />
+    <Content Include="Content\less\slider.less" />
+    <Content Include="Content\less\sprites.less" />
+    <Content Include="Content\less\tables.less" />
+    <Content Include="Content\less\thumbnails.less" />
+    <Content Include="Content\less\tooltip.less" />
+    <Content Include="Content\less\type.less" />
+    <Content Include="Content\less\utilities.less" />
+    <Content Include="Content\less\variables.less" />
+    <Content Include="Content\less\wells.less" />
+    <Content Include="Default.cshtml" />
+    <Content Include="Docs\Contribute\Contributing-to-MyGet-Documentation.markdown" />
+    <Content Include="Docs\Contribute\_metadata" />
+    <Content Include="Docs\How-To\Auto-Trigger-a-MyGet-Build-using-an-HTTP-POST-Hook-URL.markdown" />
+    <Content Include="Docs\How-To\Consume-a-private-feed-in-TeamCity.markdown" />
+    <Content Include="Docs\How-To\Make-MyGet-list-and-automatically-mirror-packages-from-other-feeds.markdown" />
+    <Content Include="Docs\How-To\Make-use-of-nuget-within-your-build-scripts.markdown" />
+    <Content Include="Docs\How-To\Make-use-of-psake-within-your-build-scripts.markdown" />
+    <Content Include="Docs\How-To\Migrating-to-MyGet.markdown" />
+    <Content Include="Docs\How-To\Package-not-found-during-package-restore.markdown" />
+    <Content Include="Docs\How-To\Use-TFS-Online-Git-with-MyGet-Build-Services.markdown" />
+    <Content Include="Docs\How-To\_metadata" />
+    <Content Include="Docs\Reference\ADFS-integration.markdown" />
+    <Content Include="Docs\Reference\Build-Services.markdown" />
+    <Content Include="Docs\Reference\Custom-Build-Scripts.markdown" />
+    <Content Include="Docs\Reference\FAQ.markdown" />
+    <Content Include="Docs\Reference\Feed-endpoints.markdown" />
+    <Content Include="Docs\Reference\Package-Source-Discovery.markdown" />
+    <Content Include="Docs\Reference\Package-Sources.markdown" />
+    <Content Include="Docs\Reference\Security.markdown" />
+    <Content Include="Docs\Reference\SymbolSource.markdown" />
+    <Content Include="Docs\Reference\_metadata" />
+    <Content Include="Docs\Release-Notes\MyGet-1.4.markdown" />
+    <Content Include="Docs\Release-Notes\MyGet-1.5.markdown" />
+    <Content Include="Docs\Release-Notes\MyGet-1.6.markdown" />
+    <Content Include="Docs\Release-Notes\MyGet-1.7.markdown" />
+    <Content Include="Docs\Release-Notes\MyGet-1.8.markdown" />
+    <Content Include="Docs\Release-Notes\_metadata" />
+    <Content Include="Docs\Walkthrough\Overview.markdown" />
+    <Content Include="Docs\Walkthrough\Setting-up-MyGet.markdown" />
+    <Content Include="Docs\Walkthrough\_metadata" />
+    <Content Include="Docs\_DocLayout.cshtml" />
+    <Content Include="Docs\_metadata" />
+    <Content Include="Docs\_PageStart.cshtml" />
+    <Content Include="Docs\_TableOfContents.cshtml" />
+    <Content Include="Error.cshtml" />
+    <Content Include="Search.cshtml" />
+    <Content Include="Views\Web.config" />
+    <Content Include="packages.config" />
+    <Content Include="App_Code\Disqus.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="_Layout.cshtml" />
+    <Content Include="_Overview.cshtml" />
+    <Content Include="_PageStart.cshtml" />
+    <Content Include="_SearchBox.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\images\myget\logo.png" />
+    <Content Include="Content\images\myget\myget.ico" />
+    <Content Include="Content\images\myget\myget_125x25.png" />
+    <Content Include="Content\images\sharing\diggit.png" />
+    <Content Include="Content\images\sharing\facebook.png" />
+    <Content Include="Content\images\sharing\google.png" />
+    <Content Include="Content\images\sharing\linkedin.png" />
+    <Content Include="Content\images\sharing\pinterest.png" />
+    <Content Include="Content\images\sharing\reddit.png" />
+    <Content Include="Content\images\sharing\stumbleupon.png" />
+    <Content Include="Content\images\sharing\twitter.png" />
+    <Content Include="Content\prettify.css" />
+    <Content Include="Content\twitter-bootstrap\img\glyphicons-halflings-white.png" />
+    <Content Include="Content\twitter-bootstrap\img\glyphicons-halflings.png" />
+    <Content Include="Docs\How-To\Images\acme-details.png" />
+    <Content Include="Docs\How-To\Images\acmefeed-one-package.png" />
+    <Content Include="Docs\How-To\Images\acmefeed-two-packages.png" />
+    <Content Include="Docs\How-To\Images\acmefeed-upstream-search.png" />
+    <Content Include="Docs\How-To\Images\add_package_source.png" />
+    <Content Include="Docs\How-To\Images\bitbucket_hook_add_webhook_url.png" />
+    <Content Include="Docs\How-To\Images\bitbucket_hook_service_hooks_button.png" />
+    <Content Include="Docs\How-To\Images\bitbucket_hook_settings_button.png" />
+    <Content Include="Docs\How-To\Images\bitbucket_hook_webhook_dropdown.png" />
+    <Content Include="Docs\How-To\Images\codeplex_appharbor_hook.png" />
+    <Content Include="Docs\How-To\Images\codeplex_hook_add_webhook_url.png" />
+    <Content Include="Docs\How-To\Images\codeplex_hook_service_hooks_button.png" />
+    <Content Include="Docs\How-To\Images\codeplex_hook_settings_button.png" />
+    <Content Include="Docs\How-To\Images\github_hook_add_webhook_url.png" />
+    <Content Include="Docs\How-To\Images\github_hook_service_hooks_button.png" />
+    <Content Include="Docs\How-To\Images\github_hook_settings_button.png" />
+    <Content Include="Docs\How-To\Images\github_hook_test_webhook.png" />
+    <Content Include="Docs\How-To\Images\github_hook_webhook_url_link.png" />
+    <Content Include="Docs\How-To\Images\myget_build_services_window.png" />
+    <Content Include="Docs\How-To\Images\nuget_include_in_source_control.png" />
+    <Content Include="Docs\How-To\Images\proget-settings.png" />
+    <Content Include="Docs\How-To\Images\proxy-schema.png" />
+    <Content Include="Docs\How-To\Images\proxy-settings.png" />
+    <Content Include="Docs\How-To\Images\psake_include_in_source_control.png" />
+    <Content Include="Docs\How-To\Images\teamcity-private-feed.png" />
+    <Content Include="Docs\How-To\Images\tfsonline-allowalternate.jpg" />
+    <Content Include="Docs\How-To\Images\tfsonline-profile.jpg" />
+    <Content Include="Docs\Reference\Images\access_token_management.png" />
+    <Content Include="Docs\Reference\Images\add_package_source.png" />
+    <Content Include="Docs\Reference\Images\Aggregate_Package_Sources.png" />
+    <Content Include="Docs\Reference\Images\auto-update.png" />
+    <Content Include="Docs\Reference\Images\build-badge.png" />
+    <Content Include="Docs\Reference\Images\configure-packages-to-push.png" />
+    <Content Include="Docs\Reference\Images\configure-projects-to-build.png" />
+    <Content Include="Docs\Reference\Images\debug-options.png" />
+    <Content Include="Docs\Reference\Images\feedsettings_symbolserver_url.png" />
+    <Content Include="Docs\Reference\Images\feed_security_add_success.png" />
+    <Content Include="Docs\Reference\Images\feed_security_add_warning.png" />
+    <Content Include="Docs\Reference\Images\feed_security_main_dialog.png" />
+    <Content Include="Docs\Reference\Images\feed_security_main_page.png" />
+    <Content Include="Docs\Reference\Images\feed_security_options.png" />
+    <Content Include="Docs\Reference\Images\github_commit_status.png" />
+    <Content Include="Docs\Reference\Images\myget_feed_security_popup.png" />
+    <Content Include="Docs\Reference\Images\myget_feed_security_tab.png" />
+    <Content Include="Docs\Reference\Images\npe_plugins_symbolsource.png" />
+    <Content Include="Docs\Reference\Images\pass-through-claims.png" />
+    <Content Include="Docs\Reference\Images\proxy-schema.png" />
+    <Content Include="Docs\Reference\Images\proxy-settings.png" />
+    <Content Include="Docs\Reference\Images\push_package_upstream.png" />
+    <Content Include="Docs\Reference\Images\successful.png" />
+    <Content Include="Docs\Walkthrough\Images\faq_register_myget_feed.png" />
+    <Content Include="Docs\Walkthrough\Images\the-myget-cloud.png" />
+    <Content Include="favicon.ico" />
+    <Content Include="Images\Caution.png" />
+    <Content Include="Images\Code.png" />
+    <Content Include="Images\error.png" />
+    <Content Include="Images\headerbackground.png" />
+    <Content Include="Images\information.png" />
+    <Content Include="Images\mygetlogo.png" />
+    <Content Include="Images\Outline.png" />
+    <Content Include="Images\OutlineClose.png" />
+    <Content Include="Images\output.png" />
+    <Content Include="Images\searchButton.png" />
+    <Content Include="Images\Tutorial.png" />
+    <Content Include="Scripts\autocolumn.js" />
+    <Content Include="Scripts\autocolumn.min.js" />
+    <Content Include="Scripts\bootstrap-slider.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\Helpers.js" />
+    <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\jquery.cookie.js" />
+    <Content Include="Scripts\prettify\lang-apollo.js" />
+    <Content Include="Scripts\prettify\lang-css.js" />
+    <Content Include="Scripts\prettify\lang-hs.js" />
+    <Content Include="Scripts\prettify\lang-lisp.js" />
+    <Content Include="Scripts\prettify\lang-lua.js" />
+    <Content Include="Scripts\prettify\lang-ml.js" />
+    <Content Include="Scripts\prettify\lang-proto.js" />
+    <Content Include="Scripts\prettify\lang-scala.js" />
+    <Content Include="Scripts\prettify\lang-sql.js" />
+    <Content Include="Scripts\prettify\lang-vb.js" />
+    <Content Include="Scripts\prettify\lang-vhdl.js" />
+    <Content Include="Scripts\prettify\lang-wiki.js" />
+    <Content Include="Scripts\prettify\lang-yaml.js" />
+    <Content Include="Scripts\prettify\prettify.js" />
+    <Content Include="Web.config" />
+    <Content Include="Scripts\jquery-1.9.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CassetteConfiguration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Docs.Core\Docs.Core.csproj">
+      <Project>{ef9b878f-fce0-4a92-8f6d-11e3146d0417}</Project>
+      <Name>Docs.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>16781</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:16781/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

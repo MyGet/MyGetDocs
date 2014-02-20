@@ -1,0 +1,57 @@
+﻿@using Docs.Core
+@{
+    Page.Title = "MyGet Documentation";
+    PageData["NoSearch"] = true;
+}
+
+<script type="text/javascript">
+    $(function() {
+        $('#searchBoxInput2').focus();
+    });
+</script>
+
+<article>
+    <h2 id="top">Welcome to MyGet Documentation</h2>
+
+    <p><a href="http://www.myget.org">MyGet</a> allows you to create and host your own <a href="http://nuget.org">NuGet</a> feed. Include packages from the official NuGet feed or upload your own NuGet packages. We can also compile and package your source code from GitHub, BitBucket, CodePlex and more!</p>
+    
+    <hr noshade="noshade"/>
+
+    <form action="" onsubmit="return submitQuery('#searchBoxInput2')" class="span8 centered">
+        <input name="q" id="searchBoxInput2" placeholder="How can we help?" class="input-xxlarge" /><br /><br />
+        <input id="searchBoxSubmit" type="submit" value="Search" class="btn btn-primary btn-large" />
+    </form>
+
+    <hr noshade="noshade" />
+
+    <div class="row">
+        <div class="span3">
+            <h3>Where to begin?</h3>
+            <p>Completely new to MyGet? It's probably best to start with <a href="/docs/walkthrough/overview">the overview</a> and head on to <a href="/docs/walkthrough/setting-up-myget">setting up MyGet</a>.</p>
+            <p>If you're already using NuGet, check <a href="/docs/how-to/migrating-to-myget">how to migrate to MyGet</a>.</p>
+        </div>
+        <div class="span3">
+            <h3>Popular topics</h3>
+            <ul>
+                <li><a href="/docs/how-to/make-myget-list-and-automatically-mirror-packages-from-other-feeds">Mirror packages from other feeds</a></li>
+                <li><a href="/docs/how-to/consume-a-private-feed-in-teamcity">Consume a private feed in TeamCity</a></li>
+                <li><a href="/docs/reference/package-sources">Working with Package Sources</a></li>
+                <li><a href="/docs/reference/package-source-discovery">Package Source Discovery</a></li>
+            </ul>
+        </div>
+        <div class="span3">
+            <h3>Reference</h3>
+            <ul>
+                <li><a href="/docs/reference/build-services">Build Services</a></li>
+                <li><a href="/docs/reference/custom-build-scripts">Custom Build Scripts</a></li>
+                <li><a href="/docs/reference/symbolsource">SymbolSource</a></li>
+                <li><a href="/docs/reference/feed-endpoints">Feed endpoints</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div>
+        @{ Disqus.Initialize("mygetdocs"); }
+        @Disqus.ShowComments(HttpUtility.UrlPathEncode("default"))
+    </div>
+</article>

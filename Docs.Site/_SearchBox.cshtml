@@ -1,0 +1,26 @@
+﻿@{
+    var ShowSearch = !PageData.ContainsKey("NoSearch");
+}
+
+<script type="text/javascript">
+    function submitQuery(searchBox) {
+        if (!searchBox) {
+            searchBox = '#searchBoxInput';
+        }
+
+        window.location = "@Href("~/search")?q=" + encodeURIComponent($(searchBox).val());
+        return false;
+    }
+</script>
+
+@if (ShowSearch)
+{
+    <form action="" onsubmit=" return submitQuery() " class="pull-right" style="margin-top: 5px;">
+        <input name="q" id="searchBoxInput" placeholder="Search documentation" value="@PageData["query"]" />
+        <input id="searchBoxSubmit" type="submit" value="Search" class="btn btn-small" />
+    </form>
+}
+else
+{
+    <br />
+}

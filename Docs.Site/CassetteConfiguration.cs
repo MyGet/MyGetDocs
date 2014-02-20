@@ -25,7 +25,6 @@ namespace Docs.Site
                 "~/Scripts/jquery-1.9.1.js",
                 "~/Scripts/bootstrap.js",
                 "~/Scripts/bootstrap-slider.js",
-                "~/Scripts/jquery.cookie.js",
                 "~/Scripts/autocolumn.js",
                 "~/Scripts/prettify/prettify.js",
                 "~/Scripts/Helpers.js"

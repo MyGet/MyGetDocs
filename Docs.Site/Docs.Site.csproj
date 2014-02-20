@@ -202,10 +202,14 @@
     <Content Include="Docs\_PageStart.cshtml" />
     <Content Include="Docs\_TableOfContents.cshtml" />
     <Content Include="Error.cshtml" />
+    <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
     <Content Include="Search.cshtml" />
     <Content Include="Views\Web.config" />
-    <Content Include="packages.config" />
     <Content Include="App_Code\Disqus.cshtml" />
+    <Content Include="packages.config" />
+    <Content Include="Scripts\jquery-1.9.1.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -301,9 +305,6 @@
     <Content Include="Scripts\bootstrap-slider.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\Helpers.js" />
-    <None Include="Scripts\jquery-1.9.1.intellisense.js" />
-    <Content Include="Scripts\jquery-1.9.1.js" />
-    <Content Include="Scripts\jquery-1.9.1.min.js" />
     <Content Include="Scripts\jquery.cookie.js" />
     <Content Include="Scripts\prettify\lang-apollo.js" />
     <Content Include="Scripts\prettify\lang-css.js" />
@@ -320,7 +321,6 @@
     <Content Include="Scripts\prettify\lang-yaml.js" />
     <Content Include="Scripts\prettify\prettify.js" />
     <Content Include="Web.config" />
-    <Content Include="Scripts\jquery-1.9.1.min.map" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CassetteConfiguration.cs" />

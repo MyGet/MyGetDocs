@@ -124,11 +124,18 @@
 
                             <div class="row">
                                 <div class="span9 centered">
-                                    <a href="#" class="btn btn-primary btn-small"><i class="icon-question-sign icon-white"></i> Get support</a>
+                                    <a href="https://www.myget.org/support" class="btn btn-primary btn-small"><i class="icon-question-sign icon-white"></i> Get support</a>
 
-                                    <a href="#" class="btn btn-primary btn-small"><i class="icon-comment icon-white"></i> Request a feature</a>
-
-                                    <a href="#" class="btn btn-primary btn-small"><i class="icon-wrench icon-white"></i> Contribute to our docs</a>
+                                    <a href="http://myget.uservoice.com" class="btn btn-primary btn-small"><i class="icon-comment icon-white"></i> Request a feature</a>
+                                    
+                                    @if (Page.Source != null)
+                                    {
+                                        <a href="https://github.com/myget/MyGetDocs/edit/master/Docs.Site/@HttpUtility.UrlPathEncode(Page.Source)" class="btn btn-primary btn-small"><i class="icon-wrench icon-white"></i> Contribute to our docs</a>
+                                    }
+                                    else
+                                    {
+                                        <a href="/docs/contribute/contributing-to-myget-documentation" class="btn btn-primary btn-small"><i class="icon-wrench icon-white"></i> Contribute to our docs</a>
+                                    }
                                 </div>
                             </div>
                         </div>

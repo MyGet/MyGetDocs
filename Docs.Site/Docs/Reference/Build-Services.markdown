@@ -132,6 +132,18 @@ MyGet gives you the option to specify one or more package sources for a feed. Pa
 * An additional package source is needed during build. MyGet will make the package source available during build if it has been added to the feed's package sources.
 * If you have an authenticated feed but do not wish to add credentials to source control, credentials can be added to the feed's package source. These credentials will be available during build and allow you to consume a protected feed with ease.
 * The API key for a package source is also transferred to the build server. This means during a build, you can call into ```nuget.exe push``` and push packages to configured package sources.
+* You want to make use of ```nuget.exe push``` in a build script without having to specify the ```-Source``` parameter.
+
+### Setting default package sources during build
+
+The ```NuGet.config``` on our build machines is configured using NuGet's defaults, enriched with all package sources configured for a feed. Based on these defaults, the following conventions are active:
+
+* The default package source is set to ```(Aggregate Source)```, meaning all feeds will be queried for packages in the order defined in the feed's package sources.
+* The default push source (when using ```nuget push``` without the ```-Source``` parameter) is NuGet.org.
+
+Both of these conventions can be overridden by editing the build source configuration.
+
+![Setting default package sources during build](Images/package-source-defaults.png)
 
 ## Supported project types and SDK
 

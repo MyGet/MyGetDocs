@@ -203,6 +203,7 @@
     <Content Include="Docs\_TableOfContents.cshtml" />
     <Content Include="Error.cshtml" />
     <Content Include="Docs\Release-Notes\MyGet-1.9.markdown" />
+    <Content Include="Docs\How-To\NuGet-Configuration-Inheritance.markdown" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />

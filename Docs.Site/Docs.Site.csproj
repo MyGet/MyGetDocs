@@ -171,6 +171,8 @@
     <Content Include="Docs\Contribute\_metadata" />
     <Content Include="Docs\How-To\Auto-Trigger-a-MyGet-Build-using-an-HTTP-POST-Hook-URL.markdown" />
     <Content Include="Docs\How-To\Consume-a-private-feed-in-TeamCity.markdown" />
+    <Content Include="Docs\How-To\Images\build-services-owasp.png" />
+    <Content Include="Docs\How-To\Images\owasp-warning.png" />
     <Content Include="Docs\How-To\Make-MyGet-list-and-automatically-mirror-packages-from-other-feeds.markdown" />
     <Content Include="Docs\How-To\Make-use-of-nuget-within-your-build-scripts.markdown" />
     <Content Include="Docs\How-To\Make-use-of-psake-within-your-build-scripts.markdown" />
@@ -204,6 +206,7 @@
     <Content Include="Error.cshtml" />
     <Content Include="Docs\Release-Notes\MyGet-1.9.markdown" />
     <Content Include="Docs\How-To\NuGet-Configuration-Inheritance.markdown" />
+    <Content Include="Docs\How-To\Checking-NuGet-package-vulnerabilities-with-OWASP-SafeNuGet .markdown" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />

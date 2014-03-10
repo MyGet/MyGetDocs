@@ -1,9 +1,11 @@
 ﻿Register MyGet Feeds In Visual Studio
 Add new owner to a feed
+Migrating to MyGet
 Consume a private feed in TeamCity
+NuGet Configuration Inheritance
 Package not found during package restore
 Auto Trigger a MyGet Build using an HTTP POST Hook URL
 Make use of nuget within your build scripts
 Make use of psake within your build scripts
 Make MyGet list and automatically mirror packages from other feeds
-Migrating to MyGet
+Checking NuGet package vulnerabilities with OWASP SafeNuGet 

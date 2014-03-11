@@ -159,6 +159,7 @@ Build services supports the following frameworks and SDK's:
 * TypeScript SDK
 * psake
 * ripple
+* node.js
 
 The following test runners are supported:
 

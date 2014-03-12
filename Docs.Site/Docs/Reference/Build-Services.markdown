@@ -167,7 +167,8 @@ The following test runners are supported:
 * MbUnit 2, MbUnit 3
 * NBehave
 * NUnit (up to 2.6.2)
-* xUnit.net
+* xUnit 1.0
+* xUnit 1.9.2
 * csUnit
 * RSpec
 
@@ -243,7 +244,11 @@ If you provide your own build.bat script or MyGet.sln, you can specifically inst
     	</tr>
     	<tr>
     	    <td><strong>%GallioEcho%</strong></td>
-    	    <td>Path to the Gallio.Echo.exe test runner</td>
+    	    <td>Path to the Gallio.Echo.exe test runner executable</td>
+    	</tr>
+    	<tr>
+    	    <td><strong>%XUnit192Path%</strong></td>
+    	    <td>Path to XUnit 1.9.2</td>
     	</tr>
 	</tbody>
 </table>

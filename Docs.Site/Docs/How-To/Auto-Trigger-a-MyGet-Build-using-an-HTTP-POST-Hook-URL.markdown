@@ -31,7 +31,7 @@ The following 6 steps provide information about how to use the MyGet HTTP POST H
 ![The Service Hooks button within your GitHub Project Settings](Images/github_hook_service_hooks_button.png)  
 4. Within the Service Hooks page, click on the __WebHook URLs__ link  
 ![The WebHook URLs link within Service Hooks for your GitHub Project](Images/github_hook_webhook_url_link.png)  
-5. Using the form that appears, paste in the HTTP POST Hook URL that was copied from MyGet above into the __URL__ field and click the __Update settings__ button  
+5. Using the form that appears, paste in the HTTP POST Hook URL that was copied from MyGet above into the __URL__ field and click the __Update settings__ button. __Make sure to select thea pplication/vnd.github.v3+json hook type!__  
 ![Adding a new WebHook URL to your GitHub Project](Images/github_hook_add_webhook_url.png)  
 6. To verify that this has been set up correctly, you can then click the __Test Hook__ button.  Doing this should trigger a Build straight away within MyGet.   
 ![Testing the new WebHook URL that was added to your GitHub Project](Images/github_hook_test_webhook.png)

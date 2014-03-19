@@ -271,11 +271,11 @@ Badges will be shown for pending builds (queued or building) as well as successf
 
 It can then be used in HTML, for example with a hyperlink to your feed on the [MyGet Gallery](http://www.myget.org/gallery):
 
-<pre><code>&lt;a href="https://www.myget.org/gallery/googleanalyticstracker"&gt;&lt;img alt="GoogleAnalyticsTracker Nightly Build Status" src="https://www.myget.org/BuildSource/Hook/googleanalyticstracker?identifier=479ff619-28f2-47c0-9574-2774ed0cd855" /&gt;&lt;/a&gt;</code></pre>
+<pre><code>&lt;a href="https://www.myget.org/gallery/googleanalyticstracker"&gt;&lt;img alt="GoogleAnalyticsTracker Nightly Build Status" src="https://www.myget.org/BuildSource/Badge/googleanalyticstracker?identifier=479ff619-28f2-47c0-9574-2774ed0cd855" /&gt;&lt;/a&gt;</code></pre>
 
 You can do the same in Markdown:
 
-<pre><code>[![GoogleAnalyticsTracker Nightly Build Status](https://www.myget.org/BuildSource/Hook/googleanalyticstracker?identifier=479ff619-28f2-47c0-9574-2774ed0cd855)](https://www.myget.org/gallery/googleanalyticstracker)</code></pre>
+<pre><code>[![GoogleAnalyticsTracker Nightly Build Status](https://www.myget.org/BuildSource/Badge/googleanalyticstracker?identifier=479ff619-28f2-47c0-9574-2774ed0cd855)](https://www.myget.org/gallery/googleanalyticstracker)</code></pre>
 
 Of course, you can also use it in any other markup language that supports embedding images.
 

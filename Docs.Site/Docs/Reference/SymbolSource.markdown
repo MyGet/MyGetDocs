@@ -1,6 +1,6 @@
 # SymbolSource
 
-MyGet integrates with [SymbolSource](http//www.SymbolSource.org) to host debugging symbols for your NuGet packages. Let consumers of your NuGet packages step through the source code and integrate with Visual Studio. 
+MyGet integrates with [SymbolSource](http://www.SymbolSource.org) to host debugging symbols for your NuGet packages. Let consumers of your NuGet packages step through the source code and integrate with Visual Studio. 
 
 ## Pushing packages to SymbolSource
 

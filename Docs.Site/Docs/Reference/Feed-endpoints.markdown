@@ -76,13 +76,10 @@ When accessing *private* feeds, these endpoints all require basic authentication
     <strong>Warning!</strong> As pre-authenticated feed URLs contain sensitive information, it is recommended to never use pre-authenticated feed URLs unless absolutely needed.
 </p>
 
+Since pre-authenticated feed URLs contain your API key in the URL, we advise to use a <a href="https://www.myget.org/profile/Me#!/AccessTokens">separate access token</a> generated specifically for the purpose of using a pre-authenticated feed endpoint so that it can be revoked at any time.
+
 MyGet has the following pre-authenticated feed endpoints available:
 
 * /F/&lt;your-feed-name&gt;/auth/&lt;your-api-key&gt; - the NuGet v2 API endpoint
 * /F/&lt;your-feed-name&gt;/auth/&lt;your-api-key&gt;/api/v2 - the NuGet v2 API endpoint for consuming packages
 * /F/&lt;your-feed-name&gt;/auth/&lt;your-api-key&gt;/api/v2/package - the NuGet v2 API endpoint for pushing packages
-
-<p class="alert alert-danger">
-    <strong>Warning!</strong> Pre-authenticated feed URLs contain your API key in the URL. It is recommended to not share pre-authenticated feed URLs with others as they expose your credentials.<br /><br />
-    We recommend using a <a href="https://www.myget.org/profile/Me#!/AccessTokens">separate access token</a> generated specifically for this purpose.
-</p>

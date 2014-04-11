@@ -1,4 +1,4 @@
-﻿# Frequently Asked Questions
+# Frequently Asked Questions
 
 ## What is required to be able to use MyGet?
 
@@ -30,6 +30,18 @@ The *409 Conflict* status code can be returned because of several reasons:
   * **Forbid packages which are non-compliant with Semantic Version?** - this will forbid uploading packages that are not compliant with [Semantic Versioning](http://www.semver.org). E.g. a package version like 2.0.234.255 will not be supported.
 
 MyGet will return a detailed error when pushing packages with a full description of the issue. If your NuGet client is not showing this error, use the *-verbosity Detailed* switch.
+
+## I get a 402 Payment Required when working with my private feed
+
+The *402 Payment Required* status code means that the private feed is locked because the feed owner's subscription has expired.
+
+If the owner of a private feed downgrades a paid subscription to a free one or if the subscription expires, any private feeds on the account will become read-only for a period of 7 days. After this period, the feed will become locked, meaning private feeds cannot be accessed until the subscription is renewed or the feed is made public.
+
+<div class="alert alert-info">
+    <strong>Note:</strong> Locked feeds will not be made public, nor will they be automatically deleted.
+</div>
+
+[Upgrading to a paid subscription](http://www.myget.org/plans) will automatically unlock the private feed. Another option is to make the feed public and restore access. Note that making the feed public will make it accessible to everyone.
 
 ## Does MyGet support Mono?
 

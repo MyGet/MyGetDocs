@@ -22,12 +22,12 @@ Once downloaded, source code can then be built using a number of different metho
 
 Using MyGet Build Services, you have the opportunity to control exactly how your project gets built. MyGet Build Services works based on several conventions to run builds. It will scan the contents of your Source Control Repository looking for a file which it can work with.  In order of precedence, the following files are searched for:
 
-* Project files (*.csproj, *.vbproj, ...) [specified in the build source configuration](#Configuring_Projects_To_Build).
+* Project files (*.csproj, *.vbproj, *.fsproj, ...) that are explicitly [specified in the build source configuration](#Configuring_Projects_To_Build).
 * MyGet.bat, MyGet.cmd or MyGet.ps1
 * build.bat, build.cmd or build.ps1
 * MyGet.sln
 * Any other *.sln file
-* *.csproj (and *.vbproj, etc)
+* *.csproj (and *.vbproj, *.fsproj, ...)
 * *.nuspec (yep, we support packaging simple [convention-based NuGet directories](http://docs.nuget.org/docs/creating-packages/creating-and-publishing-a-package#From_a_convention_based_working_directory "Convention Based Nuget Directories") as well)
 
 Based on the files found, the build process will be slightly different.
@@ -152,11 +152,12 @@ Build services supports the following frameworks and SDK's:
 * .NET 2.0, .NET 3.0, .NET 3.5, .NET 4.0, .NET 4.5 and .NET 4.5.1
 * WinRT Class Libraries (Windows 8.0 and 8.1)
 * PCL support (2012)
-* Windows Azure SDK 1.7, 1.8, 2.0, 2.1, 2.2
+* Windows Azure SDK 1.7, 1.8, 2.0, 2.1, 2.2, 2.3
 * Windows Identity Foundation SDK
 * Silverlight 4, Silverlight 5
 * Windows Phone 7.1 SDK, Windows Phone 8 SDK
 * TypeScript SDK
+* FSharp  Tools 3.1.1
 * psake
 * ripple
 * node.js

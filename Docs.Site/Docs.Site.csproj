@@ -185,6 +185,7 @@
     <Content Include="Docs\Reference\Custom-Build-Scripts.markdown" />
     <Content Include="Docs\Reference\FAQ.markdown" />
     <Content Include="Docs\Reference\Feed-endpoints.markdown" />
+    <Content Include="Docs\Reference\Images\package-source-defaults.png" />
     <Content Include="Docs\Reference\Package-Source-Discovery.markdown" />
     <Content Include="Docs\Reference\Package-Sources.markdown" />
     <Content Include="Docs\Reference\Security.markdown" />
@@ -207,6 +208,7 @@
     <Content Include="Docs\Release-Notes\MyGet-1.9.markdown" />
     <Content Include="Docs\How-To\NuGet-Configuration-Inheritance.markdown" />
     <Content Include="Docs\How-To\Checking-NuGet-package-vulnerabilities-with-OWASP-SafeNuGet.markdown" />
+    <Content Include="Docs\Reference\MyGet-Enterprise.markdown" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />

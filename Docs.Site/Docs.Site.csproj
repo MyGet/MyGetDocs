@@ -185,6 +185,8 @@
     <Content Include="Docs\Reference\Custom-Build-Scripts.markdown" />
     <Content Include="Docs\Reference\FAQ.markdown" />
     <Content Include="Docs\Reference\Feed-endpoints.markdown" />
+    <Content Include="Docs\Reference\Images\add_user.png" />
+    <Content Include="Docs\Reference\Images\enterprise_account_management.png" />
     <Content Include="Docs\Reference\Images\package-source-defaults.png" />
     <Content Include="Docs\Reference\Package-Source-Discovery.markdown" />
     <Content Include="Docs\Reference\Package-Sources.markdown" />

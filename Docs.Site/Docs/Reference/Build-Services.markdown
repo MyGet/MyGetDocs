@@ -150,14 +150,21 @@ Both of these conventions can be overridden by editing the build source configur
 Build services supports the following frameworks and SDK's:
 
 * .NET 2.0, .NET 3.0, .NET 3.5, .NET 4.0, .NET 4.5 and .NET 4.5.1
+* Mono 2, Mono 3
 * WinRT Class Libraries (Windows 8.0 and 8.1)
-* PCL support (2012)
+* PCL support
 * Windows Azure SDK 1.7, 1.8, 2.0, 2.1, 2.2, 2.3
 * Windows Identity Foundation SDK
 * Silverlight 4, Silverlight 5
 * Windows Phone 7.1 SDK, Windows Phone 8 SDK
 * TypeScript SDK
-* FSharp  Tools 3.1.1
+* FSharp Tools 3.1.1
+* MSBuild Community Tasks
+* NAnt
+* Ruby 1.8.7, 1.9.2, 1.9.3
+* Python (2 and 3)
+* Go
+* ScriptCS
 * psake
 * ripple
 * node.js

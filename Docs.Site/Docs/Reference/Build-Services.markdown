@@ -157,6 +157,8 @@ Build services supports the following frameworks and SDK's:
 * Windows Identity Foundation SDK
 * Silverlight 4, Silverlight 5
 * Windows Phone 7.1 SDK, Windows Phone 8 SDK
+* Lightswitch
+* Office Developer Tools (2013)
 * TypeScript SDK
 * FSharp Tools 3.1.1
 * MSBuild Community Tasks

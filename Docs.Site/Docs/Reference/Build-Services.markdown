@@ -149,7 +149,7 @@ Both of these conventions can be overridden by editing the build source configur
 
 Build services supports the following frameworks and SDK's:
 
-* .NET 2.0, .NET 3.0, .NET 3.5, .NET 4.0, .NET 4.5 and .NET 4.5.1
+* .NET 2.0, .NET 3.0, .NET 3.5, .NET 4.0, .NET 4.5, .NET 4.5.1, .NET 4.5.2
 * Mono 2, Mono 3
 * WinRT Class Libraries (Windows 8.0 and 8.1)
 * PCL support

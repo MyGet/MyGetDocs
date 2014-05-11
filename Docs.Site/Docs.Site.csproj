@@ -173,7 +173,10 @@
     <Content Include="Docs\How-To\Auto-Trigger-a-MyGet-Build-using-an-HTTP-POST-Hook-URL.markdown" />
     <Content Include="Docs\How-To\Consume-a-private-feed-in-TeamCity.markdown" />
     <Content Include="Docs\How-To\Images\build-services-owasp.png" />
+    <Content Include="Docs\Reference\Images\edit-license.png" />
+    <Content Include="Docs\Reference\Images\license-analysis.png" />
     <Content Include="Docs\How-To\Images\owasp-warning.png" />
+    <Content Include="Docs\Reference\Images\package-details-license.png" />
     <Content Include="Docs\How-To\Make-MyGet-list-and-automatically-mirror-packages-from-other-feeds.markdown" />
     <Content Include="Docs\How-To\Make-use-of-nuget-within-your-build-scripts.markdown" />
     <Content Include="Docs\How-To\Make-use-of-psake-within-your-build-scripts.markdown" />
@@ -230,6 +233,7 @@
     <Content Include="Docs\How-To\Checking-NuGet-package-vulnerabilities-with-OWASP-SafeNuGet.markdown" />
     <Content Include="Docs\Reference\MyGet-Enterprise.markdown" />
     <Content Include="Docs\Reference\VSO-Integration.markdown" />
+    <Content Include="Docs\Reference\License-Analysis.markdown" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />

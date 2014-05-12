@@ -5,11 +5,11 @@ From your feed, a _Licenses_ tab displays a report of all licenses used by packa
 
 ![License report for NuGet packages](Images/license-analysis.png)
 
-The licenses overview provices a chart that provides a quick view on licenses in use. The list underneath shows all different licenses used per package identifier. If a package changed license over time, it will be listed twice. To quickly filter the detailed list, simply click one of the colors in the chart: this will show just the packages that have the selected license applied.
+The licenses overview provices a chart that provides a quick view on licenses in use. The list underneath shows all different licenses used per package identifier. If a package changed license over time, it will be listed twice. To quickly filter the detailed list, click one of the colors in the chart: this will show just the packages that have the selected license applied.
 
 ## Where does license information come from?
 
-Whenever a package is uploaded to your feed, wheteher from an upstream package source or by using nuget push, MyGet will perform a license analysis on the package. The license is determined as follows:
+Whenever a package is uploaded to your feed, whether from an upstream package source or by using ```nuget push```, MyGet will perform a license analysis on the package. The license is determined as follows:
 
 * If we've seen the package's license URL before, we will assign the same license to the package that is being added.
 * If your feed contains a package with the same identifier, we'll take that package's license.
@@ -22,6 +22,6 @@ Whenever you have a package where the license analysis was incorrect or you want
 
 ![License report for an individual NuGet package](Images/package-details-license.png)
 
-Editing the license will open a dialog in which you can edit the license. MyGet provides autocompletion on known [OSI licenses](http://opensource.org/licenses/), but if you have a proprietary license name that can be entered here as well. Once a license has been overriden, new versions of the package will be assigned the overriden license.
+Editing the license will open a dialog in which you can specify a new license. MyGet provides autocompletion on known [OSI licenses](http://opensource.org/licenses/), but a proprietary license name can be entered here as well. Once a license has been overriden, new versions of the package will be assigned this overriden license.
 
 ![Edit NuGet package license information](Images/edit-license.png)

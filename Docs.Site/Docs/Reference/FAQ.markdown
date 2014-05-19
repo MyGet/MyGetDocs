@@ -14,7 +14,7 @@ For backwards compatibility with older NuGet clients and Orchard, we also still 
 
 ## How do I get my package in the feed?
 
-See the [Creating and publishing a package](http://docs.nuget.org/creating-packages/creating-and-publishing-a-package) page on the NuGet Documentation for details on how to create NuGet packages.
+See the [Creating and publishing a package](http://docs.nuget.org/docs/creating-packages/creating-and-publishing-a-package) page on the NuGet Documentation for details on how to create NuGet packages.
 
 In order to publish them onto your MyGet feeds, you'll need to create a MyGet account first.
 //todo

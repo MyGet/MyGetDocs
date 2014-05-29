@@ -123,6 +123,7 @@
   <ItemGroup>
     <Content Include="404.cshtml" />
     <Content Include="App_Code\PaginationHelper.cshtml" />
+    <Content Include="Content\images\pdf.png" />
     <Content Include="Content\less\accordion.less" />
     <Content Include="Content\less\alerts.less" />
     <Content Include="Content\less\bootstrap.less" />

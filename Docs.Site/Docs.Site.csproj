@@ -234,6 +234,7 @@
     <Content Include="Docs\Reference\MyGet-Enterprise.markdown" />
     <Content Include="Docs\Reference\VSO-Integration.markdown" />
     <Content Include="Docs\Reference\License-Analysis.markdown" />
+    <Content Include="Docs\Reference\Packaging-FSharp.markdown" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />

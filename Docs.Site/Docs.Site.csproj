@@ -172,6 +172,7 @@
     <Content Include="Docs\Contribute\_metadata" />
     <Content Include="Docs\How-To\Auto-Trigger-a-MyGet-Build-using-an-HTTP-POST-Hook-URL.markdown" />
     <Content Include="Docs\How-To\Consume-a-private-feed-in-TeamCity.markdown" />
+    <Content Include="Docs\How-To\Images\2fa-credentials.png" />
     <Content Include="Docs\How-To\Images\build-services-owasp.png" />
     <Content Include="Docs\Reference\Images\edit-license.png" />
     <Content Include="Docs\Reference\Images\license-analysis.png" />
@@ -235,6 +236,7 @@
     <Content Include="Docs\Reference\VSO-Integration.markdown" />
     <Content Include="Docs\Reference\License-Analysis.markdown" />
     <Content Include="Docs\Reference\Packaging-FSharp.markdown" />
+    <Content Include="Docs\How-To\MyGet-and-GitHub-Two-Factor-Authentication.markdown" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />

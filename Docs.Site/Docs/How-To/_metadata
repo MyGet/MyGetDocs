@@ -9,3 +9,5 @@ Make use of nuget within your build scripts
 Make use of psake within your build scripts
 Make MyGet list and automatically mirror packages from other feeds
 Checking NuGet package vulnerabilities with OWASP SafeNuGet 
+MyGet and GitHub Two-Factor Authentication
+Use TFS Online Git repositories with MyGet Build Services

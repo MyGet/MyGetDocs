@@ -41,7 +41,7 @@ The following build steps will be run when building from solution or project fil
 * Patch AssemblyInfo (if enabled)
 * Build solution or project file(s)
 * Run unit tests
-* Create NuGet packages (see [How does MyGet determine what packages to create?](#Which_packages_are_created%3f))
+* Create NuGet packages (see [Which packages are created?](#Which_packages_are_created%3f))
 * Push packages to your MyGet feed
 * Label sources (if enabled)
 

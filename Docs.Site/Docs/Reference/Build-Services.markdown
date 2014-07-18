@@ -99,6 +99,8 @@ Here's the workflow:
   {3} = optionally appended `"-Version {4}"` if version patching is enabled
 * Note that we by default always create symbols packages
 
+The above workflow also clearly prefers targeting project files if present. This means that you can benefit from this by having a companion `projectname.nuspec` file next to your `projectname.csproj` (within the same directory!). [Check this StackOverflow thread](http://stackoverflow.com/questions/14797525/differences-between-nuget-packing-a-csproj-vs-nuspec/14808085#14808085) if you want to learn about the differences between targeting a project file and targeting a nuspec file directly.
+
 ## Which packages are pushed to my feed?
 
 By default, MyGet will push all NuGet packages generated during build to your feed, except for packages generated in a folder named *packages*. The reason for this is that the *packages* folder is reserved by NuGet itself and may contain packages that were used during the build process and are not necessarily to be added to your feed.

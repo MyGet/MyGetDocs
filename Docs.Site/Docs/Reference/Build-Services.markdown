@@ -41,7 +41,7 @@ The following build steps will be run when building from solution or project fil
 * Patch AssemblyInfo (if enabled)
 * Build solution or project file(s)
 * Run unit tests
-* Create NuGet packages
+* Create NuGet packages (see [How does MyGet determine what packages to create?](#Which_packages_are_created%3f))
 * Push packages to your MyGet feed
 * Label sources (if enabled)
 
@@ -65,6 +65,39 @@ Two attributes will be patched: AssemblyVersion and AssemblyInformationalVersion
 * The patched AssemblyInformationalVersion version supports semantic versioning and can be in the form major.minor.patch as well as major.minor.patch-prerelease.
 
 Patching of these attributes will occur whenever the feature is enabled, no matter which build process is used (solution, project or build.bat).
+
+## Which packages are created?
+
+When you use MyGet's default build conventions and simply let us handle the build of your solution, then we will perform a few steps to determine which packages should be created.
+Here's the workflow:
+* Verify if packages were created during compilation (for those using MSBuild for creating packages). 
+  
+  If any `*.nupkg` file is found in any directory (except for `/packages` which is NuGet's default package install/restore location), we don't bother creating any additional packages.
+* If no `.nupkg` files were found, we scan for *packageable* files.
+  
+  A packageable file is any `.csproj`, `.vbproj`, `.fsproj` or `.nuspec` file. We ignore any file with the word `test` in its path. 
+
+  Since only a few of you are building test frameworks, we feel we shouldn't annoy the majority of people by creating and publishing test assemblies by default. If you are creating a test framework, you can always customize the build process using a build script.
+* We call the following command on all found *packageable* files:
+  
+  ```
+  nuget.exe pack "{0}" -OutputDirectory "{1}" 
+                       -Prop Configuration={2} 
+                       -NoPackageAnalysis 
+                       -Symbols 
+                       {3}
+  ```
+  
+  where 
+
+  {0} = path to packageable file, 
+
+  {1} = `\bin` subdirectory of packageable path, 
+
+  {2} = build configuration (as specified in build source or `'Release'` by default), 
+
+  {3} = optionally appended `"-Version {4}"` if version patching is enabled
+* Note that we by default always create symbols packages
 
 ## Which packages are pushed to my feed?
 

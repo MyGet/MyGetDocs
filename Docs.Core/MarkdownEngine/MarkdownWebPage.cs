@@ -75,7 +75,7 @@ namespace Docs.Core.MarkdownEngine {
                 var headerLevel = Convert.ToInt32(heading.Name.Remove(0, 1));
 
                 var id = heading.InnerHtml.Replace(" ", "_");
-                id = Regex.Replace("", "[^a-zA-Z0-9-_]", "");
+                id = Regex.Replace(id, "[^a-zA-Z0-9-_]", "");
                 heading.SetAttributeValue("id", id);
                 headings.Add(new Heading(id, headerLevel, heading.InnerText));
 

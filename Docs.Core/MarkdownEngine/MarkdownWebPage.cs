@@ -75,13 +75,13 @@ namespace Docs.Core.MarkdownEngine {
                 var headerLevel = Convert.ToInt32(heading.Name.Remove(0, 1));
 
                 var id = heading.InnerHtml.Replace(" ", "_");
-                id = HttpUtility.HtmlAttributeEncode(HttpUtility.UrlEncode(id)); // TODO: What encoding should happen here?
+                id = Regex.Replace("", "[^a-zA-Z0-9-_]", "");
                 heading.SetAttributeValue("id", id);
                 headings.Add(new Heading(id, headerLevel, heading.InnerText));
 
                 heading.Name = "h" + (headerLevel + 1);
             }
-
+            
             Page.Headings = headings;
 
             var docteredHTML = new StringWriter();

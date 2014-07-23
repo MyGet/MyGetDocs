@@ -110,11 +110,19 @@ The above workflow also clearly prefers targeting project files if present. This
 
 By default, MyGet will push all NuGet packages generated during build to your feed, except for packages generated in a folder named *packages*. The reason for this is that the *packages* folder is reserved by NuGet itself and may contain packages that were used during the build process and are not necessarily to be added to your feed.
 
-When creating a batch-based build, make sure to generate packages in a folder not named *packages*. A good example would be *output*.
+When creating a batch-based build, make sure to generate packages in a folder that is not named *packages*. A good example would be *output*.
 
-To override this behaviour, a series of wildcard matches can be specified in the build configuration. When omitted, all packages generated during build will be pushed to your feed. When specified, only packages matching any of the specified package names or wildcards will be pushed to your feed.
+To override this behaviour, a series of filters can be specified in the build configuration. When omitted, all packages generated during build will be pushed to your feed. When specified, only packages matching any of the specified filters or wildcards will be pushed to your feed.
 
 ![Configure Packages to Push](Images/configure-packages-to-push.png)
+
+Filters can be of different types:
+
+* Plain text, e.g. `MyPackage` to match a specific package id.
+* Containing a wildcard, e.g. `MyPackage.*` to match all package id's that start with `MyPackage.`.
+* Starting with a negation, e.g. `!MyPackage.*` to explicitly exclude all package id's starting with `Mypackage.*`.
+
+Filters are executed in order of precedence. If a negation comes first, packages matching the negation will be excluded, even if the next rule defines to include the package.
 
 ## Pushing symbols
 

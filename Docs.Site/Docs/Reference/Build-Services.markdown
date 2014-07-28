@@ -309,6 +309,10 @@ If you provide your own build.bat script or MyGet.sln, you can specifically inst
     	    <td><strong>%XUnit192Path%</strong></td>
     	    <td>Path to XUnit 1.9.2</td>
     	</tr>
+    	<tr>
+    	    <td><strong>%VsTestConsole%</strong></td>
+    	    <td>Path to VsTest.Console.exe</td>
+    	</tr>
 	</tbody>
 </table>
 

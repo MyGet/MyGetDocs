@@ -49,3 +49,11 @@ As long as NuGet.Core and the NuGet CLI support Mono, we'll do the same.
 
 The command-line application (*nuget.exe*) builds and runs under Mono and allows you to create packages in Mono.
 This is especially true for Mono on Windows, but there are some known issues for Mono on 
+
+## Where is my data stored?
+
+MyGet runs its operations from the [Microsoft Azure](http://www.azure.com) in the West Europe region, near Amsterdam, the Netherlands. All free and paid plans are hosted in this location, with backups in the North Europe region, near Dublin, Ireland.
+
+Enterprise plan customers have a choice in where data is stored between the US East region, or our primary West Europe region.
+
+Check our [terms and conditions](http://www.myget.org/terms) to learn more about Security, privacy, and Customer Data.

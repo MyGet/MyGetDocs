@@ -74,7 +74,7 @@ Here's the workflow:
 
 * Verify if packages were created during compilation (for those using MSBuild for creating packages). 
   
-  If any `*.nupkg` file is found in any directory (except for `/packages` which is NuGet's default package install/restore location), we don't bother creating any additional packages.
+  If any `*.nupkg` file is found in any directory (that was not present in source control or has not been downloaded during package restore), we don't bother creating any additional packages.
 
 * If no `.nupkg` files were found, we scan for *packageable* files.
   
@@ -108,11 +108,9 @@ The above workflow also clearly prefers targeting project files if present. This
 
 ## Which packages are pushed to my feed?
 
-By default, MyGet will push all NuGet packages generated during build to your feed, except for packages generated in a folder named *packages*. The reason for this is that the *packages* folder is reserved by NuGet itself and may contain packages that were used during the build process and are not necessarily to be added to your feed.
+By default, MyGet will push all NuGet packages generated during build to your feed, except for packages that were present in source control or have been downloaded during package restore. The reason for this is that the *packages* folder is reserved by NuGet itself and may contain packages that were used during the build process and are not necessarily to be added to your feed. Note that when creating a batch-based build, a good practice is to generate packages in a folder that is not named *packages*. A good example would be *output*.
 
-When creating a batch-based build, make sure to generate packages in a folder that is not named *packages*. A good example would be *output*.
-
-To override this behaviour, a series of filters can be specified in the build configuration. When omitted, all packages generated during build will be pushed to your feed. When specified, only packages matching any of the specified filters or wildcards will be pushed to your feed.
+To override this default behaviour, a series of filters can be specified in the build configuration. When omitted, all packages generated during build will be pushed to your feed. When specified, only packages matching any of the specified filters or wildcards will be pushed to your feed.
 
 ![Configure Packages to Push](Images/configure-packages-to-push.png)
 

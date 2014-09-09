@@ -15,7 +15,7 @@ The following events can be subscribed to:
 * **Build finished** - a build has finished
 
 <p class="alert alert-info">
-	<strong>Note:</strong> Webhooks are currently a preview feature.
+	<strong>Note:</strong> Webhooks are currently a preview feature. Feel free to <a href="https://github.com/myget/MyGetDocs/edit/master/Docs.Site/Docs/Reference/Webhooks.markdown">contribute to the documentation</a> and provide us feedback on this feature.
 </p>
 
 ## HTTP Post webhook

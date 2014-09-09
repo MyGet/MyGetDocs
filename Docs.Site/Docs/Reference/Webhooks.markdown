@@ -1,6 +1,6 @@
 # Webhooks
 
-Every MyGet feed provides the option to communicate with external services, such as a web server, whenever a specific action occurs on the feed. These webhooks can be used to perform actions based on such event, for example sending out a Tweet when a package is pushed or updating an issue tracker when a build succeeds.
+Every MyGet feed provides the option to communicate with external services, such as a web server, whenever a specific action occurs on the feed. These webhooks can be used to perform actions based on such event, for example sending out a tweet when a package is pushed or updating an issue tracker when a build succeeds.
 
 Only feed owners and co-owners can manage webhooks for a feed. Each webhook can be triggered for one or more event types, depending on the implementation. Webhook deliveries can be inspected, including full logs, as well as redelivered in case this is needed. 
 
@@ -39,6 +39,10 @@ MyGet will make every HTTP request with the following headers:
 </table>
 
 Let's go over some example payloads.
+
+<p class="alert alert-success">
+	<strong>Tip:</strong> Webhooks can be tested and debugged using a variety of tools. John Sheehan has an extensive list of them available <a href="http://john-sheehan.com/blog/ultimate-api-webhook-backend-service-debugging-testing-monitoring-and-discovery-tools-list">on his blog</a>.
+</p>
 
 ### Ping
 

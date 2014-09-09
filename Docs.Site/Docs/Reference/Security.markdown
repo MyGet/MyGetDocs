@@ -48,7 +48,9 @@ After inviting a user to your feed, you can change the privileges previously ass
 
 The *Feed security* tab for your feed lists all users that currently have access to your feed as well as a list of users that have been invited to your feed but haven’t confirmed their privileges yet. The dropdown next to a user’s name allows you to modify the currently assigned privilege.
 
-**Note:** When assigning the <i>&quot;Has no access to this feed&quot;</i> privilege to a certain user, the user will be removed from the list of users. If afterwards you want to assign a dfferent privilege to this user, the user should be sent a new invitation using the *Add feed privileges...* button.
+<p class="alert alert-info">
+    <strong>Note:</strong> When assigning the <i>&quot;Has no access to this feed&quot;</i> privilege to a certain user, the user will be removed from the list of users. If afterwards you want to assign a dfferent privilege to this user, the user should be sent a new invitation using the <strong>Add feed privileges..</strong> button.
+</p>
 
 ## Available Feed Privileges
 

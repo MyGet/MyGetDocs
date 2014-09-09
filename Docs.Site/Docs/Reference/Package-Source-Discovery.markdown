@@ -1,7 +1,7 @@
 # NuGet Package Source Discovery Specification
 
 <p class="alert alert-info">
-    <strong>NOTE:</strong> You can contribute or comment on this specification on the GitHub repository at <a href="https://github.com/myget/PackageSourceDiscovery" target="_blank">https://github.com/myget/PackageSourceDiscovery</a>.
+    <strong>Note:</strong> You can contribute or comment on this specification on the GitHub repository at <a href="https://github.com/myget/PackageSourceDiscovery" target="_blank">https://github.com/myget/PackageSourceDiscovery</a>.
 </p>
 
 NuGet Package Source Discovery (PSD) allows for NuGet-based client tools to discover the feeds that are hosted by a user, or organization, by using, for instance a blog, any website URL.

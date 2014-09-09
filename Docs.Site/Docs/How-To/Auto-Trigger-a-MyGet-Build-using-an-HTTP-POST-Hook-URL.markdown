@@ -9,7 +9,7 @@ Once you have fully configured a Build Source for your MyGet Feed, you will be a
 The HTTP POST Hook URL is a mechanism to allow your Source Code Repository to notify the MyGet Build Service (via an HTTP POST to the given URL) when a commit has been pushed.  As soon as this has happened, a MyGet Build will be added to the Build Queue, which will then go and grab the latest code from the Source Code Repository, and execute the Build.  
 
 <p class="alert alert-info">
-    <strong>NOTE:</strong> During the current MyGet Build Services Beta, you can't trigger a Build, manually or otherwise, faster than one every 5 minutes
+    <strong>Note:</strong> During the current MyGet Build Services Beta, you can't trigger a Build, manually or otherwise, faster than one every 5 minutes
 </p>
 
 ## Where can I find the HTTP POST Hook URL?

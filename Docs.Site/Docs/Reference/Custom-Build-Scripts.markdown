@@ -3,7 +3,7 @@
 As described in the [Build Services Reference](/docs/reference/build-services), MyGet Build Services supports scripting your own build using a batch file named build.bat, build.cmd or using a PowerShell script. This page lists several example build.bat files which can be used in other projects as well.
 
 <p class="alert alert-info">
-    <strong>NOTE:</strong> All environment variables described in the <a href="/docs/reference/build-services">Build Services Reference</a> can be used in build.bat files.
+    <strong>Note:</strong> All environment variables described in the <a href="/docs/reference/build-services">Build Services Reference</a> can be used in build.bat files.
 </p>
 
 ## Simple build.bat

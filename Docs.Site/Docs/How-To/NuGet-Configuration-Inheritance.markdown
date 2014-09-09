@@ -106,5 +106,5 @@ The reason for that is probably the active package source is set to one specific
 	</configuration>
 
 <p class="alert alert-info">
-    <strong>NOTE:</strong> Also see <a href="/docs/how-to/package-not-found-during-package-restore">Package not found during package restore</a>
+    <strong>Note:</strong> Also see <a href="/docs/how-to/package-not-found-during-package-restore">Package not found during package restore</a>
 </p>

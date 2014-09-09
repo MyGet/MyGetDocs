@@ -236,7 +236,7 @@ We believe adding frameworks and SDK's out-of-the-box provides a lot of value to
 If you provide your own build.bat script or MyGet.sln, you can specifically instruct MyGet Build Services on how to act on your sources. This also means you'll need to take care of applying a version number to your build. That's why we provide you with the following set of parameters so you can benefit from using the version scheme you have already defined within the MyGet User Interface, as well as the build-counter attached to your build source. 
 
 <p class="alert alert-info">
-    <strong>Note:</strong> that these environment variables are read-only and are reset to the initial values at the start of the build process.
+    <strong>Note:</strong> These environment variables are read-only and are reset to the initial values at the start of the build process.
 </p>
 
 <table class="table table-condensed">

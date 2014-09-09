@@ -220,3 +220,54 @@ MyGet provides several service-specific webhooks:
 * **HipChat** - sends the event as a notification to a HipChat room
 * **Twilio** - sends the event as a plain text SMS to a phone
 * **Twitter** - sends the event as a plain text tweet
+
+Not all event types may be supported by these service-specific webhooks. Some payloads may be optional as well.
+
+### Email webhook
+
+The email webhook sends the event as plain text or HTML to e-mail recipients. It requires a few configuration values:
+
+* **Host** - the SMTP server hostname
+* **Port** - the SMTP server port
+* **Use TLS?** - whether to use TLS or not
+* **SMTP Username** - SMTP server username
+* **SMTP password** - SMTP server password
+* **From** - sender of the message
+* **To** - recipients of the message (separated by semicolon)
+* **Body** - whether to send the e-mail containing *raw JSON*, *plain text* or *HTML*
+
+### HipChat webhook
+
+The HipChat webhook sends the event as a notification to a HipChat room. The following configuration options must be provided:
+
+* **AuthToken** - auth token ([Room token](https://hipchat.com/rooms) or [Personal token](https://hipchat.com/account/api))
+* **Room** - room to which to send the notifaction
+* **Server** - HipChat server URL, defaults to api.hipchat.com
+* **Color** - background color for the notification (yellow, green, red, purple, gray or random)
+
+### Twilio
+
+The Twilio webhook sends the event as a plain text SMS to a phone. The following configuration options must be provided:
+
+* **AccountSid** - the Twilio account [SID](https://www.twilio.com/user/account)
+* **AuthenticationToken** - the Twilio account [authentication token](https://www.twilio.com/user/account)
+* **From** - the number sending the message (must be a Twilio number enabled for SMS)
+* **To** - the number to which the message will be sent
+
+### Twitter
+
+The Twitter webhook sends the event as a plain text tweet using OAuth credentials.
+
+Before using this webhook, the following steps must be followed:
+
+1. Create a [Twitter application](https://apps.twitter.com/). For the website, please use a URL of your own.
+2. Modify the application permissions to *read & write*
+3. Copy the API key and API secret and configure the MyGet webhook with it
+4. Create an access token and configure the MyGet webhook with it
+
+The following configuration options must be provided:
+
+* **OAuth consumer key** - the OAuth consumer key (API key) obtained from [dev.twitter.com](http://dev.twitter.com)
+* **OAuth consumer secret** - the OAuth consumer secret (API secret) obtained from [dev.twitter.com](http://dev.twitter.com)
+* **OAuth token** - the OAuth token obtained from [dev.twitter.com](http://dev.twitter.com)
+* **OAuth token secret** - the OAuth token secret obtained from [dev.twitter.com](http://dev.twitter.com)

@@ -268,6 +268,7 @@ The HipChat webhook sends the event as a notification to a HipChat room. The fol
 * **Room** - room to which to send the notifaction
 * **Server** - HipChat server URL, defaults to api.hipchat.com
 * **Color** - background color for the notification (yellow, green, red, purple, gray or random)
+* **Color build events based on status** - will color the message gray when a build is started, green when a build succeeds and red when a build fails
 * **Notify participants** - determines if room participants should get a notification for the event or not
 
 ### Twilio

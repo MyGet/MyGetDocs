@@ -12,6 +12,7 @@ The following events can be subscribed to:
 * **Package listed/unlisted** - a package has been listed/unlisted
 * **Package pinned/unpinned** - a package has been pinned/unpinned
 * **Package pushed** - a package has been pushed to an external feed
+* **Build started** - a build has started
 * **Build finished** - a build has finished
 
 <p class="alert alert-info">
@@ -188,6 +189,23 @@ Here's an example of a *package pushed* payload. It includes package metadata.
 	  }
 	}
 
+### Build started
+
+Here's an example of a *build started* payload.
+
+	{
+	  "Identifier":"82f9a300-2439-4ac6-a2bd-8da96bb26f75",
+	  "Username":"maartenba",
+	  "When":"2014-09-08T13:00:10.9006808Z",
+	  "PayloadType":"BuildStartedWebHookEventPayloadV1",
+	  "Payload":{
+	    "FeedIdentifier":"sample-feed",
+	    "FeedUrl":"https://www.myget.org/F/sample-feed/",
+        "Name":"SampleBuild",
+        "Branch":"master"
+	  }
+	}
+
 ### Build finished
 
 Here's an example of a *build finished* payload. The ```Result``` will contain ```success``` or ```failed```. It includes the packages that were added to the feed.
@@ -201,6 +219,8 @@ Here's an example of a *build finished* payload. The ```Result``` will contain `
 	    "Result":"success",
 	    "FeedIdentifier":"sample-feed",
 	    "FeedUrl":"https://www.myget.org/F/sample-feed/",
+        "Name":"SampleBuild",
+        "Branch":"master",
 	    "BuildLogUrl":"https://www.myget.org/BuildSource/List/sample-feed#d510be3d-7803-43cc-8d15-e327ba999ba7",
 	    "Packages":[
 	      {

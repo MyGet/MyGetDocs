@@ -335,7 +335,7 @@ For Git-based builds, the following environment variables are added:
     	<tr>
     	    <td><strong>%GitVersion%</strong></td>
     	    <td>
-    	        Path to <code>gitversion</code> executable (see [GitVersion documentation](https://github.com/Particular/GitVersion))
+    	        Path to <code>gitversion</code> executable (see <a href="https://github.com/Particular/GitVersion">GitVersion documentation</a>)
     	    </td>
     	</tr>
 	</tbody>

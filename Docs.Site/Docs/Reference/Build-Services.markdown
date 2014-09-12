@@ -216,6 +216,7 @@ Build services supports the following frameworks and SDK's:
 * ScriptCS
 * psake
 * ripple
+* GitVersion
 * node.js
 
 The following test runners are supported:

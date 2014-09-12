@@ -243,15 +243,15 @@ If you provide your own build.bat script or MyGet.sln, you can specifically inst
 	<thead>
     	<tr>
     	    <th>Environment Variable Name</th> 
-			<th>Description</th>
+    	    <th>Description</th>
     	</tr>
 	</thead>
 	<tbody>
     	<tr>
     	    <td><strong>%BuildRunner%</strong></td>
     	    <td>
-    	        Always <code>MyGet</code> can be used to determine if running on MyGet Build Services
-	        </td>
+    	        Always <code>MyGet</code>, can be used to determine if running on MyGet Build Services
+    	    </td>
     	</tr>
     	<tr>
     	    <td><strong>%NuGet%</strong></td>
@@ -313,6 +313,67 @@ If you provide your own build.bat script or MyGet.sln, you can specifically inst
     	</tr>
 	</tbody>
 </table>
+
+### Git-based builds
+
+For Git-based builds, the following environment variables are added:
+
+<table class="table table-condensed">
+	<thead>
+    	<tr>
+    	    <th>Environment Variable Name</th> 
+    	    <th>Description</th>
+    	</tr>
+	</thead>
+	<tbody>
+    	<tr>
+    	    <td><strong>%GitPath%</strong></td>
+    	    <td>
+    	        Path to ```git``` executable
+    	    </td>
+    	</tr>
+    	<tr>
+    	    <td><strong>%GitVersion%</strong></td>
+    	    <td>
+    	        Path to ```gitversion``` executable (see [GitVersion documentation](https://github.com/Particular/GitVersion))
+    	    </td>
+    	</tr>
+	</tbody>
+</table>
+
+### GitVersion and Semantic Versioning
+
+When a Git-based build is executed, see [GitVersion](https://github.com/Particular/GitVersion) will also be run. This utility uses a convention to derive a SemVer product version from a GitFlow based repository.
+
+Output of the ```GitVersion.exe /output json``` command is provided through environment variables that can be used in a batch / PowerShell based build. The variables are explained and demonstrated in the [GitVersion documentation](https://github.com/Particular/GitVersion/wiki/Command-Line-Tool#consume-gitversion-from-build-scripts).
+
+MyGet Build Services prefixes these variables with ```GitVersion.``` when converting them to environment variables. For example, the following environment variables will be available on a project where GitFlow is used (example values provided):
+
+	GitVersion.Major=3
+	GitVersion.Minor=0
+	GitVersion.Patch=23
+	GitVersion.PreReleaseTag=
+	GitVersion.PreReleaseTagWithDash=
+	GitVersion.BuildMetaData=0
+	GitVersion.FullBuildMetaData=0.Branch.master.Sha.4898f534dfd906bd3a56818752f5fa4e16c31267
+	GitVersion.MajorMinorPatch=3.0.23
+	GitVersion.SemVer=3.0.23
+	GitVersion.LegacySemVer=3.0.23
+	GitVersion.LegacySemVerPadded=3.0.23
+	GitVersion.AssemblySemVer=3.0.23.0
+	GitVersion.FullSemVer=3.0.23+0
+	GitVersion.InformationalVersion=3.0.23+0.Branch.master.Sha.4898f534dfd906bd3a56818752f5fa4e16c31267
+	GitVersion.ClassicVersion=3.0.23.0
+	GitVersion.ClassicVersionWithTag=3.0.23.0
+	GitVersion.BranchName=master
+	GitVersion.Sha=4898f534dfd906bd3a56818752f5fa4e16c31267
+	GitVersion.AssemblyVersion=3.0.23.0
+	GitVersion.AssemblyFileVersion=3.0.23.0
+	GitVersion.OriginalRelease=4898f534dfd906bd3a56818752f5fa4e16c31267.2014-08-26 13:32:36Z
+
+<p class="alert alert-info">
+    <strong>Note:</strong> MyGet Build Services will only provide these variables during build and does not do anything with them. If you require the <code>AssemblyInfo.cs</code> files in your project to be patched with the information from GitVersion, you will have to run it manually, for example using the command <code>call %GitVersion% /updateassemblyinfo</code>.
+</p>
 
 ## Configuring Projects to Build
 

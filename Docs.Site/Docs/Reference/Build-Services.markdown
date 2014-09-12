@@ -292,8 +292,8 @@ If you provide your own build.bat script or MyGet.sln, you can specifically inst
     	<tr>
     	    <td><strong>%PackageVersion%</strong></td>
     	    <td>
-    	        %VersionFormat% with %BuildCounter% filled in, used as the auto-generated package version number
-	        </td>
+    	        <code>%VersionFormat%</code> with <code>%BuildCounter%</code> filled in, used as the auto-generated package version number
+	    </td>
     	</tr>
     	<tr>
     	    <td><strong>%EnableNuGetPackageRestore%</strong></td>
@@ -301,15 +301,15 @@ If you provide your own build.bat script or MyGet.sln, you can specifically inst
     	</tr>
     	<tr>
     	    <td><strong>%GallioEcho%</strong></td>
-    	    <td>Path to the Gallio.Echo.exe test runner executable</td>
+    	    <td>Path to the <code>Gallio.Echo.exe</code> test runner executable.</td>
     	</tr>
     	<tr>
     	    <td><strong>%XUnit192Path%</strong></td>
-    	    <td>Path to XUnit 1.9.2</td>
+    	    <td>Path to XUnit 1.9.2. <code>xunit.console.clr4.exe</code>, <code>xunit.console.clr4.x86.exe</code>, <code>xunit.console.exe</code> and <code>xunit.console.x86.exe</code> are located under this path.</td>
     	</tr>
     	<tr>
     	    <td><strong>%VsTestConsole%</strong></td>
-    	    <td>Path to VsTest.Console.exe</td>
+    	    <td>Path to <code>VsTest.Console.exe</code></td>
     	</tr>
 	</tbody>
 </table>

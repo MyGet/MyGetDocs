@@ -53,8 +53,9 @@ Enabling both options will ensure that the MyGet feed is always up-to-date with 
 ## Scenario - Automatically updating packages from upstream
 Sometimes it would be nice if we could automatically update packages on our feed that originate from upstream package sources. When adding or editing a package source, we can enable this behaviour per package source, as well as an interval when MyGet should check for updates.
 
+* **E-mail me when package updates are available**: Sends an e-mail to the specified recipient(s) when package updates are available on the upstream package source.
+* **Include prerelease versions**: By default, MyGet will only consider stable packages. When enabled, we will also check prerelease packages from the upstream package source.
 * **Automatically update packages to their latest versions**: Enables the behaviour of automatically updating packages from the package source.
-* **Allow automatic updates to prerelease versions**: By default, MyGet will only update to stable packages. When enabled, we will also get prerelease packages from the upstream package source.
 * **Update interval**: Depending on your subscription plan, we can specify how often MyGet should check for updates (up to every 5 minutes on a [Professional subscription](http://www.myget.org/plans))
 
 ![Package auto update](Images/auto-update.png)

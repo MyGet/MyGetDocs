@@ -6,6 +6,7 @@
     private const string ArgumentNullExceptionMessage = "Argument cannot be null or empty.";
     
     private static readonly object _apiKey = new object();
+    private static readonly object _urlKey = new object();
     private static readonly object _initializedKey = new object();
 
     public static string ForumShortName {
@@ -24,6 +25,23 @@
 			ScopeStorage.CurrentScope[_apiKey] = value;
 		}
 	}
+
+    public static string ForumUrl {
+		get {
+			if (!Initialized) {
+				throw new InvalidOperationException(InitializedExceptionMessage);
+			}
+			return (string)(ScopeStorage.CurrentScope[_urlKey] ?? "");
+		}
+
+		private set {
+			if (value == null) {
+				throw new ArgumentNullException("ForumUrl");
+			}
+
+			ScopeStorage.CurrentScope[_urlKey] = value;
+		}
+	}
     
     private static bool Initialized {
 		get {
@@ -38,12 +56,14 @@
     /// Initializes the Disqus helper.
     /// </summary>
     /// <param name="apiKey">The site shortname.</param>
-	public static void Initialize(string forumShortName) {
+    /// <param name="forumUrl">The site url.</param>
+	public static void Initialize(string forumShortName, string forumUrl) {
 		 if (forumShortName.IsEmpty()) {
                 throw new ArgumentException(ArgumentNullExceptionMessage, "forumShortName");
          }
 
 		ForumShortName = forumShortName;
+		ForumUrl = forumUrl;
 
 		Initialized = true;
 	}
@@ -55,7 +75,10 @@
       <div id="disqus_thread"></div> 
     </p> 
     <script type='text/javascript'> 
-        var disqus_shortname = '@ForumShortName';       
+        var disqus_shortname = '@ForumShortName';
+		@if (!string.IsNullOrEmpty(ForumUrl)) {
+			<text>var disqus_url = '@ForumUrl';</text>
+		}
         var disqus_identifier = '@pageIdentifier';        
         
         (function() {

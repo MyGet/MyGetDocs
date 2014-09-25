@@ -38,16 +38,16 @@ One use case for MyGet is to create your own NuGet feed on MyGet and upload your
 
 ![Proxy upstream feed](Images/proxy-schema.png)
 
-When creating a package source, two options are available:
+When creating a package source, these options are available:
 
 ![Proxy settings](Images/proxy-settings.png)
 
 These options will do the following:
 
-* **Include packages from the package source in search results**: the upstream package source will be searched and packages that match the search will be displayed when consuming the feed from Visual Studio. Packages from the upstream source can be installed into a project but will be downloaded from the upstream package source.
-
-* **Automatically add downloaded upstream packages to the current feed**: when the above option is enabled, packages that are downloaded will automatically be mirrored on your feed, ensuring the package is available all the time (even when the upstream package source experiences an outage).
-
+* **Make all upstream packages available in NuGet clients**: the upstream package source will be searched and packages that match the search will be displayed when consuming the feed from Visual Studio. Packages from the upstream source can be installed into a project but will be downloaded from the upstream package source.
+* **Automatically add downloaded upstream packages to the current feed (mirror)**: when the above option is enabled, packages that are downloaded will automatically be mirrored on your feed, ensuring the package is available all the time (even when the upstream package source experiences an outage).
+* **Upstream packages are dependencies and should be unlisted**: upstream packages will be unlisted (not searchable but available when using package restore)
+ 
 Enabling both options will ensure that the MyGet feed is always up-to-date with the packages you are consuming in your organization.
 
 ## Scenario - Automatically updating packages from upstream

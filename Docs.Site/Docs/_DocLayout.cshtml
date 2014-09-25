@@ -18,7 +18,7 @@
         </div>
         
         <div>
-            @{ Disqus.Initialize("mygetdocs"); }
+            @{ Disqus.Initialize("mygetdocs", "http://docs.myget.org"); }
             @Disqus.ShowComments( HttpUtility.UrlPathEncode(Page.Source) )
         </div>
     }

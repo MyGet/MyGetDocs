@@ -382,6 +382,22 @@ When needed, the project file to build can be specified in the build source conf
 
 ![Configure Projects to Build](Images/configure-projects-to-build.png)
 
+## User-defined environment variables
+
+Sometimes you may want to pass in a value to the build scripts without hard-coding it into the build script. MyGet supports setting additional environment variables that can be used in custom build scripts as well as MSBuild. From the Build Source configuration, you can add user-defined environment variables that will be made available during build.
+
+![Environment variables](Images/environment-variable.png)
+
+Environment variables can be used in your builds:
+
+* MSBuild: use the ```$(VARIABLE_KEY)``` syntax
+* Batch files: use the ```%VARIABLE_KEY%``` syntax
+* PowerShell: use the ```$env:VARIABLE_KEY``` syntax
+
+Environment variables will be shown in the build log. If needed, environment variable values can be hidden in the build log using the open/closed eye button.
+
+![Environment variables in log](Images/environment-variable-log.png)
+
 ## Build Status Badges
 
 You can embed a status image for a build into any web page out there, including your project’s README file or documentation. Your users will be immediately updated about the status of the last build performed. Here’s an example badge for a successful build:

@@ -175,6 +175,8 @@
     <Content Include="Docs\How-To\Images\2fa-credentials.png" />
     <Content Include="Docs\How-To\Images\build-services-owasp.png" />
     <Content Include="Docs\Reference\Images\edit-license.png" />
+    <Content Include="Docs\Reference\Images\environment-variable-log.png" />
+    <Content Include="Docs\Reference\Images\environment-variable.png" />
     <Content Include="Docs\Reference\Images\license-analysis.png" />
     <Content Include="Docs\How-To\Images\owasp-warning.png" />
     <Content Include="Docs\Reference\Images\package-details-license.png" />

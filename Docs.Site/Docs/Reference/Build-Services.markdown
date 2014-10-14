@@ -259,6 +259,10 @@ If you provide your own build.bat script or MyGet.sln, you can specifically inst
     	    <td>Path to a maintained-by-MyGet NuGet.exe</td>
     	</tr>
     	<tr>
+    	    <td><strong>%MsBuild%</strong></td>
+    	    <td>Path to msbuild.exe</td>
+    	</tr>
+    	<tr>
     	    <td><strong>%SourcesPath%<strong></td>
     	    <td>
     	        Path to source code being built        

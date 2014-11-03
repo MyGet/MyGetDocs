@@ -15,10 +15,6 @@ The following events can be subscribed to:
 * **Build started** - a build has started
 * **Build finished** - a build has finished
 
-<p class="alert alert-info">
-	<strong>Note:</strong> Webhooks are currently a preview feature and have to be <a href="http://www.myget.org/Home/WebHooks">enabled explicitly</a>. Feel free to <a href="https://github.com/myget/MyGetDocs/edit/master/Docs.Site/Docs/Reference/Webhooks.markdown">contribute to the documentation</a> and provide us feedback on this feature.
-</p>
-
 ## HTTP Post webhook
 
 The most basic type of webhook implementation is our HTTP Post webhook. It sends raw event data, formatted as a JSON document, as an HTTP POST to a configured URL.
@@ -33,7 +29,7 @@ MyGet will make every HTTP request with the following headers:
     	</tr>
 	</thead>
 	<tbody>
-		<tr><th><strong>Content-type</strong></th><td><code>application/vnd.myget.webhooks.v1.preview+json</code></td>
+		<tr><th><strong>Content-type</strong></th><td><code>application/vnd.myget.webhooks.v1+json</code></td>
 		<tr><th><strong>User-Agent</strong></th><td>Will always have the prefix <code>MyGet Web Hook/</code></td>
 		<tr><th><strong>X-MyGet-EventIdentifier</strong></th><td>A unique identifier for the event, which can be used to correlate diagnostics data and ensure a webhook payload is not handled more than once.</td>
 	</tbody>

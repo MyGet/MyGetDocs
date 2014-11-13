@@ -234,6 +234,7 @@ Build services supports the following frameworks and SDK's:
 * NAnt
 * Ruby 1.8.7, 1.9.2, 1.9.3
 * Python (2 and 3)
+* JDK 1.5, 1.6, 1.7, 1.8
 * Go
 * ScriptCS
 * psake

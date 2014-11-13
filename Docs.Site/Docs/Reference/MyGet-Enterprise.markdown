@@ -16,13 +16,19 @@ The statistics page provides an overview of common metrics related to the Enterp
 
 ## Accounts
 
-The accounts page allows setting account options, such as whitelisted/blacklisted domains, password policies and so forth.
+The accounts page allows setting account options, such as whitelisted/blacklisted domains, IP security, password policies and so forth.
 
 ![Managing accounts for MyGet Enterprise](Images/enterprise_account_management.png)
 
 ### Registration
 
 The registration section can be used to whitelist/blacklist e-mail domains. For example, a whitelist can be set to _acmecompany.com_ to only allow users from that domain to register an account.
+
+## IP security
+
+MyGet Enterprise makes it possible to whitelist IP addresses (or IP ranges) so only clients can only access MyGet if they are coming from the configured address. The whitelist will be applied for accessing the website, as well as for consuming hosted NuGet feeds.
+
+IP addresses can be entered on separate lines. If an entire subnet has to have access, the IP address can be suffixed with a CIDR suffix (e.g. /24) or a subnet mask (e.g. /255.255.255.0).
 
 ### Passwords
 

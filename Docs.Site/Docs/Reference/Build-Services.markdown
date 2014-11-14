@@ -377,7 +377,7 @@ Running ```GitVersion /output buildserver``` will cause MyGet Build Services to 
 	GitVersion.NuGetVersion=3.0.23
 
 <p class="alert alert-info">
-    <strong>Note:</strong> If you require the <code>AssemblyInfo.cs</code> files in your project to be patched with the information from GitVersion, you will have to run it manually, for example using the command <code>call %GitVersion% /updateassemblyinfo</code>.
+    <strong>Note:</strong> If you require the <code>AssemblyInfo.cs</code> files in your project to be patched with the information from GitVersion, you will have to run it manually, for example using the command <code>call %GitVersion% /updateassemblyinfo true</code>.
 </p>
 
 ## Configuring Projects to Build

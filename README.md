@@ -46,6 +46,7 @@ Open source contributions - and especially documentation contributions - deserve
 				<li>Issue #13: How to: auto-trigger MyGet build services using POST hook URL</li>
 				<li>Issue #20: Build Services Reference page</li>
 				<li>Issue #21: How to: add a feed owner</li>
+				<li>Issue #39: Corrected command for updateassemblyinfo</li>
 			</ul>
 		</td>
 	</tr>

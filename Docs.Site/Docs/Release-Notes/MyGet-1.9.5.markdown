@@ -24,6 +24,7 @@ This release contains many exciting new features. We'd love to hear from you so 
 * Support Visual Studio Online as a package source
 * [Improved RSS feed-endpoint][11] allowing you to receive feed activity notifications. Also enabled RSS auto-discovery on feed pages on the MyGet web site to facilitate detection of the RSS endpoint in the browser.
 * [Configure a feed's Report Abuse URL][19]
+* Support for NuGet 2.8.3
 
 ### MyGet Enterprise
 * [Administrators can now configure password policies and account lockout settings][6]

@@ -6,6 +6,7 @@ MyGet 1.9.5 was released on November 18, 2014.
 It's been a while since we tagged another MyGet release, but here we are, 9 months after tagging v1.9.0.
 We constantly ship and deploy improvements to our service so this v1.9.5 basically aggregates everything we've done since then, combined into a single milestone.
 This release contains many exciting new features. We'd love to hear from you so [please send us your feedback][9]!
+
 * [Visual Studio Online integration][4]
 * [MyGet now offered through the Microsoft Azure store!][16] (use your MSDN!)
 * [Package mirroring is now enabled by default][0]

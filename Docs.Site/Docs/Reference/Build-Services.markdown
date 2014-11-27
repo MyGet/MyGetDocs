@@ -462,7 +462,7 @@ Note that this should be done in a , as the environment variable is not updated 
 
 ### Reporting build failure
 
-sing the `buildProblem` service message, a build failure can be triggered. This will stop the build at the exact position the message was written to output. For example:
+Using the `buildProblem` service message, a build failure can be triggered. This will stop the build at the exact position the message was written to output. For example:
 
 	##myget[buildProblem description='Build failed because of this error']
 

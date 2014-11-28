@@ -1,4 +1,4 @@
-﻿# Walktrough - Setting up MyGet
+﻿# Walkthrough - Setting up MyGet
 
 Setting up your own NuGet repository has never been easier. MyGet allows you to create your own public or private NuGet feeds in just a few clicks. This section will guide you through it.
 
@@ -12,7 +12,7 @@ Setting up your own NuGet repository has never been easier. MyGet allows you to 
 
 	* public: everyone has read access, only feed owners/managers can write
 	* private: only users with explicitly granted permissions can read or write (depending on permissions)
-	* community: everyone can read all packages + anyone can manage the packages he pushed to the feed
+	* community: everyone can read all packages + anyone can manage the packages they pushed to the feed
 
 ## Setting up collaboration
 

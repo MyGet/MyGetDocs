@@ -19,6 +19,6 @@ Tough one! If you look at MyGet for the first minute, you would think it's an id
 * MyGet can set up a feed for you in less than 5 seconds
 * You don't have to set up or maintain your own infrastructure
 * There's support for multiple feeds per account in MyGet. NuGet.Server, Orchard Gallery and NuGet Gallery only support one
-* MyGet allows you to delegate privileges to other users without sharing an API key: everyone has its own, secure access to a MyGet feed
+* MyGet allows you to delegate privileges to other users without sharing an API key: everyone has their own, secure access to a MyGet feed
 * Multiple API keys per user: why give the build server your API key if you can give it its own?
 * And much more! Check [the MyGet features](https://www.myget.org/features) for a complete overview.

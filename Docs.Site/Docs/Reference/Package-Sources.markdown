@@ -50,6 +50,10 @@ These options will do the following:
  
 Enabling both options will ensure that the MyGet feed is always up-to-date with the packages you are consuming in your organization.
 
+### Feed proxying and authentication
+
+When the feed that is being proxied is a MyGet feed, we will impersonate the user against the upstream feed. When other credentials are required or the package source is not hosted on MyGet, credentials should be entered when defining the package source.
+
 ## Scenario - Automatically updating packages from upstream
 Sometimes it would be nice if we could automatically update packages on our feed that originate from upstream package sources. When adding or editing a package source, we can enable this behaviour per package source, as well as an interval when MyGet should check for updates.
 

@@ -73,7 +73,7 @@ Here's a quick cheatsheet of the commands related to symbol feeds:
 
 * Pushing a package to myget.org:
 
-	```nuget.exe push <package-file> -Source https://nuget.gw.symbolsource.org/MyGet/<feed-name>```
+	```nuget.exe push <package-file> -Source https://www.myget.org/F/<feed-name>```
 
 * Pushing a symbol package to symbolsource.org:
 

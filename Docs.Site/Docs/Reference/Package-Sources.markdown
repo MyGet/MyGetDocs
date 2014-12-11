@@ -27,9 +27,11 @@ Adding a package can happen in two ways: referencing or mirroring.
 ## Scenario - Pushing a package upstream
 Another major scenario made possible by using package sources is the *package promotion* workflow: pushing a package from one feed to another.
 
-Choose the package you want to promote and with a click of a button you can push it upstream. A dialog will provide you with additional options, e.g. configure the package version to be used upstream.
+Choose the package you want to promote and with a click of a button you can push it upstream. A dialog will provide you with additional options, e.g. configure the package version to be used upstream. 
 
 ![Push Package Upstream](Images/push_package_upstream.png)
+
+Before pushing, you still have a chance to modify the package description, or add release notes. MyGet will even support release notes written in markdown and render them properly on the web site.
 
 It is also possible to label sources when pushing a package upstream. When enabled, MyGet will find the build from which the package originated and will add a label to the source control revision it was built from.
 

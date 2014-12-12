@@ -240,7 +240,10 @@ Build services supports the following frameworks and SDK's:
 * psake
 * ripple
 * GitVersion
-* node.js
+* node.js, npm
+* Grunt
+* Gulp
+* Bower
 
 The following test runners are supported:
 

@@ -10,7 +10,7 @@ The basic workflow for contributing to MyGet Docs is simple.
 2. [Fork the project](https://help.github.com/articles/fork-a-repo). There's a big Fork button towards the upper right. That creates a copy of this project under your account. It's really fast and lets you make edits without worrying that you're affecting the real site.
 
 3. Find the page you want to edit within the /site/Docs folder. This folder contains all of the documentation markdown files. 
-For example, the page you're [reading is here](https://github.com/myget/MyGetDocs/blob/master/site/Docs/Contribute/Contributing-to-MyGet-Documentation.markdown).
+For example, the page you're [reading is here](https://github.com/myget/MyGetDocs/blob/master/Docs.Site/Docs/Contribute/Contributing-to-MyGet-Documentation.markdown).
 
 4. Click the link labelled "Edit this file".
 

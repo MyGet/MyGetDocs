@@ -2,6 +2,10 @@
 
 In addition to manually triggering a Build within the MyGet User Interface, it is also possible to automatically trigger a Build every time code is pushed to your Source Control Repository, by making use of an HTTP POST Hook URL.
 
+<p class="alert alert-info">
+    <strong>Note:</strong> When adding a build source from GitHub, BitBucket or Visual Studio Online, we already create a service hook trigger for you. Except if you disable this when linking a sorce code repository to MyGet, the hook has already been created and there is no need to do this again.
+</p>
+
 ## What is an HTTP POST Hook URL?
 
 Once you have fully configured a Build Source for your MyGet Feed, you will be able to manually trigger a build whenever you like.  However, if you are trying to adopt the [Continuous Integration Software Development Practice](http://martinfowler.com/articles/continuousIntegration.html "Martin Fowler talks about the Continuous Integration Software Development Practice"), then automatically triggering a MyGet Build whenever you push some code changes to your Source Code Repository is one of the first steps in doing this.
@@ -22,6 +26,10 @@ The HTTP POST Hook URL is clearly visible on this page (the GUID at the end of t
 
 ## Setting up GitHub
 
+<p class="alert alert-info">
+    <strong>Note:</strong> When adding a build source from GitHub, we already create a service hook trigger for you. Except if you disable this when linking a sorce code repository to MyGet, the hook has already been created and there is no need to do this again.
+</p>
+
 The following 6 steps provide information about how to use the MyGet HTTP POST Hook URL within a GitHub Repository.
 
 1. Log into GitHub and navigate to the repository that is to be configured  
@@ -37,6 +45,10 @@ The following 6 steps provide information about how to use the MyGet HTTP POST H
 ![Testing the new WebHook URL that was added to your GitHub Project](Images/github_hook_test_webhook.png)
 
 ## Setting up Bitbucket
+
+<p class="alert alert-info">
+    <strong>Note:</strong> When adding a build source from  BitBucket, we already create a service hook trigger for you. Except if you disable this when linking a sorce code repository to MyGet, the hook has already been created and there is no need to do this again.
+</p>
 
 The following 6 steps provide information about how to use the MyGet HTTP POST Hook URL within a Bitbucket Repository.
 

@@ -461,7 +461,7 @@ The `setParameter` service message allows setting an environment variable that c
 
 	##myget[setParameter name='Name' value='Value']
 
-Note that this should be done in a , as the environment variable is not updated in the running script (this could be done by just setting the environment variable manually).
+Note that this should be done in a [pre-build step](#Pre-_and_post-build_steps), as the environment variable is not updated in the running script (this could be done by just setting the environment variable manually).
 
 ### Reporting build failure
 

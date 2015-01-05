@@ -1,4 +1,4 @@
-﻿# Walkthrough - Getting Started
+﻿# Walkthrough - Getting Started Creating Your Own NuGet Feed
 
 Setting up your own NuGet repository has never been easier. MyGet allows you to create your own public or private NuGet feeds in just a few clicks. This section will guide you through it.
 

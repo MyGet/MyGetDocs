@@ -223,6 +223,15 @@
     <Content Include="Docs\Release-Notes\MyGet-1.7.markdown" />
     <Content Include="Docs\Release-Notes\MyGet-1.8.markdown" />
     <Content Include="Docs\Release-Notes\_metadata" />
+    <Content Include="Docs\Walkthrough\Images\authenticate.png" />
+    <Content Include="Docs\Walkthrough\Images\build-badge.PNG" />
+    <Content Include="Docs\Walkthrough\Images\build-building.PNG" />
+    <Content Include="Docs\Walkthrough\Images\build-queued.PNG" />
+    <Content Include="Docs\Walkthrough\Images\build-success.PNG" />
+    <Content Include="Docs\Walkthrough\Images\build-svc-add.PNG" />
+    <Content Include="Docs\Walkthrough\Images\build-svc-addFromGitHub.PNG" />
+    <Content Include="Docs\Walkthrough\Images\build-svc-addManually.PNG" />
+    <Content Include="Docs\Walkthrough\Images\mygetdocs-github-deployhook.PNG" />
     <Content Include="Docs\Walkthrough\Overview.markdown" />
     <Content Include="Docs\Walkthrough\Getting-Started.markdown" />
     <Content Include="Docs\Walkthrough\_metadata" />

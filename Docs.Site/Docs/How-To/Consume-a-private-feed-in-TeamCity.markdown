@@ -2,9 +2,9 @@
 
 When consuming NuGet packages from an authenticated feed during a build on TeamCity, the last thing you want to do is add credentials for connecting to that authenticated feed to source control. Depending on your version of TeamCity, there are different approaches to consuming private feeds.
 
-## TeamCity 8
+## TeamCity 8 and 9
 
-TeamCity 8 provides a build feature which enables you to consume packages from feeds that require authentication.
+TeamCity 8 and 9 provide a build feature which enables you to consume packages from feeds that require authentication.
 
 When editing the build configuration, you can add the NuGet Feed Credentials build feature from the build steps administration. In the dialog that is opened, the feed URL whould be specified as well as credentials to connect to the feed.
 

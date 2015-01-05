@@ -224,7 +224,7 @@
     <Content Include="Docs\Release-Notes\MyGet-1.8.markdown" />
     <Content Include="Docs\Release-Notes\_metadata" />
     <Content Include="Docs\Walkthrough\Overview.markdown" />
-    <Content Include="Docs\Walkthrough\Setting-up-MyGet.markdown" />
+    <Content Include="Docs\Walkthrough\Getting-Started.markdown" />
     <Content Include="Docs\Walkthrough\_metadata" />
     <Content Include="Docs\_DocLayout.cshtml" />
     <Content Include="Docs\_metadata" />

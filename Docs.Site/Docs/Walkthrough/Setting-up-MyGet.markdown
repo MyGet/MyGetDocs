@@ -4,7 +4,7 @@ Setting up your own NuGet repository has never been easier. MyGet allows you to 
 
 ## Creating a new MyGet feed
 
-1. **Browse to [MyGet.org][1] and log in** using your preferred identity provider. We currently support Google, Live ID, Yahoo!, Facebook, StackOverflow, GitHub and OpenID.
+1. **Browse to [MyGet.org][1] and log in** using your preferred identity provider. We currently support Microsoft Account, Google, GitHub, Facebook, StackExchange and OpenID.
 
 2. **Complete your new MyGet profile** by providing a username and password. These are your *MyGet credentials*, which you'll need to authenticate against private feeds on MyGet.org. From now on, you can also use these to log in on the MyGet.org web site.
 

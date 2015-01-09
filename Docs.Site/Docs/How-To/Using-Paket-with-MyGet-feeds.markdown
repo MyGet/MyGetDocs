@@ -61,10 +61,9 @@ This does, however, require checking in credentials into source control. Alterna
 Using this technique is interesting as it makes it possible to securely provide credentials in an environment variable on build servers like [TeamCity](http://www.jetbrains.com) or our own [build services](/docs/reference/build-services#User-defined_environment_variables).
 
 <p class="alert alert-info">
-    <strong>Note:</strong> It is also possible to make use of a <a href="/docs/reference/feed-endpoints#Private_feed_endpoints_and_authentication">pre-authenticated feed URL</a>. Do keep in mind that such URLs contain a MyGet API key and should be treated as confidential.<br/<br/>
-	The Paket source will look like the following in such case:<br/>
-	<pre class="prettyprint"><code>source https://www.myget.org/F/paket-demo/auth/147fae61-95fb-4747-9e54-09debb256c99/</code></pre>
-</p>
+    <strong>Note:</strong> It is also possible to make use of a <a href="/docs/reference/feed-endpoints#Private_feed_endpoints_and_authentication">pre-authenticated feed URL</a>. Do keep in mind that such URLs contain a MyGet API key and should be treated as confidential.<br/><br/>
+	The Paket source will look like the following in such case: <code>https://www.myget.org/F/paket-demo/auth/147fae61-95fb-4747-9e54-09debb256c99/</code>
+</P>
 
 ## Adding a package from MyGet
 

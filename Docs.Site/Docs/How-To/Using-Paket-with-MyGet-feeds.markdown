@@ -6,7 +6,7 @@ Let's see how you can use Paket with a MyGet feed.
 
 ## Downloading Paket
 
-You will need Paket on your system, either instaled globally or on a per-project basis.
+You will need Paket on your system, either installed globally or on a per-project basis.
 
 To install Paket globally, [download Paket from GitHub](https://github.com/fsprojects/Paket/releases/latest), copy it to disk and make sure it is available from the system `PATH`.
 
@@ -43,7 +43,7 @@ Paket will ask if you want to migrate feed credentials and if they have to be st
 	nuget Respond 1.2.0
 	nuget WebGrease 1.5.2
 
-You can now use Paket to restore an update NuGet packages in your project. Running `paket install` will perform a package restore. By running `paket init-auto-restore` the package restore is also injected into your Visual Studio project so it runs during build, if needed.
+You can now use Paket to restore and update NuGet packages in your project. Running `paket install` will perform a package restore. By running `paket init-auto-restore` the package restore is also injected into your Visual Studio project so it runs during build, if needed.
 
 ## Using a private MyGet feed
 
@@ -57,7 +57,7 @@ This does, however, require checking in credentials into source control. Alterna
 
 	source https://www.myget.org/F/paket-demo/api/v2 username: "%MY_USERNAME%" password: "%MY_PASSWORD%"
 
-Using this technique is interesting as it makes it possible to securely provide credentials in an environment variable on build servers like [TeamCity](http://www.jetbrains.com) or MyGet's own [build services](/docs/reference/build-services#User-defined_environment_variables).
+Using this technique is interesting as it makes it possible to securely provide credentials in an environment variable on build servers like [TeamCity](http://www.jetbrains.com) with it's [build parameters](https://confluence.jetbrains.com/display/TCD8/Defining+and+Using+Build+Parameters+in+Build+Configuration) or MyGet's own [build services](/docs/reference/build-services#User-defined_environment_variables).
 
 <p class="alert alert-info">
     <strong>Note:</strong> It is also possible to make use of a <a href="/docs/reference/feed-endpoints#Private_feed_endpoints_and_authentication">pre-authenticated feed URL</a>. Do keep in mind that such URLs contain a MyGet API key and should be treated as confidential.<br/><br/>

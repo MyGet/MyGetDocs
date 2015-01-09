@@ -1,6 +1,6 @@
 # Using Paket with MyGet feeds
 
-<img src="Images/paket.png" align="right"/> Just like NuGet, Paket is a dependency manager for .NET and Mono projects. It is designed to work with NuGet packages but also enables referencing files directly from GitHub repositories and GitHub Gists.
+<img src="Images/paket.png" align="right"/> Just like NuGet, [Paket](http://fsprojects.github.io/Paket/) is a dependency manager for .NET and Mono projects. It is designed to work with NuGet packages but also enables referencing files directly from GitHub repositories and GitHub Gists.
 
 Let's see how we can use Paket with a MyGet feed.
 

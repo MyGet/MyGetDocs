@@ -7,6 +7,7 @@ Package not found during package restore
 Auto Trigger a MyGet Build using an HTTP POST Hook URL
 Make use of nuget within your build scripts
 Make use of psake within your build scripts
+Using Paket with MyGet feeds
 Make MyGet list and automatically mirror packages from other feeds
 Checking NuGet package vulnerabilities with OWASP SafeNuGet 
 MyGet and GitHub Two-Factor Authentication

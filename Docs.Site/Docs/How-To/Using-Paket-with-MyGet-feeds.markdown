@@ -57,7 +57,7 @@ This does, however, require checking in credentials into source control. Alterna
 
 	source https://www.myget.org/F/paket-demo/api/v2 username: "%MY_USERNAME%" password: "%MY_PASSWORD%"
 
-Using this technique is interesting as it makes it possible to securely provide credentials in an environment variable on build servers like [TeamCity](http://www.jetbrains.com) with it's [build parameters](https://confluence.jetbrains.com/display/TCD8/Defining+and+Using+Build+Parameters+in+Build+Configuration) or MyGet's own [build services](/docs/reference/build-services#User-defined_environment_variables).
+Using this technique is interesting as it makes it possible to securely provide credentials in an environment variable on build servers like [TeamCity](http://www.jetbrains.com) with its [build parameters](https://confluence.jetbrains.com/display/TCD8/Defining+and+Using+Build+Parameters+in+Build+Configuration) or MyGet's own [build services and support for environment variables](/docs/reference/build-services#User-defined_environment_variables).
 
 <p class="alert alert-info">
     <strong>Note:</strong> It is also possible to make use of a <a href="/docs/reference/feed-endpoints#Private_feed_endpoints_and_authentication">pre-authenticated feed URL</a>. Do keep in mind that such URLs contain a MyGet API key and should be treated as confidential.<br/><br/>

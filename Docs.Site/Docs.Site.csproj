@@ -252,6 +252,7 @@
     <Content Include="Docs\How-To\MyGet-and-GitHub-Two-Factor-Authentication.markdown" />
     <Content Include="Docs\Reference\Webhooks.markdown" />
     <Content Include="Docs\How-To\Using-Paket-with-MyGet-feeds.markdown" />
+    <Content Include="Docs\Reference\Feed-State-API-Endpoint.markdown" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />

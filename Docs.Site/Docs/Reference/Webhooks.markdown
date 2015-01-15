@@ -66,6 +66,7 @@ It's important to know the ```PackageVersion``` property may not contain a valid
 	  "When":"2014-09-08T12:59:53.1148196Z",
 	  "PayloadType":"PackageAddedWebHookEventPayloadV1",
 	  "Payload":{
+	    "PackageType":"NuGet",
 	    "PackageIdentifier":"GoogleAnalyticsTracker.WP8",
 	    "PackageVersion":"1.0.0-CI00002",
 	    "PackageDetailsUrl":"https://www.myget.org/feed/sample-feed/package/GoogleAnalyticsTracker.WP8/1.0.0-CI00002",
@@ -103,6 +104,7 @@ Here's an example of a *package deleted* payload.
 	  "When":"2014-09-08T13:00:52.0300822Z",
 	  "PayloadType":"PackageDeletedWebHookEventPayloadV1",
 	  "Payload":{
+	    "PackageType":"NuGet",
 	    "PackageIdentifier":"GoogleAnalyticsTracker.Core",
 	    "PackageVersion":"1.0.0-CI00002",
 	    "FeedIdentifier":"sample-feed",
@@ -121,6 +123,7 @@ Here's an example of a *package listed/unlisted* payload. The ```Action``` will 
 	  "PayloadType":"PackageListedWebHookEventPayloadV1",
 	  "Payload":{
 	    "Action":"unlisted",
+	    "PackageType":"NuGet",
 	    "PackageIdentifier":"GoogleAnalyticsTracker.Simple",
 	    "PackageVersion":"1.0.0-CI00002",
 	    "FeedIdentifier":"sample-feed",
@@ -139,6 +142,7 @@ Here's an example of a *package pinned/unpinned* payload. The ```Action``` will 
 	  "PayloadType":"PackagePinnedWebHookEventPayloadV1",
 	  "Payload":{
 	    "Action":"pinned",
+	    "PackageType":"NuGet",
 	    "PackageIdentifier":"GoogleAnalyticsTracker.Simple",
 	    "PackageVersion":"1.0.0-CI00002",
 	    "FeedIdentifier":"sample-feed",
@@ -156,6 +160,7 @@ Here's an example of a *package pushed* payload. It includes package metadata.
 	  "When":"2014-09-08T13:02:46.6949583Z",
 	  "PayloadType":"PackagePushedWebHookEventPayloadV1",
 	  "Payload":{
+	    "PackageType":"NuGet",
 	    "PackageIdentifier":"GoogleAnalyticsTracker.Simple",
 	    "PackageVersion":"1.0.0-CI00002",
 	    "PackageDetailsUrl":"https://www.myget.org/feed/sample-feed/package/GoogleAnalyticsTracker.Simple/1.0.0-CI00002",
@@ -220,11 +225,13 @@ Here's an example of a *build finished* payload. The ```Result``` will contain `
 	    "BuildLogUrl":"https://www.myget.org/BuildSource/List/sample-feed#d510be3d-7803-43cc-8d15-e327ba999ba7",
 	    "Packages":[
 	      {
+	    	"PackageType":"NuGet",
 	        "PackageIdentifier":"GoogleAnalyticsTracker.Core",
 	        "PackageVersion":"1.0.0-CI00002",
 	        "TargetFramework":null
 	      },
 	      {
+	    	"PackageType":"NuGet",
 	        "PackageIdentifier":"GoogleAnalyticsTracker.MVC4",
 	        "PackageVersion":"1.0.0-CI00002",
 	        "TargetFramework":null
@@ -238,6 +245,7 @@ MyGet provides several service-specific webhooks:
 
 * **Email** - sends the event as plain text or HTML to e-mail recipients
 * **HipChat** - sends the event as a notification to a HipChat room
+* **Slack** - sends the event to a Slack channel
 * **Twilio** - sends the event as a plain text SMS to a phone
 * **Twitter** - sends the event as a plain text tweet
 
@@ -266,6 +274,13 @@ The HipChat webhook sends the event as a notification to a HipChat room. The fol
 * **Color** - background color for the notification (yellow, green, red, purple, gray or random)
 * **Color build events based on status** - will color the message gray when a build is started, green when a build succeeds and red when a build fails
 * **Notify participants** - determines if room participants should get a notification for the event or not
+
+### Slack webhook
+
+The Slack webhook sends the event as a notification to a Slack channel. The following configuration options must be provided:
+
+* **Webhook URL** - a Slack [incoming webhook URL](https://www.slack.com/services/new/incoming-webhook)
+* **Channel** - channel to which to send the notifaction
 
 ### Twilio
 

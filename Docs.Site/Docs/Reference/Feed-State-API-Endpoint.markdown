@@ -34,15 +34,16 @@ The server will respond with the a very simple JSON document that describes the 
 	{
 		_date: "401939109",
 		packages: [{
+			packagetype: "nuget",
 			id: "my.package",
 			versions: ["1.0","1.1"],
 			dates: ["10008010","38192014"] }]
 	}
 
-The response is a single JSON object with a `packages` property containing an array of `package` objects. Each `package` object has an `id` property and two arrays, `versions` and `dates`. The above sample response lists the following packages are available on the feed:
+The response is a single JSON object with a `packages` property containing an array of `package` objects. Each `package` object has a `packagetype` property, an `id` property and two arrays, `versions` and `dates`. The above sample response lists the following packages are available on the feed:
 
-* my.package 1.0, updated 10008010
-* my.package 1.1, updated 38192014
+* my.package 1.0, updated 10008010 (NuGet package)
+* my.package 1.1, updated 38192014 (NuGet package)
 
 The timestamps are .NET `DateTime` ticks in UTC. Note date values can be null.
 
@@ -66,21 +67,23 @@ Content-Type: application/json
 	{
 		_date: "401939109",
 		packages: [{
+			packagetype: "nuget",
 			id: "my.package",
 			versions: ["1.0"],
 			dates: ["10008010"] }],
 		deleted: [{
+			packagetype: "nuget",
 			id: "my.deleted.package",
 			versions: ["1.0"]
 		}]
 	}
 
-The response is a single JSON object with a `packages` property containing an array of `package` objects. Each `package` object has an `id` property and two arrays, `versions` and `dates`. Next to the `packages` property, a `deleted` property contains an array of `package` objects that have an `id` property a `dates` array.
+The response is a single JSON object with a `packages` property containing an array of `package` objects. Each `package` object has a `packagetype` property, an `id` property and two arrays, `versions` and `dates`. Next to the `packages` property, a `deleted` property contains an array of `package` objects that have a `packagetype` property, an `id` property and a `dates` array.
 
 The above sample response lists the following packages are available on the feed:
 
-* my.package 1.0, added or updated 10008010
-* my.deleted.package 1.0, deleted
+* my.package 1.0, added or updated 10008010 (NuGet package)
+* my.deleted.package 1.0, deleted (NuGet package)
 
 The timestamps are .NET `DateTime` ticks in UTC. Note date values can be null.
 

@@ -87,7 +87,9 @@ The following list of tips might be useful to you if you hit any issues whilst s
 
 MyGet syncs your API key and credentials with SymbolSource. Make sure you use your **MyGet profile** username and password to authenticate against SymbolSource (and not the credentials from your identity provider such as Google, LiveId, Facebook etc).
 
-If authentication for SymbolSource fails, you might want to update your MyGet API key or credentials to trigger another synchronization. Do not ever change your credentials on the SymbolSource side, as there is no reverse integration from SymbolSource to MyGet. If this doesn't resolve your issue, please contact MyGet support.
+If the error message states that *The sequence contains more than one element*, you might want to verify the credentials stored in SymbolSource. Log on to [the SymbolSource Authentication page](https://www.symbolsource.org/myget/Account/Authentication) and ensure that each entry has a unique Type.
+
+If authentication for SymbolSource still fails, you might want to update your MyGet API key or credentials to trigger another synchronization. Do not ever change your credentials on the SymbolSource side, as there is no reverse integration from SymbolSource to MyGet. If this doesn't resolve your issue, please contact MyGet support.
 
 ### VisualStudio Doesn't Find Debugging Information in my Symbols Package
 

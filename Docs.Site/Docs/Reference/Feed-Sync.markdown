@@ -8,7 +8,11 @@ That's where feed sync comes in. Feed Sync, jointly developed by MyGet and [Ined
 
 Packages added on a linked ProGet instance will be replicated to MyGet and any other linked instance. When [using MyGet Build Services to build packages from GitHub, BitBucket or Visual Studio Online](/docs/reference/build-services), packages that are created will be replicated as well.
 
-Feed Sync is available for all [paid MyGet plans](https://www.myget.org/plans) and users of ProGet Enterprise 3.5 and up. It makes use of the [Feed State API](/docs/reference/feed-state-api-endpoint).
+<p class="alert alert-info">
+    <strong>Note:</strong> After release, Feed Sync will be available available for all [paid MyGet plans](https://www.myget.org/plans) and users of ProGet Enterprise 3.5 and up. During preview, Feed Sync is available for all MyGet plans and Inedo ProGet free users.
+</p>
+
+Feed Sync makes use of the [Feed State API](/docs/reference/feed-state-api-endpoint).
 
 ## Getting Feed Sync details
 

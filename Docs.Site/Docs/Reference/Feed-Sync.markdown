@@ -2,7 +2,7 @@
 
 How can you keep multiple local NuGet servers synchronized? How can developers consume the same packages when each office branch has its own local NuGet server? How can two servers be synchronized when bandwidth is insufficient for a cloud-only solution?
 
-That's where feed sync comes in. Feed Sync, jointly developed by MyGet and [Inedo ProGet](http://inedo.com/proget), allows you to synchronize packages on multiple package servers with MyGet.
+Feed Sync, jointly developed by MyGet and [Inedo ProGet](http://inedo.com/proget), allows you to synchronize packages on multiple package servers with MyGet.
 
 ![Feed Sync](Images/feed-sync.png)
 

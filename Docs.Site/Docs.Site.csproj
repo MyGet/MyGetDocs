@@ -178,6 +178,9 @@
     <Content Include="Docs\Reference\Images\edit-license.png" />
     <Content Include="Docs\Reference\Images\environment-variable-log.png" />
     <Content Include="Docs\Reference\Images\environment-variable.png" />
+    <Content Include="Docs\Reference\Images\feed-sync-details.png" />
+    <Content Include="Docs\Reference\Images\feed-sync-proget.png" />
+    <Content Include="Docs\Reference\Images\feed-sync.png" />
     <Content Include="Docs\Reference\Images\license-analysis.png" />
     <Content Include="Docs\How-To\Images\owasp-warning.png" />
     <Content Include="Docs\Reference\Images\package-details-license.png" />
@@ -253,6 +256,7 @@
     <Content Include="Docs\Reference\Webhooks.markdown" />
     <Content Include="Docs\How-To\Using-Paket-with-MyGet-feeds.markdown" />
     <Content Include="Docs\Reference\Feed-State-API-Endpoint.markdown" />
+    <Content Include="Docs\Reference\Feed-Sync.markdown" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />

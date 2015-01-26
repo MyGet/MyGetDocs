@@ -1,10 +1,14 @@
 # Feed endpoints
 
-This page explains the different feed endpoints available on MyGet. Depending on the client you are using (NuGet.exe, Orchard CMS, ...), these endpoints can be configured as the package source or as the publish endpoint.
+This page explains the different feed endpoints available on MyGet. Depending on the client you are using (NuGet.exe, Orchard CMS, npm, ...), these endpoints can be configured as the package source or as the publish endpoint.
 
 ## Feed endpoints that can be used
 
-MyGet has the following feed endpoints available:
+Various endpoints are available for MyGet feeds.
+
+### NuGet-compatible feed endpoints
+
+MyGet has the following feed endpoints available for NuGet:
 
 * /F/&lt;your-feed-name&gt; - the NuGet v2 API endpoint
 * /F/&lt;your-feed-name&gt;/api/v2 - the NuGet v2 API endpoint for consuming packages
@@ -68,6 +72,12 @@ The following table lists which endpoint can be used with which client:
     </tbody>
 </table>
 
+### Npm-compatible feed endpoints
+
+MyGet has the following feed endpoints available for npm:
+
+* /F/&lt;your-feed-name&gt;/npm - the npm API endpoint
+
 ## Private feed endpoints and authentication
 
 When accessing *private* feeds, these endpoints all require basic authentication. If the NuGet client that is being used does not support basic authentication, a pre-authenticated feed URL can be used.
@@ -77,9 +87,3 @@ When accessing *private* feeds, these endpoints all require basic authentication
 </p>
 
 Since pre-authenticated feed URLs contain your API key in the URL, we advise to use a <a href="https://www.myget.org/profile/Me#!/AccessTokens">separate access token</a> generated specifically for the purpose of using a pre-authenticated feed endpoint so that it can be revoked at any time.
-
-MyGet has the following pre-authenticated feed endpoints available:
-
-* /F/&lt;your-feed-name&gt;/auth/&lt;your-api-key&gt; - the NuGet v2 API endpoint
-* /F/&lt;your-feed-name&gt;/auth/&lt;your-api-key&gt;/api/v2 - the NuGet v2 API endpoint for consuming packages
-* /F/&lt;your-feed-name&gt;/auth/&lt;your-api-key&gt;/api/v2/package - the NuGet v2 API endpoint for pushing packages

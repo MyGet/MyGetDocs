@@ -40,9 +40,11 @@ Setting up your own npm registry has never been easier. MyGet allows you to crea
 
 3. (optional) **Enable package source proxy** to seamlessly blend your MyGet registry with the public npm registry.
 
-	From the *Package Sources* tab, edit the *Npmjs.org* package source and enable the *Make all upstream packages available in clients * option. If you prefer to have the package binaries downloaded to your feed for subsequent requests, also enable the *Automatically add downloaded upstream packages to the current feed (mirror)* option.
+	From the *Package Sources* tab, edit the *Npmjs.org* package source and enable the *Make all upstream packages available in clients* option. If you prefer to have the package binaries downloaded to your feed for subsequent requests, also enable the *Automatically add downloaded upstream packages to the current feed (mirror)* option.
 
 	![Mix your npm registry with the public npm registry](Images/proxy-npm-registry.png)
+
+	Note that using these settings it's also possible to blend more than one npm registry into one. MYou can also [push npm packages to other npm registries using MyGet](/docs/reference/package-sources#Scenario_-_Pushing_a_package_upstream)
 
 4. (optional) **Check the licenses of the packages on your registry** using the *[licenses][3]* tab. This will display a report of the licenses used by the packages on your npm registry.
 

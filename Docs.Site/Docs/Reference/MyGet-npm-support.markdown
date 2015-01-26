@@ -12,7 +12,7 @@ The full registry URL to your npm registry on MyGet can be found on the *feed de
 
 ![NPM feed URL on MyGet](Images/npm-feed-details.png)
 
-This URL can be used with any npm-compatible client. Note that a [pre-authenticated URL](/reference/feed-endpoints) is also available for private npm registry feeds.
+This URL can be used with any npm-compatible client. Note that a [pre-authenticated URL](/docs/reference/feed-endpoints) is also available for private npm registry feeds.
 
 Your MyGet npm registry feed can be used by providing the `--registry` switch on every npm command, or by running the following command to set the MyGet registry feed as the default:
 
@@ -20,9 +20,10 @@ Your MyGet npm registry feed can be used by providing the `--registry` switch on
 
 ## Using multiple npm registries
 
-By default, your MyGet npm registry feed will only contain packages you have explicitly added, either using the web UI or the npm client. To have the public npm registry blended into your own, go to the *Package Sources* tab, edit the *Npmjs.org* package source and enable the *Make all upstream packages available in clients * option and the the *Automatically add downloaded upstream packages to the current feed (mirror)* option.
+By default, your MyGet npm registry feed will only contain packages you have explicitly added, either using the web UI or the npm client. To have the public npm registry blended into your own, go to the *Package Sources* tab, edit the *Npmjs.org* package source and enable the *Make all upstream packages available in clients* option and the the *Automatically add downloaded upstream packages to the current feed (mirror)* option.
 
-Note that using these settings it's also possible to blend more than one npm registry into one.
+Note that using these settings it's also possible to blend more than one npm registry into one. MYou can also [push npm packages to other npm registries using MyGet](/docs/reference/package-sources#Scenario_-_Pushing_a_package_upstream)
+
 
 ![Mix your npm registry with the public npm registry](Images/proxy-npm-registry.png)
 
@@ -83,7 +84,7 @@ If you would like to use the default public registry yet still want to refernce 
 Running `npm install` will make sure any dependency is downloaded from the default npm registry, except for those where a full URL is given.
 
 <p class="alert alert-info">
-    <strong>Note:</strong> If you are using a private npm feed, it is recommended to make use of a <a href="/reference/feed-endpoints">pre-authenticated URL</a> to make sure no HTTP error 401 or 403 are returned during package download.
+    <strong>Note:</strong> If you are using a private npm feed, it is recommended to make use of a <a href="/docs/reference/feed-endpoints">pre-authenticated URL</a> to make sure no HTTP error 401 or 403 are returned during package download.
 </p>
 
 ## Working with scoped packages

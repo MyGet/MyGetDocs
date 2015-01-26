@@ -186,6 +186,8 @@
     <Content Include="Docs\Reference\Images\feed-sync.png" />
     <Content Include="Docs\Reference\Images\license-analysis.png" />
     <Content Include="Docs\How-To\Images\owasp-warning.png" />
+    <Content Include="Docs\Reference\Images\npm-adduser.png" />
+    <Content Include="Docs\Reference\Images\npm-feed-details.png" />
     <Content Include="Docs\Reference\Images\package-details-license.png" />
     <Content Include="Docs\How-To\Make-MyGet-list-and-automatically-mirror-packages-from-other-feeds.markdown" />
     <Content Include="Docs\How-To\Make-use-of-nuget-within-your-build-scripts.markdown" />
@@ -222,6 +224,7 @@
     <Content Include="Docs\Reference\Images\vso-service-hook-step5.png" />
     <Content Include="Docs\Reference\Package-Source-Discovery.markdown" />
     <Content Include="Docs\Reference\Package-Sources.markdown" />
+    <Content Include="Docs\Reference\proxy-npm-registry.png" />
     <Content Include="Docs\Reference\Security.markdown" />
     <Content Include="Docs\Reference\SymbolSource.markdown" />
     <Content Include="Docs\Reference\_metadata" />
@@ -231,6 +234,7 @@
     <Content Include="Docs\Release-Notes\MyGet-1.7.markdown" />
     <Content Include="Docs\Release-Notes\MyGet-1.8.markdown" />
     <Content Include="Docs\Release-Notes\_metadata" />
+    <Content Include="Docs\Walkthrough\Images\add-npm-fromfeed.png" />
     <Content Include="Docs\Walkthrough\Images\authenticate.png" />
     <Content Include="Docs\Walkthrough\Images\build-badge.PNG" />
     <Content Include="Docs\Walkthrough\Images\build-building.PNG" />
@@ -240,8 +244,11 @@
     <Content Include="Docs\Walkthrough\Images\build-svc-addFromGitHub.PNG" />
     <Content Include="Docs\Walkthrough\Images\build-svc-addManually.PNG" />
     <Content Include="Docs\Walkthrough\Images\mygetdocs-github-deployhook.PNG" />
+    <Content Include="Docs\Walkthrough\Images\npm-feed-details.png" />
+    <Content Include="Docs\Walkthrough\Images\npm-licenses.png" />
+    <Content Include="Docs\Walkthrough\Images\proxy-npm-registry.png" />
     <Content Include="Docs\Walkthrough\Overview.markdown" />
-    <Content Include="Docs\Walkthrough\Getting-Started.markdown" />
+    <Content Include="Docs\Walkthrough\Getting-Started-with-NuGet.markdown" />
     <Content Include="Docs\Walkthrough\_metadata" />
     <Content Include="Docs\_DocLayout.cshtml" />
     <Content Include="Docs\_metadata" />
@@ -261,6 +268,8 @@
     <Content Include="Docs\How-To\Using-Paket-with-MyGet-feeds.markdown" />
     <Content Include="Docs\Reference\Feed-State-API-Endpoint.markdown" />
     <Content Include="Docs\Reference\Feed-Sync.markdown" />
+    <Content Include="Docs\Walkthrough\Getting-Started-with-npm.markdown" />
+    <Content Include="Docs\Reference\MyGet-npm-support.markdown" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />

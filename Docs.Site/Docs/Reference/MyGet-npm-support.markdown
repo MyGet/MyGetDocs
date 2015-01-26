@@ -45,7 +45,7 @@ Provide your MyGet username and password to make sure authentication is setup.
 ![Specifying credentials to use the MyGet npm registry](Images/npm-adduser.png)
 
 <p class="alert alert-info">
-    <strong>Note:</strong> If you have any special characters in your username or password, such as an @ or a space, make sure to use the URL encoded value (e.g. %40 for @).
+    <strong>Note:</strong> If you have any special characters in your username or password, such as an @ or a space, make sure to use the URL encoded value (e.g. %40 for @, %23 for #, %2F for / and so on).
 </p>
 
 When this is done, any package can be published to the MyGet npm registry feed using the `publish` command:
@@ -64,7 +64,7 @@ Provide your MyGet username and password to make sure authentication is setup.
 ![Specifying credentials to use the MyGet npm registry](Images/npm-adduser.png)
 
 <p class="alert alert-info">
-    <strong>Note:</strong> If you have any special characters in your username or password, such as an @ or a space, make sure to use the URL encoded value (e.g. %40 for @).
+    <strong>Note:</strong> If you have any special characters in your username or password, such as an @ or a space, make sure to use the URL encoded value (e.g. %40 for @, %23 for #, %2F for / and so on).
 </p>
 
 ## Referencing npm packages in package.json

@@ -24,11 +24,15 @@ The accounts page allows setting account options, such as whitelisted/blackliste
 
 The registration section can be used to whitelist/blacklist e-mail domains. For example, a whitelist can be set to _acmecompany.com_ to only allow users from that domain to register an account.
 
-## IP security
+### IP security
 
 MyGet Enterprise makes it possible to whitelist IP addresses (or IP ranges) so only clients can only access MyGet if they are coming from the configured address. The whitelist will be applied for accessing the website, as well as for consuming hosted NuGet feeds.
 
 IP addresses can be entered on separate lines. If an entire subnet has to have access, the IP address can be suffixed with a CIDR suffix (e.g. /24) or a subnet mask (e.g. /255.255.255.0).
+
+### Login page
+
+The login page section provides a means of customizing the text that is shown on the login page (above username/password). For example, a notice could be added on who to contact to get an account.
 
 ### Passwords
 

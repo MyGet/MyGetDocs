@@ -25,6 +25,7 @@ The following table lists which endpoint can be used with which client:
             <td><strong>NuGet &gt; v1.6</strong></td>
             <td><strong>NuGet Package Explorer</strong></td>
             <td><strong>Orchard CMS</strong></td>
+            <td><strong>Chocolatey / OneGet</strong></td>
             <td><strong>Web browser</strong></td>
         </tr>
     </thead>
@@ -36,6 +37,7 @@ The following table lists which endpoint can be used with which client:
             <td>yes</td>
             <td>no</td>
             <td>yes</td>
+            <td>yes</td>
 		</tr>
         <tr>
             <td>/F/&lt;your-feed-name&gt;/api/v2</td>
@@ -44,12 +46,14 @@ The following table lists which endpoint can be used with which client:
             <td>yes</td>
             <td>no</td>
             <td>yes</td>
+            <td>yes</td>
 		</tr>
         <tr>
             <td>/F/&lt;your-feed-name&gt;/api/v2/package</td>
             <td>no</td>
             <td>yes</td>
             <td>yes</td>
+            <td>no</td>
             <td>no</td>
             <td>no</td>
 		</tr>
@@ -60,9 +64,11 @@ The following table lists which endpoint can be used with which client:
             <td>yes</td>
             <td>yes</td>
             <td>yes</td>
+            <td>yes</td>
 		</tr>
         <tr>
             <td>/RSS/&lt;your-feed-name&gt;</td>
+            <td>no</td>
             <td>no</td>
             <td>no</td>
             <td>no</td>
@@ -78,9 +84,15 @@ MyGet has the following feed endpoints available for npm:
 
 * /F/&lt;your-feed-name&gt;/npm - the npm API endpoint
 
+### Bower-compatible feed endpoints
+
+MyGet has the following feed endpoints available for Bower:
+
+* /F/&lt;your-feed-name&gt;/bower - the Bower API endpoint
+
 ## Private feed endpoints and authentication
 
-When accessing *private* feeds, these endpoints all require basic authentication. If the NuGet client that is being used does not support basic authentication, a pre-authenticated feed URL can be used.
+When accessing *private* feeds, these endpoints all require basic authentication. If the client that is being used does not support basic authentication, a pre-authenticated feed URL can be used. The pre-authenticated feed URL is available from the feed's *feed details* page.
 
 <p class="alert alert-danger">
     <strong>Warning!</strong> As pre-authenticated feed URLs contain sensitive information, it is recommended to never use pre-authenticated feed URLs unless absolutely needed. Sharing the pre-authenticated feed URL can potentially give others read and write access to the feed!

@@ -8,6 +8,7 @@ Security
 SymbolSource
 License Analysis
 MyGet npm support
+MyGet Bower support
 Feed Sync
 Webhooks
 FAQ

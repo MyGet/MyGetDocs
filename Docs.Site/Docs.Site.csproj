@@ -178,6 +178,10 @@
     <Content Include="Docs\Reference\Images\okta-add-template-app.png" />
     <Content Include="Docs\Reference\Images\okta-app-config.png" />
     <Content Include="Docs\Reference\Images\okta-first.png" />
+    <Content Include="Docs\Reference\Images\bower-feed-details.png" />
+    <Content Include="Docs\Reference\Images\proxy-bower-registry.png" />
+    <Content Include="Docs\Walkthrough\Images\add-bower-fromfeed.png" />
+    <Content Include="Docs\Walkthrough\Images\bower-feed-details.png" />
     <Content Include="Docs\Reference\Images\edit-license.png" />
     <Content Include="Docs\Reference\Images\environment-variable-log.png" />
     <Content Include="Docs\Reference\Images\environment-variable.png" />
@@ -224,7 +228,7 @@
     <Content Include="Docs\Reference\Images\vso-service-hook-step5.png" />
     <Content Include="Docs\Reference\Package-Source-Discovery.markdown" />
     <Content Include="Docs\Reference\Package-Sources.markdown" />
-    <Content Include="Docs\Reference\proxy-npm-registry.png" />
+    <Content Include="Docs\Reference\Images\proxy-npm-registry.png" />
     <Content Include="Docs\Reference\Security.markdown" />
     <Content Include="Docs\Reference\SymbolSource.markdown" />
     <Content Include="Docs\Reference\_metadata" />
@@ -246,6 +250,7 @@
     <Content Include="Docs\Walkthrough\Images\mygetdocs-github-deployhook.PNG" />
     <Content Include="Docs\Walkthrough\Images\npm-feed-details.png" />
     <Content Include="Docs\Walkthrough\Images\npm-licenses.png" />
+    <Content Include="Docs\Walkthrough\Images\proxy-bower-registry.png" />
     <Content Include="Docs\Walkthrough\Images\proxy-npm-registry.png" />
     <Content Include="Docs\Walkthrough\Overview.markdown" />
     <Content Include="Docs\Walkthrough\Getting-Started-with-NuGet.markdown" />
@@ -270,6 +275,8 @@
     <Content Include="Docs\Reference\Feed-Sync.markdown" />
     <Content Include="Docs\Walkthrough\Getting-Started-with-npm.markdown" />
     <Content Include="Docs\Reference\MyGet-npm-support.markdown" />
+    <Content Include="Docs\Reference\MyGet-Bower-support.markdown" />
+    <Content Include="Docs\Walkthrough\Getting-Started-with-Bower.markdown" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />

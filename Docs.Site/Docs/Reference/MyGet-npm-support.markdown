@@ -1,6 +1,6 @@
 # MyGet npm support
 
-After [signing up for a MyGet account](http://www.myget.org/Account/Login) and creating a feed that servers as an npm registry, you can work with node modules (packages) using the npm command line and *package.json*.
+After [signing up for a MyGet account](http://www.myget.org/Account/Login) and creating a feed that serves as an npm registry, you can work with node modules (packages) using the npm command line and *package.json*.
 
 <p class="alert alert-info">
     <strong>Note:</strong> MyGet support for npm is still in preview. If you encounter any issues, please <a href="http://www.myget.org/support">get in touch with support</a>.
@@ -14,7 +14,7 @@ The full URL to your npm feed on MyGet can be found on the *feed details* page.
 
 This URL can be used with any npm-compatible client. Note that a [pre-authenticated URL](/docs/reference/feed-endpoints) is also available for private npm feeds.
 
-Your MyGet npm registry feed can be used by providing the `--registry` switch on every npm command, or by running the following command to set the MyGet registry feed as the default:
+Your MyGet npm feed can be used by providing the `--registry` switch on every npm command, or by running the following command to set the MyGet registry feed as the default:
 
 	npm config set registry https://www.myget.org/F/your-feed-name/npm
 
@@ -70,7 +70,7 @@ Provide your MyGet username and password to make sure authentication is setup.
 
 The npm command line client does not suport mixing multiple registries. Make sure to <a href="#Using_both_public_and_private_npm">enable package source proxy</a> if you want to blend your own feed and the public npm registry.
 
-If you would like to use the default public registry yet still want to refernce packages in your own npm feed, you can do so by using the tarball URL in your `package.json` file, for example:
+If you would like to use the default public registry yet still want to reference packages in your own npm feed, you can do so by using the tarball URL in your `package.json` file, for example:
 
 	{
 	  "name": "awesomeapplication",

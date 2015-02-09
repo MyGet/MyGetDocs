@@ -31,6 +31,11 @@ Setting up your own npm registry has never been easier. MyGet allows you to crea
 	If you plan on using your MyGet npm feed all the time, we recommend running the following command:
 
 		npm config set registry https://www.myget.org/F/your-feed-name/npm
+	
+	If a MyGet npm feed is marked as *private*, it will always require authentication. To setup authentication, run the following commands:
+		
+		npm login --registry=https://www.myget.org/F/your-feed-name/npm
+		npm config set always-auth true 
 
 2. **Add packages** to the feed by either uploading them through the web site, referencing/mirroring them from the npm registry, or pushing them using the npm client.
 

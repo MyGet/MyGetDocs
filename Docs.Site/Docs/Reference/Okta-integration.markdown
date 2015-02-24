@@ -28,7 +28,7 @@ In Okta, assign users to MyGet. All users assigned to MyGet will get single sign
 
 Using the Okta browser plugin or Okta's unique application URL for MyGet, sign in. The first login, Okta will ask for MyGet credentials which should be used for the user. The user can either enter existing MyGet credentials, or enter a username/password combination of choice to create a new user.
 
-![kta first login](Images/okta-first.png)
+![Okta first login](Images/okta-first.png)
 
 <p class="alert alert-info">
     <strong>Note:</strong> The first login to MyGet will ask for additional profile details such as e-mail address and so forth. Every user will have to provide these details once.

@@ -1,6 +1,6 @@
 # Okta integration
 
-Many companies make use of singl sign-on providers like [Okta](http://www.okta.com). Using Okta, users in your organization can easily login to company approved apps, of which MyGet could be one. This document describes the required configuration steps on your Okta administraton page.
+Many companies make use of single sign-on providers like [Okta](http://www.okta.com). Using Okta, users in your organization can easily login to company approved apps, of which MyGet could be one. This document describes the required configuration steps on your Okta administraton page.
 
 ## 1. Add a new Template App
 

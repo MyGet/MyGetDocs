@@ -175,6 +175,9 @@
     <Content Include="Docs\How-To\Images\2fa-credentials.png" />
     <Content Include="Docs\How-To\Images\build-services-owasp.png" />
     <Content Include="Docs\How-To\Images\paket.png" />
+    <Content Include="Docs\Reference\Images\okta-add-template-app.png" />
+    <Content Include="Docs\Reference\Images\okta-app-config.png" />
+    <Content Include="Docs\Reference\Images\okta-first.png" />
     <Content Include="Docs\Reference\Images\edit-license.png" />
     <Content Include="Docs\Reference\Images\environment-variable-log.png" />
     <Content Include="Docs\Reference\Images\environment-variable.png" />
@@ -191,6 +194,7 @@
     <Content Include="Docs\How-To\Package-not-found-during-package-restore.markdown" />
     <Content Include="Docs\How-To\Use-TFS-Online-Git-with-MyGet-Build-Services.markdown" />
     <Content Include="Docs\How-To\_metadata" />
+    <Content Include="Docs\Reference\Okta-integration.markdown" />
     <Content Include="Docs\Reference\ADFS-integration.markdown" />
     <Content Include="Docs\Reference\Build-Services.markdown" />
     <Content Include="Docs\Reference\Custom-Build-Scripts.markdown" />

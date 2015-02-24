@@ -3,7 +3,7 @@
 The [MyGet Enterprise plan](http://www.myget.org/enterprise) provides support for ADFS to log in, when requested. This document describes the required configuration steps on your ADFS server.
 
 <p class="alert alert-info">
-    <strong>Note:</strong> To log in to your feed from Visual Studio, credentials obtained from Active Directory can currently <strong>not</strong> be used as the NuGet client does not support this. Private feeds will stuill require authentication to happen based on MyGet credentials. ADFS integration will only work for logging in to the MyGet web interface. 
+    <strong>Note:</strong> To log in to your feed from Visual Studio, credentials obtained from Active Directory can currently <strong>not</strong> be used as the NuGet client does not support this. Private feeds will still require authentication to happen based on MyGet credentials. ADFS integration will only work for logging in to the MyGet web interface. 
 </p>
 
 ## Required claims

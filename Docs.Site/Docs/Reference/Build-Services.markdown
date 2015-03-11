@@ -322,6 +322,12 @@ If you provide your own build.bat script or MyGet.sln, you can specifically inst
     	    </td>
     	</tr>
     	<tr>
+    	    <td><strong>%PrereleaseTag%</strong></td>
+    	    <td>
+    	        The prerelease tag generated based on the VersionFormat and BuildCounter values
+    	    </td>
+    	</tr>
+    	<tr>
     	    <td><strong>%PackageVersion%</strong></td>
     	    <td>
     	        <code>%VersionFormat%</code> with <code>%BuildCounter%</code> filled in, used as the auto-generated package version number

@@ -30,6 +30,8 @@ MyGet Enterprise makes it possible to whitelist IP addresses (or IP ranges) so o
 
 IP addresses can be entered on separate lines. If an entire subnet has to have access, the IP address can be suffixed with a CIDR suffix (e.g. /24) or a subnet mask (e.g. /255.255.255.0).
 
+![IP whitelisting](Images\IP-security.png)
+
 ### Login page
 
 The login page section provides a means of customizing the text that is shown on the login page (above username/password). For example, a notice could be added on who to contact to get an account.

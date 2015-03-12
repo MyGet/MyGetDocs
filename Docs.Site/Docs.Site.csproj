@@ -175,6 +175,7 @@
     <Content Include="Docs\How-To\Images\2fa-credentials.png" />
     <Content Include="Docs\How-To\Images\build-services-owasp.png" />
     <Content Include="Docs\How-To\Images\paket.png" />
+    <Content Include="Docs\Reference\Images\IP-security.png" />
     <Content Include="Docs\Reference\Images\okta-add-template-app.png" />
     <Content Include="Docs\Reference\Images\okta-app-config.png" />
     <Content Include="Docs\Reference\Images\okta-first.png" />

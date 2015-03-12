@@ -431,6 +431,14 @@ Environment variables will be shown in the build log. If needed, environment var
 
 ![Environment variables in log](Images/environment-variable-log.png)
 
+## User-defined environment variable expansions
+
+Sometimes you may want to define an environment variable and pass in a value that is based on another environment variable value.
+You can easily reference existing environment variables by using the %-annotation, as shown in the examples below:
+
+	DNX_BUILD_VERSION = %PrereleaseTag%
+	OutputPath = bin\%Configuration%\%PackageVersion%
+
 ## Service Messages
 
 It is possible for a build to interact with MyGet Build Services using Service Messages. For example writing a message to the build log, setting the package version or triggering a build failure.

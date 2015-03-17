@@ -187,7 +187,7 @@ If you provide your own build.bat script or MyGet.sln, you can specifically inst
     	</tr>
     	<tr>
     	    <td><strong>%XUnit20Path%</strong></td>
-    	    <td>Path to XUnit 2.0. <code>xunit.console.clr4.exe</code>, <code>xunit.console.clr4.x86.exe</code>, <code>xunit.console.exe</code> and <code>xunit.console.x86.exe</code> are located under this path.</td>
+    	    <td>Path to XUnit 2.0. <code>xunit.console.exe</code> and <code>xunit.console.x86.exe</code> are located under this path.</td>
     	</tr>
     	<tr>
     	    <td><strong>%VsTestConsole%</strong></td>

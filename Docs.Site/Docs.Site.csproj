@@ -281,6 +281,7 @@
     <Content Include="Docs\Reference\MyGet-Bower-support.markdown" />
     <Content Include="Docs\Walkthrough\Getting-Started-with-Bower.markdown" />
     <Content Include="Docs\Release-Notes\MyGet-2.0.markdown" />
+    <Content Include="Docs\Reference\Build-Services-for-npm.markdown" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />

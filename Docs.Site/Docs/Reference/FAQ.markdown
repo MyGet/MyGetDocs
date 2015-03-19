@@ -55,4 +55,4 @@ MyGet runs its operations from the [Microsoft Azure](http://www.azure.com) in th
 
 Enterprise plan customers have a choice in where data is stored between the US East region, or our primary West Europe region.
 
-Check our [terms and conditions](http://www.myget.org/terms) to learn more about Security, privacy, and Customer Data.
+Check our [terms and conditions](https://www.myget.org/policies/terms) to learn more about Security, privacy, and Customer Data.

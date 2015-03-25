@@ -48,6 +48,10 @@ The lockout section provides options to lock a user account after a number of lo
 
 By default, MyGet closes sessions after 2 hours. If it is required to close a session after a shorter time period, it can be specified here. Many teams use this feature to logout users after, for example, 15 minutes of inactivity.
 
+### Feed creation
+
+Creating feeds can be limited to Enterprise administrators. When enabled, non-administrative users will see a message that they should contact an Enterprise administrator in order to create a feed.
+
 ## Users
 
 The users section allows for user management. It is possible to create new users, as well as manage roles, manage quota for a user, send a password reset e-mail or delete a user.

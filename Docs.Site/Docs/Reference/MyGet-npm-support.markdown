@@ -31,6 +31,10 @@ We recommend running the following commands to have full support for the proxied
 	npm config set strict-ssl true
 	npm config set ca ""
 
+<p class="alert alert-info">
+    <strong>Note:</strong> Another approach to mixing repositories is to make use of <a href="#Working_with_scoped_packages">scoped packages</a>.
+</p>
+
 ## Uploading npm packages
 
 If you want to publish a node module to a registry, you usually run the `npm pack` command. This is not different with MyGet: `npm pack` will package your node module into a `.tgz` file.
@@ -92,7 +96,48 @@ Running `npm install` will make sure any dependency is downloaded from the defau
 
 ## Working with scoped packages
 
-The MyGet npm registry feed does not support scoped packages.
+The MyGet npm registry feed supports working with scoped packages. Scoped packages are "scoped" to a specific registry. E.g. all packages scoped `@acmecorp` may be retrieved from a MyGet npm registry feed, while other scopes and non-scoped packages flow in from the default npm registry.
+
+### Creating a scoped package
+
+A scoped package can be created by setting the `name` property in `package.json` file correctly, for example:
+
+ 	{
+	  "name": "@acmecorp/awesomeapplication",
+	  "version": "1.0.0"
+	}
+
+Dependencies can be scoped as well:
+
+	{
+	  "name": "@acmecorp/awesomeapplication",
+	  "version": "1.0.0",
+	  "dependencies": {
+	    "@acmecorp/awesomepackage": "1.0.0"
+	  }
+	}
+
+More information on scoped packages is available from the [npm docs](https://docs.npmjs.com/misc/scope).
+
+### Publishing a scoped package
+
+Scopes can be associated with a specific registry. This allows for seamless mixing of packages from various npm registries.
+
+Let's associate the scope `@acmecorp` with the `https://www.myget.org/F/your-feed-name/npm/` npm registry feed. We can do this manually, by adding the following to our `.npmrc` file:
+
+	@acmecorp:registry=https://www.myget.org/F/your-feed-name/npm/
+	//www.myget.org/F/your-feed-name/npm/:_password="base64encodedpassword"
+	//www.myget.org/F/your-feed-name/npm/:username=someuser
+	//www.myget.org/F/your-feed-name/npm/:email=someuser@example.com
+	//www.myget.org/F/your-feed-name/npm/:always-auth=true
+
+It's probably easier to generate these entries from the command line by running:
+
+	npm config set @acmecorp:registry=https://www.myget.org/F/your-feed-name/npm/
+	npm login --registry https://www.myget.org/F/your-feed-name/npm/ --scope=@acmecorp
+	npm config set always-auth true --registry https://www.myget.org/F/your-feed-name/npm/
+
+From now on, we can publish and consume any package that has the `@acmecorp` scope. Npm will automatically direct requests to the correct registry.
 
 ## Fixing "Error: CERT_UNTRUSTED"
 

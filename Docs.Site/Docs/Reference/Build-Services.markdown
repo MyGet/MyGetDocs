@@ -257,6 +257,7 @@ The following test runners are supported:
 * xUnit 2.0
 * csUnit
 * RSpec
+* Pester (v3.3.6)
 
 We believe adding frameworks and SDK's out-of-the-box provides a lot of value to our users and we want to continue investing in expanding the number of supported SDK's.
 

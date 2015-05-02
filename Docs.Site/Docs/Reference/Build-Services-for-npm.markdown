@@ -36,9 +36,11 @@ The following build steps will be run when building from package.json files:
 * Fetch source code
 * Set npm registry to the current feed
 * Update package.json and set the version value to [%PackageVersion%](Available Environment Variables)
-* Run npm install
-* Run npm test
-* Run npm pack
+* Run `npm run pre-myget` (if applicable)
+* Run `npm install`
+* Run `npm test`
+* Run `npm pack`
+* Run `npm run post-myget` (if applicable)
 * Push packages to your MyGet feed
 * Label sources (if enabled)
 
@@ -60,6 +62,23 @@ This setting can contain scripts (like .bat, .cmd and .ps1 files). Note that whe
 ![Configure Projects to Build](Images/configure-projects-to-build.png)
 
 ### Pre- and post-build steps
+
+#### Pre- and post-build steps with package.json files
+
+When using [package.json files for builds](#Build_process_for_package.json_files), MyGet Build Services will run the `pre-myget` script before running any other npm commands, and `post-myget` after packaging the node module.
+
+For example, we could run `npm version` before our actual build, by adding the following to `package.json`:
+
+  "scripts": {
+    "pre-myget": "npm version prerelease --no-git-tag-version",
+    "post-myget": "echo This is a post-build step"
+  },
+
+The above example increases the prerelease version of the package. Note that addign `git push` is not required: you may want to enable labeling in the MyGet build settigns to push changes back in a reliable way.
+
+After build, the above will output a message to the build log.
+
+#### Pre- and post-build steps with batch / PowerShell based builds
 
 When using [batch / PowerShell based builds](#Build_process_for_batch__PowerShell_based_builds), MyGet Build Services will scan for batch files to be executed. In addition to the MyGet.bat (or .cmd or .ps1) and build.bat (or .cmd or .ps1), we search for pre- and post-build steps as well. These can be batch scripts or PowerShell scripts that are run before and after the actual build file.
 

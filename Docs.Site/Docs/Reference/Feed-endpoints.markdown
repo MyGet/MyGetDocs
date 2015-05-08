@@ -90,6 +90,12 @@ MyGet has the following feed endpoints available for Bower:
 
 * /F/&lt;your-feed-name&gt;/bower - the Bower API endpoint
 
+### Vsix-compatible feed endpoints
+
+MyGet has the following feed endpoints available for Vsix (Visual Studio extensions):
+
+* /F/&lt;your-feed-name&gt;/vsix - the VSIX Atom feed API endpoint
+
 ## Private feed endpoints and authentication
 
 When accessing *private* feeds, these endpoints all require basic authentication. If the client that is being used does not support basic authentication, a pre-authenticated feed URL can be used. The pre-authenticated feed URL is available from the feed's *feed details* page.

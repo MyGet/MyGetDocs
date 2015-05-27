@@ -6,7 +6,7 @@ When consuming NuGet packages from an authenticated feed during a build on TeamC
 
 TeamCity 8 and 9 provide a build feature which enables you to consume packages from feeds that require authentication.
 
-When editing the build configuration, you can add the NuGet Feed Credentials build feature from the build steps administration. In the dialog that is opened, the feed URL whould be specified as well as credentials to connect to the feed.
+When editing the build configuration, you can add the NuGet Feed Credentials build feature from the build steps administration. In the dialog that is opened, the feed URL should be specified as well as credentials to connect to the feed.
 
 ![TeamCity NuGet Feed Credentialsl](Images/teamcity-private-feed.png)
 

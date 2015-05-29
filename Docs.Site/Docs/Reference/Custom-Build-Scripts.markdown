@@ -31,8 +31,8 @@ build.bat:
 
     REM Package
     mkdir Build
-	cmd /c %nuget% pack "YourSolution\ProjectA.csproj" -symbols -o Build -p Configuration=%config% %version%
-	cmd /c %nuget% pack "YourSolution\ProjectB.csproj" -symbols -o Build -p Configuration=%config% %version%
+	call %nuget% pack "YourSolution\ProjectA.csproj" -symbols -o Build -p Configuration=%config% %version%
+	call %nuget% pack "YourSolution\ProjectB.csproj" -symbols -o Build -p Configuration=%config% %version%
 	
 ## build.bat creating a single NuGet package containing all projects
 
@@ -59,7 +59,7 @@ build.bat:
 
     REM Package
     mkdir Build
-	cmd /c %nuget% pack "YourSolution\ProjectA.csproj" -IncludeReferencedProjects -o Build -p Configuration=%config% %version%
+	call %nuget% pack "YourSolution\ProjectA.csproj" -IncludeReferencedProjects -o Build -p Configuration=%config% %version%
 	
 ## build.bat manually running unit tests using default test runner
 
@@ -94,7 +94,7 @@ build.bat:
 	
     REM Package
     mkdir Build
-	cmd /c %nuget% pack "YourSolution\YourSolution.ProjectA.csproj" -symbols -o Build -p Configuration=%config% %version%
+	call %nuget% pack "YourSolution\YourSolution.ProjectA.csproj" -symbols -o Build -p Configuration=%config% %version%
 	if not "%errorlevel%"=="0" goto failure
 	
 	:success
@@ -138,7 +138,7 @@ build.bat:
 	
     REM Package
     mkdir Build
-	cmd /c %nuget% pack "YourSolution\YourSolution.ProjectA.csproj" -symbols -o Build -p Configuration=%config% %version%
+	call %nuget% pack "YourSolution\YourSolution.ProjectA.csproj" -symbols -o Build -p Configuration=%config% %version%
 	if not "%errorlevel%"=="0" goto failure
 	
 	:success
@@ -173,24 +173,23 @@ build.bat:
 	
     REM Build
     %WINDIR%\Microsoft.NET\Framework\v4.0.30319\msbuild YourSolution.sln /p:Configuration="%config%" /m /v:M /fl /flp:LogFile=msbuild.log;Verbosity=Normal /nr:false
-	if not "%errorlevel%"=="0" goto failure
+    if not "%errorlevel%"=="0" goto failure
 
-	REM Unit tests
-	%nuget% install NUnit.Runners -Version 2.6.4 -OutputDirectory packages
-	packages\NUnit.Runners.2.6.4\tools\nunit-console.exe /config:%config% /framework:net-4.5 YourSolution\ProjectA.Tests\bin\%config%\ProjectA.Tests.dll
-
-	if not "%errorlevel%"=="0" goto failure
+    REM Unit tests
+    call %nuget% install NUnit.Runners -Version 2.6.4 -OutputDirectory packages
+    packages\NUnit.Runners.2.6.4\tools\nunit-console.exe /config:%config% /framework:net-4.5 YourSolution\ProjectA.Tests\bin\%config%\ProjectA.Tests.dll
+    if not "%errorlevel%"=="0" goto failure
 	
     REM Package
     mkdir Build
-	cmd /c %nuget% pack "YourSolution\YourSolution.ProjectA.csproj" -symbols -o Build -p Configuration=%config% %version%
-	if not "%errorlevel%"=="0" goto failure
+    call %nuget% pack "YourSolution\YourSolution.ProjectA.csproj" -symbols -o Build -p Configuration=%config% %version%
+    if not "%errorlevel%"=="0" goto failure
 	
-	:success
-	exit 0
+    :success
+    exit 0
 	
-	:failure
-	exit -1
+    :failure
+    exit -1
 
 ## build.bat doing manual package restore before build
 

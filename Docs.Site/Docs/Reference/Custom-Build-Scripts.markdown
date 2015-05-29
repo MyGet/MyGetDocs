@@ -109,7 +109,7 @@ The following build.bat executes several steps:
 
 * Compile the solution using msbuild
 * Run unit tests using a custom test runner provided through the project's source control repository
-* Create a single NuGet package containing all referenced projects, also creating symbols packages. Package version will come from %PackageVersion% environment variable, if set.
+* Create a single NuGet package containing a specific projects, also creating symbols packages. Package version will come from %PackageVersion% environment variable, if set.
 
 This build.bat also verifies error level after every step and reports build success/failure back to MyGet.
 
@@ -134,6 +134,53 @@ build.bat:
 
 	REM Unit tests
 	%nunit% YourSolution\ProjectA.Tests\bin\%config%\ProjectA.Tests.dll
+	if not "%errorlevel%"=="0" goto failure
+	
+    REM Package
+    mkdir Build
+	cmd /c %nuget% pack "YourSolution\YourSolution.ProjectA.csproj" -symbols -o Build -p Configuration=%config% %version%
+	if not "%errorlevel%"=="0" goto failure
+	
+	:success
+	exit 0
+	
+	:failure
+	exit -1
+
+## build.bat manually running unit tests using custom test runner which is downloaded on the fly
+
+The following build.bat executes several steps:
+
+* Compile the solution using msbuild
+* Download NUnit 2.6.4 from NuGet.org
+* Run unit tests using the downloaded NUnit 2.6.4 test runner
+* Create a single NuGet package containing a specific projects, also creating symbols packages. Package version will come from %PackageVersion% environment variable, if set.
+
+This build.bat also verifies error level after every step and reports build success/failure back to MyGet.
+
+build.bat:
+
+    @echo Off
+    set config=%1
+    if "%config%" == "" (
+       set config=Release
+    )
+    
+    set version=
+    if not "%PackageVersion%" == "" (
+       set version=-Version %PackageVersion%
+    )
+    
+	set nunit="tools\nunit\nunit-console.exe"
+	
+    REM Build
+    %WINDIR%\Microsoft.NET\Framework\v4.0.30319\msbuild YourSolution.sln /p:Configuration="%config%" /m /v:M /fl /flp:LogFile=msbuild.log;Verbosity=Normal /nr:false
+	if not "%errorlevel%"=="0" goto failure
+
+	REM Unit tests
+	%nuget% install NUnit.Runners -Version 2.6.4 -OutputDirectory packages
+	packages\NUnit.Runners.2.6.4\tools\nunit-console.exe /config:%config% /framework:net-4.5 YourSolution\ProjectA.Tests\bin\%config%\ProjectA.Tests.dll
+
 	if not "%errorlevel%"=="0" goto failure
 	
     REM Package

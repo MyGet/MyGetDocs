@@ -18,18 +18,6 @@ See the [Creating and publishing a package](http://docs.nuget.org/docs/creating-
 
 In order to publish them onto your MyGet feeds, you'll need to create a MyGet account first.
 
-## I get a 409 Conflict when pushing packages to my MyGet feed
-
-The *409 Conflict* status code can be returned because of several reasons:
-
-* The package size is too large for the current [subscription](http://www.myget.org/plans). E.g. the Free plan only supports packages <= 100 MB. Check the package size and your subscription plan quota. When the feed owner created a private feed and you are on a plan that has lesser quota, MyGet will apply your subscription quota. For example, when you are on the Free plan and are pushing packages to a private feed created by someone on a Starter plan, packages can still only be <= 100 MB.
-* The feed is over quota for the current [subscription](http://www.myget.org/plans). Check the feed quota and your subscription plan quota.
-* You enabled any of the following package settings for your feed. Verify the package settings for the feed you are pushing to.
-  * **Forbid overwriting of existing packages?** - this will forbid overwriting packages that already exist on your feed (same package id and version)
-  * **Forbid packages which are non-compliant with Semantic Version?** - this will forbid uploading packages that are not compliant with [Semantic Versioning](http://www.semver.org). E.g. a package version like 2.0.234.255 will not be supported.
-
-MyGet will return a detailed error when pushing packages with a full description of the issue. If your NuGet client is not showing this error, use the *-verbosity Detailed* switch.
-
 ## I get a 402 Payment Required when working with my private feed
 
 The *402 Payment Required* status code means that the private feed is locked because the feed owner's subscription has expired.
@@ -41,6 +29,18 @@ If the owner of a private feed downgrades a paid subscription to a free one or i
 </div>
 
 [Upgrading to a paid subscription](http://www.myget.org/plans) will automatically unlock the private feed. Another option is to make the feed public and restore access. Note that making the feed public will make it accessible to everyone.
+
+## I get a 409 Conflict when pushing packages to my MyGet feed
+
+The *409 Conflict* status code can be returned because of several reasons:
+
+* The package size is too large for the current [subscription](http://www.myget.org/plans). E.g. the Free plan only supports packages <= 100 MB. Check the package size and your subscription plan quota. When the feed owner created a private feed and you are on a plan that has lesser quota, MyGet will apply your subscription quota. For example, when you are on the Free plan and are pushing packages to a private feed created by someone on a Starter plan, packages can still only be <= 100 MB.
+* The feed is over quota for the current [subscription](http://www.myget.org/plans). Check the feed quota and your subscription plan quota.
+* You enabled any of the following package settings for your feed. Verify the package settings for the feed you are pushing to.
+  * **Forbid overwriting of existing packages?** - this will forbid overwriting packages that already exist on your feed (same package id and version)
+  * **Forbid packages which are non-compliant with Semantic Version?** - this will forbid uploading packages that are not compliant with [Semantic Versioning](http://www.semver.org). E.g. a package version like 2.0.234.255 will not be supported.
+
+MyGet will return a detailed error when pushing packages with a full description of the issue. If your NuGet client is not showing this error, use the *-verbosity Detailed* switch.
 
 ## Does MyGet support Mono?
 

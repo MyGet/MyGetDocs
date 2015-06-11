@@ -49,6 +49,7 @@ First of all, when pushing to a v2 NuGet feed, ensure you are targeting the `api
 There are various reasons that can result in this exception being thrown. Usually, the response is enriched with more details about the cause of the exception.
 
 Here's an overview:
+
 * The package is too large according to your subscription quota. Please verify before asking support as you can often simply resolve it by upgrading your subscription plan or adjusting retention policies on your feed to free up some space.
 * The total size of the packages that are pending upload (through the web UI) is too large.
 * The package is simply too large (as in Gb's of size) and our servers reject it.

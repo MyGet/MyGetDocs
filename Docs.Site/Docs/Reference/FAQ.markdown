@@ -42,6 +42,17 @@ The *409 Conflict* status code can be returned because of several reasons:
 
 MyGet will return a detailed error when pushing packages with a full description of the issue. If your NuGet client is not showing this error, use the *-verbosity Detailed* switch.
 
+## I get a 413 RequestEntityTooLarge when pushing packages to my MyGet feed
+
+First of all, when pushing to a v2 NuGet feed, ensure you are targeting the `api/v2/package` endpoint.
+
+There are various reasons that can result in this exception being thrown. Usually, the response is enriched with more details about the cause of the exception.
+
+Here's an overview:
+* The package is too large according to your subscription quota. Please verify before asking support as you can often simply resolve it by upgrading your subscription plan or adjusting retention policies on your feed to free up some space.
+* The total size of the packages that are pending upload (through the web UI) is too large.
+* The package is simply too large (as in Gb's of size) and our servers reject it.
+
 ## Does MyGet support Mono?
 
 As long as NuGet.Core and the NuGet CLI support Mono, we'll do the same.

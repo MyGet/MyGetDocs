@@ -40,7 +40,7 @@ Setting up your own Vsix feed has never been easier. MyGet allows you to create 
 
 	![Add VSIX to feed](Images/add-vsix.png)
 
-	Additionally, you can do a HTTP POST from your build server to the feed to add a Visual Studio extension from your continuous integration process. The POST URL is in the form of `/F/<feedname>/vsix/package`. Note you will have to add the `X-NuGet-ApiKey` header with a valid API key as well.
+	Additionally, you can do a HTTP POST from your build server to the feed to add a Visual Studio extension from your continuous integration process. The POST URL is in the form of `/F/<feedname>/vsix/upload`. Note you will have to add the `X-NuGet-ApiKey` header with a valid API key as well.
 
 3. **Consume extensions** in Visual Studio.
 

@@ -28,7 +28,7 @@ Using MyGet Build Services, you have the opportunity to control exactly how your
 * MyGet.sln
 * Any other *.sln file
 * *.csproj (and *.vbproj, *.fsproj, ...)
-* *.nuspec (yep, we support packaging simple [convention-based NuGet directories](http://docs.nuget.org/docs/creating-packages/creating-and-publishing-a-package#From_a_convention_based_working_directory "Convention Based Nuget Directories") as well)
+* *.nuspec (yep, we support packaging simple [convention-based NuGet directories](http://docs.nuget.org/create/creating-and-publishing-a-package#package-conventions "Convention Based Nuget Directories") as well)
 
 Based on the files found, the build process will be slightly different.
 

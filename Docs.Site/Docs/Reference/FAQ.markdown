@@ -25,7 +25,7 @@ We often get this question:
 
 Usually, your packages will appear on the feed within a minute. Depending on load and other factors, this could take up to 5 minutes. Very sporadically even longer (this can happen for instance when we are scaling out during burst load scenarios).
 
-Note that MyGet.org is an eventual consistent system (and so is NuGet.org).
+Note that MyGet.org is an eventually consistent system (and so is NuGet.org).
 
 If you really need your package to be instantly available, it is very likely you should question whether the consuming project really needs a package dependency, versus a project reference. We found in practice that this was often the case.
 

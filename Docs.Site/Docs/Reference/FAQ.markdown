@@ -18,6 +18,17 @@ See the [Creating and publishing a package](http://docs.nuget.org/docs/creating-
 
 In order to publish them onto your MyGet feeds, you'll need to create a MyGet account first.
 
+## When do packages appear on the feed after pushing them successfully?
+
+We often get this question: 
+"I pushed a package successfully but it is not yet available (even though activity log shows it). Why?"
+
+Usually, your packages will appear on the feed within a minute. Depending on load and other factors, this could take up to 5 minutes. Very sporadically even longer (this can happen for instance when we are scaling out during burst load scenarios).
+
+Note that MyGet.org is an eventual consistent system (and so is NuGet.org).
+
+If you really need your package to be instantly available, it is very likely you should question whether the consuming project really needs a package dependency, versus a project reference. We found in practice that this was often the case.
+
 ## I get a 402 Payment Required when working with my private feed
 
 The *402 Payment Required* status code means that the private feed is locked because the feed owner's subscription has expired.

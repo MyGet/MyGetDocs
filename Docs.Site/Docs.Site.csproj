@@ -19,6 +19,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -175,6 +176,7 @@
     <Content Include="Docs\How-To\Images\2fa-credentials.png" />
     <Content Include="Docs\How-To\Images\build-services-owasp.png" />
     <Content Include="Docs\How-To\Images\paket.png" />
+    <Content Include="Docs\Reference\Images\FiddlerHttps.png" />
     <Content Include="Docs\Reference\Images\IP-security.png" />
     <Content Include="Docs\Reference\Images\okta-add-template-app.png" />
     <Content Include="Docs\Reference\Images\okta-app-config.png" />
@@ -287,6 +289,7 @@
     <Content Include="Docs\Release-Notes\MyGet-2.0.markdown" />
     <Content Include="Docs\Reference\Build-Services-for-npm.markdown" />
     <Content Include="Docs\Walkthrough\Getting-Started-with-Vsix.markdown" />
+    <Content Include="Docs\Reference\Capturing-traffic-with-Fiddler.markdown" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />

@@ -10,7 +10,7 @@ Various endpoints are available for MyGet feeds.
 
 MyGet has the following feed endpoints available for NuGet:
 
-* /F/&lt;your-feed-name&gt; - the NuGet v2 API endpoint
+* /F/&lt;your-feed-name&gt;/api/v3/index.json - the NuGet v3 API endpoint
 * /F/&lt;your-feed-name&gt;/api/v2 - the NuGet v2 API endpoint for consuming packages
 * /F/&lt;your-feed-name&gt;/api/v2/package - the NuGet v2 API endpoint for pushing packages
 * /F/&lt;your-feed-name&gt;/api/v1 - the NuGet v1 API endpoint for consuming and pushing packages (still in use by Orchard CMS and some others)
@@ -21,8 +21,9 @@ The following table lists which endpoint can be used with which client:
     <thead>
         <tr>
             <td><strong>Endpoint</strong></td>
-            <td><strong>NuGet &lt; v1.6</strong></td>
-            <td><strong>NuGet &gt; v1.6</strong></td>
+            <td><strong>NuGet &lt; v1.6</strong><br />(VS2010)</td>
+            <td><strong>NuGet &gt; v1.6</strong><br />(VS2013)</td>
+            <td><strong>NuGet &gt; v3.0</strong><br />(VS2015+)</td>
             <td><strong>NuGet Package Explorer</strong></td>
             <td><strong>Orchard CMS</strong></td>
             <td><strong>Chocolatey / OneGet</strong></td>
@@ -31,17 +32,19 @@ The following table lists which endpoint can be used with which client:
     </thead>
     <tbody>
         <tr>
-            <td>/F/&lt;your-feed-name&gt;</td>
+            <td>/F/&lt;your-feed-name&gt;/api/v3/index.json</td>
+            <td>no</td>
             <td>no</td>
             <td>yes</td>
-            <td>yes</td>
             <td>no</td>
-            <td>yes</td>
+            <td>no</td>
+            <td>no</td>
             <td>yes</td>
 		</tr>
         <tr>
             <td>/F/&lt;your-feed-name&gt;/api/v2</td>
             <td>no</td>
+            <td>yes</td>
             <td>yes</td>
             <td>yes</td>
             <td>no</td>
@@ -51,6 +54,7 @@ The following table lists which endpoint can be used with which client:
         <tr>
             <td>/F/&lt;your-feed-name&gt;/api/v2/package</td>
             <td>no</td>
+            <td>yes</td>
             <td>yes</td>
             <td>yes</td>
             <td>no</td>
@@ -65,9 +69,11 @@ The following table lists which endpoint can be used with which client:
             <td>yes</td>
             <td>yes</td>
             <td>yes</td>
+            <td>yes</td>
 		</tr>
         <tr>
             <td>/RSS/&lt;your-feed-name&gt;</td>
+            <td>no</td>
             <td>no</td>
             <td>no</td>
             <td>no</td>
@@ -77,6 +83,13 @@ The following table lists which endpoint can be used with which client:
 		</tr>
     </tbody>
 </table>
+
+### Symbol server endpoints
+
+MyGet has the following endpoints available for symbol server (debugging in Visual Studio and WinDbg):
+
+* /F/&lt;your-feed-name&gt;/api/v2/package - the symbols package publish endpoint
+* /F/&lt;your-feed-name&gt;/symbols - the symbol server endpoint
 
 ### Npm-compatible feed endpoints
 

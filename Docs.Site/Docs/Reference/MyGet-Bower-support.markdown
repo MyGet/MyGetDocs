@@ -2,10 +2,6 @@
 
 After [signing up for a MyGet account](http://www.myget.org/Account/Login) and creating a feed that serves as a Bower registry, you can work with Bower packages using the Bower command line and *bower.json*.
 
-<p class="alert alert-info">
-    <strong>Note:</strong> MyGet support for Bower is still in preview. If you encounter any issues, please <a href="http://www.myget.org/support">get in touch with support</a>.
-</p>
-
 ## Your Bower registry URL
 
 The full URL to your Bower feed on MyGet can be found on the *feed details* page.

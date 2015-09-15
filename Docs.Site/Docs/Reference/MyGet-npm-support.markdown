@@ -2,10 +2,6 @@
 
 After [signing up for a MyGet account](http://www.myget.org/Account/Login) and creating a feed that serves as an npm registry, you can work with node modules (packages) using the npm command line and *package.json*.
 
-<p class="alert alert-info">
-    <strong>Note:</strong> MyGet support for npm is still in preview. If you encounter any issues, please <a href="http://www.myget.org/support">get in touch with support</a>.
-</p>
-
 ## Your npm registry URL
 
 The full URL to your npm feed on MyGet can be found on the *feed details* page.

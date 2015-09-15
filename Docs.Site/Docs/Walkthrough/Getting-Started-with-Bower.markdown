@@ -2,10 +2,6 @@
 
 Setting up your own Bower registry has never been easier. MyGet allows you to create your own public or private Bower registries in just a few clicks and work with your own Bower packages. This section will guide you through it.
 
-<p class="alert alert-info">
-    <strong>Note:</strong> MyGet support for Bower is still in preview. If you encounter any issues, please <a href="http://www.myget.org/support">get in touch with support</a>.
-</p>
-
 ## Creating a new feed
 
 1. **Browse to [MyGet.org][1] and log in** using your preferred identity provider.

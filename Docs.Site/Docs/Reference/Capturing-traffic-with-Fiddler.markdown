@@ -21,7 +21,14 @@ Once the requested actions have been performed, use the *File | Save | All Sessi
 
 ### Tips for capturing NuGet and VSIX traffic
 
-Make sure to start Fiddler prior to NuGet or Visual Studio. 
+Make sure to start Fiddler prior to NuGet or Visual Studio.
+
+If no traffic from Visual Studio is shown in Fiddler, try setting one of the following:
+
+* Set the `HTTP_PROXY` environment variable to `http://127.0.0.1:8888`
+* or use the NuGet configuration commands to set the proxy:
+
+	NuGet.exe config -Set HTTP_PROXY=ttp://127.0.0.1:8888
 
 ### Tips for capturing npm traffic
 

@@ -3,13 +3,15 @@
 [SymbolSource](http://www.SymbolSource.org) lets consumers of your NuGet packages step through the source code and integrate with Visual Studio.
 MyGet integrates with SymbolSource to host debugging symbols for your NuGet packages. In fact, MyGet has its own tenant on SymbolSource available at [https://www.symbolsource.org/MyGet](https://www.symbolsource.org/MyGet) (as opposed to the general public one at the site's root). When creating a MyGet account we automatically create a SymbolSource account within the MyGet tenant and sync your credentials.
 
+MyGet comes with its [own symbol server](/docs/reference/symbols) but also provides integration with SymbolSource.org.
+
 ## Pushing packages to SymbolSource
 
 With [NuGet.org](http://www.nuget.org), the NuGet client automatically recognizes symbols packages and pushes them to the default SymbolSource feed. MyGet uses a different feed on SymbolSource, making it possible to securely host your symbols packages. This does imply that pushing symbols to the MyGet symbol server consists of two steps instead of one.
 
 The publish workflow to publish the SamplePackage.1.0.0.nupkg to a MyGet feed, including symbols, would be issuing the following two commands from the console (replace the GUID with your MyGet API key):
 
-	nuget push SamplePackage.1.0.0.nupkg 00000000-0000-0000-0000-00000000000 -Source http://www.myget.org/F/somefeed/api/v1
+	nuget push SamplePackage.1.0.0.nupkg 00000000-0000-0000-0000-00000000000 -Source http://www.myget.org/F/somefeed/api/v2/package
 	nuget push SamplePackage.1.0.0.Symbols.nupkg 00000000-0000-0000-0000-00000000000 -Source http://nuget.gw.SymbolSource.org/MyGet/somefeed
 
 <p class="alert alert-info">

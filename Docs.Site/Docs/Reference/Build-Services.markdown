@@ -146,7 +146,13 @@ Filters are executed in order of precedence. If a negation comes first, packages
 
 ## Pushing symbols
 
-By default, when symbols packages (*.sympols.nupkg) are created, MyGet Build Services will push symbols packages to [SymbolSource](http://www.symbolsource.org). When disabled for the build, no symbols packages will be pushed.
+By default, MyGet pushes symbols packages (*.sympols.nupkg) to [SymbolSource](http://www.symbolsource.org) or to the current feed (Enterprise plans without SymbolSource support enabled).
+
+To change this behaviour, edit the build source and select the target for pushing symbols packages.
+
+![Change target for symbols](Images/symbols-options-build.png)
+
+Pushing symbols can also be disabled for the build, in which case no symbols packages will be pushed.
 
 ## Source labeling (tagging)
 

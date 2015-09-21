@@ -20,6 +20,7 @@ Full details can be found in the [NuGet docs](http://docs.nuget.org/docs/referen
 The interesting observation here is that all clients start with a *NuGet.config* in the current directory and then walk up to the drive root, and only then are the standard files checked.This means every parent folder of a project or solution can contain additional configuration details that will be applied (note: items the file that is checked first wins).
 
 Here's another example: if you have a solution file C:\Projects\CustomerA\AwesomeSolution\AwesomeSolution.sln, all NuGet clients will load configuration values from: 
+
 * C:\Projects\CustomerA\AwesomeSolution\NuGet.config
 * C:\Projects\CustomerA\NuGet.config
 * C:\Projects\NuGet.config

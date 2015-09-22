@@ -12,6 +12,7 @@ The following events can be subscribed to:
 * **Package listed/unlisted** - a package has been listed/unlisted
 * **Package pinned/unpinned** - a package has been pinned/unpinned
 * **Package pushed** - a package has been pushed to an external feed
+* **Build queued** - a build has been queued
 * **Build started** - a build has started
 * **Build finished** - a build has finished
 
@@ -25,7 +26,7 @@ MyGet will make every HTTP request with the following headers:
 	<thead>
     	<tr>
     	    <th>Header</th> 
-			<th>Description</th>
+    	    <th>Description</th>
     	</tr>
 	</thead>
 	<tbody>
@@ -190,6 +191,23 @@ Here's an example of a *package pushed* payload. It includes package metadata.
 	  }
 	}
 
+### Build queued
+
+Here's an example of a *build queued* payload.
+
+	{
+	  "Identifier":"82f9a300-2439-4ac6-a2bd-8da96bb26f75",
+	  "Username":"maartenba",
+	  "When":"2014-09-08T13:00:10.9006808Z",
+	  "PayloadType":"BuildQueuedWebHookEventPayloadV1",
+	  "Payload":{
+	    "FeedIdentifier":"sample-feed",
+	    "FeedUrl":"https://www.myget.org/F/sample-feed/",
+	    "Name":"SampleBuild",
+	    "Branch":"master"
+	  }
+	}
+	
 ### Build started
 
 Here's an example of a *build started* payload.
@@ -202,8 +220,8 @@ Here's an example of a *build started* payload.
 	  "Payload":{
 	    "FeedIdentifier":"sample-feed",
 	    "FeedUrl":"https://www.myget.org/F/sample-feed/",
-        "Name":"SampleBuild",
-        "Branch":"master"
+	    "Name":"SampleBuild",
+	    "Branch":"master"
 	  }
 	}
 

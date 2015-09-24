@@ -36,41 +36,51 @@ Keep the Options dialog open and find the ***Debugging | Symbols*** node on the 
 
 ![Visual Studio symbol server settings](Images/debug-options-2015.png)
 
+## Browsing symbols in MyGet
+
+The package details page for a package that has symbols available comes with a nice utility that enables us to browse the source code embedded in a symbols package.
+
+![Browse NuGet source code on MyGet](Images/browse-sources.png)
+
 ## Quick command cheatsheet
 
 Here's a quick cheatsheet of the commands related to symbol feeds:
 
-* Package symbols
+* Create package and symbols
 
 	```nuget.exe pack <path_to_project_or_nuspec> -symbols```
 
-* Storing your NuGet.org key, which also enables pushing to SymbolSource.org:
-
-	```nuget.exe setapikey <nuget-key>```
-
-* Storing your MyGet key:
-
-	```nuget.exe setapikey <myget-key> -Source https://www.myget.org/F/<feed-name>/api/v2```
-
-* Pushing a package to NuGet.org (a symbol package will be detected and pushed to SymbolSource.org):
-
-	```nuget.exe push <package-file>```
-
 * Pushing a package to MyGet:
 
-	```nuget.exe push <package-file> -Source https://www.myget.org/F/<feed-name>/api/v2/package```
+	```nuget.exe push <package-file> <myget-key> -Source https://www.myget.org/F/<feed-name>/api/v2/package```
 
-* Pushing a symbol package to MyGet:
+* Pushing a symbols package to MyGet:
 
-	```nuget.exe push <package-file> -Source https://www.myget.org/F/<feed-name>/api/v2/package```
+	```nuget.exe push <package-file> <myget-key> -Source https://www.myget.org/F/<feed-name>/api/v2/package```
 
 ## Troubleshooting
 
 The following list of tips might be useful to you if you hit any issues when configuring the debugger. If you have some other tips to share, contact MyGet support or submit a pull request for this page.
 
-### Visual Studio does not find debugging information in a symbols package
+<p class="alert alert-info">
+    <strong>Note:</strong> MyGet does not index any binaries found in the package's <code>\tools</code> folder.
+</p>
 
-When Visual Studio downloads `.symbols.nupkg` files but doesn't find any debugging symbols, it likely means there's something wrong with the symbols package. There is a useful plug-in for [NuGet Package Explorer](http://npe.codeplex.com) which allows us to validate our symbols packages.
+### A symbols package was pushed but does not provide source stepping
+
+The way Visual Studio and other debugging tools match an assembly and PDB file is by using the assembly hash. This hash is stored in the `.dll` and `.pdb` file and must match for debugging and source steping to work.
+
+On the package details page on MyGet, we can verify if for a given assembly debugging and source stepping is possible. MyGet shows the assembly name, the assembly hash and whether source stepping will be available for it or not.
+
+![Does the assembly hash match](Images/assembly-pdb-match.png)
+
+<p class="alert alert-info">
+    <strong>Note:</strong> To verify this match when creating packages on our system, we can use the <a href="http://www.debuginfo.com/tools/chkmatch.html">ChkMatch</a> tool. The author of this tool also provides <a href="http://www.debuginfo.com/articles/debuginfomatch.html">a comprehensive article about matching assemblies and symbols</a>.
+</p>
+
+### Veryifying symbols package contents
+
+There is a useful plug-in for [NuGet Package Explorer](http://npe.codeplex.com) which allows us to validate our symbols packages.
 
 To install the plug-in, open NuGet Package Explorer and use the ***Tools | Plugin Manager...*** menu. In the dialog that opens, click the ***Add Feed Plugin...*** button double-click the SymbolSource plug-in from the MyGet feed.
 
@@ -89,7 +99,3 @@ If you have a nuspec file which contains a similar line as the one above, you mi
 ```<file src="C:\src\AwesomeLib\bin\Release\AwesomeLib.*" target="lib\net45" />```
 
 The NuGet client tools are smart enough to filter out PDB files from non-symbols packages (unless you explicitly include them).
-
-<p class="alert alert-info">
-    <strong>Note:</strong> MyGet does not index any binaries found in the package's <code>\tools</code> folder.
-</p>

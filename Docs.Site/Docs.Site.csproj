@@ -176,6 +176,8 @@
     <Content Include="Docs\How-To\Images\2fa-credentials.png" />
     <Content Include="Docs\How-To\Images\build-services-owasp.png" />
     <Content Include="Docs\How-To\Images\paket.png" />
+    <Content Include="Docs\Reference\Images\assembly-pdb-match.png" />
+    <Content Include="Docs\Reference\Images\browse-sources.png" />
     <Content Include="Docs\Reference\Images\debug-options-2015.png" />
     <Content Include="Docs\Reference\Images\feedsettings_symbols_url.png" />
     <Content Include="Docs\Reference\Images\FiddlerHttps.png" />

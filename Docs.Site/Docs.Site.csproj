@@ -296,6 +296,7 @@
     <Content Include="Docs\Walkthrough\Getting-Started-with-Vsix.markdown" />
     <Content Include="Docs\Reference\Capturing-traffic-with-Fiddler.markdown" />
     <Content Include="Docs\Reference\Symbols.markdown" />
+    <Content Include="Docs\Reference\MyGet-Gallery.markdown" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />

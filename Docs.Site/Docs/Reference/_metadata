@@ -5,6 +5,7 @@ Packaging FSharp
 Visual Studio Online Integration
 Package Sources
 Package Source Discovery
+MyGet Gallery
 Security
 Symbols
 SymbolSource

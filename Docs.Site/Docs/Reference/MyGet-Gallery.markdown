@@ -22,18 +22,19 @@ If you meet the above requirements, all you need to do to publish your feed in t
 Click the **Save** button to update your settings.
 
 <p class="alert alert-info">
-Note that it may take up to 15 minutes for your feed to appear in the MyGet Gallery due to caching.<br/>
-<i>(and vice versa, to unpublish your feed from the gallery when unchecking the checkbox and saving the setting)</i>
+Note that it may take up to 15 minutes for your feed to appear in the MyGet Gallery due to caching.
 </p>
 
-## Adding a little context
+## Adding an readme using markdown
 
-To provide your feed consumers with a little context on the feed, or disclaimer, or project-related information, you may want to add a readme to your feed.
+To provide your feed consumers with some context on the feed, or disclaimer, or project-related information, you may want to add a readme to your feed.
 The readme can be written in Markdown, or you can simply reference an existing readme from your GitHub repository.
 
 To link an existing readme from GitHub, click on the **import from GitHub** link and select an entry in the popup dialog that appears by clicking on the **Use This** button next to it.
 
+## Setting a feed icon
+
 ![Import readme from GitHub](Images/gallery_link_readme_from_github.png)
 
-Finally, you can also add a little icon to make your feed easily recognizable in the gallery listing by entering an URL to an image, or by uploading a JPG, GIF or PNG file of choice. Optimal icon resolution is 50 by 50 pixels.
+Finally, you can also add an icon to make your feed easily recognizable in the gallery listing by entering an URL to an image, or by uploading a JPG, GIF or PNG file of choice. Optimal icon resolution is 50 by 50 pixels.
 ![Add feed icon](Images\gallery_add_feed_icon.png)

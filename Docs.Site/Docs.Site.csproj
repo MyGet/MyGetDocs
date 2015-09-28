@@ -181,6 +181,9 @@
     <Content Include="Docs\Reference\Images\debug-options-2015.png" />
     <Content Include="Docs\Reference\Images\feedsettings_symbols_url.png" />
     <Content Include="Docs\Reference\Images\FiddlerHttps.png" />
+    <Content Include="Docs\Reference\Images\gallery_add_feed_icon.png" />
+    <Content Include="Docs\Reference\Images\gallery_link_readme_from_github.png" />
+    <Content Include="Docs\Reference\Images\gallery_publish_checkbox.png" />
     <Content Include="Docs\Reference\Images\IP-security.png" />
     <Content Include="Docs\Reference\Images\okta-add-template-app.png" />
     <Content Include="Docs\Reference\Images\okta-app-config.png" />

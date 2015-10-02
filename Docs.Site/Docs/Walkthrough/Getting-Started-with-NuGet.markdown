@@ -27,9 +27,50 @@ Setting up your own NuGet repository has never been easier. MyGet allows you to 
 
 	![Register MyGet Feed](Images/faq_register_myget_feed.png)
 
-	To store your MyGet feed credentials in your account's roaming profile, you can use the following Gist in combination with the NuGet Commandline tool (<a href="https://nuget.org/nuget.exe" title="Click here to download the NuGet commandline tool">NuGet.exe</a>):
+	To store your MyGet feed credentials in your account's roaming profile, you can use the latest NuGet Commandline tool (<a href="https://dist.nuget.org/win-x86-commandline/latest/nuget.exe" title="Click here to download the latest NuGet commandline tool">NuGet.exe</a>).
 
-	<script src="https://gist.github.com/xavierdecoster/3205826.js"></script>
+	Execute the following script using your MyGet [feedUrl] and MyGet [username] , [password] and [apikey].
+	Run this from a commandline where you have access to nuget.exe (or set the path to your nuget.exe in a system environment variable).
+
+	a. **Option A: Store credentials in machine-level nuget.config (non-transferable)**
+
+	Register credentials for new package source:
+
+		nuget setapikey [apikey] -source [url]
+		nuget sources add -name [name] -source [url] -user [username] -pass [pwd]
+
+	or update an already registered package source:
+
+		nuget setapikey [apikey] -source [url]
+		nuget sources update -name [name] -source [url] -user [username] -pass [pwd]
+
+	b. **Option B: Store credentials in specific nuget.config (non-transferable)**
+
+	Register credentials for new package source:
+
+		nuget setapikey [apikey] -source [url] -configFile [configFilePath]
+		nuget sources add -name [name] -source [url] -user [username] -pass [pwd] -configFile [path]
+
+	or update an already registered package source:
+	
+		nuget setapikey [apikey] -source [url] -configFile [configFilePath]
+		nuget sources update -name [name] -source [url] -user [username] -pass [pwd] -configFile [path]
+
+	c. **Option C: Store credentials in specific nuget.config (transferable)**
+
+	Don't bother putting the above nuget.config files into source control as they'll only work on the machine and the account that created the configs.
+
+	To be able to share credentials, use the -StorePasswordInClearText option.
+	
+	Register credentials for new package source:
+
+		nuget setapikey [apikey] -source [url] -configFile [configFilePath]
+		nuget sources add -name [name] -source [url] -user [username] -pass [pwd] -configFile [path] -StorePasswordInClearText
+
+	or update an already registered package source:
+	
+		nuget setapikey [apikey] -source [url] -configFile [configFilePath]
+		nuget sources update -name [name] -source [url] -user [username] -pass [pwd] -configFile [path] -StorePasswordInClearText
 
 	Also check out our blog post dedicated to this topic: <a href="http://blog.myget.org/post/2012/12/12/NuGet-package-restore-from-a-secured-feed.aspx" target="_blank">NuGet package restore from a secured feed</a>.
 

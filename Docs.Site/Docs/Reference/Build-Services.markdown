@@ -10,6 +10,7 @@ Next to that, integration with several Source Control Repositories is available 
 
 * [GitHub](https://github.com/ "GitHub")
 * [BitBucket](https://bitbucket.org "BitBucket")
+* [Visual Studio Online](http://www.visualstudio.com)
 * [CodePlex](http://www.codeplex.com/ "CodePlex")
 
 Once downloaded, source code can then be built using a number of different methodologies.
@@ -144,6 +145,10 @@ Filters can be of different types:
 
 Filters are executed in order of precedence. If a negation comes first, packages matching the negation will be excluded, even if the next rule defines to include the package.
 
+<p class="alert alert-info">
+    <strong>Note:</strong> By default, MyGet generates prerelease packages. Configure the client correctly or edit the build source to change the version number template and generate release packages instead.
+</p>
+
 ## Pushing symbols
 
 By default, MyGet pushes symbols packages (*.sympols.nupkg) to [SymbolSource](http://www.symbolsource.org) or to the current feed (Enterprise plans without SymbolSource support enabled).
@@ -249,7 +254,9 @@ Build services supports the following frameworks and SDK's:
 * ScriptCS
 * psake
 * ripple
-* GitVersion
+* Git
+
+
 * node.js, npm
 * Grunt
 * Gulp

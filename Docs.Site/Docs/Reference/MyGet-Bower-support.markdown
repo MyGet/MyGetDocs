@@ -12,11 +12,11 @@ This URL can be used with any Bower-compatible client. Note that a [pre-authenti
 
 The easiest way of registering the feed is running the following command:
 
-	echo {"registry": "https://www.myget.org/F/your-feed-name/npm/bower/"} > .bowerrc
+	echo {"registry": "https://www.myget.org/F/your-feed-name/bower/"} > .bowerrc
 
 For private feeds, make sure to either use a [pre-authenticated URL](/docs/reference/feed-endpoints) or include the username and password in the registry URL:
 
-	echo {"registry": "https://username:password@www.myget.org/F/your-feed-name/npm/bower/"} > .bowerrc
+	echo {"registry": "https://username:password@www.myget.org/F/your-feed-name/bower/"} > .bowerrc
 
 <p class="alert alert-info">
 	<strong>Note:</strong> If you have any special characters in your username or password, such as an @ or a space, make sure to use the URL encoded value (e.g. `%40` for @, %23 for #, %2F for / and so on).
@@ -35,10 +35,10 @@ Additionally, your [`.bowerrc`](http://bower.io/docs/config/) file can be config
 	{
 	  "registry": {
 	    "search": [
-	      "https://www.myget.org/F/your-feed-name/npm/bower/",
+	      "https://www.myget.org/F/your-feed-name/bower/",
 	      "https://bower.herokuapp.com"
 	    ],
-		"register": "https://username:password@www.myget.org/F/your-feed-name/npm/bower/"
+		"register": "https://username:password@www.myget.org/F/your-feed-name/bower/"
 	  }
 	}
 
@@ -58,7 +58,7 @@ When this is done, any package can be registered on the MyGet Bower feed using t
 
 If a MyGet Bower feed is marked as *private*, it will always require authentication. To setup authentication, make sure to either use a [pre-authenticated URL](/docs/reference/feed-endpoints) or include the username and password in the registry URL:
 
-	echo {"registry": "https://username:password@www.myget.org/F/your-feed-name/npm/bower/"} > .bowerrc
+	echo {"registry": "https://username:password@www.myget.org/F/your-feed-name/bower/"} > .bowerrc
 
 <p class="alert alert-info">
 	<strong>Note:</strong> If you have any special characters in your username or password, such as an @ or a space, make sure to use the URL encoded value (e.g. `%40` for @, %23 for #, %2F for / and so on).

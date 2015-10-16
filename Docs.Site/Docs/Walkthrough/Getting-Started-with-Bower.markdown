@@ -26,11 +26,11 @@ Setting up your own Bower registry has never been easier. MyGet allows you to cr
 
 	The easiest way of registering the feed is running the following command:
 
-		echo {"registry": "https://www.myget.org/F/your-feed-name/npm/bower/"} > .bowerrc
+		echo {"registry": "https://www.myget.org/F/your-feed-name/bower/"} > .bowerrc
 
 	For private feeds, make sure to either use a [pre-authenticated URL](/docs/reference/feed-endpoints) or include the username and password in the registry URL:
 
-		echo {"registry": "https://username:password@www.myget.org/F/your-feed-name/npm/bower/"} > .bowerrc
+		echo {"registry": "https://username:password@www.myget.org/F/your-feed-name/bower/"} > .bowerrc
 
 	<p class="alert alert-info">
 	    <strong>Note:</strong> If you have any special characters in your username or password, such as an @ or a space, make sure to use the URL encoded value (e.g. `%40` for @, %23 for #, %2F for / and so on).

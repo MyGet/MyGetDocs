@@ -83,3 +83,7 @@ If you would like to reference packages, you can do so by using the package name
 	}
 
 Running `bower install` will make sure any dependency is downloaded and installed.
+
+## Company proxy server
+
+When using a company proxy server, make sure to configure it correctly. Justin James has a great guide to [npm, bower, git and bash proxy configurations](http://digitaldrummerj.me/proxy-configurations/) available.

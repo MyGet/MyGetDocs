@@ -39,5 +39,5 @@ Make sure to configure the npm proxy and use Fiddler:
 
 After capturing traffic, the proxy settings can be removed.
 
-	npm config delete http-proxy
+	npm config delete proxy
 	npm config delete https-proxy

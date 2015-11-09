@@ -89,6 +89,10 @@ Two attributes will be patched: AssemblyVersion and AssemblyInformationalVersion
 
 Patching of these attributes will occur whenever the feature is enabled, no matter which build process is used (solution, project or build.bat).
 
+<p class="alert alert-info">
+    <strong>Note:</strong> For DNX-based builds, we will patch the <code>project.json</code> file when assembly version patching is enabled for the build source.
+</p>
+
 ## Which packages are created?
 
 When you use MyGet's default build conventions and simply let us handle the build of your solution, then we will perform a few steps to determine which packages should be created.

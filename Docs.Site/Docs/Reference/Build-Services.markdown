@@ -232,16 +232,16 @@ Both of these conventions can be overridden by editing the build source configur
 
 Build services supports the following frameworks and SDK's:
 
-* .NET 2.0, .NET 3.0, .NET 3.5, .NET 4.0, .NET 4.5, .NET 4.5.1, .NET 4.5.2, .NET 4.6
+* .NET 2.0, .NET 3.0, .NET 3.5, .NET 4.0, .NET 4.5, .NET 4.5.1, .NET 4.5.2, .NET 4.6, .NET 4.6.1
 * Mono 2, Mono 3
 * Visual Studio 2013 Update 4
-* Visual Studio 2015
+* Visual Studio 2015 Update 1
 * Visual Studio 2013 SDK
 * Visual Studio 2015 SDK
 * WinRT Class Libraries (Windows 8.0 and 8.1)
 * Universal Apps support
 * PCL support
-* Windows Azure SDK 2.0, 2.1, 2.4, 2.5, 2.6, 2.7, 2.8)
+* Windows Azure SDK 2.0, 2.1, 2.4, 2.5, 2.6, 2.7, 2.8, 2.8.1)
 * Windows Identity Foundation SDK
 * Silverlight 4, Silverlight 5
 * Windows Phone 7.1 SDK, Windows Phone 8 SDK
@@ -259,7 +259,6 @@ Build services supports the following frameworks and SDK's:
 * psake
 * ripple
 * Git
-
 
 * node.js, npm
 * Grunt

@@ -84,6 +84,10 @@ If you would like to reference packages, you can do so by using the package name
 
 Running `bower install` will make sure any dependency is downloaded and installed.
 
+## Fixing certificate errors
+
+You may want to run the [SSL checker](https://cryptoreport.rapidssl.com/checker/views/certCheck.jsp) and verify your computer has all required certification authorities installed.
+
 ## Company proxy server
 
 When using a company proxy server, make sure to configure it correctly. Justin James has a great guide to [npm, bower, git and bash proxy configurations](http://digitaldrummerj.me/proxy-configurations/) available.

@@ -145,6 +145,8 @@ To work around this issue, run:
 
 	npm config set ca ""
 
+Additionally, you may want to run the [SSL checker](https://cryptoreport.rapidssl.com/checker/views/certCheck.jsp) and verify your computer has all required certification authorities installed.
+
 ## Company proxy server
 
 When using a company proxy server, make sure to configure it correctly. Justin James has a great guide to [npm, bower, git and bash proxy configurations](http://digitaldrummerj.me/proxy-configurations/) available.

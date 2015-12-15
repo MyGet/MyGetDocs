@@ -491,11 +491,11 @@ Note that this should be done in a [pre-build step](#Pre-_and_post-build_steps),
 
 Packages can be published explicitly to a MyGet feed by using the `publishPackage` service message, for example:
 
-	##myget[publishPackage path='<relative-path-no-wildcards>' type='nuget|npm|bower|vsix']
+	##myget[publishPackage path='<relative-path-no-wildcards>' type='nuget|symbols|npm|bower|vsix']
 
 This service message requires the relative path to the package (from the root of the source control repository). Wildcards are not supported: each artifact that needs to be published has to be enumerated.
 
-Note that MyGet Build Services does not apply [package filters](#Which_packages_are_pushed_to_my_feed) when the `publishPackage` service message is used. If a filter excludes a given package, the `publishPackage` service message will still make the package available on the MyGet feed.
+Note that MyGet Build Services also applies [package filters](#Which_packages_are_pushed_to_my_feed) when the `publishPackage` service message is used. If a filter excludes a given package, the package will not be published to the MyGet feed.
 
 ### Writing messages to the build log
 

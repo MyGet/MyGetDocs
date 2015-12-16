@@ -189,6 +189,9 @@
     <Content Include="Docs\Reference\Images\okta-app-config.png" />
     <Content Include="Docs\Reference\Images\okta-first.png" />
     <Content Include="Docs\Reference\Images\bower-feed-details.png" />
+    <Content Include="Docs\Reference\Images\package-pinning.png" />
+    <Content Include="Docs\Reference\Images\package-retention-rules.png" />
+    <Content Include="Docs\Reference\Images\package-retention-webhook.png" />
     <Content Include="Docs\Reference\Images\proxy-bower-registry.png" />
     <Content Include="Docs\Reference\Images\symbols-options-build.png" />
     <Content Include="Docs\Release-Notes\Images\MyGet-2.0-highlights.png" />
@@ -301,6 +304,7 @@
     <Content Include="Docs\Reference\Symbols.markdown" />
     <Content Include="Docs\Reference\MyGet-Gallery.markdown" />
     <Content Include="Docs\How-To\Publish-a-PowerShell-Module-to-MyGet.markdown" />
+    <Content Include="Docs\Reference\Package-Retention.markdown" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />

@@ -1,6 +1,6 @@
 # Package not found during package restore
 
-When working with your own feed, whether private or public, chances are you want to consume more than just that feed. When using your MyGet feed and the NuGet.org feed simultaneously, an interesting error mayoccur  during package restore.
+When working with your own feed, whether private or public, chances are you want to consume more than just that feed. When using your MyGet feed and the NuGet.org feed simultaneously, an interesting error may occur during package restore.
 
 	Unable to find version xxxx of package yyyy
 

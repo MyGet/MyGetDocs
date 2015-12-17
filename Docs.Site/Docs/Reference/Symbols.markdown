@@ -4,10 +4,6 @@ MyGet symbols support lets consumers of our NuGet packages step through the sour
 
 MyGet comes with its own symbol server but also provides integration with [SymbolSource.org](/docs/reference/symbolsource).
 
-<p class="alert alert-info">
-    <strong>Note:</strong> MyGet support for debugger symbols is still in preview. If you encounter any issues, please <a href="http://www.myget.org/support">get in touch with support</a>.
-</p>
-
 ## Pushing symbols packages to MyGet
 
 With [NuGet.org](http://www.nuget.org), the NuGet client automatically recognizes symbols packages and pushes them to the default SymbolSource feed. Since we want to ensure our packages end up on our own feed and securely host debugger symbols, we must explicitly push symbols to the MyGet symbol server.

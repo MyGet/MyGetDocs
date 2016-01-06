@@ -437,7 +437,7 @@ We advise to run a tool like GitVersion in a pre-build script so that it can set
 	GitVersion.NuGetVersion=3.0.23
 
 <p class="alert alert-info">
-    <strong>Note:</strong> If you require the <code>AssemblyInfo.cs</code> files in your project to be patched with the information from GitVersion, you will have to run it manually, for example using the command <code>call %GitVersion% /updateassemblyinfo true</code>.
+    <strong>Note:</strong> If you require the <code>AssemblyInfo.cs</code> files in your project to be patched with the information from GitVersion, you will have to run it manually, for example using the command <code>call %GitVersion% /updateassemblyinfo</code>.
 </p>
 
 ## User-defined environment variables

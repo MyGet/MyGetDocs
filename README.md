@@ -1,3 +1,6 @@
+[![Code Issues](https://www.quantifiedcode.com/api/v1/project/0e69adabd0c842c895ea5ec88302f64c/badge.svg)](https://www.quantifiedcode.com/app/project/0e69adabd0c842c895ea5ec88302f64c)
+
+
 [![MyGet Docs](http://docs.myget.org/images/mygetlogo.png)](http://docs.myget.org)
 # MyGet Documentation
 Markdown based ASP.NET Web Pages documentation system for MyGet.

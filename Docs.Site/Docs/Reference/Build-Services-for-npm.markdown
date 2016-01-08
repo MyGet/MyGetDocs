@@ -4,7 +4,7 @@ MyGet Build Services allows you to connect to different types of source control 
 
 * Git
 * Mercurial (Hg)
-* Subversion
+* Subversion (Svn)
 
 Next to that, integration with several Source Control Repositories is available as well:
 
@@ -16,7 +16,7 @@ Next to that, integration with several Source Control Repositories is available 
 Once downloaded, source code can then be built using a number of different methodologies.
 
 <p class="alert alert-info">
-    <strong>Note:</strong> Although fully operational, MyGet Build Services is currently still in the Beta Stage.  While in Beta, you can't trigger a Build, manually or otherwise, faster then one every 5 minutes
+    <strong>Note:</strong> MyGet Build Services has a 5 minute cooldown period between builds during which you can't trigger a build, manually or otherwise. Please contact MyGet support for more information about our dedicated Build Services offering to avoid this cooldown period.
 </p>
 
 ## The Build Process
@@ -121,7 +121,7 @@ The labeling scheme is compatible with [GitHub releases](https://help.github.com
 
 ## Available Environment Variables
 
-If you provide your own build.bat script or MyGet.sln, you can specifically instruct MyGet Build Services on how to act on your sources. This also means you'll need to take care of applying a version number to your build. That's why we provide you with the following set of parameters so you can benefit from using the version scheme you have already defined within the MyGet User Interface, as well as the build-counter attached to your build source. 
+If you provide your own build.bat script or MyGet.sln, you can specifically instruct MyGet Build Services on how to act on your sources. This also means you'll need to take care of applying a version number to your build. That's why we provide you with the following set of parameters so you can benefit from using the version scheme you have already defined within the MyGet User Interface, as well as the build-counter attached to your build source.
 
 <p class="alert alert-info">
     <strong>Note:</strong> These environment variables are read-only and are reset to the initial values at the start of the build process.
@@ -130,7 +130,7 @@ If you provide your own build.bat script or MyGet.sln, you can specifically inst
 <table class="table table-condensed">
 	<thead>
     	<tr>
-    	    <th>Environment Variable Name</th> 
+    	    <th>Environment Variable Name</th>
     	    <th>Description</th>
     	</tr>
 	</thead>
@@ -152,7 +152,7 @@ If you provide your own build.bat script or MyGet.sln, you can specifically inst
     	<tr>
     	    <td><strong>%SourcesPath%<strong></td>
     	    <td>
-    	        Path to source code being built        
+    	        Path to source code being built
     	    </td>
     	</tr>
     	<tr>
@@ -182,12 +182,12 @@ If you provide your own build.bat script or MyGet.sln, you can specifically inst
     	    </td>
     	</tr>
     	<tr>
-    	    <td><strong>%PrereleaseTag%</strong></td> 
-    	    <td> 
-    	        The prerelease tag generated based on the VersionFormat and BuildCounter values 
-    	    </td> 
-    	</tr> 
-    	<tr> 
+    	    <td><strong>%PrereleaseTag%</strong></td>
+    	    <td>
+    	        The prerelease tag generated based on the VersionFormat and BuildCounter values
+    	    </td>
+    	</tr>
+    	<tr>
     	    <td><strong>%PackageVersion%</strong></td>
     	    <td>
     	        <code>%VersionFormat%</code> with <code>%BuildCounter%</code> filled in, used as the auto-generated package version number
@@ -223,7 +223,7 @@ For Git-based builds, the following environment variables are added:
 <table class="table table-condensed">
 	<thead>
     	<tr>
-    	    <th>Environment Variable Name</th> 
+    	    <th>Environment Variable Name</th>
     	    <th>Description</th>
     	</tr>
 	</thead>

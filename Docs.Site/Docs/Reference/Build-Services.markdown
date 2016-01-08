@@ -16,7 +16,7 @@ Next to that, integration with several Source Control Repositories is available 
 Once downloaded, source code can then be built using a number of different methodologies.
 
 <p class="alert alert-info">
-    <strong>Note:</strong> Although fully operational, MyGet Build Services is currently still in the Beta Stage.  While in Beta, you can't trigger a Build, manually or otherwise, faster then one every 5 minutes
+    <strong>Note:</strong> MyGet Build Services has a 5 minute cooldown period between builds during which you can't trigger a build, manually or otherwise. Please contact MyGet support for more information about our dedicated Build Services offering to avoid this cooldown period.
 </p>
 
 ## The Build Process
@@ -99,36 +99,36 @@ When you use MyGet's default build conventions and simply let us handle the buil
 
 Here's the workflow:
 
-* Verify if packages were created during compilation (for those using MSBuild for creating packages). 
-  
+* Verify if packages were created during compilation (for those using MSBuild for creating packages).
+
   If any `.nupkg` file is found in any directory (that was not present in source control or has not been downloaded during package restore), we don't bother creating any additional packages.
 
 * If no `.nupkg` files were found, we scan for *packageable* files.
-  
-  A packageable file is any `.csproj`, `.vbproj`, `.fsproj` or `.nuspec` file. We ignore any file with the word `test` in its path. 
+
+  A packageable file is any `.csproj`, `.vbproj`, `.fsproj` or `.nuspec` file. We ignore any file with the word `test` in its path.
 
   Since only a few of you are building test frameworks, we feel we shouldn't annoy the majority of people by creating and publishing test assemblies by default. If you are creating a test framework, you can always customize the build process using a build script.
-  
+
 * We call the following command on all found *packageable* files:
-  
+
   ```
-  nuget.exe pack "{0}" -OutputDirectory "{1}" 
-                       -Prop Configuration={2} 
-                       -NoPackageAnalysis 
-                       -Symbols 
+  nuget.exe pack "{0}" -OutputDirectory "{1}"
+                       -Prop Configuration={2}
+                       -NoPackageAnalysis
+                       -Symbols
                        {3}
   ```
-  
-  where 
 
-  {0} = path to packageable file, 
+  where
 
-  {1} = `\bin` subdirectory of packageable path, 
+  {0} = path to packageable file,
 
-  {2} = build configuration (as specified in build source or `'Release'` by default), 
+  {1} = `\bin` subdirectory of packageable path,
+
+  {2} = build configuration (as specified in build source or `'Release'` by default),
 
   {3} = optionally appended `"-Version {4}"` if version patching is enabled
-  
+
 * Note that we by default always create symbols packages
 
 The above workflow also clearly prefers targeting project files if present. This means that you can benefit from this by having a companion `projectname.nuspec` file next to your `projectname.csproj` (within the same directory!). [Check this StackOverflow thread](http://stackoverflow.com/questions/14797525/differences-between-nuget-packing-a-csproj-vs-nuspec/14808085#14808085) if you want to learn about the differences between targeting a project file and targeting a nuspec file directly.
@@ -282,7 +282,7 @@ We believe adding frameworks and SDK's out-of-the-box provides a lot of value to
 
 ## Available Environment Variables
 
-If you provide your own build.bat script or MyGet.sln, you can specifically instruct MyGet Build Services on how to act on your sources. This also means you'll need to take care of applying a version number to your build. That's why we provide you with the following set of parameters so you can benefit from using the version scheme you have already defined within the MyGet User Interface, as well as the build-counter attached to your build source. 
+If you provide your own build.bat script or MyGet.sln, you can specifically instruct MyGet Build Services on how to act on your sources. This also means you'll need to take care of applying a version number to your build. That's why we provide you with the following set of parameters so you can benefit from using the version scheme you have already defined within the MyGet User Interface, as well as the build-counter attached to your build source.
 
 <p class="alert alert-info">
     <strong>Note:</strong> These environment variables are read-only and are reset to the initial values at the start of the build process.
@@ -291,7 +291,7 @@ If you provide your own build.bat script or MyGet.sln, you can specifically inst
 <table class="table table-condensed">
 	<thead>
     	<tr>
-    	    <th>Environment Variable Name</th> 
+    	    <th>Environment Variable Name</th>
     	    <th>Description</th>
     	</tr>
 	</thead>
@@ -313,7 +313,7 @@ If you provide your own build.bat script or MyGet.sln, you can specifically inst
     	<tr>
     	    <td><strong>%SourcesPath%<strong></td>
     	    <td>
-    	        Path to source code being built        
+    	        Path to source code being built
     	    </td>
     	</tr>
     	<tr>
@@ -384,7 +384,7 @@ For Git-based builds, the following environment variables are added:
 <table class="table table-condensed">
 	<thead>
     	<tr>
-    	    <th>Environment Variable Name</th> 
+    	    <th>Environment Variable Name</th>
     	    <th>Description</th>
     	</tr>
 	</thead>

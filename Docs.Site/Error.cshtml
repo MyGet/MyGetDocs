@@ -1,4 +1,4 @@
-﻿@{ 
+﻿@{
     Page.Title = "MyGet Docs | Error";
     PageData["NoSearch"] = true;
 }
@@ -14,8 +14,8 @@
     </ul>
 
     <p>
-        We have logged the error and we will look into it, and make sure it doesn’t happen again. However if you keep 
-        seeing this page please File a bug on <a href="https://github.com/myget/MyGetDocs/issues">the MyGet documentation Github site</a> or better 
+        We have logged the error and we will look into it, and make sure it doesn’t happen again. However if you keep
+        seeing this page please File a bug on <a href="https://github.com/myget/MyGetDocs/issues">the MyGet documentation Github site</a> or better
         yet fix the issue yourself by <a href="@Href("~/docs/Contribute/Contributing-to-MyGet-Documentation")">Contributing to MyGet Documentation</a>.
     </p>
 
@@ -29,7 +29,7 @@
 
 <script type="text/javascript">
     function submitQuery() {
-        window.location =  "@Href("~/search")?q=" 
+        window.location =  "@Href("~/search")?q="
         + encodeURIComponent($("#searchBoxInput").val());
         return false;
     }

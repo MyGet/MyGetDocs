@@ -41,7 +41,7 @@ The following build steps will be run when building from solution or project fil
 * Run package restore
 * Patch AssemblyInfo (if enabled)
 * Build solution or project file(s)
-* Run unit tests
+* Run unit tests (see [Which tests are run?](#Which_tests_are_run))
 * Create NuGet packages (see [Which packages are created?](#Which_packages_are_created))
 * Push packages to your MyGet feed
 * Label sources (if enabled)
@@ -92,6 +92,14 @@ Patching of these attributes will occur whenever the feature is enabled, no matt
 <p class="alert alert-info">
     <strong>Note:</strong> For DNX-based builds, we will patch the <code>project.json</code> file when assembly version patching is enabled for the build source.
 </p>
+
+## Which tests are run?
+
+When running a convention-based build (so without build scripts), MyGet Build Services by default will scan your built projects for any assemblies that contain the word **Test** in the filename, and run them.
+
+You can however instruct MyGet Build Services not to run certain test projects by simply not building them. This can be achieved by [explicitly defining a list of projects to build](#Configuring_Projects_to_Build) in the Build Source settings.
+
+When running a scripted build, you can of course modify your build script accordingly. We have a few [sample build scripts that demonstrate this](custom-build-scripts).
 
 ## Which packages are created?
 

@@ -198,6 +198,7 @@
     <Content Include="Docs\Reference\Images\package-retention-webhook.png" />
     <Content Include="Docs\Reference\Images\proxy-bower-registry.png" />
     <Content Include="Docs\Reference\Images\symbols-options-build.png" />
+    <Content Include="Docs\Release-Notes\Images\host your packages on myget.gif" />
     <Content Include="Docs\Release-Notes\Images\MyGet-2.0-highlights.png" />
     <Content Include="Docs\Release-Notes\Images\MyGet-2.0-highlights2.png" />
     <Content Include="Docs\Walkthrough\Images\add-bower-fromfeed.png" />
@@ -310,6 +311,7 @@
     <Content Include="Docs\How-To\Publish-a-PowerShell-Module-to-MyGet.markdown" />
     <Content Include="Docs\Reference\Package-Retention.markdown" />
     <Content Include="Docs\Reference\Azure-AD-Integration.markdown" />
+    <Content Include="Docs\Release-Notes\MyGet-2.1.markdown" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />

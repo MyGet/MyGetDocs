@@ -177,6 +177,10 @@
     <Content Include="Docs\How-To\Images\build-services-owasp.png" />
     <Content Include="Docs\How-To\Images\paket.png" />
     <Content Include="Docs\Reference\Images\assembly-pdb-match.png" />
+    <Content Include="Docs\Reference\Images\Azure-AD\step1.png" />
+    <Content Include="Docs\Reference\Images\Azure-AD\step2.png" />
+    <Content Include="Docs\Reference\Images\Azure-AD\step3.png" />
+    <Content Include="Docs\Reference\Images\Azure-AD\step4.png" />
     <Content Include="Docs\Reference\Images\browse-sources.png" />
     <Content Include="Docs\Reference\Images\debug-options-2015.png" />
     <Content Include="Docs\Reference\Images\feedsettings_symbols_url.png" />
@@ -305,6 +309,7 @@
     <Content Include="Docs\Reference\MyGet-Gallery.markdown" />
     <Content Include="Docs\How-To\Publish-a-PowerShell-Module-to-MyGet.markdown" />
     <Content Include="Docs\Reference\Package-Retention.markdown" />
+    <Content Include="Docs\Reference\Azure-AD-Integration.markdown" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />

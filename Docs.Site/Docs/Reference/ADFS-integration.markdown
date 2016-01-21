@@ -22,7 +22,7 @@ If you are uncertain about the steps required to configure ADFS, the following s
 
 1.  Login to your ADFS Server and start the **AD FS 2.0 Management Console**. 
 2.	In the tree, right-click on **Relying Party Trusts** under the **Trust Relationships** node and choose **Add Relying Party Trust**. 
-3.	A wizard pops up. Skip past the welcome page to **Select Data Source** and enter the URL to MyGet's *FederationMetadata.xml* document.
+3.	A wizard pops up. Skip past the welcome page to **Select Data Source** and enter the URL to MyGet's *FederationMetadata.xml* document: ```https://myget-prod.accesscontrol.windows.net/FederationMetadata/2007-06/FederationMetadata.xml```
 4.	Specify a display name and choose your issuance rules policy. For simplicity's sake select **Permit All Users to Access this Relying Party**. Do know you can limit access to MyGet to certain users in your AD by customizing this setting.
 5.	On the next page, confirm all the data you've entered and hit finish.
 

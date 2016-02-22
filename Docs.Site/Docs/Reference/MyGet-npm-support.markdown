@@ -135,6 +135,21 @@ It's probably easier to generate these entries from the command line by running:
 
 From now on, we can publish and consume any package that has the `@acmecorp` scope. Npm will automatically direct requests to the correct registry.
 
+## Fixing "401 Unauthorized" even after running npm login
+
+When working with private npm registries, it is required to run `npm login` to store authentication details into a `.npmrc` file in your user profile folder. Some npm versions miss writing one specific setting, resulting in `401 Unauthorized` when working with MyGet npm registries.
+
+To resolve this, edit the `.npmrc` file and make sure the `//www.myget.org/F/your-feed-name/:always-auth=` setting is set to `true`. Here's an example:
+
+```
+registry=https://www.myget.org/F/your-feed-name/npm
+//www.myget.org/F/your-feed-name/:_password="xxxxxx"
+//www.myget.org/F/your-feed-name/:username=your-username
+//www.myget.org/F/your-feed-name/:email=you@example.com
+//www.myget.org/F/your-feed-name/:always-auth=true
+```
+
+
 ## Fixing "Error: CERT_UNTRUSTED"
 
 When installing packages from your MyGet npm registry, you may see an error:

@@ -27,7 +27,7 @@ build.bat:
     )
     
     REM Build
-    %WINDIR%\Microsoft.NET\Framework\v4.0.30319\msbuild YourSolution.sln /p:Configuration="%config%" /m /v:M /fl /flp:LogFile=msbuild.log;Verbosity=Normal /nr:false
+    "%programfiles(x86)%\MSBuild\14.0\Bin\MSBuild.exe" YourSolution.sln /p:Configuration="%config%" /m /v:M /fl /flp:LogFile=msbuild.log;Verbosity=Normal /nr:false
 
     REM Package
     mkdir Build
@@ -55,7 +55,7 @@ build.bat:
     )
     
     REM Build
-    %WINDIR%\Microsoft.NET\Framework\v4.0.30319\msbuild YourSolution.sln /p:Configuration="%config%" /m /v:M /fl /flp:LogFile=msbuild.log;Verbosity=Normal /nr:false
+    "%programfiles(x86)%\MSBuild\14.0\Bin\MSBuild.exe" YourSolution.sln /p:Configuration="%config%" /m /v:M /fl /flp:LogFile=msbuild.log;Verbosity=Normal /nr:false
 
     REM Package
     mkdir Build
@@ -85,7 +85,7 @@ build.bat:
     )
     
     REM Build
-    %WINDIR%\Microsoft.NET\Framework\v4.0.30319\msbuild YourSolution.sln /p:Configuration="%config%" /m /v:M /fl /flp:LogFile=msbuild.log;Verbosity=Normal /nr:false
+    "%programfiles(x86)%\MSBuild\14.0\Bin\MSBuild.exe" YourSolution.sln /p:Configuration="%config%" /m /v:M /fl /flp:LogFile=msbuild.log;Verbosity=Normal /nr:false
 	if not "%errorlevel%"=="0" goto failure
 
 	REM Unit tests
@@ -129,7 +129,7 @@ build.bat:
 	set nunit="tools\nunit\nunit-console.exe"
 	
     REM Build
-    %WINDIR%\Microsoft.NET\Framework\v4.0.30319\msbuild YourSolution.sln /p:Configuration="%config%" /m /v:M /fl /flp:LogFile=msbuild.log;Verbosity=Normal /nr:false
+    "%programfiles(x86)%\MSBuild\14.0\Bin\MSBuild.exe" YourSolution.sln /p:Configuration="%config%" /m /v:M /fl /flp:LogFile=msbuild.log;Verbosity=Normal /nr:false
 	if not "%errorlevel%"=="0" goto failure
 
 	REM Unit tests
@@ -172,7 +172,7 @@ build.bat:
     )
 	
     REM Build
-    %WINDIR%\Microsoft.NET\Framework\v4.0.30319\msbuild YourSolution.sln /p:Configuration="%config%" /m /v:M /fl /flp:LogFile=msbuild.log;Verbosity=Normal /nr:false
+    "%programfiles(x86)%\MSBuild\14.0\Bin\MSBuild.exe" YourSolution.sln /p:Configuration="%config%" /m /v:M /fl /flp:LogFile=msbuild.log;Verbosity=Normal /nr:false
     if not "%errorlevel%"=="0" goto failure
 
     REM Unit tests
@@ -219,7 +219,7 @@ build.bat:
     call %NuGet% restore GoogleAnalyticsTracker.WP7\packages.config -OutputDirectory %cd%\packages -NonInteractive
 
     REM Build
-    %WINDIR%\Microsoft.NET\Framework\v4.0.30319\msbuild GoogleAnalyticsTracker.sln /p:Configuration="%config%" /m /v:M /fl /flp:LogFile=msbuild.log;Verbosity=Normal /nr:false
+    "%programfiles(x86)%\MSBuild\14.0\Bin\MSBuild.exe" GoogleAnalyticsTracker.sln /p:Configuration="%config%" /m /v:M /fl /flp:LogFile=msbuild.log;Verbosity=Normal /nr:false
 
     REM Package
     mkdir Build

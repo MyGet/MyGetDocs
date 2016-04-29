@@ -2,7 +2,7 @@
 
 MyGet symbols support lets consumers of our NuGet packages step through the source code and integrate with Visual Studio and tools like WinDbg.
 
-MyGet comes with its own symbol server but also provides integration with [SymbolSource.org](/docs/reference/symbolsource).
+MyGet comes with its own symbol server that supports pushing symbols as well as consuming symbols and source indexing. Both managed and native assemblies and symbols are supported.
 
 ## Pushing symbols packages to MyGet
 

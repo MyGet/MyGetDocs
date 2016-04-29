@@ -248,6 +248,7 @@ Build services supports the following frameworks and SDK's:
 * Visual Studio 2015 SDK
 * WinRT Class Libraries (Windows 8.0 and 8.1)
 * Universal Apps support
+* Xamarin support
 * PCL support
 * Windows Azure SDK 2.0, 2.1, 2.4, 2.5, 2.6, 2.7, 2.8, 2.8.1, 2.8.2)
 * Windows Identity Foundation SDK

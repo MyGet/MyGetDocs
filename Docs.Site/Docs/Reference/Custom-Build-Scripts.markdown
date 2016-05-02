@@ -538,3 +538,25 @@ build.ps1:
 		-target $target `
 		-targetFrameworks $targetFrameworks `
 		-alwaysClean $alwaysClean
+
+## PowerShell Build.ps1 example creating Chocolatey packages
+
+The following is a Powershell script that, instead of creating NuGet packages, creates [Chocolatey](http://www.chocolatey.org) packages.
+
+build.ps1:
+
+	Write-Host "Building Chocolatey packages..."
+	
+	$nuspecs = Get-ChildItem -Path $PSScriptRoot -Filter *.nuspec -Recurse
+	
+	foreach ($nuspec in $nuspecs) {
+	    choco pack $nuspec.FullName
+	}
+	
+	$artifactsFolder = "./artifacts"
+	
+	Remove-Item -Path $artifactsFolder -Force -Recurse -ErrorAction SilentlyContinue
+	New-Item $artifactsFolder -Force -Type Directory | Out-Null
+	Move-Item *.nupkg $artifactsFolder
+
+	Write-Host "Finished building Chocolatey packages."

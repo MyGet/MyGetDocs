@@ -35,3 +35,9 @@ Packages added on MyGet, for example by third parties that you grant access or [
 <p class="alert alert-info">
     <strong>Note:</strong> The initial sync can take some time if there are a lot of packages to transfer. Click the _view status_ link in the Feed Sync section of the Feed Settings page to view the status.
 </p>
+
+## FAQ
+
+**With Feed Sync up and running between ProGet and MyGet, when I add/delete a package from MyGet, will it add/delete from ProGet as well? (or vice versa)**
+
+**>** *Yes. Both package additions and deletes will sync over from MyGet to ProGet using Feed Sync. (and vice versa)*

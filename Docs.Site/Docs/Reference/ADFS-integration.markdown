@@ -39,3 +39,9 @@ When you're done, leave the **Open the Edit Claim Rules dialog** option checked.
 	* E-mail address
 	* Name
 	* Windows account name
+
+## FAQ
+
+**When disabling a user account in ADFS, will that also disable that user account's access to MyGet using API keys (access tokens)?**
+  
+**>** *No. ADFS is a federated identity service, so ADFS integration does not provide MyGet with access to user accounts. MyGet credentials, including username and access tokens, remain on MyGet and therefore are not disabled when disabling the user account in ADFS.*

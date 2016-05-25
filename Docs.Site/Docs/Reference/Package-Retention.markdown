@@ -1,4 +1,4 @@
-﻿# Package retention
+# Package retention
 
 As you produce more and more packages, it may become harder to manage all of those assets.
 **By default, we keep all package versions available on your feed.**
@@ -15,7 +15,7 @@ Package retention rules will ignore any pinned packages, to avoid they accidenta
 
 From the package details page, you can define which package versions should be retained using the **Pin** button next to the package.
 Alternatively, you can pin all versions at once, all but latest, or only the latest version using the convenient dropdown button at the top of the *Package History* list.
-Ofcourse, you can also **Unpin** packages using the same approach.
+Of course, you can also **Unpin** packages using the same approach.
 
 ![Pinning and unpinning packages](Images/package-pinning.png)
 
@@ -30,14 +30,27 @@ Retention options currently consist of any combination of the below:
 * defining the maximum number of stable versions to keep
 * defining the maximum number of prerelease versions to keep
 * defining whether to keep depended packages or not
+* defining whether to allow removal of packages that have downloads
 
 ![Defining Package Retention Rules](Images/package-retention-rules.png)
 
-The first two options are rather obvious as they simply retain the defined number of latest stable or prerelease package versions.
+### Retention Rule for Stable Versions ###
 
-The last one is different: when enabled, we blindly delete packages that are older than version *X* (as defined in the first two rules), even if there are still packages depending on it.
-This can put you into trouble and cause [package not found](../How-To/package-not-found-during-package-restore) messages during package restore.
-For this very reason, the option is **disabled** by default.
+By defining the maximum number of stable versions to keep, the retention policy will keep the configured number of stable versions and remove other stable versions from the feed.
+
+### Retention Rule for Prerelease Versions ###
+
+By defining the maximum number of prerelease versions to keep, the retention policy will keep the configured number of prerelease versions and remove other prerelease versions from the feed.
+
+### Retention Rule for Package Dependencies ###
+
+By default, MyGet will never delete packages that are depended on (within the same feed).
+
+When this retention rule is enabled, we will blindly delete packages that are older than version *X* (as defined in the first two rules), even if there are still packages depending on it. This can put you into trouble and cause [package not found](../How-To/package-not-found-during-package-restore) messages during package restore. For this very reason, the option is **disabled** by default.
+
+### Retention Rule for Package Downloads ###
+
+By default, MyGet's retention policies will remove all packages that match any of the above conditions. Sometimes you may want to keep package versions that have at least one download: it means these packages are being used and should remain available on the feed. Enabling the this retention rule will prevent retention policies from removing packages that have at least one download.
 
 ## Custom package retention rules using webhooks
 

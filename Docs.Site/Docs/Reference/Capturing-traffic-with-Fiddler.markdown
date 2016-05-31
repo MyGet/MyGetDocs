@@ -28,7 +28,7 @@ If no traffic from Visual Studio is shown in Fiddler, try setting one of the fol
 * Set the `HTTP_PROXY` environment variable to `http://127.0.0.1:8888`
 * or use the NuGet configuration commands to set the proxy:
 
-	`NuGet.exe config -Set HTTP_PROXY=ttp://127.0.0.1:8888`
+	`NuGet.exe config -Set HTTP_PROXY=http://127.0.0.1:8888`
 
 ### Tips for capturing npm traffic
 

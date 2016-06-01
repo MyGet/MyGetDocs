@@ -21,7 +21,7 @@ Once the requested actions have been performed, use the *File | Save | All Sessi
 
 ### Tips for capturing NuGet and VSIX traffic
 
-Make sure to start Fiddler prior to NuGet or Visual Studio.
+*Make sure to start Fiddler prior to NuGet or Visual Studio.*
 
 If no traffic from Visual Studio is shown in Fiddler, try setting one of the following:
 

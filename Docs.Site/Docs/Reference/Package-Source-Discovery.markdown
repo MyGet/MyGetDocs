@@ -110,8 +110,8 @@ Proposed values:<br/>
 <li>nuget-v1-packages (Orchard)</li>
 <li>nuget-v2-packages (current NuGet protocol)</li>
 <li>nuget-v2-push (package push URL)</li>
-<li>symsrc-v2-push (SymbolSource package indexing URL)</li>
-<li>symsrc-v1-symbols (SymbolSource debugging URL)</li>
+<li>symsrc-v2-push (symbols package indexing URL)</li>
+<li>symsrc-v1-symbols (symbol server debugging URL)</li>
 </ul>
 Note that this list can be extended at will (e.g. chocolatey-v1 or proget-v2). Clients can decide which versions they support.
 </td>

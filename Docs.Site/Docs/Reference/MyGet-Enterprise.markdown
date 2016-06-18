@@ -89,13 +89,13 @@ It is possible to enable or disable MyGet Gallery. When enabled, users can enlis
 
 ## SymbolSource
 
-The SymbolSource page allows configuring integration with [SymbolSource.org](http://www.symbolsource.org). Note that You will need a SymbolSource.org [private company](https://www.symbolsource.org/Public/Account/RegisterCompany) in order to be able to link MyGet to SymbolSource.
+The SymbolSource page allows configuring integration with [SymbolSource.org](http://www.symbolsource.org). Note that you will need a SymbolSource.org [private company](https://www.symbolsource.org/Public/Account/RegisterCompany) in order to be able to link MyGet to SymbolSource.
+
+User accounts will be synchronized with SymbolSource by leveraging the <i>admin</i> account configured on this page. Please do not change the password for this account as it will break synchronization of users and privileges.
 
 <p class="alert alert-info">
-    <strong>Note:</strong> User accounts will be synchronized with SymbolSource by leveraging the <i>admin</i> account configured on this page. Please do not change the password for this account as it will break synchronization of users and privileges. 
+    <strong>Note:</strong> SymbolSource support is being deprecated. We recommend using the <a href="/docs/reference/symbols">MyGet symbol server</a> instead.
 </p>
-
-We have a dedicated page available on [working with symbols and SymbolSource](SymbolSource) for your users.
 
 ## SMTP settings
 

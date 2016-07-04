@@ -241,7 +241,7 @@ Build services supports the following frameworks and SDK's:
 * .NET 2.0, .NET 3.0, .NET 3.5, .NET 4.0, .NET 4.5, .NET 4.5.1, .NET 4.5.2, .NET 4.6, .NET 4.6.1
 * Mono 2, Mono 3
 * Visual Studio 2013 Update 4
-* Visual Studio 2015 Update 2
+* Visual Studio 2015 Update 3
 * Visual Studio 2013 SDK
 * Visual Studio 2015 SDK
 * WinRT Class Libraries (Windows 8.0 and 8.1)
@@ -272,6 +272,7 @@ Build services supports the following frameworks and SDK's:
 * Grunt
 * Gulp
 * Bower
+* Go programming language
 
 The following test runners are supported:
 

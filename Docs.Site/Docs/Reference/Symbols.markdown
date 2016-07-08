@@ -95,3 +95,15 @@ If you have a nuspec file which contains a similar line as the one above, you mi
 ```<file src="C:\src\AwesomeLib\bin\Release\AwesomeLib.*" target="lib\net45" />```
 
 The NuGet client tools are smart enough to filter out PDB files from non-symbols packages (unless you explicitly include them).
+
+### The source files are still in their original location
+
+When stepping into source code, Visual Studio or WinDbg uses the `.pdb` file to link the assembly with corresponding code. MyGet indexes the `.pdb` file after uploading a package. This indexing process adds a second path to the `.pdb` file, telling Visual Studio where to find the source files.
+
+If the source code is still on the machine where a symbols package was created, and we try to debug on that machine, the `.pdb` file that is downloaded will reference both the local path to sources as well as the path on MyGet. Since the sources are still available locally, Visual Studio will never reach out to MyGet to download source code files. If this is undesired, make sure to rename the local folder containing the original sources (or use a different machine to perform debugging).
+
+### Make sure to push both .nupkg and .symbols.nupkg to your feed
+
+Symbols packages contain the `.pdb` files that link the assembly with source code. When only `.symbols.nupkg` packages are pushed to a feed, we can consume the package like any normal package and MyGet will properly recognize the package as a symbols package. When trying to debug using such package, Visual Studio will find the `.pdb` on disk instead of reaching out to MyGet to download it, and will fail stepping into code because of that. 
+
+The solution here is to always push `.nupkg` as well as `.symbols.nupkg` packages to a feed so that Visual Studio has to reach out to MyGet for fetching debugging information.

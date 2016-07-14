@@ -32,9 +32,13 @@ IP addresses can be entered on separate lines. If an entire subnet has to have a
 
 ![IP whitelisting](Images\IP-security.png)
 
-### Login page
+### Registration and Login
 
-The login page section provides a means of customizing the text that is shown on the login page (above username/password). For example, a notice could be added on who to contact to get an account.
+The Registration and Login section provides a means of customizing user registration and login.
+
+The text that is shown on the login page (above username/password). For example, a notice could be added on who to contact to get an account.
+
+User registration can be disabled so that Enterprise administrators always have to invite users to the MyGet Enterprise plan.
 
 ### Passwords
 

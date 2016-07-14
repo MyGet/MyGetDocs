@@ -50,7 +50,9 @@ By default, MyGet closes sessions after 2 hours. If it is required to close a se
 
 ### Feed creation
 
-Creating feeds can be limited to Enterprise administrators. When enabled, non-administrative users will see a message that they should contact an Enterprise administrator in order to create a feed.
+Creating feeds can be limited to Enterprise administrators/feed creators. When enabled, non-administrative users will see a message that they should contact an Enterprise administrator in order to create a feed.
+
+Individual users can be assigned the *Administrator* or *Feed creator* role from the user management dashboard.
 
 ## Users
 

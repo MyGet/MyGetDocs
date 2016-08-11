@@ -30,7 +30,7 @@ The HTTP POST Hook URL is clearly visible on this page (the GUID at the end of t
     <strong>Note:</strong> When adding a build source from GitHub, we automatically create a service hook trigger for you. Except if you disable this when linking a souce code repository to MyGet, the hook has already been created and there is no need to do this again.
 </p>
 
-We recommend using <a href="@Url.Action("Index", "Profile")#!/AccessTokens">alternate API keys</a> for every sync relation.
+We recommend using <a href="https://www.myget.org/profile/me#!/AccessTokens">alternate API keys</a> for every sync relation.
 
 The following 6 steps provide information about how to use the MyGet HTTP POST Hook URL within a GitHub Repository.
 

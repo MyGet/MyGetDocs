@@ -6,7 +6,7 @@ The following steps are required to enable basic authentication:
 
 * Go to your team project's home page and open your profile.
 
-![TFS Online profile](Images/tfsonline-profile.jpg)
+![VSTS Online profile](Images/tfsonline-profile.jpg)
 
 * Allow alternate credentials for this account.
 

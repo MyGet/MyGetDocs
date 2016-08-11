@@ -176,6 +176,9 @@
     <Content Include="Docs\How-To\Images\2fa-credentials.png" />
     <Content Include="Docs\How-To\Images\build-services-owasp.png" />
     <Content Include="Docs\How-To\Images\paket.png" />
+    <Content Include="Docs\How-To\Images\vsts-add-generic-endpoint.png" />
+    <Content Include="Docs\How-To\Images\vsts-add-nuget-publisher.png" />
+    <Content Include="Docs\How-To\Images\vsts-configure-endpoint.png" />
     <Content Include="Docs\Reference\Images\assembly-pdb-match.png" />
     <Content Include="Docs\Reference\Images\Azure-AD\step1.png" />
     <Content Include="Docs\Reference\Images\Azure-AD\step2.png" />
@@ -312,6 +315,7 @@
     <Content Include="Docs\Reference\Package-Retention.markdown" />
     <Content Include="Docs\Reference\Azure-AD-Integration.markdown" />
     <Content Include="Docs\Release-Notes\MyGet-2.1.markdown" />
+    <Content Include="Docs\How-To\Publish-to-MyGet-from-a-VSTS-build.markdown" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />

@@ -13,3 +13,4 @@ Checking NuGet package vulnerabilities with OWASP SafeNuGet
 MyGet and GitHub Two-Factor Authentication
 Use TFS Online Git repositories with MyGet Build Services
 Publish a PowerShell Module to MyGet
+Publish to MyGet from a VSTS build

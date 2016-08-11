@@ -12,7 +12,7 @@ In this tutorial, we assume NuGet packages are already being created, for exampl
  
 ## Adding the NuGet Publisher build step
 
-Edit your build definition and add a new build step. Under the **Package** node, find the **NuGet Publisher** task and add it to your build definition. The order in which this step runs is not very important, except that it has to happen after the NuGet packages already have been created. Ideally, this step only runs when build and running tests is succesful.
+Edit your build definition and add a new build step. Under the **Package** node, find the **NuGet Publisher** task and add it to your build definition. The order in which this step runs is not very important, except that it has to happen after the NuGet packages already have been created. Ideally, this step only runs when build and running tests is successful.
 
 ![Adding the NuGet Publisher build task to publish from VSTS to MyGet](Images/vsts-add-nuget-publisher.png)
 
@@ -20,7 +20,7 @@ Edit your build definition and add a new build step. Under the **Package** node,
 
 In the NuGet Publisher build task, make sure the generated packages can be found. The path/pattern will have to be configured correctly (the default usually works fine). The feed type is an *External NuGet feed*.
 
-Before being able to select the **NuGet Server Endpoint**, click the **Manage** button on the right.You will first need to add a new endpoint to the VSTS configuration. 
+Before being able to select the **NuGet Server Endpoint**, click the **Manage** button on the right.  You will first need to add a new endpoint to the VSTS configuration. 
 
 In the toolbar, hit **New Service Endpoint | Generic** and configure your MyGet feed:
 

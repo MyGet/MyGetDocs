@@ -204,6 +204,7 @@
     <Content Include="Docs\Release-Notes\Images\host your packages on myget.gif" />
     <Content Include="Docs\Release-Notes\Images\MyGet-2.0-highlights.png" />
     <Content Include="Docs\Release-Notes\Images\MyGet-2.0-highlights2.png" />
+    <Content Include="Docs\Release-Notes\Images\MyGet-2.2-logviewer.png" />
     <Content Include="Docs\Walkthrough\Images\add-bower-fromfeed.png" />
     <Content Include="Docs\Walkthrough\Images\add-vsix.png" />
     <Content Include="Docs\Walkthrough\Images\bower-feed-details.png" />
@@ -316,6 +317,7 @@
     <Content Include="Docs\Reference\Azure-AD-Integration.markdown" />
     <Content Include="Docs\Release-Notes\MyGet-2.1.markdown" />
     <Content Include="Docs\How-To\Publish-to-MyGet-from-a-VSTS-build.markdown" />
+    <Content Include="Docs\Release-Notes\MyGet-2.2.markdown" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />

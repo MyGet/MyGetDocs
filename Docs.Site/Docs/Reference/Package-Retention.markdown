@@ -55,7 +55,7 @@ By default, MyGet's retention policies will remove all packages that match any o
 
 ## Custom package retention rules using webhooks
 
-Besides the built-in package retention rules, you can also create your own custom package retention rules by levering [MyGet WebHooks](Webhooks).
+Besides the built-in package retention rules, you can also create your own custom package retention rules by leveraging [MyGet WebHooks](Webhooks).
 
 The following HTTP Post webhooks may be useful for this purpose:
 

@@ -27,6 +27,7 @@ Package retention rules allow you to do some automated housekeeping.
 These rules are **defined per feed**, so you can define different retention policies for different feeds, however you find them suitable to their purpose.
 
 Retention options currently consist of any combination of the below:
+
 * defining the maximum number of stable versions to keep
 * defining the maximum number of prerelease versions to keep
 * defining whether to keep depended packages or not

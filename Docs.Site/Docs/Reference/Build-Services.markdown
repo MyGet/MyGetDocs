@@ -169,6 +169,11 @@ By default, MyGet pushes symbols packages (*.sympols.nupkg) to the current feed.
 
 Pushing symbols can also be disabled for the build, in which case no symbols packages will be pushed.
 
+<div class="alert alert-block">
+  <strong>Warning!</strong><br/>
+  SymbolSource support is being deprecated and support for it <strong>will end on November 1, 2016</strong>. We recommend using the <a href="/docs/reference/symbols">MyGet symbol server</a> instead.
+</div>
+
 ## Source labeling (tagging)
 
 When enabled in the build source configuration on MyGet, source code can be labeled with the build number. This can be done for successful builds only (recommended) as well as for failed builds.

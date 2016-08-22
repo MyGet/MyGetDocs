@@ -208,16 +208,16 @@ The authenticated version of https://www.myget.org/Discovery/Feed/googleanalytic
 		    <dc:creator>maartenba</dc:creator>
 		    <dc:title>Staging feed for GoogleAnalyticsTracker</dc:title>
 		    <dc:description>Staging feed for GoogleAnalyticsTracker</dc:description>
-		    <homePageLink>http://www.myget.org/Feed/Details/googleanalyticstracker/</homePageLink>
+		    <homePageLink>https://www.myget.org/Feed/Details/googleanalyticstracker/</homePageLink>
 		    <apis>
-		    	<api name="nuget-v2-packages" blogID="" preferred="true" apiLink="http://www.myget.org/F/googleanalyticstracker/" />
-		    	<api name="nuget-v1-packages" blogID="" preferred="false" apiLink="http://www.myget.org/F/googleanalyticstracker/api/v1/" />
-		    	<api name="nuget-v2-push" blogID="" preferred="true" apiLink="http://www.myget.org/F/googleanalyticstracker/">
+		    	<api name="nuget-v2-packages" blogID="" preferred="true" apiLink="https://www.myget.org/F/googleanalyticstracker/" />
+		    	<api name="nuget-v1-packages" blogID="" preferred="false" apiLink="https://www.myget.org/F/googleanalyticstracker/api/v1/" />
+		    	<api name="nuget-v2-push" blogID="" preferred="true" apiLink="https://www.myget.org/F/googleanalyticstracker/">
 				    <settings>
 				      <setting name="apiKey">530c14a6-6ce5-47d0-8f14-9daab627aa38</setting>
 				    </settings>
 		    	</api>
-			    <api name="symbols-v1-push" blogID="" preferred="true" apiLink="http://nuget.gw.symbolsource.org/MyGet/googleanalyticstracker">
+			    <api name="symbols-v1-push" blogID="" preferred="true" apiLink="https://www.myget.org/F/googleanalyticstracker/symbols/api/v2/package">
 				    <settings>
 				      <setting name="apiKey">abcdefghijklmnop</setting>
 				    </settings>

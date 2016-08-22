@@ -1,5 +1,10 @@
 # SymbolSource
 
+<div class="alert alert-block">
+  <strong>Warning!</strong><br/>
+  SymbolSource support is being deprecated and support for it <strong>will end on November 1, 2016</strong>.<br/> We recommend using the <a href="/docs/reference/symbols">MyGet symbol server</a> instead.
+</div>
+
 [SymbolSource](http://www.SymbolSource.org) lets consumers of your NuGet packages step through the source code and integrate with Visual Studio.
 MyGet integrates with SymbolSource to host debugging symbols for your NuGet packages. In fact, MyGet has its own tenant on SymbolSource available at [https://www.symbolsource.org/MyGet](https://www.symbolsource.org/MyGet) (as opposed to the general public one at the site's root). When creating a MyGet account we automatically create a SymbolSource account within the MyGet tenant and sync your credentials.
 

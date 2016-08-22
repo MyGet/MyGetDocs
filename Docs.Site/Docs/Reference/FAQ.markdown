@@ -3,7 +3,7 @@
 ## What is required to be able to use MyGet?
 
 MyGet is fully compatible with all NuGet clients. This means that we support all NuGet Visual Studio extensions as well as the NuGet commandline or NuGet Package Explorer.
-That also means we are compatible with Chocolatey, Orchard, SymbolSource and OctopusDeploy!
+That also means we are compatible with Chocolatey, Orchard, and OctopusDeploy!
 
 ## What version of NuGet is required to use MyGet?
 

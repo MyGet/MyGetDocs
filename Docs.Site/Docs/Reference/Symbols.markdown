@@ -10,8 +10,8 @@ When working with [NuGet.org](http://www.nuget.org), the NuGet client automatica
 
 The publish workflow to publish the SamplePackage.1.0.0.nupkg to a MyGet feed, including symbols, would be issuing the following two commands from the console (replace the GUID with your MyGet API key):
 
-	nuget push SamplePackage.1.0.0.nupkg 00000000-0000-0000-0000-00000000000 -Source http://www.myget.org/F/somefeed/api/v2/package
-	nuget push SamplePackage.1.0.0.Symbols.nupkg 00000000-0000-0000-0000-00000000000 -Source http://www.myget.org/F/somefeed/api/v2/package
+	nuget push SamplePackage.1.0.0.nupkg 00000000-0000-0000-0000-00000000000 -Source https://www.myget.org/F/somefeed/api/v2/package
+	nuget push SamplePackage.1.0.0.Symbols.nupkg 00000000-0000-0000-0000-00000000000 -Source https://www.myget.org/F/somefeed/symbols/api/v2/package
 
 ## Consuming symbol packages in Visual Studio
 
@@ -84,7 +84,7 @@ To install the plug-in, open NuGet Package Explorer and use the ***Tools | Plugi
 
 This plugin enhances the package analysis tools with additional rules that should help detect 99% of the problems with symbols packages.
 
-Once installed, open a symbols package and validate its contents before pushing it to SymbolSource by selecting `Tools > Analyze Package` or hit `CTRL-Q`.
+Once installed, open a symbols package and validate its contents by selecting `Tools > Analyze Package` or hit `CTRL-Q`.
 
 A common root cause for symbols missing in the symbols package originates from a too restrictive `.nuspec` file. The one below will filter out all non-DLL files from the package.
 

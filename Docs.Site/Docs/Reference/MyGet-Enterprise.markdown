@@ -99,9 +99,10 @@ The SymbolSource page allows configuring integration with [SymbolSource.org](htt
 
 User accounts will be synchronized with SymbolSource by leveraging the <i>admin</i> account configured on this page. Please do not change the password for this account as it will break synchronization of users and privileges.
 
-<p class="alert alert-info">
-    <strong>Note:</strong> SymbolSource support is being deprecated. We recommend using the <a href="/docs/reference/symbols">MyGet symbol server</a> instead.
-</p>
+<div class="alert alert-block">
+  <strong>Warning!</strong><br/>
+  SymbolSource support is being deprecated and support for it <strong>will end on November 1, 2016</strong>. We recommend using the <a href="/docs/reference/symbols">MyGet symbol server</a> instead.
+</div>
 
 ## SMTP settings
 

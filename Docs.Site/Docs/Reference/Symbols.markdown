@@ -15,7 +15,7 @@ The publish workflow to publish the SamplePackage.1.0.0.nupkg to a MyGet feed, i
 
 <p class="alert alert-info">
     <strong>Note:</strong> Starting with NuGet.exe 3.5, regular packages and symbols packages can be pushed with one single command:<br/>
-    <pre>nuget push SamplePackage.1.0.0.nupkg 00000000-0000-0000-0000-00000000000 -Source https://www.myget.org/F/somefeed/api/v2/package -SymbolSource https://www.myget.org/F/somefeed/symbols/api/v2/package -SymbolApiKey 00000000-0000-0000-0000-00000000000</pre>
+    <em>nuget push SamplePackage.1.0.0.nupkg 00000000-0000-0000-0000-00000000000 -Source https://www.myget.org/F/somefeed/api/v2/package -SymbolSource https://www.myget.org/F/somefeed/symbols/api/v2/package -SymbolApiKey 00000000-0000-0000-0000-00000000000</em>
 </p>
 
 ## Consuming symbol packages in Visual Studio

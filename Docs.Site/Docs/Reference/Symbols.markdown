@@ -79,6 +79,8 @@ On the package details page on MyGet, we can verify if for a given assembly debu
     <strong>Note:</strong> To verify this match when creating packages on our system, we can use the <a href="http://www.debuginfo.com/tools/chkmatch.html">ChkMatch</a> tool. The author of this tool also provides <a href="http://www.debuginfo.com/articles/debuginfomatch.html">a comprehensive article about matching assemblies and symbols</a>.
 </p>
 
+In the Visual Studio Debugger options, you can disable the *Require source files to exactly math the original version* toggle if you are confident the `.dll` and `.pdb` can be different. We advise against this as the debugging symbols that will be loaded come from a different build than the one you are tying to debug, but it can be a last resort to get at least an idea of the source code for the assembly being debugged.
+
 ### Veryifying symbols package contents
 
 There is a useful plug-in for [NuGet Package Explorer](http://npe.codeplex.com) which allows us to validate our symbols packages.

@@ -16,11 +16,6 @@
             Read our <a href="http://docs.myget.org/docs/Contribute/Contributing-to-MyGet-Documentation">contribution guidance</a> or
             <a href="https://github.com/myget/MyGetDocs/edit/master/Docs.Site/@HttpUtility.UrlPathEncode(Page.Source)" target="edit">edit this page's source on GitHub</a>.
         </div>
-        
-        <div>
-            @{ Disqus.Initialize("mygetdocs", "http://docs.myget.org"); }
-            @Disqus.ShowComments( HttpUtility.UrlPathEncode(Page.Source) )
-        </div>
     }
 </article>
 

@@ -9,8 +9,7 @@ Major highlights of this release are:
 
 * our **[improved build log viewer](http://blog.myget.org/post/2016/08/04/Improved-build-log-viewer-with-error-navigation.aspx)** with warning and error navigation, log level coloring and deep linking support,
 * a new profile section providing access to your invoices and billing settings,
-* opt-in **[support for expiring access tokens](http://blog.myget.org/post/2016/06/14/Setting-an-expiration-time-for-your-MyGet-access-tokens.aspx)** (API keys),
-* learn about NuGet Semantic Versioning using [MyGet SemVer Explorer](http://blog.myget.org/post/2016/08/16/Learning-NuGet-Semantic-Version-Ranges-with-SemVer-Explorer.aspx).
+* opt-in **[support for expiring access tokens](http://blog.myget.org/post/2016/06/14/Setting-an-expiration-time-for-your-MyGet-access-tokens.aspx)** (API keys).
 
 This means, from now on, you can now also use MyGet to host your symbols, publicly or secured.
 

@@ -11,8 +11,6 @@ Major highlights of this release are:
 * a new profile section providing access to your invoices and billing settings,
 * opt-in **[support for expiring access tokens](http://blog.myget.org/post/2016/06/14/Setting-an-expiration-time-for-your-MyGet-access-tokens.aspx)** (API keys).
 
-This means, from now on, you can now also use MyGet to host your symbols, publicly or secured.
-
 <a href="https://www.myget.org">
 	<img src="Images/host your packages on myget.gif" alt="MyGet 2.1 Highlights" />
 </a>

@@ -1,7 +1,7 @@
 # Checking NuGet package vulnerabilities with OWASP SafeNuGet 
 
 <p class="alert alert-warning">
-    <strong>Note:</strong> This method of scanning vulnerabilities is outdated. Check <a href="/docs/reference/vulnerability-report">for our integrated vulnerability report</a>.
+    <strong>Note:</strong> This method of scanning vulnerabilities is outdated. Check out <a href="/docs/reference/vulnerability-report">our integrated vulnerability report</a> for a better way of analyzing potential vulnerabilities.
 </p>
 
 Use of libraries with known vulnerabilities can be an issue for software and components you create: check the excellent whitepaper ["The Unfortunate Reality of Insecure Libraries"](https://www.aspectsecurity.com/uploads/downloads/2012/03/Aspect-Security-The-Unfortunate-Reality-of-Insecure-Libraries.pdf). In the [OWASP Top 10 2013](https://www.owasp.org/index.php/Top_10#OWASP_Top_10_for_2013), consuming vulnerable packages is listed under [A9 Using Known Vulnerable Components](https://www.owasp.org/index.php/Top_10_2013-A9-Using_Components_with_Known_Vulnerabilities).

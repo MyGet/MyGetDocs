@@ -1,5 +1,9 @@
 # Checking NuGet package vulnerabilities with OWASP SafeNuGet 
 
+<p class="alert alert-warning">
+    <strong>Note:</strong> This method of scanning vulnerabilities is outdated. Check <a href="/docs/reference/vulnerability-report">for our integrated vulnerability report</a>.
+</p>
+
 Use of libraries with known vulnerabilities can be an issue for software and components you create: check the excellent whitepaper ["The Unfortunate Reality of Insecure Libraries"](https://www.aspectsecurity.com/uploads/downloads/2012/03/Aspect-Security-The-Unfortunate-Reality-of-Insecure-Libraries.pdf). In the [OWASP Top 10 2013](https://www.owasp.org/index.php/Top_10#OWASP_Top_10_for_2013), consuming vulnerable packages is listed under [A9 Using Known Vulnerable Components](https://www.owasp.org/index.php/Top_10_2013-A9-Using_Components_with_Known_Vulnerabilities).
 
 Automatic checking for known vulnerabilities can be done: [OWASP](https://www.owasp.org/) has released a [NuGet package](https://www.nuget.org/packages/SafeNuGet/) which is able to check known vulnerabilities in other NuGet packages. The [SafeNuGet package](https://github.com/OWASP/SafeNuGet) contains an MSBuild task which will warn you about consuming such packages.

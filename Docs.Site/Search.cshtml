@@ -3,26 +3,26 @@
 @{
     Page.Title = "MyGet Documentation | Search";
 
+    Response.OutputCache(600, varyByParams: new [] {"*"}); // cache 10 minutes
+
     const int resultsPerPage = 10;
-    const string bingSearchUrlTemplate = "http://api.search.live.net/json.aspx?AppId={0}&query={1}&sources=web&web.count={2}&web.offset={3}";
-    const string appId = "079107A06124F136AD224769F658F042A7BB8694";
+    const string searchUrlTemplate = "https://www.googleapis.com/customsearch/v1?key={0}&cx={1}&alt=json&q={2}&num={3}&start={4}";
+    const string appId = "AIzaSyBlo_Vd-5G71O5KAlJHRXj_9_HZWL8wn7Y";
+    const string searchEngineId = "007192657988254065162:rqdc03j0uom";
 
-    string originalQuery = Request.QueryString["q"];
-    if (originalQuery.IsEmpty())
+    string query = Request.QueryString["q"];
+    if (query.IsEmpty())
     {
         return;
     }
 
-    originalQuery = originalQuery.Trim();
-    if (originalQuery.IsEmpty())
+    query = query.Trim();
+    if (query.IsEmpty())
     {
         return;
     }
 
-    PageData["query"] = originalQuery;
-
-    // append site:docs.nuget.org to the query
-    string query = originalQuery + " site:docs.myget.org";
+    PageData["query"] = query;
 
     // result offset
     string page = Request.QueryString["p"];
@@ -38,11 +38,12 @@
 
     var searchUrl = String.Format(
         CultureInfo.InvariantCulture,
-        bingSearchUrlTemplate,
+        searchUrlTemplate,
         HttpUtility.UrlEncode(appId),
+        HttpUtility.UrlEncode(searchEngineId),
         HttpUtility.UrlEncode(query),
         resultsPerPage,
-        (pageValue * 10).ToString());
+        (pageValue * 10 + 1).ToString());
 
     dynamic jsonResult = null;
     using (var client = new WebClient())
@@ -51,39 +52,45 @@
         jsonResult = Json.Decode(content);
     }
 
-    if (jsonResult == null || jsonResult.SearchResponse == null || jsonResult.SearchResponse.Web == null)
+    if (jsonResult == null || jsonResult.searchInformation == null || jsonResult.queries == null || jsonResult.queries.request == null || jsonResult.items == null)
     {
         return;
     }
 
-    string linkTemplate = "Search.cshtml?q=" + originalQuery + "&p=";
+    string linkTemplate = "Search.cshtml?q=" + query + "&p=";
 }
 
 <article>
-    @if ((int)jsonResult.SearchResponse.Web.Total == 0)
+    @if (int.Parse(jsonResult.searchInformation.totalResults) == 0)
     {
-        <h2 id="top">There is no result for '@originalQuery'.</h2>
+        <h2 id="top">There is no result for '@query'.</h2>
     }
     else
     {
-        int totalResults = (int)jsonResult.SearchResponse.Web.Total;
-        int startResult = (int)jsonResult.SearchResponse.Web.Offset + 1;
-        int endResult = startResult + (int)jsonResult.SearchResponse.Web.Results.Length - 1;
+        var request = jsonResult.queries.request[0];
 
-        <h2>Search results for '@originalQuery'.</h2>
-        <h3>@startResult-@endResult of @totalResults results.</h3>
+        int totalResults = int.Parse(request.totalResults);
+        int startResult = request.startIndex;
+        int endResult = startResult + request.count - 1;
+
+        <h2>Search results for '@query'.</h2>
+        <h3>@startResult-@endResult of about @totalResults results.</h3>
         <section class="results">
-            @foreach (var result in jsonResult.SearchResponse.Web.Results)
+            @foreach (var result in jsonResult.items)
             {
                 <section class="result">
-                    <h4><a href="@result.Url.Replace("https://", "http://")">@result.Title</a></h4>
-                    <p>@result.Description</p>
-                    <aside>@result.DisplayUrl.Replace("https://", "http://")</aside>
+                    <h4><a href="@result.link.Replace("https://", "http://")">@Html.Raw(result.htmlTitle)</a></h4>
+                    <p>@Html.Raw(result.htmlSnippet)</p>
+                    <aside>@result.displayLink.Replace("https://", "http://")</aside>
                 </section>
             }
-            <footer>
-                @PaginationHelper.RenderPagination(pageValue, totalResults, resultsPerPage, linkTemplate)
-            </footer>
+            @if (totalResults > resultsPerPage)
+            {
+                <footer>
+                    <hr />
+                    @PaginationHelper.RenderPagination(pageValue, totalResults, resultsPerPage, linkTemplate)
+                </footer>
+            }
         </section>
     }
 </article>

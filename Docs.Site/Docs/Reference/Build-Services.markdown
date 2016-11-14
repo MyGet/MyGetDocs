@@ -163,16 +163,11 @@ Filters are executed in order of precedence. If a negation comes first, packages
 
 ## Pushing symbols
 
-By default, MyGet pushes symbols packages (*.sympols.nupkg) to the current feed. If you prefer pushing to [SymbolSource](http://www.symbolsource.org) instead, edit the build source and select the target for pushing symbols packages.
+MyGet pushes symbols packages (*.sympols.nupkg) to the current feed.
 
 ![Change target for symbols](Images/symbols-options-build.png)
 
 Pushing symbols can also be disabled for the build, in which case no symbols packages will be pushed.
-
-<div class="alert alert-block">
-  <strong>Warning!</strong><br/>
-  SymbolSource support is being deprecated and support for it <strong>will end on November 1, 2016</strong>. We recommend using the <a href="/docs/reference/symbols">MyGet symbol server</a> instead.
-</div>
 
 ## Source labeling (tagging)
 

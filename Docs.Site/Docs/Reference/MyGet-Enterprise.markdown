@@ -93,17 +93,6 @@ MyGet Enterprise allows tracking activity using [Google Analytics](http://www.go
 
 It is possible to enable or disable MyGet Gallery. When enabled, users can enlist their feeds in the gallery and make them discoverable for other users and teams. Feeds that are public will also be discoverable to any user outside the team, while feeds that are visible only to users in the Enterprise account will only show up after login.
 
-## SymbolSource
-
-The SymbolSource page allows configuring integration with [SymbolSource.org](http://www.symbolsource.org). Note that you will need a SymbolSource.org [private company](https://www.symbolsource.org/Public/Account/RegisterCompany) in order to be able to link MyGet to SymbolSource.
-
-User accounts will be synchronized with SymbolSource by leveraging the <i>admin</i> account configured on this page. Please do not change the password for this account as it will break synchronization of users and privileges.
-
-<div class="alert alert-block">
-  <strong>Warning!</strong><br/>
-  SymbolSource support is being deprecated and support for it <strong>will end on November 1, 2016</strong>. We recommend using the <a href="/docs/reference/symbols">MyGet symbol server</a> instead.
-</div>
-
 ## SMTP settings
 
 MyGet comes with a preconfigured SMTP server for sending out system messages to users and administrators. If it is desired to use a custom SMTP server, it can be configured from this page.

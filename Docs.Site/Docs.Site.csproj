@@ -321,6 +321,7 @@
     <Content Include="Docs\How-To\Publish-to-MyGet-from-a-VSTS-build.markdown" />
     <Content Include="Docs\Release-Notes\MyGet-2.2.markdown" />
     <Content Include="Docs\Reference\Vulnerability-Report.markdown" />
+    <Content Include="Docs\Reference\Credential-Provider-for-Visual-Studio.markdown" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />

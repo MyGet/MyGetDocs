@@ -185,6 +185,7 @@
     <Content Include="Docs\Reference\Images\Azure-AD\step3.png" />
     <Content Include="Docs\Reference\Images\Azure-AD\step4.png" />
     <Content Include="Docs\Reference\Images\browse-sources.png" />
+    <Content Include="Docs\Reference\Images\credprovider-screenshot.jpg" />
     <Content Include="Docs\Reference\Images\debug-options-2015.png" />
     <Content Include="Docs\Reference\Images\feedsettings_symbols_url.png" />
     <Content Include="Docs\Reference\Images\FiddlerHttps.png" />

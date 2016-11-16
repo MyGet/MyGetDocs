@@ -1,6 +1,7 @@
 ﻿Build Services
 Build Services for npm
 Custom Build Scripts
+Credential Provider for Visual Studio
 Packaging FSharp
 Visual Studio Online Integration
 Package Retention

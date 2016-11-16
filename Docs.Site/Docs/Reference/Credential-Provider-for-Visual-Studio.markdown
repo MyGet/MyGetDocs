@@ -13,3 +13,5 @@ The benefit of using the MyGet Credential Provider for Visual Studio is three-fo
 
 ## Installation
 The MyGet Credential Provider for Visual Studio can be installed from within Visual Studio using the Visual Studio Extension Manager, available under *Tools > Extensions and Updates...*.
+
+Alternatively, you can [download the VSIX from the Visual Studio Gallery](https://marketplace.visualstudio.com/vsgallery/79609fc1-58d5-4a31-a171-124b952ca9e0).

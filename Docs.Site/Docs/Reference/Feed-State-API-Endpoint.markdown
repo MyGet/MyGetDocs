@@ -7,7 +7,7 @@ The feed state API endpoint provides a description of:
 * the current feed state (a complete list of all packages and their versions)
 * a list of updates to the feed, returning an incremental view of changes since a specific timestamp
 
-The feed state API endpoint is used by MyGet's Feed Sync. In this document, we'll go over the various characteristics of the feed state API endpoint.
+In this document, we'll go over the various characteristics of the feed state API endpoint.
 
 ## URL of the Feed State API
 

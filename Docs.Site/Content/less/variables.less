@@ -1,5 +1,5 @@
 /*
-* pikock, autreplanete http://www.autreplanete.com/ 
+* pikock, autreplanete http://www.autreplanete.com/
 * created at http://pikock.github.io/bootstrap-magic/app/#!/editor
 */
 
@@ -63,20 +63,20 @@
 
 // Buttons
 @btnBackground: @white;
-@btnBackgroundHighlight: darken(@white, 10%);
+@btnBackgroundHighlight: @btnBackground; // darken(@white, 10%);
 @btnBorder: #bbb;
 @btnPrimaryBackground: @linkColor;
-@btnPrimaryBackgroundHighlight: darken(@btnPrimaryBackground, 5%);
+@btnPrimaryBackgroundHighlight: @btnPrimaryBackground; // darken(@btnPrimaryBackground, 5%);
 @btnInfoBackgroundHighlight: @blue;
-@btnInfoBackground: lighten(@btnInfoBackgroundHighlight, 5%);
+@btnInfoBackground: @btnInfoBackgroundHighlight; //lighten(@btnInfoBackgroundHighlight, 5%);
 @btnSuccessBackgroundHighlight: @green;
-@btnSuccessBackground: lighten(@btnSuccessBackgroundHighlight, 5%);
+@btnSuccessBackground: @btnSuccessBackgroundHighlight; // lighten(@btnSuccessBackgroundHighlight, 5%);
 @btnWarningBackgroundHighlight: @orange;
-@btnWarningBackground: lighten(@btnWarningBackgroundHighlight, 5%);
+@btnWarningBackground: @btnWarningBackgroundHighlight; // lighten(@btnWarningBackgroundHighlight, 5%);
 @btnDangerBackgroundHighlight: @red;
-@btnDangerBackground: lighten(@btnDangerBackgroundHighlight, 5%);
-@btnInverseBackground: #444;
-@btnInverseBackgroundHighlight: @grayDarker;
+@btnDangerBackground: @btnDangerBackgroundHighlight; // lighten(@btnDangerBackgroundHighlight, 5%);
+@btnInverseBackground: #333;
+@btnInverseBackgroundHighlight: @btnInverseBackground; // @grayDarker;
 
 
 // Dropdowns
@@ -114,10 +114,10 @@
 // Navbar
 @navbarCollapseWidth: 979px;
 @navbarCollapseDesktopWidth: @navbarCollapseWidth + 1;
-@navbarHeight: 40px;
-@navbarBackgroundHighlight: #ffffff;
-@navbarBackground: darken(@navbarBackgroundHighlight, 5%);
-@navbarBorder: darken(@navbarBackground, 12%);
+@navbarHeight: 80px;
+@navbarBackgroundHighlight: #f9f9f9;
+@navbarBackground: #f9f9f9; // darken(@navbarBackgroundHighlight, 5%);
+@navbarBorder: darken(@navbarBackground, 4%);
 @navbarText: #777;
 @navbarLinkColor: #777;
 @navbarLinkColorHover: @grayDark;
@@ -171,8 +171,8 @@
 
 
 // Sprites
-@iconSpritePath: '../twitter-bootstrap/img/glyphicons-halflings.png';
-@iconWhiteSpritePath: '../twitter-bootstrap/img/glyphicons-halflings-white.png';
+@iconSpritePath: '/Content/twitter-bootstrap/img/glyphicons-halflings.png';
+@iconWhiteSpritePath: '/Content/twitter-bootstrap/img/glyphicons-halflings-white.png';
 
 
 // Private

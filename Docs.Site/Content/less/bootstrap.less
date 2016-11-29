@@ -12,6 +12,15 @@
 @import "variables.less"; // Modify this for custom colors, font-sizes, etc
 @import "mixins.less";
 
+// Fix bootstrap compilation with Less v2
+#grid {
+    .core  {
+        .span(@gridColumns) {
+            width: (@gridColumnWidth * @gridColumns) + (@gridGutterWidth * (@gridColumns - 1));
+        }
+    }
+}
+
 // CSS Reset
 @import "reset.less";
 

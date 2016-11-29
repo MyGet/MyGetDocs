@@ -16,7 +16,9 @@ The MyGet Credential Provider for Visual Studio can be installed from within Vis
 
 Alternatively, you can [download the VSIX from the Visual Studio Gallery](https://marketplace.visualstudio.com/vsgallery/79609fc1-58d5-4a31-a171-124b952ca9e0).
 
+<img src="Images/install-VSIX.png" alt="installation" />
+
 ## Screenshot
 The below screenshot shows the credential provider in action: when NuGet tries to connect to a secured MyGet package source, an OAuth flow is initiated and MyGet will show you a prompt to authenticate against the package source. You can choose to authenticate using any identity provider available (as configured in the target MyGet tenant), or simply provide a username and password for your MyGet account.
 
-![Screenshot](Images/credprovider-screenshot.jpg)
+<img src="Images/credprovider-screenshot.png" alt="screenshot" />

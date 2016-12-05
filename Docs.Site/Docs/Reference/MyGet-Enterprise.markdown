@@ -93,6 +93,8 @@ MyGet Enterprise allows tracking activity using [Google Analytics](http://www.go
 
 It is possible to enable or disable MyGet Gallery. When enabled, users can enlist their feeds in the gallery and make them discoverable for other users and teams. Feeds that are public will also be discoverable to any user outside the team, while feeds that are visible only to users in the Enterprise account will only show up after login.
 
+Optionally, the gallery can also be configured as the default landing page (instead of the login page).
+
 ## SMTP settings
 
 MyGet comes with a preconfigured SMTP server for sending out system messages to users and administrators. If it is desired to use a custom SMTP server, it can be configured from this page.

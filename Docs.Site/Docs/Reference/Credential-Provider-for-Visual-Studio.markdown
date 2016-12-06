@@ -23,7 +23,7 @@ The below screenshot shows the credential provider in action: when NuGet tries t
 
 <img src="Images/credprovider-screenshot.png" alt="screenshot" />
 
-# MyGet Credential Provider for Visual Studio 2015 ("Experimental" - aka "Works on My Machine (TM)")
+# MyGet Credential Provider for Visual Studio 2015 ("Experimental")
 
 Why experimental? Because we had to create a custom build version of the NuGet Package Manager extension for Visual Studio 2015. 
 This custom build is just a few commits newer than the latest official release of the NuGet VSIX and includes the Visual Studio Credential Provider extensibility as documented [here](https://docs.nuget.org/ndocs/api/nuget-credential-providers-for-visual-studio).

@@ -118,7 +118,7 @@ You also want that shiny build status badge in your readme file? Or anywhere els
 ![A readme file containing the MyGet build status badge](Images/build-badge.png)
 
 [1]: http://www.myget.org
-[2]: http://docs.myget.org/docs/reference/feed-security
+[2]: http://docs.myget.org/docs/reference/security#Inviting_other_users_to_your_feed
 [3]: http://docs.myget.org/docs/reference/build-services
 [4]: https://github.com/myget/MyGetDocs-Samples
 [5]: https://github.com/myget/MyGetDocs-Samples/fork

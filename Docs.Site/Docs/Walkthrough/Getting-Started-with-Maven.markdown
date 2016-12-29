@@ -2,6 +2,11 @@
 
 Setting up your own Maven repository has never been easier. MyGet allows you to create your own public or private Maven repositories in just a few clicks. This section will guide you through it.
 
+<div class="alert alert-block">
+  <strong>Note</strong><br/>
+  Maven support is in preview. Contact MyGet support if you want to have early access to this feature.
+</div>
+
 ## Creating a new MyGet feed
 
 1. **Browse to [MyGet.org][1] and log in** using your preferred identity provider. We currently support Microsoft Account, Google, GitHub, Facebook, StackExchange and OpenID.

@@ -39,5 +39,5 @@ Once configured, we can select the **NuGet Server Endpoint** we just created and
 As part of the build, VSTS will now publish NuGet and/or symbols packages to MyGet.
 
 <p class="alert alert-info">
-    <strong>Note:</strong> The blog of Ricci Gian Maria has also a great example of <a href="http://www.codewrecks.com/blog/index.php/2015/09/26/publishing-a-nuget-package-to-nugetmyget-with-vso-build-vnext/">Publishing a Nuget package to Nuget/Myget with VSO Build vNext></a>.
+    <strong>Note:</strong> The blog of Ricci Gian Maria has also a great example of <a href="http://www.codewrecks.com/blog/index.php/2015/09/26/publishing-a-nuget-package-to-nugetmyget-with-vso-build-vnext/">Publishing a Nuget package to Nuget/Myget with VSTS Build vNext></a>.
 </p>

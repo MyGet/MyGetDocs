@@ -10,7 +10,7 @@ Next to that, integration with several Source Control Repositories is available 
 
 * [GitHub](https://github.com/ "GitHub")
 * [BitBucket](https://bitbucket.org "BitBucket")
-* [Visual Studio Online](http://www.visualstudio.com)
+* [Visual Studio Team Services](http://www.visualstudio.com)
 * [CodePlex](http://www.codeplex.com/ "CodePlex")
 
 Once downloaded, source code can then be built using a number of different methodologies.

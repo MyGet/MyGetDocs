@@ -78,7 +78,7 @@ Setting up your own NuGet repository has never been easier. MyGet allows you to 
 
 ## Configure a build source
 
-MyGet supports many ways of integrating with hosted VCS or CI infrastructure, including built-in support for Visual Studio Online, GitHub and BitBucket, as well as any other hosted Git repository. For a full reference of MyGet Build Services, please take a look [here][3].
+MyGet supports many ways of integrating with hosted VCS or CI infrastructure, including built-in support for Visual Studio Team Services, GitHub and BitBucket, as well as any other hosted Git repository. For a full reference of MyGet Build Services, please take a look [here][3].
 
 For the purpose of demonstration, this walkthrough will guide you through setting up a GitHub build source and link it to your MyGet feed. We have a sample GitHub repository that shows you how to make use of MyGet's smart conventions specifically designed to easily produce NuGet packages and serve them to your package consumers.
 You'll notice we don't like you to be bound to a specific, single CI tool, so we explicitly try to stay clear of any MyGet-specific conventions or infrastructure.

@@ -7,7 +7,7 @@ It's been a while since we tagged another MyGet release, but here we are, 9 mont
 We constantly ship and deploy improvements to our service so this v1.9.5 basically aggregates everything we've done since then, combined into a single milestone.
 This release contains many exciting new features. We'd love to hear from you so [please send us your feedback][9]!
 
-* [Visual Studio Online integration][4]
+* [Visual Studio Team Services integration][4]
 * [MyGet now offered through the Microsoft Azure store!][16] (use your MSDN!)
 * [Package mirroring is now enabled by default][0]
 * [Build Status Badges][1]
@@ -21,7 +21,7 @@ This release contains many exciting new features. We'd love to hear from you so 
 * Improved status/error message when contributor fails pushing to a private feed on expired subscription plan
 * [Add package from feed dialog now allows specifying Lowest/Highest/HighestPatch setting for dependency resolution][5]
 * Support pre-authenticated feeds for clients that don't support basic authentication
-* Support Visual Studio Online as a package source
+* Support Visual Studio Team Services as a package source
 * [Improved RSS feed-endpoint][11] allowing you to receive feed activity notifications. Also enabled RSS auto-discovery on feed pages on the MyGet web site to facilitate detection of the RSS endpoint in the browser.
 * [Configure a feed's Report Abuse URL][19]
 * Support for NuGet 2.8.3
@@ -31,7 +31,7 @@ This release contains many exciting new features. We'd love to hear from you so 
 * [Administrators can now configure IP white-listing for the Enterprise tenant][20]
 * Administrators can now create users directly from within the administrative dashboard
 * Administrators are now able to join feeds even when feed contributor quota is reached
-* VSO, GitHub, CodePlex and BitBucket integrations are now also available for Enterprise tenants
+* VSTS, GitHub, CodePlex and BitBucket integrations are now also available for Enterprise tenants
 
 ### MyGet Build Services
 * [Support for user-defined variables][17]
@@ -49,7 +49,7 @@ This release contains many exciting new features. We'd love to hear from you so 
 * Build Services: Builds now fail immediately for feeds that return a 4XX or 5XX status code
 * Build Services: No longer ignore ```*Test*.nuspec``` files when packaging
 * Build Services: Assembly Version Patching no longer fails to process files that contain Visual Studio regions
-* Build Services: Delete web hook at GitHub / VSO when build source is deleted
+* Build Services: Delete web hook at GitHub / VSTS when build source is deleted
 * API: ```nuget delete``` is no longer case-sensitive on package ID
 * Cloning gallery feeds now unpublishes the cloned feed from the gallery
 * Allow updating the description of access tokens

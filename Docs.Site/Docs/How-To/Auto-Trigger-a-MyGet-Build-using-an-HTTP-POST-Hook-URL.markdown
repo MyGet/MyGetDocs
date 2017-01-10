@@ -3,7 +3,7 @@
 In addition to manually triggering a Build within the MyGet User Interface, it is also possible to automatically trigger a Build every time code is pushed to your Source Control Repository, by making use of an HTTP POST Hook URL.
 
 <p class="alert alert-info">
-    <strong>Note:</strong> When adding a build source from GitHub, BitBucket or Visual Studio Online, we automatically create a service hook trigger for you. Except if you disable this when linking a source code repository to MyGet, the hook has already been created and there is no need to do this again.
+    <strong>Note:</strong> When adding a build source from GitHub, BitBucket or Visual Studio Team Services, we automatically create a service hook trigger for you. Except if you disable this when linking a source code repository to MyGet, the hook has already been created and there is no need to do this again.
 </p>
 
 ## What is an HTTP POST Hook URL?

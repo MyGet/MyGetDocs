@@ -62,6 +62,6 @@ Sometimes it would be nice if we could automatically update packages on our feed
 * **E-mail me when package updates are available**: Sends an e-mail to the specified recipient(s) when package updates are available on the upstream package source.
 * **Include prerelease versions**: By default, MyGet will only consider stable packages. When enabled, we will also check prerelease packages from the upstream package source.
 * **Automatically update packages to their latest versions**: Enables the behaviour of automatically updating packages from the package source.
-* **Update interval**: Depending on your subscription plan, we can specify how often MyGet should check for updates (up to every 5 minutes on a [Professional subscription](http://www.myget.org/plans))
+* **Update interval**: Depending on your subscription plan, we can specify how often MyGet should check for updates (up to every 30 minutes on a [Professional subscription](http://www.myget.org/plans))
 
 ![Package auto update](Images/auto-update.png)

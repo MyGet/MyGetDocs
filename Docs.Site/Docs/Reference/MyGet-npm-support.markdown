@@ -51,6 +51,10 @@ When this is done, any package can be published to the MyGet npm feed using the 
 
 	npm publish  --registry=https://www.myget.org/F/your-feed-name/npm
 
+<p class="alert alert-warning">
+    <strong>Important!</strong> As per the <a href="https://docs.npmjs.com/cli/publish">npm publish docs</a>, MyGet will add the <code>latest</code> tag to the published package, unless a different tag is specified using the <code>--tag</code> switch. In our UI, we will show the latest version by semantic version, whereas the npm client will make use of the tags to check for latest version.
+</p>
+
 ## Working with private npm registry feeds
 
 If a MyGet npm feed is marked as *private*, it will always require authentication. To setup authentication, run the following commands:

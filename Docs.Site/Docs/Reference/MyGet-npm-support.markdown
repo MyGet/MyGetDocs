@@ -12,7 +12,7 @@ This URL can be used with any npm-compatible client. Note that a [pre-authentica
 
 Your MyGet npm feed can be used by providing the `--registry` switch on every npm command, or by running the following command to set the MyGet registry feed as the default:
 
-	npm config set registry https://www.myget.org/F/your-feed-name/npm
+	npm config set registry https://www.myget.org/F/your-feed-name/npm/
 
 ## Using multiple npm registries
 
@@ -37,7 +37,7 @@ If you want to publish a node module to a registry, you usually run the `npm pac
 
 To publish the package to MyGet, you will have to run the `adduser` (or `login`) command once:
 
-	npm adduser --registry=https://www.myget.org/F/your-feed-name/npm
+	npm adduser --registry=https://www.myget.org/F/your-feed-name/npm/
 
 Provide your MyGet username and password to make sure authentication is setup.
 
@@ -49,7 +49,7 @@ Provide your MyGet username and password to make sure authentication is setup.
 
 When this is done, any package can be published to the MyGet npm feed using the `publish` command:
 
-	npm publish  --registry=https://www.myget.org/F/your-feed-name/npm
+	npm publish  --registry=https://www.myget.org/F/your-feed-name/npm/
 
 <p class="alert alert-warning">
     <strong>Important!</strong> As per the <a href="https://docs.npmjs.com/cli/publish">npm publish docs</a>, MyGet will add the <code>latest</code> tag to the published package, unless a different tag is specified using the <code>--tag</code> switch. In our UI, we will show the latest version by semantic version, whereas the npm client will make use of the tags to check for latest version.
@@ -59,7 +59,7 @@ When this is done, any package can be published to the MyGet npm feed using the 
 
 If a MyGet npm feed is marked as *private*, it will always require authentication. To setup authentication, run the following commands:
 	
-	npm adduser --registry=https://www.myget.org/F/your-feed-name/npm
+	npm adduser --registry=https://www.myget.org/F/your-feed-name/npm/
 	npm config set always-auth true 
 
 Provide your MyGet username and password to make sure authentication is setup.
@@ -145,11 +145,15 @@ When working with private npm registries, it is required to run `npm login` to s
 
 To resolve this, edit the `.npmrc` file and make sure the `//www.myget.org/F/your-feed-name/:always-auth=` setting is set to `true`. Here's an example:
 
-	registry=https://www.myget.org/F/your-feed-name/npm
-	//www.myget.org/F/your-feed-name/:_password="xxxxxx"
-	//www.myget.org/F/your-feed-name/:username=your-username
-	//www.myget.org/F/your-feed-name/:email=you@example.com
-	//www.myget.org/F/your-feed-name/:always-auth=true
+	registry=https://www.myget.org/F/your-feed-name/npm/
+	//www.myget.org/F/your-feed-name/npm/:_password="xxxxxx"
+	//www.myget.org/F/your-feed-name/npm/:username=your-username
+	//www.myget.org/F/your-feed-name/npm/:email=you@example.com
+	//www.myget.org/F/your-feed-name/npm/:always-auth=true
+
+<p class="alert alert-info">
+    <strong>Note:</strong> Depending on the npm version being used, a trailing slash (<code>/</code>) may or may not be needed for the URL's in <code>.npmrc</code>. When authentication fails, make sure to try both the URL with and without the trailing slash.
+</p>
 
 ## Fixing "Error: CERT_UNTRUSTED"
 

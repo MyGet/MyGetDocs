@@ -52,13 +52,13 @@ The following table lists which endpoint can be used with which client:
             <td>yes</td>
 		</tr>
         <tr>
-            <td>/F/&lt;your-feed-name&gt;/api/v2/package</td>
+            <td>/F/&lt;your-feed-name&gt;/api/v2/package (push)</td>
             <td>no</td>
             <td>yes</td>
             <td>yes</td>
             <td>yes</td>
             <td>no</td>
-            <td>no</td>
+            <td>yes</td>
             <td>no</td>
 		</tr>
         <tr>

@@ -300,6 +300,12 @@ The Slack webhook sends the event as a notification to a Slack channel. The foll
 * **Webhook URL** - a Slack [incoming webhook URL](https://www.slack.com/services/new/incoming-webhook)
 * **Channel** - channel to which to send the notifaction
 
+### Microsoft Teams webhook
+
+The Microsoft Teams/Office 365 Groups webhook sends the event as a notification to a Microsoft Teams channel or Office 365 Group. The following configuration options must be provided:
+
+* **Webhook URL** - an [incoming webhook URL](https://dev.outlook.com/Connectors/GetStarted)
+
 ### Twilio
 
 The Twilio webhook sends the event as a plain text SMS to a phone. The following configuration options must be provided:

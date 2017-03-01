@@ -2,7 +2,7 @@
 
 The MyGet Credential Provider for Visual Studio provides an easy way to connect to secured NuGet package sources hosted on MyGet.
 
-It is a Visual Studio extension that relies on [NuGet's credential provider extensibility (VS2017)](http://docs.nuget.org/ndocs/api/credential-providers), so it requires the NuGet Package Manager to be available in your Visual Studio workload.
+It is a Visual Studio extension that relies on [NuGet's credential provider extensibility (VS2017)](https://docs.microsoft.com/en-us/nuget/api/nuget-credential-providers-for-visual-studio), so it requires the NuGet Package Manager to be available in your Visual Studio workload.
 
 ## Benefits
 
@@ -36,7 +36,7 @@ The below screenshot shows the credential provider in action: when NuGet tries t
 
 Why experimental? Because we had to create a custom build version of the NuGet Package Manager extension for Visual Studio 2015.
 
-This custom build is just a few commits newer than the latest official release of the NuGet VSIX and includes the Visual Studio Credential Provider extensibility as documented [here](https://docs.nuget.org/ndocs/api/nuget-credential-providers-for-visual-studio). It would be great to see this commit released as an official build of the NuGet extension, unfortunately Microsoft has not yet shipped an update of NuGet 3.x for Visual Studio 2015.
+This custom build is just a few commits newer than the latest official release of the NuGet VSIX and includes the Visual Studio Credential Provider extensibility as documented [here](https://docs.microsoft.com/en-us/nuget/api/nuget-credential-providers-for-visual-studio). It would be great to see this commit released as an official build of the NuGet extension, unfortunately Microsoft has not yet shipped an update of NuGet 3.x for Visual Studio 2015.
 
 To install the MyGet Credential Provider for Visual Studio 2015:
 

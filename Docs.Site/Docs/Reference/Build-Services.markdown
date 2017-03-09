@@ -385,6 +385,10 @@ If you provide your own build.bat script or MyGet.sln, you can specifically inst
     	    <td><strong>%VsTestConsole%</strong></td>
     	    <td>Path to <code>VsTest.Console.exe</code></td>
     	</tr>
+    	<tr>
+    	    <td><strong>%MsTestExe%</strong></td>
+    	    <td>Path to <code>MSTest.exe</code></td>
+    	</tr>
 	</tbody>
 </table>
 

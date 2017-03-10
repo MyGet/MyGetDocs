@@ -55,6 +55,7 @@ Setting up your own Bower registry has never been easier. MyGet allows you to cr
 You can easily upload a Bower package through the web site, but if you prefer to automate this in a non-interactive way, you can still do so. Unfortunately, Bower does not have an official API to push packages, so you'll have to use a tool such as `cUrl` to accomplish this task.
 
 The request to make is an HTTP `POST`, towards https://www.myget.org/F/yourfeedname/bower/upload.
+
 * Add a header: `X-NuGet-ApiKey` - with the value of one of your access tokens (aka API key).
 * Add request body: the ZIPped Bower package (basically a `ZIP` file containing your entire package + `package.json`)
 

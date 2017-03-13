@@ -243,8 +243,10 @@ Build services supports the following frameworks and SDK's:
 * Mono 2, Mono 3
 * Visual Studio 2013 Update 4
 * Visual Studio 2015 Update 3
+* Visual Studio 2017
 * Visual Studio 2013 SDK
 * Visual Studio 2015 SDK
+* Visual Studio 2017 SDK
 * WinRT Class Libraries (Windows 8.0 and 8.1)
 * Universal Apps support
 * Xamarin support
@@ -285,6 +287,7 @@ The following test runners are supported:
 * xUnit 1.0
 * xUnit 1.9.2
 * xUnit 2.0
+* xUnit 2.1
 * csUnit
 * RSpec
 * Pester (v3.3.6)

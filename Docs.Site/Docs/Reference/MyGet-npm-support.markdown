@@ -139,6 +139,10 @@ It's probably easier to generate these entries from the command line by running:
 
 From now on, we can publish and consume any package that has the `@acmecorp` scope. Npm will automatically direct requests to the correct registry.
 
+<p class="alert alert-info">
+    <strong>Note:</strong> <code>packages.json</code> must not contain a <code>publishConfig</code> property. If it does, make sure it points to the correct registry or remove the entry. The npm client will always push to the registry specified in this property, no matter which registry is specified on the command line.
+</p>
+
 ## Fixing "401 Unauthorized" after running npm login
 
 When working with private npm registries, it is required to run `npm login` to store authentication details into a `.npmrc` file in your user profile folder. Some npm versions miss writing one specific setting, resulting in `401 Unauthorized` when working with MyGet npm registries.

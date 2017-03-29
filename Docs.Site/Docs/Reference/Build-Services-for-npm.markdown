@@ -75,7 +75,7 @@ For example, we could run `npm version` before our actual build, by adding the f
     "post-myget": "echo This is a post-build step"
   },
 
-The above example increases the prerelease version of the package. Note that addign `git push` is not required: you may want to enable labeling in the MyGet build settigns to push changes back in a reliable way.
+The above example increases the prerelease version of the package. Note that adding `git push` is not required: you may want to enable labeling in the MyGet build settings to push changes back in a reliable way.
 
 After build, the above will output a message to the build log.
 

@@ -85,10 +85,6 @@ Default quota can be overriden per user. It is possible to specify:
 
 The feeds page allows for basic feed management. It is possible for an administrator to join a feed team as either the owner or as a co-owner.
 
-## Analytics
-
-MyGet Enterprise allows tracking activity using [Google Analytics](http://www.google.com/analytics). By entering your Google Analytics account details, MyGet will send information about packages downloaded, features that are being used and so on to Google Analytics.
-
 ## Gallery
 
 It is possible to enable or disable MyGet Gallery. When enabled, users can enlist their feeds in the gallery and make them discoverable for other users and teams. Feeds that are public will also be discoverable to any user outside the team, while feeds that are visible only to users in the Enterprise account will only show up after login.

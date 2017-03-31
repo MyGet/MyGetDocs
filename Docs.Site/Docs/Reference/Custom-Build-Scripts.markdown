@@ -563,95 +563,69 @@ build.ps1:
 
 ## .NET Core running xunit tests
 
-MyGet can build .NET Core projects out of the box. However, creating a `build.bat` often makes a lot of sense if you want to add a custom test runner or have more control over the build process. The following files make up a build for a .NET Core library that:
+MyGet can build .NET Core projects out of the box. However, creating a `build.bat` often makes a lot of sense if you want to add a custom test runner or want to have more control over the build process. The following files make up a build for a .NET Core library that:
 
 * Restores packages using `dotnet restore`
-* Builds packages using `dotnet build`
-* Runs tests using `dotnet test`, making use of the XUnit test framework
+* Builds packages using `dotnet build` (or MSBuild 15.0)
+* Runs tests using `dotnet test`
 * Packages the library using `dotnet pack`
 
-Before we dive into the build itself, there are some prerequisites. First of all, the solution folder should have a `NuGet.config` that adds the XUnit nightlies feed so that we can use the XUnit test runner:
-
-NuGet.config:
-
-	<?xml version="1.0" encoding="utf-8"?>
-	<configuration>
-	  <activePackageSource>
-	    <add key="All" value="(Aggregate source)" />
-	  </activePackageSource>
-	  <packageSources>
-		<clear />
-	    <add key="nuget.org" value="https://api.nuget.org/v3/index.json" />
-	    <add key="xunit" value="https://www.myget.org/F/xunit/api/v3/index.json" />
-	  </packageSources>
-	</configuration>
-
-Make sure that the test project is configured correctly. XUnit has a tutorial "[Getting started with xUnit.net (.NET Core / ASP.NET Core)](https://xunit.github.io/docs/getting-started-dotnet-core.html)" which describes the steps involved.
-
-Finally, make sure the library project itself has a `project.json` that holds at least the `name` and `description` to be used in the generated NuGet package:
-
-project.json:
-
-	{
-	  "version": "1.0.0-*",
-	  
-	  "name": "MyLibrary",
-	  "description": "My cool library",
-	
-	  "dependencies": {
-	    "NETStandard.Library": "1.6.0"
-	  },
-	
-	  "frameworks": {
-	    "netstandard1.6": {
-	      "imports": "dnxcore50"
-	    }
-	  }
-	}
+Make sure the library project itself either has a `MyLibrary.nuspec` which holds package metadata, or that the `.csproj` contains required metadata.
 
 The following build uses the `dotnet` command to do all the work, except compilation. We'll be using `msbuild` for that as it automatically resolves project dependencies and builds projects in the right order.
 
-We're also using MyGet's `%BuildCounter%` environment variable to generate a version number suffix (which will replace the `*` in `1.0.0-*`). This is optional and can be removed if you prefer using the version numbers .NET Core generates itself.
+We're also using MyGet's `%BuildCounter%` environment variable to generate a version number suffix (which will be appended to the version number). This is optional and can be removed if you prefer using the version numbers .NET Core generates itself.
 
 build.bat:
 
 	@echo Off
 	set config=%1
 	if "%config%" == "" (
-	   set config=Release
+	    set config=Release
 	)
-	
+
 	set version=
 	if not "%BuildCounter%" == "" (
-	   set version=--version-suffix ci-%BuildCounter%
+	   set packversionsuffix=--version-suffix ci-%BuildCounter%
 	)
-	
+
+	REM Detect MSBuild 15.0 path
+	if exist "%programfiles(x86)%\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe" (
+	    set msbuild="%programfiles(x86)%\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe"
+	)
+	if exist "%programfiles(x86)%\Microsoft Visual Studio\2017\Professional\MSBuild\15.0\Bin\MSBuild.exe" (
+	    set msbuild="%programfiles(x86)%\Microsoft Visual Studio\2017\Professional\MSBuild\15.0\Bin\MSBuild.exe"
+	)
+	if exist "%programfiles(x86)%\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\MSBuild.exe" (
+	    set msbuild="%programfiles(x86)%\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\MSBuild.exe"
+	)
+
 	REM (optional) build.bat is in the root of our repo, cd to the correct folder where sources/projects are
-	cd MyLibrary
-	
+	cd src
+
 	REM Restore
 	call dotnet restore
 	if not "%errorlevel%"=="0" goto failure
-	
+
 	REM Build
 	REM - Option 1: Run dotnet build for every source folder in the project
 	REM   e.g. call dotnet build <path> --configuration %config%
 	REM - Option 2: Let msbuild handle things and build the solution
-	"%programfiles(x86)%\MSBuild\14.0\Bin\MSBuild.exe" MyLibrary.sln /p:Configuration="%config%" /m /v:M /fl /flp:LogFile=msbuild.log;Verbosity=Normal /nr:false
+	call "%msbuild%" MyLibrary.sln /p:Configuration="%config%" /m /v:M /fl /flp:LogFile=msbuild.log;Verbosity=Normal /nr:false
 	REM call dotnet build --configuration %config%
 	if not "%errorlevel%"=="0" goto failure
-	
+
 	REM Unit tests
-	call dotnet test tests\MyLibrary.Tests --configuration %config%
+	call dotnet test MyLibrary.Tests\MyLibrary.Tests.csproj --configuration %config% --no-build
 	if not "%errorlevel%"=="0" goto failure
-	
+
 	REM Package
-	mkdir %cd%\Artifacts
-	call dotnet pack src\MyLibrary --configuration %config% %version% --output Artifacts
+	mkdir %cd%\..\artifacts
+	call dotnet pack MyLibrary --configuration %config% %packversionsuffix% --output %cd%\..\artifacts
 	if not "%errorlevel%"=="0" goto failure
-	
+
 	:success
 	exit 0
-	
+
 	:failure
 	exit -1

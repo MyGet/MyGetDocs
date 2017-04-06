@@ -79,3 +79,13 @@ MyGet runs its operations from the [Microsoft Azure](http://www.azure.com) in th
 Enterprise plan customers have a choice in where data is stored between the US East region, or our primary West Europe region.
 
 Check our [terms and conditions](https://www.myget.org/policies/terms) to learn more about Security, privacy, and Customer Data.
+
+## Can I change my MyGet username?
+
+Your MyGet username is a critical data point in our systems, and we do not support changing your username at this point.
+
+If you really feel strong about it, you can create a new account using the desired username, and transfer your feeds over by inviting the new account as new feed owner.
+
+**Before doing so**, please note you should verify your new account has the proper subscription level to support the private feeds and quota of your current account.
+
+More information about adding a feed owner can be found in this MyGet Documentation article: http://docs.myget.org/docs/reference/security#Adding_a_new_feed_owner

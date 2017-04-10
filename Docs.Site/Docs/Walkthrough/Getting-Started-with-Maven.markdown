@@ -77,8 +77,10 @@ For public and community repositories, there's no need to add authentication det
 	  }
 	}
 
-If you plan on publishing packages using the `gradle publish` command, make sure to also add the `distributionManagement` element. Note that this will require authentication details to be added in `~/.m2/settings.xml` as well.
+If you plan on publishing packages using the `gradle publish` command, make sure to also add the `distributionManagement` element. Note that this will require authentication details to be added in `build.gradle` as well.
 
+	apply plugin: 'maven'
+	
 	uploadArchives {
 	  repositories {
 	    mavenDeployer {

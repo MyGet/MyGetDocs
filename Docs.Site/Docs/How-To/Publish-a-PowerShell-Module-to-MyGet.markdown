@@ -5,7 +5,7 @@ With PowerShell 5.0 and PowerShellGet, private feeds on MyGet can be used to sto
 	Import-Module PowerShellGet
 	$PSGalleryPublishUri = 'https://www.myget.org/F/<feed-name-goes-here>/api/v2/package'
 	$PSGallerySourceUri = 'https://www.myget.org/F/<feed-name-goes-here>/api/v2'
-	$APIKey = '<api-key-for-MyGet-goes-here'
+	$APIKey = '<api-key-for-MyGet-goes-here>'
 	
 	Register-PSRepository -Name MyGetFeed -SourceLocation $PSGallerySourceUri -PublishLocation $PSGalleryPublishUri
 	Publish-Module -Path <path-to-module> -NuGetApiKey $APIKey -Repository MyGetFeed -Verbose

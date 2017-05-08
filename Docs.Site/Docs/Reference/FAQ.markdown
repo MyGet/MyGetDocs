@@ -61,7 +61,7 @@ There are various reasons that can result in this exception being thrown. Usuall
 
 Here's an overview:
 
-* The package is too large according to your subscription quota. Please verify before asking support as you can often simply resolve it by upgrading your subscription plan or adjusting retention policies on your feed to free up some space.
+* The package is too large according to your subscription quota. **Please verify before asking support** as you can often simply resolve it by upgrading your subscription plan or adjusting retention policies on your feed to free up some space. [**Check this "Storage Quota Exceeded" KB article** for more details](https://myget.freshdesk.com/support/solutions/articles/19000054560-storage-quota-exceeded).
 * The total size of the packages that are pending upload (through the web UI) is too large.
 * The package is simply too large (as in Gb's of size) and our servers reject it.
 

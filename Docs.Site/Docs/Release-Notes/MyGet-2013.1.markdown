@@ -1,6 +1,6 @@
-# MyGet 1.5 Release Notes
+# MyGet 2013.1 Release Notes
 
-MyGet 1.5 was released on January 5, 2013.
+MyGet 2013.1 was released on January 5, 2013.
 
 ## Features
 

@@ -1,15 +1,15 @@
-# MyGet 2.0 Release Notes
+# MyGet 2015.1 Release Notes
 
-MyGet 2.0 was released on March 12, 2015.
+MyGet 2015.1 was released on March 12, 2015.
 
 ## Highlights
 
-This 2.0 release of MyGet adds brand new functionality to the service. With this release, we bring all the functionality we already had for NuGet also to Bower and NPM!
+This 2015.1 release of MyGet adds brand new functionality to the service. With this release, we bring all the functionality we already had for NuGet also to Bower and NPM!
 
 This means, from now on, you can use MyGet to host and build your own NuGet, NPM or Bower feeds, whether public or secured.
 
 <a href="https://www.myget.org">
-	<img src="Images\MyGet-2.0-highlights2.png" alt="MyGet 2.0 Highlights" />
+	<img src="Images\MyGet-2.0-highlights2.png" alt="MyGet 2015.1 Highlights" />
 </a>
 
 ## Features
@@ -58,5 +58,5 @@ Keep that [feedback](http://myget.uservoice.com/) coming! MyGet is built for you
 _Happy packaging!_
 
 <a href="https://www.myget.org">
-	<img src="Images\MyGet-2.0-highlights.png" alt="MyGet 2.0 Highlights" />
+	<img src="Images\MyGet-2.0-highlights.png" alt="MyGet 2015.1 Highlights" />
 </a>

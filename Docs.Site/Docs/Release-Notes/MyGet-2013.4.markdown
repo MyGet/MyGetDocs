@@ -1,6 +1,6 @@
-# MyGet 1.8 Release Notes
+# MyGet 2013.4 Release Notes
 
-MyGet 1.8 was released on September 10, 2013.
+MyGet 2013.4 was released on September 10, 2013.
 
 ## Features
 

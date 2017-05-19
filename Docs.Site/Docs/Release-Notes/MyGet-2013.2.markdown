@@ -1,6 +1,6 @@
-# MyGet 1.6 Release Notes
+# MyGet 2013.2 Release Notes
 
-MyGet 1.6 was released on February 25, 2013.
+MyGet 2013.2 was released on February 25, 2013.
 
 ## Features
 

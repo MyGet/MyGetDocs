@@ -1,6 +1,6 @@
-# MyGet 1.4 Release Notes
+# MyGet 2012.1 Release Notes
 
-MyGet 1.4 was released on December 10, 2012.
+MyGet 2012.1 was released on December 10, 2012.
 
 ## Features
 

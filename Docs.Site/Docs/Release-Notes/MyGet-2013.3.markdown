@@ -1,6 +1,6 @@
-# MyGet 1.7 Release Notes
+# MyGet 2013.3 Release Notes
 
-MyGet 1.7 was released on May 17, 2013.
+MyGet 2013.3 was released on May 17, 2013.
 
 ## Features
 

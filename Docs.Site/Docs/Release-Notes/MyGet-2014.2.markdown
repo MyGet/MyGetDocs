@@ -1,10 +1,10 @@
-# MyGet 1.9.5 Release Notes
+# MyGet 2014.2 Release Notes
 
-MyGet 1.9.5 was released on November 18, 2014.
+MyGet 2014.2 was released on November 18, 2014.
 
 ## Major Features
-It's been a while since we tagged another MyGet release, but here we are, 9 months after tagging v1.9.0.
-We constantly ship and deploy improvements to our service so this v1.9.5 basically aggregates everything we've done since then, combined into a single milestone.
+It's been a while since we tagged another MyGet release, but here we are, 9 months after tagging v2014.1.
+We constantly ship and deploy improvements to our service so this v2014.2 basically aggregates everything we've done since then, combined into a single milestone.
 This release contains many exciting new features. We'd love to hear from you so [please send us your feedback][9]!
 
 * [Visual Studio Team Services integration][4]

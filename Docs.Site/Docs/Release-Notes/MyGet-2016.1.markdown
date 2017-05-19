@@ -1,10 +1,10 @@
-# MyGet 2.1 Release Notes
+# MyGet 2016.1 Release Notes
 
-MyGet 2.1 was released on February 12, 2016.
+MyGet 2016.1 was released on February 12, 2016.
 
 ## Highlights
 
-This 2.1 release of MyGet again adds some new functionality to the service. 
+This 2016.1 release of MyGet again adds some new functionality to the service. 
 Major highlights of this release are: 
 
 * our new **[MyGet Symbols Services](../reference/symbols)** offering,
@@ -14,7 +14,7 @@ Major highlights of this release are:
 This means, from now on, you can now also use MyGet to host your symbols, publicly or secured.
 
 <a href="https://www.myget.org">
-	<img src="Images/host your packages on myget.gif" alt="MyGet 2.1 Highlights" />
+	<img src="Images/host your packages on myget.gif" alt="MyGet 2016.1 Highlights" />
 </a>
 
 ## Features

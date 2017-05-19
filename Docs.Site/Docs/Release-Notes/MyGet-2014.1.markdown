@@ -1,6 +1,6 @@
-# MyGet 1.9 Release Notes
+# MyGet 2014.1 Release Notes
 
-MyGet 1.9 was released on February 27, 2014.
+MyGet 2014.1 was released on February 27, 2014.
 
 ## Features
 

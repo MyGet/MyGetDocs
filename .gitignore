@@ -21,3 +21,4 @@ App_Data
 [Tt]humbs.db
 packages/
 .vs/config/applicationhost.config
+.idea/

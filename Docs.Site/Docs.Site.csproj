@@ -274,7 +274,7 @@
     <Content Include="Docs\Reference\Images\vso-service-hook-step4.png" />
     <Content Include="Docs\Reference\Images\vso-service-hook-step5.png" />
     <Content Include="Docs\Reference\Package-Source-Discovery.markdown" />
-    <Content Include="Docs\Reference\Package-Sources.markdown" />
+    <Content Include="Docs\Reference\Upstream-Sources.markdown" />
     <Content Include="Docs\Reference\Images\proxy-npm-registry.png" />
     <Content Include="Docs\Reference\Security.markdown" />
     <Content Include="Docs\Reference\SymbolSource.markdown" />
@@ -343,6 +343,7 @@
     <Content Include="Docs\Reference\Vulnerability-Report.markdown" />
     <Content Include="Docs\Reference\Credential-Provider-for-Visual-Studio.markdown" />
     <Content Include="Docs\Walkthrough\Getting-Started-with-Maven.markdown" />
+    <Content Include="Docs\Reference\Package-Sources.cshtml" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="googlef9ed0438b7b80b43.html" />
     <Content Include="Scripts\jquery-1.9.1.js" />

@@ -110,6 +110,13 @@ MyGet has the following feed endpoints available for Vsix (Visual Studio extensi
 * /F/&lt;your-feed-name&gt;/vsix - the VSIX Atom feed API endpoint
 * /F/&lt;your-feed-name&gt;/vsix/package - the VSIX upload endpoint
 
+### PHP Composer-compatible feed endpoints
+
+MyGet has the following feed endpoints available for Vsix (Visual Studio extensions):
+
+* /F/&lt;your-feed-name&gt;/composer - the PHP Composer registry API endpoint
+* /F/&lt;your-feed-name&gt;/composer/dist/lt;packageid&gt;/lt;packageversion&gt;.zip - the PHP Composer registry API endpoint to which a binary can be uploaded using `HTTP POST`
+
 ## Private feed endpoints and authentication
 
 When accessing *private* feeds, these endpoints all require basic authentication. If the client that is being used does not support basic authentication, a pre-authenticated feed URL can be used. The pre-authenticated feed URL is available from the feed's *feed details* page.

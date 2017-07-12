@@ -1,4 +1,4 @@
-# Build Services for Npm
+# Build Services for PHP Composer
 
 MyGet Build Services allows you to connect to different types of source control systems:
 
@@ -26,22 +26,21 @@ Using MyGet Build Services, you have the opportunity to control exactly how your
 * Scripts (*.bat, *.cmd, *.ps1) that are explicitly [specified in the build source configuration](#Configuring_Projects_To_Build).
 * MyGet.bat, MyGet.cmd or MyGet.ps1
 * build.bat, build.cmd or build.ps1
-* package.json
+* composer.json
 
 Based on the files found, the build process will be slightly different.
 
-### Build process for package.json files
+### Build process for composer.json files
 
 The following build steps will be run when building from package.json files:
 
 * Fetch source code
-* Set npm registry to the current feed
-* Update package.json and set the version value to [%PackageVersion%](Available Environment Variables)
-* Run `npm run pre-myget` (if applicable)
-* Run `npm install`
-* Run `npm test`
-* Run `npm pack`
-* Run `npm run post-myget` (if applicable)
+* Register all of the MyGet upstream sources with PHP Composer in `composer.json` and add authentication details to `auth.json`
+* Update composer.json and set the version value to [%PackageVersion%](#Available_Environment_Variables)
+* Run `php composer.phar run-script pre-myget --no-interaction` (if applicable)
+* Run `php composer.phar install --ignore-platform-reqs --no-dev --no-interaction`
+* Run `php composer.phar test --no-interaction`
+* Run `php composer.phar run-script post-myget --no-interaction` (if applicable)
 * Push packages to your MyGet feed
 * Label sources (if enabled)
 
@@ -50,6 +49,7 @@ The following build steps will be run when building from package.json files:
 The following build steps will be run when building from batch or PowerShell scripts:
 
 * Fetch source code
+* Register all of the MyGet upstream sources with PHP Composer in `composer.json` and add authentication details to `auth.json`
 * Run batch or PowerShell script
 * Push packages to your MyGet feed
 * Label sources (if enabled)
@@ -64,20 +64,11 @@ This setting can contain scripts (like .bat, .cmd and .ps1 files). Note that whe
 
 ### Pre- and post-build steps
 
-#### Pre- and post-build steps with package.json files
+#### Pre- and post-build steps with composer.json files
 
-When using [package.json files for builds](#Build_process_for_package.json_files), MyGet Build Services will run the `pre-myget` script before running any other npm commands, and `post-myget` after packaging the node module.
+When using [composer.json files for builds](#Build_process_for_composer.json_files), MyGet Build Services will run the `pre-myget` script before running any other PHP Composer commands, and `post-myget` after creating the PHP Composer package.
 
-For example, we could run `npm version` before our actual build, by adding the following to `package.json`:
-
-  "scripts": {
-    "pre-myget": "npm version prerelease --no-git-tag-version",
-    "post-myget": "echo This is a post-build step"
-  },
-
-The above example increases the prerelease version of the package. Note that adding `git push` is not required: you may want to enable labeling in the MyGet build settings to push changes back in a reliable way.
-
-After build, the above will output a message to the build log.
+The PHP Composer documentation has [additional information on creating scripts](https://getcomposer.org/doc/articles/scripts.md#defining-scripts).
 
 #### Pre- and post-build steps with batch / PowerShell based builds
 
@@ -95,7 +86,7 @@ The following files are detected as being post-build steps:
 
 ## Which packages are pushed to my feed?
 
-By default, MyGet will push all npm packages generated during build to your feed, except for packages that are found in `node_modules`. The reason for this is that the `node_modules` folder is reserved by npm itself and may contain packages that were used during the build process and are not necessarily to be added to your feed. Note that when creating a batch-based build, a good practice is to generate packages in a folder that is not named `node_modules`. A good example would be *output*.
+By default, MyGet will push all PHP Composer packages generated during build to your feed, which will typically be just one as most PHP Composer packages have their own source control repository.
 
 To override this default behaviour, a series of filters can be specified in the build configuration. When omitted, all packages generated during build will be pushed to your feed. When specified, only packages matching any of the specified filters or wildcards will be pushed to your feed.
 
@@ -117,7 +108,7 @@ The label originating from MyGet will always be named in the form ```vX.Y.Z```, 
 
 Note that for labeling sources, you must provide credentials that can commit to the originating source repository. If omitted, labeling will fail.
 
-The labeling scheme is compatible with [GitHub releases](https://help.github.com/articles/about-releases) and can link a given npm package version number to a GitHub release.
+The labeling scheme is compatible with [GitHub releases](https://help.github.com/articles/about-releases) and can link a given PHP Composer package version number to a GitHub release.
 
 ## Available Environment Variables
 
@@ -242,38 +233,6 @@ For Git-based builds, the following environment variables are added:
     	</tr>
 	</tbody>
 </table>
-
-## GitVersion and Semantic Versioning
-
-When a Git-based build is executed, it is possible to run [GitVersion](https://github.com/Particular/GitVersion) during your build. This utility uses a convention to derive a SemVer product version from a GitFlow based repository.
-
-Running ```GitVersion /output buildserver``` will cause MyGet Build Services to set the current ```%PackageVersion%``` value to the npm-compatible SemVer generated by GitVersion.
-
-We advise to run a tool like GitVersion in a pre-build script so that it can set additional environment variables for the actual build script. GitVersion outputs [service messages](#Service_Messages) to provide these variables. The variables are explained and demonstrated in the [GitVersion documentation](https://github.com/Particular/GitVersion/wiki/Command-Line-Tool#consume-gitversion-from-build-scripts).
-
-	GitVersion.Major=3
-	GitVersion.Minor=0
-	GitVersion.Patch=23
-	GitVersion.PreReleaseTag=
-	GitVersion.PreReleaseTagWithDash=
-	GitVersion.BuildMetaData=0
-	GitVersion.FullBuildMetaData=0.Branch.master.Sha.4898f534dfd906bd3a56818752f5fa4e16c31267
-	GitVersion.MajorMinorPatch=3.0.23
-	GitVersion.SemVer=3.0.23
-	GitVersion.LegacySemVer=3.0.23
-	GitVersion.LegacySemVerPadded=3.0.23
-	GitVersion.AssemblySemVer=3.0.23.0
-	GitVersion.FullSemVer=3.0.23+0
-	GitVersion.InformationalVersion=3.0.23+0.Branch.master.Sha.4898f534dfd906bd3a56818752f5fa4e16c31267
-	GitVersion.ClassicVersion=3.0.23.0
-	GitVersion.ClassicVersionWithTag=3.0.23.0
-	GitVersion.BranchName=master
-	GitVersion.Sha=4898f534dfd906bd3a56818752f5fa4e16c31267
-	GitVersion.AssemblyVersion=3.0.23.0
-	GitVersion.AssemblyFileVersion=3.0.23.0
-	GitVersion.OriginalRelease=4898f534dfd906bd3a56818752f5fa4e16c31267.2014-08-26 13:32:36Z
-	GitVersion.NuGetVersionV2=3.0.23
-	GitVersion.NuGetVersion=3.0.23
 
 ## User-defined environment variables
 

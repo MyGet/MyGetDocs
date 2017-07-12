@@ -228,6 +228,7 @@
     <Content Include="Docs\Release-Notes\Images\MyGet-2.2-logviewer.png" />
     <Content Include="Docs\Walkthrough\Images\add-bower-fromfeed.png" />
     <Content Include="Docs\Walkthrough\Images\add-maven-fromupload.png" />
+    <Content Include="Docs\Walkthrough\Images\add-phpcomposer-fromupload.png" />
     <Content Include="Docs\Walkthrough\Images\add-vsix.png" />
     <Content Include="Docs\Walkthrough\Images\bower-feed-details.png" />
     <Content Include="Docs\Reference\Images\edit-license.png" />
@@ -344,6 +345,8 @@
     <Content Include="Docs\Reference\Credential-Provider-for-Visual-Studio.markdown" />
     <Content Include="Docs\Walkthrough\Getting-Started-with-Maven.markdown" />
     <Content Include="Docs\Reference\Package-Sources.cshtml" />
+    <Content Include="Docs\Walkthrough\Getting-Started-with-PHP-Composer.markdown" />
+    <Content Include="Docs\Reference\Build-Services-for-PHP-composer.markdown" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="googlef9ed0438b7b80b43.html" />
     <Content Include="Scripts\jquery-1.9.1.js" />

@@ -509,7 +509,7 @@ Note that this should be done in a [pre-build step](#Pre-_and_post-build_steps),
 
 Packages can be published explicitly to a MyGet feed by using the `publishPackage` service message, for example:
 
-	##myget[publishPackage path='<relative-path-no-wildcards>' type='nuget|symbols|npm|bower|vsix']
+	##myget[publishPackage path='<relative-path-no-wildcards>' type='nuget|symbols|npm|bower|vsix|phpc']
 
 This service message requires the relative path to the package (from the root of the source control repository). Wildcards are not supported: each artifact that needs to be published has to be enumerated.
 

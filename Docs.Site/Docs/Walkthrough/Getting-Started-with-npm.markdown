@@ -39,9 +39,9 @@ Setting up your own npm registry has never been easier. MyGet allows you to crea
 
 	![Add package from NPM registry](Images/add-npm-fromfeed.png)
 
-3. (optional) **Enable package source proxy** to seamlessly blend your MyGet feed with the public npm registry.
+3. (optional) **Enable upstream source proxy** to seamlessly blend your MyGet feed with the public npm registry.
 
-	From the *Package Sources* tab, edit the *Npmjs.org* package source and enable the *Make all upstream packages available in clients* option. If you prefer to have the package binaries downloaded to your feed for subsequent requests, also enable the *Automatically add downloaded upstream packages to the current feed (mirror)* option.
+	From the *Upstream Sources* tab, edit the *Npmjs.org* upstream source and enable the *Make all upstream packages available in clients* option. If you prefer to have the package binaries downloaded to your feed for subsequent requests, also enable the *Automatically add downloaded upstream packages to the current feed (mirror)* option.
 
 	![Mix your npm registry with the public npm registry](Images/proxy-npm-registry.png)
 

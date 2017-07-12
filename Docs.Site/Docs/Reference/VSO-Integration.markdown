@@ -20,7 +20,7 @@ The following simplified diagram provides a schematic overview of this new integ
 
 To make use of this integration, you need to add a new package source to your MyGet feed:
 
-1.	Go to feed settings and select the **Package Sources** tab. Select **Visual Studio Team Services build definition** from the **Add package source** button.
+1.	Go to feed settings and select the **Upstream Sources** tab. Select **Visual Studio Team Services build definition** from the **Add package source** button.
 	![Step 1](Images/vso-package-source-step1.png)
 
 2.	Provide your Visual Studio Team Services **account name** in the dialog that appears and click **Continue**.

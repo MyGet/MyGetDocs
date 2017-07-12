@@ -42,9 +42,9 @@ Setting up your own Bower registry has never been easier. MyGet allows you to cr
 
 	![Add package from Bower registry](Images/add-bower-fromfeed.png)
 
-3. (optional) **Enable package source proxy** to seamlessly blend your MyGet feed with the public Bower registry.
+3. (optional) **Enable upstream source proxy** to seamlessly blend your MyGet feed with the public Bower registry.
 
-	From the *Package Sources* tab, edit the *Bower.io* package source and enable the *Make all upstream packages available in clients* option. If you prefer to have the package binaries downloaded to your feed for subsequent requests, also enable the *Automatically add downloaded upstream packages to the current feed (mirror)* option.
+	From the *Upstream Sources* tab, edit the *Bower.io* upstream source and enable the *Make all upstream packages available in clients* option. If you prefer to have the package binaries downloaded to your feed for subsequent requests, also enable the *Automatically add downloaded upstream packages to the current feed (mirror)* option.
 
 	![Mix your Bower registry with the public Bower registry](Images/proxy-bower-registry.png)
 

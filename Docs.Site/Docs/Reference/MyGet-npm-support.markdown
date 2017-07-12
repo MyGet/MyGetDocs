@@ -16,7 +16,7 @@ Your MyGet npm feed can be used by providing the `--registry` switch on every np
 
 ## Using multiple npm registries
 
-By default, your MyGet npm feed will only contain packages you have explicitly added, either using the web UI or the npm client. To have the public npm registry blended into your own, go to the *Package Sources* tab, edit the *Npmjs.org* package source and enable the *Make all upstream packages available in clients* option and the the *Automatically add downloaded upstream packages to the current feed (mirror)* option.
+By default, your MyGet npm feed will only contain packages you have explicitly added, either using the web UI or the npm client. To have the public npm registry blended into your own, go to the *Upstream Sources* tab, edit the *Npmjs.org* upstream source and enable the *Make all upstream packages available in clients* option and the the *Automatically add downloaded upstream packages to the current feed (mirror)* option.
 
 Note that using these settings it's also possible to blend more than one npm registry into one. You can also [push npm packages to other npm registries using MyGet](/docs/reference/package-sources#Scenario_-_Pushing_a_package_upstream)
 
@@ -76,7 +76,7 @@ Provide your MyGet username and password to make sure authentication is setup.
 
 ## Referencing npm packages in package.json
 
-The npm command line client does not suport mixing multiple registries. Make sure to <a href="#Using_both_public_and_private_npm">enable package source proxy</a> if you want to blend your own feed and the public npm registry.
+The npm command line client does not suport mixing multiple registries. Make sure to <a href="#Using_both_public_and_private_npm">enable upstream source proxy</a> if you want to blend your own feed and the public npm registry.
 
 If you would like to use the default public registry yet still want to reference packages in your own npm feed, you can do so by using the tarball URL in your `package.json` file, for example:
 

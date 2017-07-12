@@ -24,7 +24,7 @@ For private feeds, make sure to either use a [pre-authenticated URL](/docs/refer
 
 ## Using multiple Bower registries
 
-By default, your MyGet Bower feed will only contain packages you have explicitly added, either using the web UI or the Bower client. To have the public Bower registry blended into your own, go to the *Package Sources* tab, edit the *Bower.io* package source and enable the *Make all upstream packages available in clients* option and the the *Automatically add downloaded upstream packages to the current feed (mirror)* option.
+By default, your MyGet Bower feed will only contain packages you have explicitly added, either using the web UI or the Bower client. To have the public Bower registry blended into your own, go to the *Upstream Sources* tab, edit the *Bower.io* upstream source and enable the *Make all upstream packages available in clients* option and the the *Automatically add downloaded upstream packages to the current feed (mirror)* option.
 
 Note that using these settings it's also possible to blend more than one Bower registry into one. 
 

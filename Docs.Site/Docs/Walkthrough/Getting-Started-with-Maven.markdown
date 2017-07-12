@@ -111,9 +111,9 @@ If you plan on publishing packages using the `gradle publish` command, make sure
 
 	![Upload package or add package from Maven Central](Images/add-maven-fromupload.png)
 
-2. (optional) **Enable package source proxy** to seamlessly blend your MyGet feed with the Maven Central repository.
+2. (optional) **Enable upstream source proxy** to seamlessly blend your MyGet feed with the Maven Central repository.
 
-	From the *Package Sources* tab, edit the *Maven Central* package source and enable the *Make all upstream packages available in clients* option. If you prefer to have the package binaries downloaded to your feed for subsequent requests, also enable the *Automatically add downloaded upstream packages to the current feed (mirror)* option.
+	From the *Upstream Sources* tab, edit the *Maven Central* upstream source and enable the *Make all upstream packages available in clients* option. If you prefer to have the package binaries downloaded to your feed for subsequent requests, also enable the *Automatically add downloaded upstream packages to the current feed (mirror)* option.
 
 	![Mix your MyGet Maven repository with the public Maven Central repository](Images/proxy-npm-registry.png)
 

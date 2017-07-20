@@ -143,6 +143,30 @@ From now on, we can publish and consume any package that has the `@acmecorp` sco
     <strong>Note:</strong> <code>packages.json</code> must not contain a <code>publishConfig</code> property. If it does, make sure it points to the correct registry or remove the entry. The npm client will always push to the registry specified in this property, no matter which registry is specified on the command line.
 </p>
 
+### Working with multiple (scoped) registries
+
+The npm client only supports working with one "main" registry. This can be circumvented by aggregating multiple registries into a MyGet registry feed using [upstream sources](/docs/reference/upstream-sources). However, sometimes it's enough to work with one "main" registry and just fan out to other registries for specific scopes.
+
+Since scopes can be associated with a specific registry, we can seamlessly mix scoped packages from various npm registries. For example, we could register the `@acmecorp` scope to go to our own MyGet registry feed, `@some-vendor` to hit the npm registry supplied by a vendor, and use  *Npmjs.org* as the "main" registry.
+
+Our `.npmrc` file would look like the following:
+
+	@acmecorp:registry=https://www.myget.org/F/your-feed-name/npm/
+	//www.myget.org/F/your-feed-name/npm/:_authToken=<myget-access-token>
+	//www.myget.org/F/your-feed-name/npm/:always-auth=true
+	
+	@some-vendor:registry=https://npm.example.com/
+	//npm.example.com/:_password="base64encodedpassword"
+	//npm.example.com/:username=someuser
+	//npm.example.com/:email=someuser@example.com
+	//npm.example.com/:always-auth=true
+
+This setup will:
+
+* Use *Npmjs.org* as the "main" registry, since we did not set the `registry` option.
+* Use `https://www.myget.org/F/your-feed-name/npm/` for the `@acmecorp` scope.
+* Use `https://npm.example.com/` for the `@some-vendor` scope.
+
 ## Fixing "401 Unauthorized" after running npm login
 
 When working with private npm registries, it is required to run `npm login` to store authentication details into a `.npmrc` file in your user profile folder. Some npm versions miss writing one specific setting, resulting in `401 Unauthorized` when working with MyGet npm registries.

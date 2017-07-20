@@ -81,6 +81,10 @@ On the package details page on MyGet, we can verify if for a given assembly debu
 
 In the Visual Studio Debugger options, you can disable the *Require source files to exactly match the original version* toggle if you are confident the `.dll` and `.pdb` can be different. We advise against this as the debugging symbols that will be loaded come from a different build than the one you are tying to debug, but it can be a last resort to get at least an idea of the source code for the assembly being debugged.
 
+<p class="alert alert-warning">
+    <strong>Note for users generating Portable PDB's (.NET Standard):</strong> MyGet can currently not rewrite the PDB file to allow linking to source code due to a limitation in how Portable PDB's work. We recommend using <a href="https://github.com/ctaggart/SourceLink">one of the SourceLink MSBuild tasks to embed sources</a>.
+</p>
+
 ### Veryifying symbols package contents
 
 There is a useful plug-in for [NuGet Package Explorer](http://npe.codeplex.com) which allows us to validate our symbols packages.

@@ -4,6 +4,10 @@ MyGet symbols support lets consumers of our NuGet packages step through the sour
 
 MyGet comes with its own symbol server that supports pushing symbols as well as consuming symbols and source indexing. Both managed and native assemblies and symbols are supported.
 
+## Creating symbols packages
+
+Using the `nuget pack` command, you can create a normal .nupkg and a .symbols.nupkg file with the `-symbol` option. *The symbols package must contain both the .dll and .pdb file, together with the source files*. Check the [NuGet documentation](https://docs.microsoft.com/en-us/nuget/create-packages/symbol-packages) for more information and an example of a .nuspec file.
+
 ## Pushing symbols packages to MyGet
 
 When working with [NuGet.org](http://www.nuget.org), the NuGet client automatically recognizes symbols packages and pushes them to the default SymbolSource feed. Since we want to ensure our packages end up on our own feed and securely host debugger symbols, we must explicitly push symbols to the MyGet symbol server.

@@ -6,7 +6,7 @@ MyGet comes with its own symbol server that supports pushing symbols as well as 
 
 ## Creating symbols packages
 
-Using the `nuget pack` command, you can create a normal .nupkg and a .symbols.nupkg file with the `-symbol` option. *The symbols package must contain both the .dll and .pdb file, together with the source files*. Check the [NuGet documentation](https://docs.microsoft.com/en-us/nuget/create-packages/symbol-packages) for more information and an example of a .nuspec file.
+Using the `nuget pack` command, you can create a normal .nupkg and a .symbols.nupkg file with the `-symbols` option. *The symbols package must contain both the .dll and .pdb file, together with the source files*. Check the [NuGet documentation](https://docs.microsoft.com/en-us/nuget/create-packages/symbol-packages) for more information and an example of a .nuspec file.
 
 ## Pushing symbols packages to MyGet
 

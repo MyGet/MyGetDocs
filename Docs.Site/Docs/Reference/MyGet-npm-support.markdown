@@ -71,7 +71,7 @@ Provide your MyGet username and password to make sure authentication is setup.
 </p>
 
 <p class="alert alert-success">
-    <strong>Tip:</strong> Use the <a href="https://www.npmjs.com/package/npmrc">npmrc</a> module to make switching between diferent <code>.npmrc</code> files easier.
+    <strong>Tip:</strong> Use the <a href="https://www.npmjs.com/package/npmrc">npmrc</a> module to make switching between different <code>.npmrc</code> files easier.
 </p>
 
 ## Referencing npm packages in package.json

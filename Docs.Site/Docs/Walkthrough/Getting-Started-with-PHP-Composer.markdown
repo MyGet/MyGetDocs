@@ -76,6 +76,6 @@ More info on authentication is available from the [Composer docs](https://getcom
 
 	![Inspect package licenses](Images/maven-licenses.png)
 
-[1]: http://www.myget.org
-[2]: http://docs.myget.org/docs/reference/feed-security
-[3]: http://docs.myget.org/docs/reference/license-analysis
+[1]: https://www.myget.org
+[2]: https://docs.myget.org/docs/reference/feed-security
+[3]: https://docs.myget.org/docs/reference/license-analysis

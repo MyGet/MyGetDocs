@@ -1,6 +1,6 @@
 # MyGet npm support
 
-After [signing up for a MyGet account](http://www.myget.org/Account/Login) and creating a feed that serves as a Bower registry, you can work with Bower packages using the Bower command line and *bower.json*.
+After [signing up for a MyGet account](https://www.myget.org/Account/Login) and creating a feed that serves as a Bower registry, you can work with Bower packages using the Bower command line and *bower.json*.
 
 ## Your Bower registry URL
 
@@ -30,7 +30,7 @@ Note that using these settings it's also possible to blend more than one Bower r
 
 ![Mix your Bower registry with the public Bower registry](Images/proxy-bower-registry.png)
 
-Additionally, your [`.bowerrc`](http://bower.io/docs/config/) file can be configured to search multiple feeds without requiring the feed to blend the feeds. Here's an example `.bowerrc` file that uses the public Bower registry and a MyGet feed to search for packages, and only supports registering packages with the MyGet feed:
+Additionally, your [`.bowerrc`](https://bower.io/docs/config/) file can be configured to search multiple feeds without requiring the feed to blend the feeds. Here's an example `.bowerrc` file that uses the public Bower registry and a MyGet feed to search for packages, and only supports registering packages with the MyGet feed:
 
 	{
 	  "registry": {
@@ -90,4 +90,4 @@ You may want to run the [SSL checker](https://cryptoreport.rapidssl.com/checker/
 
 ## Company proxy server
 
-When using a company proxy server, make sure to configure it correctly. Justin James has a great guide to [npm, bower, git and bash proxy configurations](http://digitaldrummerj.me/proxy-configurations/) available.
+When using a company proxy server, make sure to configure it correctly. Justin James has a great guide to [npm, bower, git and bash proxy configurations](https://digitaldrummerj.me/proxy-configurations/) available.

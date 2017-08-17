@@ -22,9 +22,9 @@ MyGet 2013.4 was released on September 10, 2013.
 * The latest build version is shown in the UI
 * Package sources added at the feed level are available on the build server
 * Automatic support for NuGet package restore even if it's not enabled for the solution
-* Support for NuGet 2.7 package restore - see [http://docs.myget.org/docs/reference/build-services#Package_Restore](http://docs.myget.org/docs/reference/build-services#Package_Restore)
+* Support for NuGet 2.7 package restore - see [https://docs.myget.org/docs/reference/build-services#Package_Restore](https://docs.myget.org/docs/reference/build-services#Package_Restore)
 * Package sources added at the feed level are available on the build server for package restore
-* Build labeling: on succesful or failed builds, a label can be added to the sources. This is compatible with GitHub Releases. - see [http://docs.myget.org/docs/reference/build-services#Source_labeling_(tagging)](http://docs.myget.org/docs/reference/build-services#Source_labeling_(tagging))
+* Build labeling: on succesful or failed builds, a label can be added to the sources. This is compatible with GitHub Releases. - see [https://docs.myget.org/docs/reference/build-services#Source_labeling_(tagging)](https://docs.myget.org/docs/reference/build-services#Source_labeling_(tagging))
 * Support for MyGet.cmd, MyGet.bat, MyGet.ps1
 
 ## Bug Fixes

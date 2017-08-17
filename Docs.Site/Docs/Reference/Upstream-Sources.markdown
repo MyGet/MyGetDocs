@@ -28,7 +28,7 @@ By default, MyGet feeds have the public, central repositories configured for eac
 
 * NuGet: https://www.nuget.org/api/v2
 * Bower: https://bower.herokuapp.com
-* npm: http://registry.npmjs.org
+* npm: https://registry.npmjs.org
 * Maven: https://repo1.maven.org/maven2
 
 To configure an additional upstream source for your MyGet feed, navigate to _Feed Settings > Upstream Sources_. Then click _Add Upstream Source_ and select the package source type you want to add.
@@ -62,7 +62,7 @@ Applies to: <strong>NuGet (v2 only!)</strong>
 </p>
 
 When the upstream source is a v2 NuGet feed, you may configure additional OData filtering.
-Filtering is based on the [OData v3 Filtering System](http://www.odata.org/documentation/odata-version-3-0/odata-version-3-0-core-protocol#thefiltersystemqueryoption). 
+Filtering is based on the [OData v3 Filtering System](https://www.odata.org/documentation/odata-version-3-0/odata-version-3-0-core-protocol#thefiltersystemqueryoption). 
 Valid filters are similar to `Id eq 'jQuery'` or `IsLatestVersion eq true and Id ne 'Foo'`.
 
 <p class="alert alert-warning">

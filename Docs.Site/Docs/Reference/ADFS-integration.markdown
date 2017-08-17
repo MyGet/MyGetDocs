@@ -1,6 +1,6 @@
 # ADFS integration
 
-The [MyGet Enterprise plan](http://www.myget.org/enterprise) provides support for ADFS to log in, when requested. This document describes the required configuration steps on your ADFS server.
+The [MyGet Enterprise plan](https://www.myget.org/enterprise) provides support for ADFS to log in, when requested. This document describes the required configuration steps on your ADFS server.
 
 <p class="alert alert-info">
     <strong>Note:</strong> To log in to your feed from Visual Studio, credentials obtained from Active Directory can currently <strong>not</strong> be used as the NuGet client does not support this. Private feeds will still require authentication to happen based on MyGet credentials. ADFS integration will only work for logging in to the MyGet web interface. 
@@ -10,9 +10,9 @@ The [MyGet Enterprise plan](http://www.myget.org/enterprise) provides support fo
 
 To work with ADFS, we will require the following claims to be sent to us:
 
-* Name (*http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name*)
-* Email address (*http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress*) 
-* Nameidentifier (*http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier*) – you can use the AD user name for this claim. As long as it's unique we're happy.
+* Name (*https://schemas.xmlsoap.org/ws/2005/05/identity/claims/name*)
+* Email address (*https://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress*) 
+* Nameidentifier (*https://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier*) – you can use the AD user name for this claim. As long as it's unique we're happy.
 
 We will, of course, also need either the URL to your *FederationMetadata.xml* document, or a copy of this file to configure the trust relationship on our end.
 

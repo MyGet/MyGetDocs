@@ -94,12 +94,12 @@ Use ***italics and bold together*** if you ___have to___.
 
 There are three ways to write links. Each is easier to read than the last:
 
-Here's an in-line link to [Google](http://www.google.com/).
+Here's an in-line link to [Google](https://www.google.com/).
 Here's a reference-style link to [Google][1].
 Here's a very readable link to [Yahoo!][yahoo].
 
-  [1]: http://www.google.com/
-  [yahoo]: http://www.yahoo.com/
+  [1]: https://www.google.com/
+  [yahoo]: https://www.yahoo.com/
 The link definitions can appear anywhere in the document -- before or after the place where you 
 use them. The link definition names [1] and [yahoo] can be any unique string, and are case-insensitive; 
 [yahoo] is the same as [YAHOO].
@@ -109,26 +109,26 @@ use them. The link definition names [1] and [yahoo] can be any unique string, an
 Links can have a title attribute, which will show up on hover. Title attributes can also be added; they 
 are helpful if the link itself is not descriptive enough to tell users where they're going.
 
-Here's a [poorly-named link](http://www.google.com/ "Google").
+Here's a [poorly-named link](https://www.google.com/ "Google").
 Never write "[click here][^2]".
 Visit [us][web].
 
-  [^2]: http://www.w3.org/QA/Tips/noClickHere
+  [^2]: https://www.w3.org/QA/Tips/noClickHere
         (Advice against the phrase "click here")
-  [web]: http://stackoverflow.com/ "Stack Overflow"
+  [web]: https://stackoverflow.com/ "Stack Overflow"
 You can also use standard HTML hyperlink syntax.
 
-<a href="http://example.com" title="example">example</a>
+<a href="https://example.com" title="example">example</a>
 
 ### Bare URLs
 
 We have modified our Markdown parser to support "naked" URLs (in most but not all cases -- beware of 
 unusual characters in your URLs); they will be converted to links automatically:
 
-I often visit http://example.com.
+I often visit https://example.com.
 Force URLs by enclosing them in angle brackets:
 
-Have you seen <http://example.com>?
+Have you seen <https://example.com>?
 All URLs must be fully qualified path names. We do not support relative paths.
 
 ### Horizontal Rules
@@ -246,7 +246,7 @@ To put other Markdown blocks in a &lt;blockquote&gt;, just add a &gt; followed b
 
 Images are exactly like links, but they have an exclamation point in front of them:
 
-![Valid XHTML](http://w3.org/Icons/valid-xhtml10).
+![Valid XHTML](https://w3.org/Icons/valid-xhtml10).
 The word in square brackets is the alt text, which gets displayed if the browser can't show 
 the image. Be sure to include meaningful alt text for screen-reading software.
 
@@ -254,7 +254,7 @@ Just like links, images work with reference syntax and titles:
 
 This page is ![Valid XHTML][checkmark].
  
-[checkmark]: http://w3.org/Icons/valid-xhtml10
+[checkmark]: https://w3.org/Icons/valid-xhtml10
              "What are you smiling at?"
 __Note:__ Markdown does not currently support the shortest reference syntax for images:
 

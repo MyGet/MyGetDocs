@@ -72,7 +72,7 @@ Setting up your own NuGet repository has never been easier. MyGet allows you to 
 		nuget setapikey [apikey] -source [url] -configFile [configFilePath]
 		nuget sources update -name [name] -source [url] -user [username] -pass [pwd] -configFile [path] -StorePasswordInClearText
 
-	Also check out our blog post dedicated to this topic: <a href="http://blog.myget.org/post/2012/12/12/NuGet-package-restore-from-a-secured-feed.aspx" target="_blank">NuGet package restore from a secured feed</a>.
+	Also check out our blog post dedicated to this topic: <a href="https://blog.myget.org/post/2012/12/12/NuGet-package-restore-from-a-secured-feed.aspx" target="_blank">NuGet package restore from a secured feed</a>.
 
 3. **Add packages** to the feed by either uploading them through the web site, referencing/mirroring them from nuget.org, or pushing them using your preferred NuGet client tools.
 
@@ -117,10 +117,10 @@ You also want that shiny build status badge in your readme file? Or anywhere els
 
 ![A readme file containing the MyGet build status badge](Images/build-badge.png)
 
-[1]: http://www.myget.org
-[2]: http://docs.myget.org/docs/reference/security#Inviting_other_users_to_your_feed
-[3]: http://docs.myget.org/docs/reference/build-services
+[1]: https://www.myget.org
+[2]: https://docs.myget.org/docs/reference/security#Inviting_other_users_to_your_feed
+[3]: https://docs.myget.org/docs/reference/build-services
 [4]: https://github.com/myget/MyGetDocs-Samples
 [5]: https://github.com/myget/MyGetDocs-Samples/fork
-[6]: http://docs.myget.org/docs/reference/build-services#The_Build_Process
-[7]: http://docs.myget.org/docs/reference/custom-build-scripts
+[6]: https://docs.myget.org/docs/reference/build-services#The_Build_Process
+[7]: https://docs.myget.org/docs/reference/custom-build-scripts

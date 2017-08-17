@@ -30,7 +30,7 @@ When a library referencing a potential unsafe package is built using MyGet Build
 
 It would be great if the build would fail entirely when such package is found. This can be done with simple configuration parameter for the SafeNuGet package. Find the *SafeNuGet.targets* file and update its contents to:
 
-	<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<Project ToolsVersion="4.0" xmlns="https://schemas.microsoft.com/developer/msbuild/2003">
 	  <UsingTask AssemblyFile="SafeNuGet.dll" TaskName="SafeNuGet.AreNuGetPackagesSafe"  />
 	  <Target Name="AfterBuild">
 	    <AreNuGetPackagesSafe ProjectPath="$(MSBuildProjectDirectory)"

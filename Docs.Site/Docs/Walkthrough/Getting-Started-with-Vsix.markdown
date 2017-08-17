@@ -46,6 +46,6 @@ Setting up your own Vsix feed has never been easier. MyGet allows you to create 
 
 4. (optional) **Check the licenses of the extensions on your feed** using the *[licenses][3]* tab. This will display a report of the licenses used by the extensions on your feed.
 
-[1]: http://www.myget.org
-[2]: http://docs.myget.org/docs/reference/feed-security
-[3]: http://docs.myget.org/docs/reference/license-analysis
+[1]: https://www.myget.org
+[2]: https://docs.myget.org/docs/reference/feed-security
+[3]: https://docs.myget.org/docs/reference/license-analysis

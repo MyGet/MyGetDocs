@@ -20,7 +20,7 @@ Setting up your own Bower registry has never been easier. MyGet allows you to cr
 
 ## Working with your Bower registry
 
-1. **Register the feed** with Bower by adding a registry entry to your [`.bowerrc`](http://bower.io/docs/config/) file. The full feed URL can be found on the *feed details* page.
+1. **Register the feed** with Bower by adding a registry entry to your [`.bowerrc`](https://bower.io/docs/config/) file. The full feed URL can be found on the *feed details* page.
 
 	![Bower feed URL on MyGet](Images/bower-feed-details.png)
 
@@ -59,5 +59,5 @@ The request to make is an HTTP `POST`, towards https://www.myget.org/F/yourfeedn
 * Add a header: `X-NuGet-ApiKey` - with the value of one of your access tokens (aka API key).
 * Add request body: the ZIPped Bower package (basically a `ZIP` file containing your entire package + `package.json`)
 
-[1]: http://www.myget.org
-[2]: http://docs.myget.org/docs/reference/feed-security
+[1]: https://www.myget.org
+[2]: https://docs.myget.org/docs/reference/feed-security

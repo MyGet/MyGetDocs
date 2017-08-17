@@ -10,8 +10,8 @@ Next to that, integration with several Source Control Repositories is available 
 
 * [GitHub](https://github.com/ "GitHub")
 * [BitBucket](https://bitbucket.org "BitBucket")
-* [Visual Studio Team Services](http://www.visualstudio.com)
-* [CodePlex](http://www.codeplex.com/ "CodePlex")
+* [Visual Studio Team Services](https://www.visualstudio.com)
+* [CodePlex](https://www.codeplex.com/ "CodePlex")
 
 Once downloaded, source code can then be built using a number of different methodologies.
 
@@ -29,7 +29,7 @@ Using MyGet Build Services, you have the opportunity to control exactly how your
 * MyGet.sln
 * Any other *.sln file
 * *.csproj (and *.vbproj, *.fsproj, ...)
-* *.nuspec (yep, we support packaging simple [convention-based NuGet directories](http://docs.nuget.org/create/creating-and-publishing-a-package#package-conventions "Convention Based Nuget Directories") as well)
+* *.nuspec (yep, we support packaging simple [convention-based NuGet directories](https://docs.nuget.org/create/creating-and-publishing-a-package#package-conventions "Convention Based Nuget Directories") as well)
 
 Based on the files found, the build process will be slightly different.
 
@@ -139,7 +139,7 @@ Here's the workflow:
 
 * Note that we by default always create symbols packages
 
-The above workflow also clearly prefers targeting project files if present. This means that you can benefit from this by having a companion `projectname.nuspec` file next to your `projectname.csproj` (within the same directory!). [Check this StackOverflow thread](http://stackoverflow.com/questions/14797525/differences-between-nuget-packing-a-csproj-vs-nuspec/14808085#14808085) if you want to learn about the differences between targeting a project file and targeting a nuspec file directly.
+The above workflow also clearly prefers targeting project files if present. This means that you can benefit from this by having a companion `projectname.nuspec` file next to your `projectname.csproj` (within the same directory!). [Check this StackOverflow thread](https://stackoverflow.com/questions/14797525/differences-between-nuget-packing-a-csproj-vs-nuspec/14808085#14808085) if you want to learn about the differences between targeting a project file and targeting a nuspec file directly.
 
 ## Which packages are pushed to my feed?
 
@@ -202,7 +202,7 @@ In order of precedence, the following package restore commands are run. When one
 * ```nuget restore packages.config -NoCache -NonInteractive```
 * ```nuget restore packages.<project>.config -NoCache -NonInteractive```
 
-If you want MyGet Build Services to restore packages from a specific feed, there are two available options. One is to add package sources to your feed through the MyGet UI, the other is adding a ```MyGet.NuGet.config``` file to your repository is the key to success. See the [NuGet docs](http://docs.nuget.org/docs/reference/nuget-config-file) for more information on how such file can be created. The following is a sample registering a custom NuGet feed for package restore.
+If you want MyGet Build Services to restore packages from a specific feed, there are two available options. One is to add package sources to your feed through the MyGet UI, the other is adding a ```MyGet.NuGet.config``` file to your repository is the key to success. See the [NuGet docs](https://docs.nuget.org/docs/reference/nuget-config-file) for more information on how such file can be created. The following is a sample registering a custom NuGet feed for package restore.
 
 	<?xml version="1.0" encoding="utf-8"?>
 	<configuration>
@@ -547,7 +547,7 @@ Badges will be shown for pending builds (queued or building) as well as successf
 
 ![Where to get the URL](Images/build-badge.png)
 
-It can then be used in HTML, for example with a hyperlink to your feed on the [MyGet Gallery](http://www.myget.org/gallery):
+It can then be used in HTML, for example with a hyperlink to your feed on the [MyGet Gallery](https://www.myget.org/gallery):
 
 <pre><code>&lt;a href="https://www.myget.org/gallery/googleanalyticstracker"&gt;&lt;img alt="GoogleAnalyticsTracker Nightly Build Status" src="https://www.myget.org/BuildSource/Badge/googleanalyticstracker?identifier=479ff619-28f2-47c0-9574-2774ed0cd855" /&gt;&lt;/a&gt;</code></pre>
 

@@ -14,7 +14,7 @@ We've built a **[MyGet Credential Provider for Visual Studio 2017](/docs/referen
 </a>
 </div>
 
-We added **Maven** support, and welcome Java/Android developers to the MyGet family! ([Announcement](http://blog.myget.org/post/2017/02/09/maven-packages-just-arrived-on-myget-early-access-preview.aspx) | [Docs](docs/walkthrough/getting-started-with-maven))
+We added **Maven** support, and welcome Java/Android developers to the MyGet family! ([Announcement](https://blog.myget.org/post/2017/02/09/maven-packages-just-arrived-on-myget-early-access-preview.aspx) | [Docs](docs/walkthrough/getting-started-with-maven))
 
 <div style="text-align:center; display:block; margin-bottom:10px;" >
 <a href="docs/walkthrough/getting-started-with-maven">
@@ -22,7 +22,7 @@ We added **Maven** support, and welcome Java/Android developers to the MyGet fam
 </a>
 </div>
 
-We've built a web utility to help you learn and adopt Semantic Versioning: check out our **[MyGet SemVer Explorer](http://semver.myget.org/)**!
+We've built a web utility to help you learn and adopt Semantic Versioning: check out our **[MyGet SemVer Explorer](https://semver.myget.org/)**!
 
 <div style="text-align:center; display:block; margin-bottom:10px;" >
 <a href="https://semver.myget.org">
@@ -30,7 +30,7 @@ We've built a web utility to help you learn and adopt Semantic Versioning: check
 </a>
 </div>
 
-We've partnered with OSSIndex.net to check for potential package vulnerabilities on your MyGet feeds! ([Announcement](http://blog.myget.org/post/2016/10/14/Checking-potential-vulnerabilities-in-project-dependencies.aspx) | [Docs](/docs/reference/vulnerability-report))
+We've partnered with OSSIndex.net to check for potential package vulnerabilities on your MyGet feeds! ([Announcement](https://blog.myget.org/post/2016/10/14/Checking-potential-vulnerabilities-in-project-dependencies.aspx) | [Docs](/docs/reference/vulnerability-report))
 
 <div style="text-align:center; display:block; margin-bottom:10px;" >
 <a href="docs/reference/vulnerability-report">
@@ -74,10 +74,10 @@ The enterprise plan has all functionality from the paid subscription plans, and 
 The following applies only to the MyGet Enterprise plan:
 
 * Usability: the Gallery index is now the default landing page when authenticated on MyGet Enterprise
-* Security: added support for marking users as *external to the tenant*. This prevents the external user from accessing *Enterprise* feeds, unless privileges are explicitly assigned at the feed level. (see [Feed Types](http://docs.myget.org/docs/reference/security#Available_Feed_Types))
+* Security: added support for marking users as *external to the tenant*. This prevents the external user from accessing *Enterprise* feeds, unless privileges are explicitly assigned at the feed level. (see [Feed Types](https://docs.myget.org/docs/reference/security#Available_Feed_Types))
 
 ### MyGet Build Services
-* Added support for **Visual Studio 2017**, **.NET Core** and the new **PackageReference** project format ([Announcement](http://blog.myget.org/post/2017/03/15/visual-studio-2017-and-net-core-support-on-myget.aspx))
+* Added support for **Visual Studio 2017**, **.NET Core** and the new **PackageReference** project format ([Announcement](https://blog.myget.org/post/2017/03/15/visual-studio-2017-and-net-core-support-on-myget.aspx))
 * AssemblyInfo patching now supports globbing patterns (like `**\**.cs`)
 
 ## Bug Fixes & Other Improvements
@@ -93,7 +93,7 @@ The following applies only to the MyGet Enterprise plan:
 * Fixed an issue with the symbols code browser when a file was not found or could not be displayed
 * NuGet: allow packages.config files to be uploaded without version number specified
 
-We love hearing from you, so keep that [feedback](http://myget.uservoice.com/) coming! MyGet is built for you!
+We love hearing from you, so keep that [feedback](https://myget.uservoice.com/) coming! MyGet is built for you!
 
 _Happy packaging!_
 

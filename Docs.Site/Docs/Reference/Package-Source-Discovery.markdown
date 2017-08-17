@@ -17,7 +17,7 @@ For all  scenarios, a simple feed discovery mechanism could facilitate this. Suc
 In order to make MyGet Gallery Feeds more discoverable, the MyGet Team have implemented the Package Source Discovery Specification on the MyGet Gallery page. To see this in action, open Visual Studio and open any solution.  Then, using the Package Manager Console, type the following commands:
 
     Install-Package DiscoverPackageSources
-    Discover-PackageSources -Url "http://www.myget.org/gallery"
+    Discover-PackageSources -Url "https://www.myget.org/gallery"
 
 Close and re-open Visual Studio and check your package sources. The URL has been verified for a PSD manifest URL and the manifest has been parsed. Matching feeds have been installed into the NuGet.config file, in this case all feeds listed in the MyGet gallery.
 
@@ -27,31 +27,31 @@ A PSD request is an HTTP GET to a URL with optional authentication and an option
 
 ## Response
 
-The response will be an XML document following the **Really Simple Discovery** (RSD) RFC as described on [https://github.com/danielberlinger/rsd](https://github.com/danielberlinger/rsd "RSD Specification"). Since not all required metadata can be obtained from the RSD format, the [Dublin Core schema](http://dublincore.org/documents/2012/06/14/dcmi-terms/?v=elements) is present in the PSD response as well.
+The response will be an XML document following the **Really Simple Discovery** (RSD) RFC as described on [https://github.com/danielberlinger/rsd](https://github.com/danielberlinger/rsd "RSD Specification"). Since not all required metadata can be obtained from the RSD format, the [Dublin Core schema](https://dublincore.org/documents/2012/06/14/dcmi-terms/?v=elements) is present in the PSD response as well.
 
 Vendors and open source projects are allowed to add their own schema to the PSD discovery document however, the manifest described below should be respected at all times.
 
 An example manifest could be:
 
     <?xml version="1.0" encoding="utf-8"?>
-    <rsd version="1.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <rsd version="1.0" xmlns:dc="https://purl.org/dc/elements/1.1/">
 	    <service>
 		    <engineName>MyGet</engineName>
-		    <engineLink>http://www.myget.org</engineLink>
-		    <dc:identifier>http://www.myget.org/F/googleanalyticstracker</dc:identifier>
+		    <engineLink>https://www.myget.org</engineLink>
+		    <dc:identifier>https://www.myget.org/F/googleanalyticstracker</dc:identifier>
 		    <dc:creator>maartenba</dc:creator>
 		    <dc:owner>maartenba</dc:owner>
 		    <dc:title>Staging feed for GoogleAnalyticsTracker</dc:title>
 		    <dc:description>Staging feed for GoogleAnalyticsTracker</dc:description> 
-		    <homePageLink>http://www.myget.org/gallery/googleanalyticstracker</homePageLink>
+		    <homePageLink>https://www.myget.org/gallery/googleanalyticstracker</homePageLink>
 		    <apis>
-		    	<api name="nuget-v2-packages" preferred="true" apiLink="http://www.myget.org/F/googleanalyticstracker/api/v2" blogID="" />
-		    	<api name="nuget-v2-push" preferred="true" apiLink="http://www.myget.org/F/googleanalyticstracker/api/v2/package" blogID="">
+		    	<api name="nuget-v2-packages" preferred="true" apiLink="https://www.myget.org/F/googleanalyticstracker/api/v2" blogID="" />
+		    	<api name="nuget-v2-push" preferred="true" apiLink="https://www.myget.org/F/googleanalyticstracker/api/v2/package" blogID="">
 				    <settings>
 				      <setting name="apiKey">abcdefghijkl</setting>
 				    </settings>
 		    	</api>
-		    	<api name="nuget-v1-packages" preferred="false" apiLink="http://www.myget.org/F/googleanalyticstracker/api/v1" blogID="" />
+		    	<api name="nuget-v1-packages" preferred="false" apiLink="https://www.myget.org/F/googleanalyticstracker/api/v1" blogID="" />
 		    </apis>
 	    </service>
     </rsd>
@@ -150,14 +150,14 @@ If the user is logged in, either controlled by basic authentication or using the
 
 The client should respect the following flow of discovering feeds:
 
-* If no PSD is given, the client should assume `http://nuget.<currentdomain>` as the PSD server.
+* If no PSD is given, the client should assume `https://nuget.<currentdomain>` as the PSD server.
 * The PSD URL is accessed and downloaded. It can contain:
   * HTML containing a tag such as 
 
 	```<link rel="nuget" 
           type="application/rsd+xml" 
           title="GoogleAnalyticsTracker feed on MyGet" 
-          href="http://myget.org/discovery/feed/googleanalyticstracker"/>```
+          href="https://myget.org/discovery/feed/googleanalyticstracker"/>```
 
 	This URL should be followed and the PSD manifest parsed. Note that multiple tags may exist and should all be parsed.
 	
@@ -167,7 +167,7 @@ The client should respect the following flow of discovering feeds:
     <link rel="nuget" 
     	  type="application/atom+xml" 
     	  title="WebMatrix Package Source" 
-    	  href="http://nuget.org/api/v2/curated-feeds/WebMatrix/Packages"/>
+    	  href="https://nuget.org/api/v2/curated-feeds/WebMatrix/Packages"/>
 	```
 
 	This URL should be treated as a NuGet feed and added as-is, using the title attribute as the feed's title in NuGet package source list. No further metadata can be discovered for this feed. Note that multiple tags may exist.
@@ -180,30 +180,30 @@ URLs specified in `<link rel="nuget"/>` tags can be absolute or relative.
 
 Depending on security, consuming an PSD manifest using the `NuGet-ApiKey` header or using basic authentication may yield additional endpoints and API settings. For example, MyGet produces the following manifest on an anonymous call to https://www.myget.org/Discovery/Feed/googleanalyticstracker:
 
-    <rsd version="1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns="http://archipelago.phrasewise.com/rsd">
+    <rsd version="1.0" xmlns:dc="https://purl.org/dc/elements/1.1/" xmlns="https://archipelago.phrasewise.com/rsd">
 	    <service>
 		    <engineName>MyGet</engineName>
-		    <engineLink>http://www.myget.org/</engineLink>
-		    <dc:identifier>http://www.myget.org/F/googleanalyticstracker/</dc:identifier>
+		    <engineLink>https://www.myget.org/</engineLink>
+		    <dc:identifier>https://www.myget.org/F/googleanalyticstracker/</dc:identifier>
 		    <dc:owner>maartenba</dc:owner>
 		    <dc:creator>maartenba</dc:creator>
 		    <dc:title>Staging feed for GoogleAnalyticsTracker</dc:title>
 		    <dc:description>Staging feed for GoogleAnalyticsTracker</dc:description>
-		    <homePageLink>http://www.myget.org/Feed/Details/googleanalyticstracker/</homePageLink>
+		    <homePageLink>https://www.myget.org/Feed/Details/googleanalyticstracker/</homePageLink>
 		    <apis>
-		    	<api name="nuget-v2-packages" blogID="" preferred="true" apiLink="http://www.myget.org/F/googleanalyticstracker/" />
-		    	<api name="nuget-v1-packages" blogID="" preferred="false" apiLink="http://www.myget.org/F/googleanalyticstracker/api/v1/" />
+		    	<api name="nuget-v2-packages" blogID="" preferred="true" apiLink="https://www.myget.org/F/googleanalyticstracker/" />
+		    	<api name="nuget-v1-packages" blogID="" preferred="false" apiLink="https://www.myget.org/F/googleanalyticstracker/api/v1/" />
 		    </apis>
 	    </service>
     </rsd>
 
 The authenticated version of https://www.myget.org/Discovery/Feed/googleanalyticstracker yields:
 
-    <rsd version="1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns="http://archipelago.phrasewise.com/rsd">
+    <rsd version="1.0" xmlns:dc="https://purl.org/dc/elements/1.1/" xmlns="https://archipelago.phrasewise.com/rsd">
 	    <service>
 		    <engineName>MyGet</engineName>
-		    <engineLink>http://www.myget.org/</engineLink>
-		    <dc:identifier>http://www.myget.org/F/googleanalyticstracker/</dc:identifier>
+		    <engineLink>https://www.myget.org/</engineLink>
+		    <dc:identifier>https://www.myget.org/F/googleanalyticstracker/</dc:identifier>
 		    <dc:owner>maartenba</dc:owner>
 		    <dc:creator>maartenba</dc:creator>
 		    <dc:title>Staging feed for GoogleAnalyticsTracker</dc:title>
@@ -263,6 +263,6 @@ If you want more information, read up on [NuGet Feed Discovery (NFD)][7].
 [3]: https://github.com/myget/PackageSourceDiscovery/tree/master/src/CmdLet
 [4]: https://github.com/myget/PackageSourceDiscovery/tree/master/src/Extension
 [5]: https://github.com/myget/PackageSourceDiscovery/blob/master/LICENSE.md
-[6]: http://blog.myget.org/post/2013/03/18/Support-for-Package-Source-Discovery-draft.aspx
-[7]: http://nugetext.org/nuget-feed-discovery
-[8]: http://getglimpse.com
+[6]: https://blog.myget.org/post/2013/03/18/Support-for-Package-Source-Discovery-draft.aspx
+[7]: https://nugetext.org/nuget-feed-discovery
+[8]: https://getglimpse.com

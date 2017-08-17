@@ -1,6 +1,6 @@
 # MyGet npm support
 
-After [signing up for a MyGet account](http://www.myget.org/Account/Login) and creating a feed that serves as an npm registry, you can work with node modules (packages) using the npm command line and *package.json*.
+After [signing up for a MyGet account](https://www.myget.org/Account/Login) and creating a feed that serves as an npm registry, you can work with node modules (packages) using the npm command line and *package.json*.
 
 ## Your npm registry URL
 
@@ -197,4 +197,4 @@ Additionally, you may want to run the [SSL checker](https://cryptoreport.rapidss
 
 ## Company proxy server
 
-When using a company proxy server, make sure to configure it correctly. Justin James has a great guide to [npm, bower, git and bash proxy configurations](http://digitaldrummerj.me/proxy-configurations/) available.
+When using a company proxy server, make sure to configure it correctly. Justin James has a great guide to [npm, bower, git and bash proxy configurations](https://digitaldrummerj.me/proxy-configurations/) available.

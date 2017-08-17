@@ -3,7 +3,7 @@
 Visual Studio Team Services or VSTS in short allows us to create rich build pipelines. As part of a build, you may want to publish NuGet packages, often including [debugger symbols](/docs/reference/symbols), to your MyGet feed. Let's see how this can be done.
 
 <p class="alert alert-info">
-    <strong>Note:</strong> This tutorial describes manually pushing NuGet and/or symbols packages from a VSTS build. <b>The easiest way to publish NuGet package artifacts from VSTS to MyGet</b> is to <a href="http://blog.myget.org/post/2014/05/12/Announcing-Visual-Studio-Online-integration.aspx#scenario1">enable VSTS integration and configure Visual Studio Team Services as an upstream package source</a>.
+    <strong>Note:</strong> This tutorial describes manually pushing NuGet and/or symbols packages from a VSTS build. <b>The easiest way to publish NuGet package artifacts from VSTS to MyGet</b> is to <a href="https://blog.myget.org/post/2014/05/12/Announcing-Visual-Studio-Online-integration.aspx#scenario1">enable VSTS integration and configure Visual Studio Team Services as an upstream package source</a>.
 </p>
 
 ## Prerequisites
@@ -39,5 +39,5 @@ Once configured, we can select the **NuGet Server Endpoint** we just created and
 As part of the build, VSTS will now publish NuGet and/or symbols packages to MyGet.
 
 <p class="alert alert-info">
-    <strong>Note:</strong> The blog of Ricci Gian Maria has also a great example of <a href="http://www.codewrecks.com/blog/index.php/2015/09/26/publishing-a-nuget-package-to-nugetmyget-with-vso-build-vnext/">Publishing a Nuget package to Nuget/Myget with VSTS Build vNext></a>.
+    <strong>Note:</strong> The blog of Ricci Gian Maria has also a great example of <a href="https://www.codewrecks.com/blog/index.php/2015/09/26/publishing-a-nuget-package-to-nugetmyget-with-vso-build-vnext/">Publishing a Nuget package to Nuget/Myget with VSTS Build vNext></a>.
 </p>

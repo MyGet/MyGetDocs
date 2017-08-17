@@ -10,8 +10,8 @@ Next to that, integration with several Source Control Repositories is available 
 
 * [GitHub](https://github.com/ "GitHub")
 * [BitBucket](https://bitbucket.org "BitBucket")
-* [Visual Studio Team Services](http://www.visualstudio.com)
-* [CodePlex](http://www.codeplex.com/ "CodePlex")
+* [Visual Studio Team Services](https://www.visualstudio.com)
+* [CodePlex](https://www.codeplex.com/ "CodePlex")
 
 Once downloaded, source code can then be built using a number of different methodologies.
 
@@ -315,7 +315,7 @@ Badges will be shown for pending builds (queued or building) as well as successf
 
 ![Where to get the URL](Images/build-badge.png)
 
-It can then be used in HTML, for example with a hyperlink to your feed on the [MyGet Gallery](http://www.myget.org/gallery):
+It can then be used in HTML, for example with a hyperlink to your feed on the [MyGet Gallery](https://www.myget.org/gallery):
 
 <pre><code>&lt;a href="https://www.myget.org/gallery/googleanalyticstracker"&gt;&lt;img alt="GoogleAnalyticsTracker Nightly Build Status" src="https://www.myget.org/BuildSource/Badge/googleanalyticstracker?identifier=479ff619-28f2-47c0-9574-2774ed0cd855" /&gt;&lt;/a&gt;</code></pre>
 

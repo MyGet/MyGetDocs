@@ -10,7 +10,7 @@ Using the `nuget pack` command, you can create a normal .nupkg and a .symbols.nu
 
 ## Pushing symbols packages to MyGet
 
-When working with [NuGet.org](http://www.nuget.org), the NuGet client automatically recognizes symbols packages and pushes them to the default SymbolSource feed. Since we want to ensure our packages end up on our own feed and securely host debugger symbols, we must explicitly push symbols to the MyGet symbol server.
+When working with [NuGet.org](https://www.nuget.org), the NuGet client automatically recognizes symbols packages and pushes them to the default SymbolSource feed. Since we want to ensure our packages end up on our own feed and securely host debugger symbols, we must explicitly push symbols to the MyGet symbol server.
 
 The publish workflow to publish the SamplePackage.1.0.0.nupkg to a MyGet feed, including symbols, would be issuing the following two commands from the console (replace the GUID with your MyGet API key):
 
@@ -37,7 +37,7 @@ Visual Studio typically will only debug our own source code, the source code of 
 * *Enable Just My Code* should be disabled.
 * *Enable source server support* should be enabled. This may trigger a warning message but it is safe to just click *Yes* and continue with the settings specified.
 
-Keep the Options dialog open and find the ***Debugging | Symbols*** node on the left. In the dialog shown, add the symbol server URL for your MyGet feed, for example `http://www.myget.org/F/somefeed/auth/11111111-1111-1111-1111-11111111111/symbols`.
+Keep the Options dialog open and find the ***Debugging | Symbols*** node on the left. In the dialog shown, add the symbol server URL for your MyGet feed, for example `https://www.myget.org/F/somefeed/auth/11111111-1111-1111-1111-11111111111/symbols`.
 
 ![Visual Studio symbol server settings](Images/debug-options-2015.png)
 
@@ -80,7 +80,7 @@ On the package details page on MyGet, we can verify if for a given assembly debu
 ![Does the assembly hash match](Images/assembly-pdb-match.png)
 
 <p class="alert alert-info">
-    <strong>Note:</strong> To verify this match when creating packages on our system, we can use the <a href="http://www.debuginfo.com/tools/chkmatch.html">ChkMatch</a> tool. The author of this tool also provides <a href="http://www.debuginfo.com/articles/debuginfomatch.html">a comprehensive article about matching assemblies and symbols</a>.
+    <strong>Note:</strong> To verify this match when creating packages on our system, we can use the <a href="https://www.debuginfo.com/tools/chkmatch.html">ChkMatch</a> tool. The author of this tool also provides <a href="https://www.debuginfo.com/articles/debuginfomatch.html">a comprehensive article about matching assemblies and symbols</a>.
 </p>
 
 In the Visual Studio Debugger options, you can disable the *Require source files to exactly match the original version* toggle if you are confident the `.dll` and `.pdb` can be different. We advise against this as the debugging symbols that will be loaded come from a different build than the one you are tying to debug, but it can be a last resort to get at least an idea of the source code for the assembly being debugged.
@@ -102,7 +102,7 @@ The solution here is to always push `.nupkg` as well as `.symbols.nupkg` package
 
 ### Veryifying symbols package contents
 
-There is a useful plug-in for [NuGet Package Explorer](http://npe.codeplex.com) which allows us to validate our symbols packages.
+There is a useful plug-in for [NuGet Package Explorer](https://npe.codeplex.com) which allows us to validate our symbols packages.
 
 To install the plug-in, open NuGet Package Explorer and use the ***Tools | Plugin Manager...*** menu. In the dialog that opens, click the ***Add Feed Plugin...*** button double-click the SymbolSource plug-in from the MyGet feed.
 

@@ -7,9 +7,9 @@ MyGet 2016.2 was released on August 19, 2016.
 This 2016.2 release of MyGet again adds some new functionality to the service. 
 Major highlights of this release are: 
 
-* our **[improved build log viewer](http://blog.myget.org/post/2016/08/04/Improved-build-log-viewer-with-error-navigation.aspx)** with warning and error navigation, log level coloring and deep linking support,
+* our **[improved build log viewer](https://blog.myget.org/post/2016/08/04/Improved-build-log-viewer-with-error-navigation.aspx)** with warning and error navigation, log level coloring and deep linking support,
 * a new profile section providing access to your invoices and billing settings,
-* opt-in **[support for expiring access tokens](http://blog.myget.org/post/2016/06/14/Setting-an-expiration-time-for-your-MyGet-access-tokens.aspx)** (API keys).
+* opt-in **[support for expiring access tokens](https://blog.myget.org/post/2016/06/14/Setting-an-expiration-time-for-your-MyGet-access-tokens.aspx)** (API keys).
 
 <a href="https://www.myget.org">
 	<img src="Images/host your packages on myget.gif" alt="MyGet 2016.2 Highlights" />
@@ -21,8 +21,8 @@ Major highlights of this release are:
 
 The following applies to **all** MyGet plans:
 
-* Security: **opt-in** [support for expiring access tokens](http://blog.myget.org/post/2016/06/14/Setting-an-expiration-time-for-your-MyGet-access-tokens.aspx) (API keys)
-* Package retention: [added support for new constraint on package downloads; ability to never delete packages that have at least 1 download](http://blog.myget.org/post/2016/08/22/Keeping-feeds-clean-with-retention-rules.aspx)
+* Security: **opt-in** [support for expiring access tokens](https://blog.myget.org/post/2016/06/14/Setting-an-expiration-time-for-your-MyGet-access-tokens.aspx) (API keys)
+* Package retention: [added support for new constraint on package downloads; ability to never delete packages that have at least 1 download](https://blog.myget.org/post/2016/08/22/Keeping-feeds-clean-with-retention-rules.aspx)
 * Symbols: added a new, symbols-specific push endpoint to your MyGet repositories
 * Symbols: added support for **native .dll** symbols and .NET's new symbols package format
 * Bower: now also supporting .tar.gz packages on Bower endpoints
@@ -47,11 +47,11 @@ The following applies only to the MyGet Enterprise plan:
 * User management: we introduced a new **Feed Creator** role, allowing MyGet Enterprise administrators to delegate feed creation permissions to a non-administrator account
 
 ### MyGet Build Services
-* **[Improved build log viewer](http://blog.myget.org/post/2016/08/04/Improved-build-log-viewer-with-error-navigation.aspx)** with warning and error navigation, log level coloring and deep linking support
+* **[Improved build log viewer](https://blog.myget.org/post/2016/08/04/Improved-build-log-viewer-with-error-navigation.aspx)** with warning and error navigation, log level coloring and deep linking support
 * The build log now also recognizes Kiln source control: commit SHA now also has a hyperlink to Kiln source repository
 * Made performance optimizations to the Build Sources page
 
-<a href="http://blog.myget.org/post/2016/08/04/Improved-build-log-viewer-with-error-navigation.aspx">
+<a href="https://blog.myget.org/post/2016/08/04/Improved-build-log-viewer-with-error-navigation.aspx">
 	<img src="Images/MyGet-2.2-logviewer.png" alt="MyGet 2016.2 Highlights" />
 </a>
 
@@ -68,6 +68,6 @@ The following applies only to the MyGet Enterprise plan:
 * Fixed an issue causing pushing to upstream package source to fail downloading the package from source feed on MyGet Enterprise with custom domain
 * Support Github-style code blocks in markdown
 
-We love hearing from you, so keep that [feedback](http://myget.uservoice.com/) coming! MyGet is built for you!
+We love hearing from you, so keep that [feedback](https://myget.uservoice.com/) coming! MyGet is built for you!
 
 _Happy packaging!_

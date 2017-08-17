@@ -39,7 +39,7 @@ MyGet will make every HTTP request with the following headers:
 Let's go over some example payloads.
 
 <p class="alert alert-success">
-	<strong>Tip:</strong> Webhooks can be tested and debugged using a variety of tools. John Sheehan has an extensive list of them available <a href="http://john-sheehan.com/blog/ultimate-api-webhook-backend-service-debugging-testing-monitoring-and-discovery-tools-list">on his blog</a>.
+	<strong>Tip:</strong> Webhooks can be tested and debugged using a variety of tools. John Sheehan has an extensive list of them available <a href="https://john-sheehan.com/blog/ultimate-api-webhook-backend-service-debugging-testing-monitoring-and-discovery-tools-list">on his blog</a>.
 </p>
 
 ### Ping
@@ -77,9 +77,9 @@ It's important to know the ```PackageVersion``` property may not contain a valid
 	      "Size":6158,
 	      "Authors":"Maarten Balliauw",
 	      "Description":"GoogleAnalyticsTracker was created to have a means of tracking specific URL's directly from C#. For example, it enables you to log API calls to Google Analytics.",
-	      "LicenseUrl":"http://github.com/maartenba/GoogleAnalyticsTracker/blob/master/LICENSE.md",
+	      "LicenseUrl":"https://github.com/maartenba/GoogleAnalyticsTracker/blob/master/LICENSE.md",
 	      "LicenseNames":"MS-PL",
-	      "ProjectUrl":"http://github.com/maartenba/GoogleAnalyticsTracker",
+	      "ProjectUrl":"https://github.com/maartenba/GoogleAnalyticsTracker",
 	      "Tags":"google analytics ga wp8 wp7 windows phone windowsphone api rest client tracker stats statistics mango",
 	      "MinClientVersion":null,
 	      "ReleaseNotes":null,
@@ -171,9 +171,9 @@ Here's an example of a *package pushed* payload. It includes package metadata.
 	      "Size":5542,
 	      "Authors":"Maarten Balliauw",
 	      "Description":"GoogleAnalyticsTracker was created to have a means of tracking specific URL's directly from C#. For example, it enables you to log API calls to Google Analytics.",
-	      "LicenseUrl":"http://github.com/maartenba/GoogleAnalyticsTracker/blob/master/LICENSE.md",
+	      "LicenseUrl":"https://github.com/maartenba/GoogleAnalyticsTracker/blob/master/LICENSE.md",
 	      "LicenseNames":"MS-PL",
-	      "ProjectUrl":"http://github.com/maartenba/GoogleAnalyticsTracker",
+	      "ProjectUrl":"https://github.com/maartenba/GoogleAnalyticsTracker",
 	      "Tags":"google analytics ga mvc api rest client tracker stats statistics",
 	      "MinClientVersion":null,
 	      "ReleaseNotes":null,
@@ -328,7 +328,7 @@ Before using this webhook, the following steps must be followed:
 
 The following configuration options must be provided:
 
-* **OAuth consumer key** - the OAuth consumer key (API key) obtained from [dev.twitter.com](http://dev.twitter.com)
-* **OAuth consumer secret** - the OAuth consumer secret (API secret) obtained from [dev.twitter.com](http://dev.twitter.com)
-* **OAuth token** - the OAuth token obtained from [dev.twitter.com](http://dev.twitter.com)
-* **OAuth token secret** - the OAuth token secret obtained from [dev.twitter.com](http://dev.twitter.com)
+* **OAuth consumer key** - the OAuth consumer key (API key) obtained from [dev.twitter.com](https://dev.twitter.com)
+* **OAuth consumer secret** - the OAuth consumer secret (API secret) obtained from [dev.twitter.com](https://dev.twitter.com)
+* **OAuth token** - the OAuth token obtained from [dev.twitter.com](https://dev.twitter.com)
+* **OAuth token secret** - the OAuth token secret obtained from [dev.twitter.com](https://dev.twitter.com)

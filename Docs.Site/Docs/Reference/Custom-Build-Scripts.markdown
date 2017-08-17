@@ -66,7 +66,7 @@ build.bat:
 The following build.bat executes several steps:
 
 * Compile the solution using msbuild
-* Run unit tests using default MyGet test runner ([Gallio Echo](http://www.gallio.org))
+* Run unit tests using default MyGet test runner ([Gallio Echo](https://www.gallio.org))
 * Create a single NuGet package containing all referenced projects, also creating symbols packages. Package version will come from %PackageVersion% environment variable, if set.
 
 This build.bat also verifies error level after every step and reports build success/failure back to MyGet.
@@ -254,8 +254,8 @@ NuSpec file:
 		<title>AsposeCloud.SDK for .NET</title>
 		<authors>Aspose</authors>
 		<owners>Aspose</owners>
-	  <licenseUrl>http://www.aspose.com/corporate/purchase/end-user-license-agreement.aspx</licenseUrl>
-		<projectUrl>http://www.aspose.com/cloud/total-api.aspx</projectUrl>
+	  <licenseUrl>https://www.aspose.com/corporate/purchase/end-user-license-agreement.aspx</licenseUrl>
+		<projectUrl>https://www.aspose.com/cloud/total-api.aspx</projectUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description>Aspose for Cloud is a cloud-based document generation, conversion and automation platform for developers. 
 		Aspose for Cloud’s REST APIs gives developers on all platforms total control over documents and file formats. 
@@ -372,7 +372,7 @@ build.ps1:
 
 		Write-Diagnostic "Creating nuget package for platform $platform"
 
-		# http://docs.nuget.org/docs/reference/command-line-reference#Pack_Command
+		# https://docs.nuget.org/docs/reference/command-line-reference#Pack_Command
 		. $nugetExe pack $nuspecFilename -OutputDirectory $outputFolder -Symbols -NonInteractive `
 			-Properties "Configuration=$config;Bin=$outputFolder;Platform=$platform" -Version $version
 
@@ -541,7 +541,7 @@ build.ps1:
 
 ## PowerShell Build.ps1 example creating Chocolatey packages
 
-The following is a Powershell script that, instead of creating NuGet packages, creates [Chocolatey](http://www.chocolatey.org) packages.
+The following is a Powershell script that, instead of creating NuGet packages, creates [Chocolatey](https://www.chocolatey.org) packages.
 
 build.ps1:
 

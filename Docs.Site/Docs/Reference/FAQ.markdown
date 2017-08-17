@@ -14,7 +14,7 @@ For backwards compatibility with older NuGet clients and Orchard, we also still 
 
 ## How do I get my package in the feed?
 
-See the [Creating and publishing a package](http://docs.nuget.org/docs/creating-packages/creating-and-publishing-a-package) page on the NuGet Documentation for details on how to create NuGet packages.
+See the [Creating and publishing a package](https://docs.nuget.org/docs/creating-packages/creating-and-publishing-a-package) page on the NuGet Documentation for details on how to create NuGet packages.
 
 In order to publish them onto your MyGet feeds, you'll need to create a MyGet account first.
 
@@ -39,17 +39,17 @@ If the owner of a private feed downgrades a paid subscription to a free one or i
     <strong>Note:</strong> Locked feeds will not be made public, nor will they be automatically deleted.
 </div>
 
-[Upgrading to a paid subscription](http://www.myget.org/plans) will automatically unlock the private feed. Another option is to make the feed public and restore access. Note that making the feed public will make it accessible to everyone.
+[Upgrading to a paid subscription](https://www.myget.org/plans) will automatically unlock the private feed. Another option is to make the feed public and restore access. Note that making the feed public will make it accessible to everyone.
 
 ## I get a 409 Conflict when pushing packages to my MyGet feed
 
 The *409 Conflict* status code can be returned because of several reasons:
 
-* The package size is too large for the current [subscription](http://www.myget.org/plans). E.g. the Free plan only supports packages <= 100 MB. Check the package size and your subscription plan quota. When the feed owner created a private feed and you are on a plan that has lesser quota, MyGet will apply your subscription quota. For example, when you are on the Free plan and are pushing packages to a private feed created by someone on a Starter plan, packages can still only be <= 100 MB.
-* The feed is over quota for the current [subscription](http://www.myget.org/plans). Check the feed quota and your subscription plan quota.
+* The package size is too large for the current [subscription](https://www.myget.org/plans). E.g. the Free plan only supports packages <= 100 MB. Check the package size and your subscription plan quota. When the feed owner created a private feed and you are on a plan that has lesser quota, MyGet will apply your subscription quota. For example, when you are on the Free plan and are pushing packages to a private feed created by someone on a Starter plan, packages can still only be <= 100 MB.
+* The feed is over quota for the current [subscription](https://www.myget.org/plans). Check the feed quota and your subscription plan quota.
 * You enabled any of the following package settings for your feed. Verify the package settings for the feed you are pushing to.
   * **Forbid overwriting of existing packages?** - this will forbid overwriting packages that already exist on your feed (same package id and version)
-  * **Forbid packages which are non-compliant with Semantic Version?** - this will forbid uploading packages that are not compliant with [Semantic Versioning](http://www.semver.org). E.g. a package version like 2.0.234.255 will not be supported.
+  * **Forbid packages which are non-compliant with Semantic Version?** - this will forbid uploading packages that are not compliant with [Semantic Versioning](https://www.semver.org). E.g. a package version like 2.0.234.255 will not be supported.
 
 MyGet will return a detailed error when pushing packages with a full description of the issue. If your NuGet client is not showing this error, use the *-verbosity Detailed* switch.
 
@@ -74,7 +74,7 @@ This is especially true for Mono on Windows, but there are some known issues for
 
 ## Where is my data stored?
 
-MyGet runs its operations from the [Microsoft Azure](http://www.azure.com) in the West Europe region, near Amsterdam, the Netherlands. All free and paid plans are hosted in this location, with backups in the North Europe region, near Dublin, Ireland.
+MyGet runs its operations from the [Microsoft Azure](https://www.azure.com) in the West Europe region, near Amsterdam, the Netherlands. All free and paid plans are hosted in this location, with backups in the North Europe region, near Dublin, Ireland.
 
 Enterprise plan customers have a choice in where data is stored between the US East region, or our primary West Europe region.
 
@@ -88,4 +88,4 @@ If you really feel strong about it, you can create a new account using the desir
 
 **Before doing so**, please note you should verify your new account has the proper subscription level to support the private feeds and quota of your current account.
 
-More information about adding a feed owner can be found in this MyGet Documentation article: http://docs.myget.org/docs/reference/security#Adding_a_new_feed_owner
+More information about adding a feed owner can be found in this MyGet Documentation article: https://docs.myget.org/docs/reference/security#Adding_a_new_feed_owner

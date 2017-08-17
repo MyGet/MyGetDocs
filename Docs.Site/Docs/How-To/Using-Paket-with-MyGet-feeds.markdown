@@ -1,6 +1,6 @@
 # Using Paket with MyGet feeds
 
-<img src="Images/paket.png" align="right"/> Just like NuGet, [Paket](http://fsprojects.github.io/Paket/) is a dependency manager for .NET and Mono projects. It is designed to work with NuGet packages but also enables referencing files directly from GitHub repositories and GitHub Gists.
+<img src="Images/paket.png" align="right"/> Just like NuGet, [Paket](https://fsprojects.github.io/Paket/) is a dependency manager for .NET and Mono projects. It is designed to work with NuGet packages but also enables referencing files directly from GitHub repositories and GitHub Gists.
 
 Let's see how you can use Paket with a MyGet feed.
 
@@ -18,7 +18,7 @@ This will download the Paket executable to the packages folder of your project.
 
 ## Converting from NuGet to Paket
 
-Since Paket uses its own mechanism for specifying dependencies, you may want to convert existing projects to make use of it. We can [convert from NuGet to Paket manually or automated](http://fsprojects.github.io/Paket/paket-convert-from-nuget.html), using the approach outlined [in the Paket documentation](http://fsprojects.github.io/Paket/paket-convert-from-nuget.html).
+Since Paket uses its own mechanism for specifying dependencies, you may want to convert existing projects to make use of it. We can [convert from NuGet to Paket manually or automated](https://fsprojects.github.io/Paket/paket-convert-from-nuget.html), using the approach outlined [in the Paket documentation](https://fsprojects.github.io/Paket/paket-convert-from-nuget.html).
 
 As an example, let's automatically convert from using NuGet to using Paket by running `paket convert-from-nuget`:
 
@@ -57,7 +57,7 @@ This does, however, require checking in credentials into source control. Alterna
 
 	source https://www.myget.org/F/paket-demo/api/v2 username: "%MY_USERNAME%" password: "%MY_PASSWORD%"
 
-Using this technique is interesting as it makes it possible to securely provide credentials in an environment variable on build servers like [TeamCity](http://www.jetbrains.com) with its [build parameters](https://confluence.jetbrains.com/display/TCD8/Defining+and+Using+Build+Parameters+in+Build+Configuration) or MyGet's own [build services and support for environment variables](/docs/reference/build-services#User-defined_environment_variables).
+Using this technique is interesting as it makes it possible to securely provide credentials in an environment variable on build servers like [TeamCity](https://www.jetbrains.com) with its [build parameters](https://confluence.jetbrains.com/display/TCD8/Defining+and+Using+Build+Parameters+in+Build+Configuration) or MyGet's own [build services and support for environment variables](/docs/reference/build-services#User-defined_environment_variables).
 
 <p class="alert alert-info">
     <strong>Note:</strong> It is also possible to make use of a <a href="/docs/reference/feed-endpoints#Private_feed_endpoints_and_authentication">pre-authenticated feed URL</a>. Do keep in mind that such URLs contain a MyGet API key and should be treated as confidential.<br/><br/>

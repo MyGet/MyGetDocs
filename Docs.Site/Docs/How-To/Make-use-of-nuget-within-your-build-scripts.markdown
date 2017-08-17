@@ -6,7 +6,7 @@ Depending on what exactly you are building, you may require the use of the nuget
 
 >NuGet is the package manager for the Microsoft development platform including .NET. The NuGet client tools provide the ability to produce and consume packages. The NuGet Gallery (nuget.org) is the central package repository used by all package authors and consumers.
 
-For more information be sure to check out the [nuget home page](http://nuget.org/ "nuget home page").
+For more information be sure to check out the [nuget home page](https://nuget.org/ "nuget home page").
 
 ## Use local nuget executable
 
@@ -45,4 +45,4 @@ Once in place, you can then call the nuget executable directly by first locating
 Alternative ways to include a specific version of nuget.exe into your source code repository are:
 
 * use the .nuget\nuget.exe version you use for package restore
-* install a specific version of the [NuGet.CommandLine package](http://nuget.org/packages/NuGet.CommandLine/) on the solution level and use the nuget.exe from the Packages\NuGet.CommandLine.{version} folder
+* install a specific version of the [NuGet.CommandLine package](https://nuget.org/packages/NuGet.CommandLine/) on the solution level and use the nuget.exe from the Packages\NuGet.CommandLine.{version} folder

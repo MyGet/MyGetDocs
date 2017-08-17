@@ -15,7 +15,7 @@ While the answer to this question depends on the client being used (WebMatrix do
 	* *%ProgramData%\NuGet\Config\*.config*
 * The machine-wide config file located under *%ProgramData%\NuGet\NuGetDefaults.config* (this is a good one to put default configuration options in by using an Active Directory Group Policy)
 
-Full details can be found in the [NuGet docs](http://docs.nuget.org/docs/reference/nuget-config-file).
+Full details can be found in the [NuGet docs](https://docs.nuget.org/docs/reference/nuget-config-file).
 
 The interesting observation here is that all clients start with a *NuGet.config* in the current directory and then walk up to the drive root, and only then are the standard files checked.This means every parent folder of a project or solution can contain additional configuration details that will be applied (note: items the file that is checked first wins).
 
@@ -57,7 +57,7 @@ Want to block access to NuGet.org and only use the private feed? Here is how:
 
 ## Example 2: help, developers are pushing our internal framework to NuGet.org!
 
-When pushing packages to a private feed, it may happen that a developer forgets to use the *-Source* parameter to *NuGet.exe*, causing an accidental push to the default package source which is [NuGet.org](http://www.nuget.org). Place the following *NuGet.config* next to the .sln file and you should be good:
+When pushing packages to a private feed, it may happen that a developer forgets to use the *-Source* parameter to *NuGet.exe*, causing an accidental push to the default package source which is [NuGet.org](https://www.nuget.org). Place the following *NuGet.config* next to the .sln file and you should be good:
 
 	<?xml version="1.0" encoding="utf-8"?>
 	<configuration>

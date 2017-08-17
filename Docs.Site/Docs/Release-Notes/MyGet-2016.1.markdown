@@ -26,16 +26,16 @@ The following applies to **all** MyGet plans:
 * **[MyGet Symbols Services](../reference/symbols)!**
 * **[Support for building and hosting VisualStudio Extensions (VSIX Support)](../walkthrough/getting-started-with-vsix)**
 * NuGet: support for v3 feeds
-* NuGet: [modify NuGet package description and release notes before pushing upstream](http://blog.myget.org/post/2015/01/13/modify-nuget-package-description-and-release-notes-before-pushing-upstream.aspx)
-* NuGet: [improved support for localized satellite packages](http://blog.myget.org/post/2016/01/14/improved-support-for-localized-satellite-nuget-packages.aspx)
+* NuGet: [modify NuGet package description and release notes before pushing upstream](https://blog.myget.org/post/2015/01/13/modify-nuget-package-description-and-release-notes-before-pushing-upstream.aspx)
+* NuGet: [improved support for localized satellite packages](https://blog.myget.org/post/2016/01/14/improved-support-for-localized-satellite-nuget-packages.aspx)
 * Bower: support for Bower binary packages
 * npm: support for NPM scopes
 * MyGet Gallery: we now show the total download count for each feed in the gallery (as well as on your MyGet feed details page)
-* Package Sources: **[support for Dropbox](http://blog.myget.org/post/2016/02/11/Dropbox-as-a-package-source-for-NuGet-npm-Bower-and-VSIX-packages.aspx)**!
-* Package Sources: [quick-access to your other MyGet feeds using feed presets](http://blog.myget.org/post/2015/12/12/adding-another-myget-feed-as-a-package-source-feed-presets.aspx)
+* Package Sources: **[support for Dropbox](https://blog.myget.org/post/2016/02/11/Dropbox-as-a-package-source-for-NuGet-npm-Bower-and-VSIX-packages.aspx)**!
+* Package Sources: [quick-access to your other MyGet feeds using feed presets](https://blog.myget.org/post/2015/12/12/adding-another-myget-feed-as-a-package-source-feed-presets.aspx)
 * Package Sources: support for BitBucket API v2.0 and switch to OAuth 2.0
 * Support multiple simultaneous package uploads through the web site
-* Feed details page now also [displays the readme from its GitHub repository](http://blog.myget.org/post/2015/10/21/Package-details-showing-GitHub-project-README.aspx) (provided the repository is public)
+* Feed details page now also [displays the readme from its GitHub repository](https://blog.myget.org/post/2015/10/21/Package-details-showing-GitHub-project-README.aspx) (provided the repository is public)
 * We will now notify feed owners when they are about to reach their subscription quota, so you can anticipate and act before hitting your limits
 
 ## MyGet (paid plans)
@@ -71,6 +71,6 @@ The following applies only to the MyGet Enterprise plan:
 * Fixed a bug where in some cases pushing an npm package upstream to npmjs.com failed
 * Fixed a bug where editing a package source was not possible when the package source is unavailable
 
-We love hearing from you, so keep that [feedback](http://myget.uservoice.com/) coming! MyGet is built for you!
+We love hearing from you, so keep that [feedback](https://myget.uservoice.com/) coming! MyGet is built for you!
 
 _Happy packaging!_

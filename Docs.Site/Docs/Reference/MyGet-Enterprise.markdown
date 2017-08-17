@@ -1,6 +1,6 @@
 # MyGet Enterprise
 
-[MyGet Enterprise](http://www.myget.org/enterprise) contains everything MyGet has to offer, hosted on a dedicated URL for your team. It comes with an additional management dashboard that can be used to manage everything related to the team such as feeds, users, quota, account policies and so forth.
+[MyGet Enterprise](https://www.myget.org/enterprise) contains everything MyGet has to offer, hosted on a dedicated URL for your team. It comes with an additional management dashboard that can be used to manage everything related to the team such as feeds, users, quota, account policies and so forth.
 
 This page describes the available management options that are available to administrators of the Enterprise account.
 

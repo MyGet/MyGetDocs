@@ -95,7 +95,7 @@ If you plan on publishing packages using the `gradle publish` command, make sure
 	      licenses {
 	        license {
 	          name 'The Apache Software License, Version 2.0'
-	          url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+	          url 'https://www.apache.org/licenses/LICENSE-2.0.txt'
 		      distribution 'repo'
 	        }
 	      }
@@ -123,6 +123,6 @@ If you plan on publishing packages using the `gradle publish` command, make sure
 
 	![Inspect package licenses](Images/maven-licenses.png)
 
-[1]: http://www.myget.org
-[2]: http://docs.myget.org/docs/reference/feed-security
-[3]: http://docs.myget.org/docs/reference/license-analysis
+[1]: https://www.myget.org
+[2]: https://docs.myget.org/docs/reference/feed-security
+[3]: https://docs.myget.org/docs/reference/license-analysis

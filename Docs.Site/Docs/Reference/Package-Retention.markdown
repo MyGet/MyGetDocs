@@ -3,7 +3,7 @@
 As you produce more and more packages, it may become harder to manage all of those assets.
 **By default, we keep all package versions available on your feed.**
 Over time though, you may find your feeds to become larger and larger, perhaps even growing beyond the *storage quota* included in your MyGet subscription plan.
-That's why we introduced *package retention* functionality early on ([December, 2012](http://blog.myget.org/post/2012/12/18/Package-retention-policies.aspx)).
+That's why we introduced *package retention* functionality early on ([December, 2012](https://blog.myget.org/post/2012/12/18/Package-retention-policies.aspx)).
 
 ## "Sticky" packages
 

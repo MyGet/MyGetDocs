@@ -23,7 +23,7 @@ The following applies to **all** MyGet plans:
 * Integrated FastSpring as payment provider with support for subscription auto-renewal
 * NuGet: (IE-only) new link on package details page to open NuGet packages directly in NuGet Package Explorer
 * NuGet: support for v2 Target Framework filtering
-* NuGet: [modify NuGet package description and release notes before pushing upstream](http://blog.myget.org/post/2015/01/13/modify-nuget-package-description-and-release-notes-before-pushing-upstream.aspx)
+* NuGet: [modify NuGet package description and release notes before pushing upstream](https://blog.myget.org/post/2015/01/13/modify-nuget-package-description-and-release-notes-before-pushing-upstream.aspx)
 
 ## MyGet (paid plans)
 
@@ -53,7 +53,7 @@ The following applies only to the MyGet Enterprise plan:
 * Upstream package source proxying enhancements
 * No longer prompt the user that a package update is available upstream if the package source is set to auto-update
 
-Keep that [feedback](http://myget.uservoice.com/) coming! MyGet is built for you!
+Keep that [feedback](https://myget.uservoice.com/) coming! MyGet is built for you!
 
 _Happy packaging!_
 

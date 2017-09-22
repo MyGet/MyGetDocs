@@ -90,6 +90,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.1\lib\net45\System.Web.Helpers.dll</HintPath>
     </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Microsoft.AspNet.Razor.3.1.1\lib\net45\System.Web.Razor.dll</HintPath>
@@ -178,9 +181,6 @@
     <Content Include="Docs\How-To\Images\2fa-credentials.png" />
     <Content Include="Docs\How-To\Images\build-services-owasp.png" />
     <Content Include="Docs\How-To\Images\paket.png" />
-    <Content Include="Docs\How-To\Images\vsts-add-generic-endpoint.png" />
-    <Content Include="Docs\How-To\Images\vsts-add-nuget-publisher.png" />
-    <Content Include="Docs\How-To\Images\vsts-configure-endpoint.png" />
     <Content Include="Docs\Reference\Images\acmefeed-one-package.png" />
     <Content Include="Docs\Reference\Images\acmefeed-two-packages.png" />
     <Content Include="Docs\Reference\Images\acmefeed-upstream-search.png" />
@@ -221,6 +221,13 @@
     <Content Include="Docs\Reference\Images\setting-package-source-mirroring.png" />
     <Content Include="Docs\Reference\Images\setting-package-source-proxying.png" />
     <Content Include="Docs\Reference\Images\symbols-options-build.png" />
+    <Content Include="Docs\Reference\Images\VSTS\Add-new-NuGet-Connection.png" />
+    <Content Include="Docs\Reference\Images\VSTS\Add-new-service-endpoint-NuGet.png" />
+    <Content Include="Docs\Reference\Images\Security\Create-readonly-MyGet-access-token.png" />
+    <Content Include="Docs\Reference\Images\VSTS\Add-NuGet-Build-Task.png" />
+    <Content Include="Docs\Reference\Images\VSTS\Navigate-to-Manage-Services.png" />
+    <Content Include="Docs\Reference\Images\VSTS\Publish-to-MyGet.png" />
+    <Content Include="Docs\Reference\Images\VSTS\Restore-from-MyGet.png" />
     <Content Include="Docs\Reference\Images\vulnerability-report.png" />
     <Content Include="Docs\Reference\Images\vulnerability.png" />
     <Content Include="Docs\Release-Notes\Images\host your packages on myget.gif" />
@@ -322,7 +329,7 @@
     <Content Include="Docs\How-To\NuGet-Configuration-Inheritance.markdown" />
     <Content Include="Docs\How-To\Checking-NuGet-package-vulnerabilities-with-OWASP-SafeNuGet.markdown" />
     <Content Include="Docs\Reference\MyGet-Enterprise.markdown" />
-    <Content Include="Docs\Reference\VSO-Integration.markdown" />
+    <Content Include="Docs\Reference\VSTS-Integration.markdown" />
     <Content Include="Docs\Reference\License-Analysis.markdown" />
     <Content Include="Docs\Reference\Packaging-FSharp.markdown" />
     <Content Include="Docs\How-To\MyGet-and-GitHub-Two-Factor-Authentication.markdown" />
@@ -344,7 +351,6 @@
     <Content Include="Docs\Reference\Package-Retention.markdown" />
     <Content Include="Docs\Reference\Azure-AD-Integration.markdown" />
     <Content Include="Docs\Release-Notes\MyGet-2016.1.markdown" />
-    <Content Include="Docs\How-To\Publish-to-MyGet-from-a-VSTS-build.markdown" />
     <Content Include="Docs\Release-Notes\MyGet-2016.2.markdown" />
     <Content Include="Docs\Reference\Vulnerability-Report.markdown" />
     <Content Include="Docs\Reference\Credential-Provider-for-Visual-Studio.markdown" />
@@ -353,6 +359,7 @@
     <Content Include="Docs\Walkthrough\Getting-Started-with-PHP-Composer.markdown" />
     <Content Include="Docs\Reference\Build-Services-for-PHP-composer.markdown" />
     <Content Include="Docs\Release-Notes\MyGet-2017.1.markdown" />
+    <Content Include="Docs\Reference\VSO-Integration.cshtml" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="googlef9ed0438b7b80b43.html" />
     <Content Include="Scripts\jquery-1.9.1.js" />

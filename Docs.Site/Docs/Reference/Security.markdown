@@ -16,17 +16,29 @@ If you are a MyGet Enterprise user, a fourth feed type is available:
 
 ## Personal security: access tokens
 
-There are several credentials linked to your MyGet profile. Every user gets at least one the primary API key, which can be used when publishing packages with NuGet.exe,  NuGet Package Explorer, npm, Bower and so on. There's also a username and password for consuming private feeds from Visual Studio or a build server.
+There are several credentials linked to your MyGet profile. 
+Every user gets at least one the primary API key, which can be used when publishing packages with NuGet.exe, NuGet Package Explorer, npm, Bower and so on. 
+There's also a username and password for consuming private feeds from Visual Studio or a build server.
 
-Additional access tokens can be generated [from your profile page](https://www.myget.org/profile/Me#!/AccessTokens). The primary API key can be regenerated and new tokens can be easily created or revoked.
+Additional access tokens can be generated [from your profile page](https://www.myget.org/profile/Me#!/AccessTokens). 
+The primary API key can be regenerated and new tokens can be easily created or revoked.
 
 * Access tokens can be given a short description: this will help keeping track of where you used the access token and revoke it if necessary.
 * Access tokens can be scoped to allow access only to a specific feed - limiting the surcace area to which a given access token can push packages.
 * Access tokens can be given an optional expiration date, after which the token will no longer be valid.
 
-Access tokens can be used for all authentication purposes, except logging into the MyGet.org website. They can be used when pushing to your MyGet feed or as an alternate password when authenticating against a private feed.
+Access tokens can be used for all authentication purposes, except logging into the MyGet.org website. 
+They can be used when pushing to your MyGet feed or as an alternate password when authenticating against a private feed.
 
 ![Managing access tokens](Images/access_token_management.png)
+
+When configuring a continuous integration system to restore NuGet packages, we recommend creating separate access tokens for different build steps, based on their requirements.
+
+For instance, you can create an access token that has readonly access to all feeds accessible to your MyGet account, but disable write access.
+Then you can create another access token with write access to a specific feed only, and configure that one in the relevant project build configuration.
+This avoids CI builds to accidentally publish to other feeds. Of course you can restrict read access to a particular set of feeds too.
+
+![Create a readonly access token](Images/Security/Create-readonly-MyGet-access-token.png)
 
 ## Inviting other users to your feed
 

@@ -197,15 +197,18 @@ The following simplified diagram provides a schematic overview of this new integ
 To make use of this integration, you need to add a new package source to your MyGet feed:
 
 1.	Go to feed settings and select the **Upstream Sources** tab. Select **Visual Studio Team Services build definition** from the **Add package source** button.
+
 	![Step 1](Images/vso-package-source-step1.png)
 
 2.	Provide your Visual Studio Team Services **account name** in the dialog that appears and click **Continue**.
+
 	![Step 2](Images/vso-package-source-step2.png)
 
 3.	Select the **Team Project** and **Build Definition** to add as the package source for your feed. Click the **Add** button to complete the configuration of the new package source.
 	![Step 3](Images/vso-package-source-step3.png)
 
 4.	The new VSTS package source has been added to your feed’s package sources, and newly built NuGet packages will be fetched from your Build Definition’s drop location automatically and pushed to the MyGet feed.
+
 	![Step 4](Images/vso-package-source-step4.png)
 
 <hr/>
@@ -227,18 +230,23 @@ The following simplified diagram provides a schematic overview of this new integ
 Follow these steps to enable this scenario:
 
 1.	Go to your MyGet feed settings and select the **Build Services** tab. Select **from Visual Studio Team Services (git only)** from the **Add build source…** button.
+
 	![Step 1](Images\vso-build-source-step1.png)
 
 2.	Provide your Visual Studio Team Services **account name** in the dialog that appears and click **Continue**.
+
 	![Step 2](Images\vso-build-source-step2.png)
 
 3.	Select the desired build source to **link**. Click the **Add** button to complete the configuration of the new Build Source.
+
 	![Step 3](Images\vso-build-source-step3.png)
 
 4.	The new VSTS build source has been added to your feed’s build sources, and a service hook has been registered within VSTS. When pushing to your VSTS Git repository, a new MyGet build is going to be triggered and will produce your NuGet packages and push them to your feed.
+
 	![Step 4.1](Images\vso-build-source-step4-1.png)
 
 	If you look at your Visual Studio Team Services Administration dashboard and browse your Team Project’s Service Hooks, you’ll see a newly registered web hook listening for the Code is pushed event.
+	
 	![Step 4.2](Images\vso-build-source-step4-2.png)
 
 <hr/>

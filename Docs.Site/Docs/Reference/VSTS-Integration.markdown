@@ -74,7 +74,7 @@ If we run the command successfully, the resulting `NuGet.config` file will look 
 #### Pushing NuGet packages to MyGet using nuget.exe CLI
 
 To push NuGet packages to MyGet, you'll need an API key (also referred to as *access token*).
-For push, we recommend [creating a write-only access token](http://localhost:16781/docs/reference/security#Personal_security_access_tokens), scoped to the particul feed you want to push.
+For push, we recommend [creating a write-only access token](https://docs.myget.org/docs/reference/security#Personal_security_access_tokens), scoped to the particul feed you want to push.
 
 The command to push packages to your MyGet feed:
 
@@ -114,7 +114,7 @@ To register our MyGet feed as a new Service Endpoint in VSTS, we need to follow 
 
    Instead, you can use a scoped MyGet access token to be used in the *Password* field.
 
-   For NuGet restore, we recommend [creating a readonly access token](http://localhost:16781/docs/reference/security#Personal_security_access_tokens).
+   For NuGet restore, we recommend [creating a readonly access token](https://docs.myget.org/docs/reference/security#Personal_security_access_tokens).
    You can keep the scope global to allow package restores from any feed your MyGet account has access to, or you can reduce it to a particular set of feeds, or just one.
    
    ![Add new NuGet Connection](Images/VSTS/Add-new-NuGet-Connection.png)

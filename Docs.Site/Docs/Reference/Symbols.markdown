@@ -61,7 +61,7 @@ Here's a quick cheatsheet of the commands related to symbol feeds:
 
 * Pushing a symbols package to MyGet:
 
-	```nuget.exe push <package-file> <myget-key> -Source https://www.myget.org/F/<feed-name>/api/v2/package```
+	```nuget.exe push <package-file> <myget-key> -Source https://www.myget.org/F/<feed-name>/symbols/api/v2/package```
 
 ## Troubleshooting
 

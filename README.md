@@ -15,38 +15,3 @@ We have a special label "[Jump In](https://github.com/myget/MyGetDocs/issues?lab
 If you feel something's missing or want to suggest a new item, just create a new one and it will pop-up on our radar.
 
 Also, if you just want to share the world how you used MyGet, we welcome you to do so!
-
-### What's in it for you?
-For each accepted Pull Request that closes an issue, you can claim a **free one month extension of your current plan**. 
-
-If you're on the free plan you can claim a **voucher for a free month on the Starter plan**.
-
-### What's in it for us?
-You make us very happy by contributing your insights and sharing your experience with others. 
-Good documentation is a critical tool to reduce support and help people to get the most out of the product.
-In name of the MyGet team and our users: thank you!
-
-## Contributors Hall of Fame
-Open source contributions - and especially documentation contributions - deserve a special mention: all credits to you! To show you our gratitude, here's our *Contributors Hall of Fame*:
-
-<table style="width:100%; vertical-align:top;">
-	<tr>
-		<th style="font-weight:bold;">Contributor</th>
-		<th style="font-weight:bold;">Earned Vouchers</th>
-		<th style="font-weight:bold;">Contributions</th>
-	</tr>
-	<tr>
-		<td>@gep13</td>
-		<td>5</td>
-		<td>
-			<ul>
-				<li>Issue #1: How to: use %nuget% in build scripts</li>
-				<li>Issue #10: How to: Use psake in your build scripts</li>
-				<li>Issue #13: How to: auto-trigger MyGet build services using POST hook URL</li>
-				<li>Issue #20: Build Services Reference page</li>
-				<li>Issue #21: How to: add a feed owner</li>
-				<li>Issue #39: Corrected command for updateassemblyinfo</li>
-			</ul>
-		</td>
-	</tr>
-</table>

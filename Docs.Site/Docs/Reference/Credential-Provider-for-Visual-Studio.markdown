@@ -1,4 +1,4 @@
-﻿# MyGet Credential Provider for Visual Studio 2017
+# MyGet Credential Provider for Visual Studio 2017
 
 The MyGet Credential Provider for Visual Studio provides an easy way to connect to secured NuGet package sources hosted on MyGet.
 
@@ -19,12 +19,6 @@ The MyGet Credential Provider for Visual Studio can be installed from within Vis
 Alternatively, you can [download the VSIX from the Visual Studio Gallery](https://marketplace.visualstudio.com/vsgallery/79609fc1-58d5-4a31-a171-124b952ca9e0).
 
 <img src="Images/install-VSIX.png" alt="installation" />
-
-<div class="alert alert-block">
-  <strong>Note:</strong> The credential provider for Visual Studio 2017 is prerelease and is provided as-is. Please reach out to us if you are having issues with it.
-</div>
-
-Note that the credential provider is under development.
 
 ## Screenshot
 

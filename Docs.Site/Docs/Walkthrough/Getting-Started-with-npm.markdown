@@ -6,7 +6,7 @@ Setting up your own npm registry has never been easier. MyGet allows you to crea
 
 1. **Browse to [MyGet.org][1] and log in** using your preferred identity provider.
 
-	![Use an existing identity or create a MyGet account from scratch.](Images/authenticate.png)
+	![Use an existing identity or create a MyGet account from scratch.](/docs/walkthrough/Images/authenticate.png)
 
 2. **Complete your new MyGet profile** by providing a username and password. These are your *MyGet credentials*, which you'll need to authenticate against private feeds on MyGet.org. From now on, you can also use these to log in on the MyGet.org web site.
 
@@ -22,7 +22,7 @@ Setting up your own npm registry has never been easier. MyGet allows you to crea
 
 1. **Register the feed** with the npm command line. This can be done by using the `--registry` switch on every npm command, or by editing the `.npmrc`. The full feed URL can be found on the *feed details* page.
 
-	![NPM feed URL on MyGet](Images/npm-feed-details.png)
+	![NPM feed URL on MyGet](/docs/walkthrough/Images/npm-feed-details.png)
 
 	If you plan on using your MyGet npm feed all the time, we recommend running the following command:
 
@@ -37,19 +37,19 @@ Setting up your own npm registry has never been easier. MyGet allows you to crea
 
 	On each feed, packages can be added through the web UI.
 
-	![Add package from NPM registry](Images/add-npm-fromfeed.png)
+	![Add package from NPM registry](/docs/walkthrough/Images/add-npm-fromfeed.png)
 
 3. (optional) **Enable upstream source proxy** to seamlessly blend your MyGet feed with the public npm registry.
 
 	From the *Upstream Sources* tab, edit the *Npmjs.org* upstream source and enable the *Make all upstream packages available in clients* option. If you prefer to have the package binaries downloaded to your feed for subsequent requests, also enable the *Automatically add downloaded upstream packages to the current feed (mirror)* option.
 
-	![Mix your npm registry with the public npm registry](Images/proxy-npm-registry.png)
+	![Mix your npm registry with the public npm registry](/docs/walkthrough/Images/proxy-npm-registry.png)
 
 	Note that using these settings it's also possible to blend more than one npm registry into one. You can also [push npm packages to other npm registries using MyGet](/docs/reference/package-sources#Scenario_-_Pushing_a_package_upstream)
 
 4. (optional) **Check the licenses of the packages on your feed** using the *[licenses][3]* tab. This will display a report of the licenses used by the packages on your npm feed.
 
-	![Inspect package licenses](Images/npm-licenses.png)
+	![Inspect package licenses](/docs/walkthrough/Images/npm-licenses.png)
 
 [1]: https://www.myget.org
 [2]: https://docs.myget.org/docs/reference/feed-security

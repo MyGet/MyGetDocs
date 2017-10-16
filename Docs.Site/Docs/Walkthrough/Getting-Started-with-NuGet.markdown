@@ -6,7 +6,7 @@ Setting up your own NuGet repository has never been easier. MyGet allows you to 
 
 1. **Browse to [MyGet.org][1] and log in** using your preferred identity provider. We currently support Microsoft Account, Google, GitHub, Facebook, StackExchange and OpenID.
 
-	![Use an existing identity or create a MyGet account from scratch.](Images/authenticate.png)
+	![Use an existing identity or create a MyGet account from scratch.](/docs/walkthrough/Images/authenticate.png)
 
 2. **Complete your new MyGet profile** by providing a username and password. These are your *MyGet credentials*, which you'll need to authenticate against private feeds on MyGet.org. From now on, you can also use these to log in on the MyGet.org web site.
 
@@ -25,7 +25,7 @@ Setting up your own NuGet repository has never been easier. MyGet allows you to 
 	You can register a MyGet feed the same way you register any NuGet package source by using the _Package Manager Settings_ dialog.
 	You can find it under _Tools > Library Package Manager > Package Manager Settings_ in the Visual Studio menu.
 
-	![Register MyGet Feed](Images/faq_register_myget_feed.png)
+	![Register MyGet Feed](/docs/walkthrough/Images/faq_register_myget_feed.png)
 
 	To store your MyGet feed credentials in your account's roaming profile, you can use the latest NuGet Commandline tool (<a href="https://dist.nuget.org/win-x86-commandline/latest/nuget.exe" title="Click here to download the latest NuGet commandline tool">NuGet.exe</a>).
 
@@ -88,13 +88,13 @@ If you don't want to hook up MyGet Build Services with your version control syst
 
 The easiest way to add our samples repository to your feed as a build source is by [forking the GitHub repository][5], and simply select **Add Build Source > from GitHub**.
 
-![Adding a MyGet build source](Images/build-svc-add.png)
+![Adding a MyGet build source](/docs/walkthrough/Images/build-svc-add.png)
 
-![Add your GitHub fork as a MyGet build source](Images/build-svc-addFromGitHub.png)
+![Add your GitHub fork as a MyGet build source](/docs/walkthrough/Images/build-svc-addFromGitHub.png)
 
 Alternatively, you can manually link the samples repository to your feed by copying the Git endpoint URL in the dialog presented by MyGet when you select **Add Build Source > Manually add build source...**
 
-![Manually register a Git repository as a MyGet build source](Images/build-svc-addManually.png)
+![Manually register a Git repository as a MyGet build source](/docs/walkthrough/Images/build-svc-addManually.png)
 
 ## Building sources and producing NuGet packages
 
@@ -103,19 +103,19 @@ Our sample repository only makes use of the tokenized NuGet manifest files that 
 
 Now, try pushing some changes to your fork and watch what happens with your build source in just an instance. 
 
-![A build got queued](Images/build-queued.png)
+![A build got queued](/docs/walkthrough/Images/build-queued.png)
 
-![Building...](Images/build-building.png)
+![Building...](/docs/walkthrough/Images/build-building.png)
 
-![Successful!](Images/build-success.png)
+![Successful!](/docs/walkthrough/Images/build-success.png)
 
 When creating the build source, we **automatically configured a service hook on GitHub** to trigger a build on your MyGet build source.
 
-![GitHub service hook to trigger a MyGet build source](Images/mygetdocs-github-deployhook.png)
+![GitHub service hook to trigger a MyGet build source](/docs/walkthrough/Images/mygetdocs-github-deployhook.png)
 
 You also want that shiny build status badge in your readme file? Or anywhere else? Simply copy-paste the HTML or Markdown by clicking the links in your build source details.
 
-![A readme file containing the MyGet build status badge](Images/build-badge.png)
+![A readme file containing the MyGet build status badge](/docs/walkthrough/Images/build-badge.png)
 
 [1]: https://www.myget.org
 [2]: https://docs.myget.org/docs/reference/security#Inviting_other_users_to_your_feed

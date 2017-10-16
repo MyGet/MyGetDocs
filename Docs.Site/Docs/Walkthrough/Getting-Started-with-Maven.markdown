@@ -6,7 +6,7 @@ Setting up your own Maven repository has never been easier. MyGet allows you to 
 
 1. **Browse to [MyGet.org][1] and log in** using your preferred identity provider. We currently support Microsoft Account, Google, GitHub, Facebook, StackExchange and OpenID.
 
-	![Use an existing identity or create a MyGet account from scratch.](Images/authenticate.png)
+	![Use an existing identity or create a MyGet account from scratch.](/docs/walkthrough/Images/authenticate.png)
 
 2. **Complete your new MyGet profile** by providing a username and password. These are your *MyGet credentials*, which you'll need to authenticate against private feeds on MyGet.org. From now on, you can also use these to log in on the MyGet.org web site.
 
@@ -109,19 +109,19 @@ If you plan on publishing packages using the `gradle publish` command, make sure
 
 	On each feed, packages can be added through the web UI.
 
-	![Upload package or add package from Maven Central](Images/add-maven-fromupload.png)
+	![Upload package or add package from Maven Central](/docs/walkthrough/Images/add-maven-fromupload.png)
 
 2. (optional) **Enable upstream source proxy** to seamlessly blend your MyGet feed with the Maven Central repository.
 
 	From the *Upstream Sources* tab, edit the *Maven Central* upstream source and enable the *Make all upstream packages available in clients* option. If you prefer to have the package binaries downloaded to your feed for subsequent requests, also enable the *Automatically add downloaded upstream packages to the current feed (mirror)* option.
 
-	![Mix your MyGet Maven repository with the public Maven Central repository](Images/proxy-npm-registry.png)
+	![Mix your MyGet Maven repository with the public Maven Central repository](/docs/walkthrough/Images/proxy-npm-registry.png)
 
 	Note that using these settings it's also possible to blend more than one Maven repository into one. You can also [push Maven packages to other Maven registries using MyGet](/docs/reference/package-sources#Scenario_-_Pushing_a_package_upstream)
 
 3. (optional) **Check the licenses of the packages on your feed** using the *[licenses][3]* tab. This will display a report of the licenses used by the packages on your Maven feed.
 
-	![Inspect package licenses](Images/maven-licenses.png)
+	![Inspect package licenses](/docs/walkthrough/Images/maven-licenses.png)
 
 [1]: https://www.myget.org
 [2]: https://docs.myget.org/docs/reference/feed-security

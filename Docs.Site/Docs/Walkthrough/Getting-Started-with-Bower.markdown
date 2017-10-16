@@ -6,7 +6,7 @@ Setting up your own Bower registry has never been easier. MyGet allows you to cr
 
 1. **Browse to [MyGet.org][1] and log in** using your preferred identity provider.
 
-	![Use an existing identity or create a MyGet account from scratch.](Images/authenticate.png)
+	![Use an existing identity or create a MyGet account from scratch.](/docs/walkthrough/Images/authenticate.png)
 
 2. **Complete your new MyGet profile** by providing a username and password. These are your *MyGet credentials*, which you'll need to authenticate against private feeds on MyGet.org. From now on, you can also use these to log in on the MyGet.org web site.
 
@@ -22,7 +22,7 @@ Setting up your own Bower registry has never been easier. MyGet allows you to cr
 
 1. **Register the feed** with Bower by adding a registry entry to your [`.bowerrc`](https://bower.io/docs/config/) file. The full feed URL can be found on the *feed details* page.
 
-	![Bower feed URL on MyGet](Images/bower-feed-details.png)
+	![Bower feed URL on MyGet](/docs/walkthrough/Images/bower-feed-details.png)
 
 	The easiest way of registering the feed is running the following command:
 
@@ -40,13 +40,13 @@ Setting up your own Bower registry has never been easier. MyGet allows you to cr
 
 	On each feed, packages can be added through the web UI.
 
-	![Add package from Bower registry](Images/add-bower-fromfeed.png)
+	![Add package from Bower registry](/docs/walkthrough/Images/add-bower-fromfeed.png)
 
 3. (optional) **Enable upstream source proxy** to seamlessly blend your MyGet feed with the public Bower registry.
 
 	From the *Upstream Sources* tab, edit the *Bower.io* upstream source and enable the *Make all upstream packages available in clients* option. If you prefer to have the package binaries downloaded to your feed for subsequent requests, also enable the *Automatically add downloaded upstream packages to the current feed (mirror)* option.
 
-	![Mix your Bower registry with the public Bower registry](Images/proxy-bower-registry.png)
+	![Mix your Bower registry with the public Bower registry](/docs/walkthrough/Images/proxy-bower-registry.png)
 
 	Note that using these settings it's also possible to blend more than one Bower registry into one.
 

@@ -74,7 +74,7 @@ More info on authentication is available from the [Composer docs](https://getcom
 
 	Note that using these settings it's also possible to blend more than one PHP Composer repository into one.
 
-3. (optional) **Check the licenses of the packages on your feed** using the *[licenses][3]* tab. This will display a report of the licenses used by the packages on your Maven feed.
+3. (optional) **Check the licenses of the packages on your feed** using the *[licenses][3]* tab. This will display a report of the licenses used by the packages on your PHP Composer feed.
 
 	![Inspect package licenses](Images/maven-licenses.png)
 

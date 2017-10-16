@@ -6,7 +6,7 @@ Setting up your own Vsix feed has never been easier. MyGet allows you to create 
 
 1. **Browse to [MyGet.org][1] and log in** using your preferred identity provider.
 
-	![Use an existing identity or create a MyGet account from scratch.](Images/authenticate.png)
+	![Use an existing identity or create a MyGet account from scratch.](/docs/walkthrough/Images/authenticate.png)
 
 2. **Complete your new MyGet profile** by providing a username and password. These are your *MyGet credentials*, which you'll need to authenticate against private feeds on MyGet.org. From now on, you can also use these to log in on the MyGet.org web site.
 
@@ -22,11 +22,11 @@ Setting up your own Vsix feed has never been easier. MyGet allows you to create 
 
 1. **Register the feed** with Visual Studio. The full feed URL can be found on the *feed details* page.
 
-	![VSIX feed URL on MyGet](Images/vsix-feed-details.png)
+	![VSIX feed URL on MyGet](/docs/walkthrough/Images/vsix-feed-details.png)
 
 	This feed URL can be registered in Visual Studio by opening the _Tools | Options..._ menu. The _Environment | Extensions and Updates_ pane lets us add the feed from MyGet.
 
-	![VSIX feed in Visual Studio](Images/vsix-vs-options.png)
+	![VSIX feed in Visual Studio](/docs/walkthrough/Images/vsix-vs-options.png)
 
 	Note that to work with a _private_ Vsix feed, you'll have to use the pre-authenticated feed URL.
 
@@ -34,7 +34,7 @@ Setting up your own Vsix feed has never been easier. MyGet allows you to create 
 
 	On each feed, extensions can be added through the web UI.
 
-	![Add VSIX to feed](Images/add-vsix.png)
+	![Add VSIX to feed](/docs/walkthrough/Images/add-vsix.png)
 
 	Additionally, you can do a HTTP POST from your build server to the feed to add a Visual Studio extension from your continuous integration process. The POST URL is in the form of `/F/<feedname>/vsix/upload`. Note you will have to add the `X-NuGet-ApiKey` header with a valid API key as well.
 
@@ -42,7 +42,7 @@ Setting up your own Vsix feed has never been easier. MyGet allows you to create 
 
 	The _Tools | Extensions and Updates_ menu now holds your feed's extensions. They can be installed, upgraded and removed from your Visual Studio installation.
 
-	![Consume VSIX or Roslyn from MyGet](Images/vsix-consume.png)
+	![Consume VSIX or Roslyn from MyGet](/docs/walkthrough/Images/vsix-consume.png)
 
 4. (optional) **Check the licenses of the extensions on your feed** using the *[licenses][3]* tab. This will display a report of the licenses used by the extensions on your feed.
 

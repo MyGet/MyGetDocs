@@ -2,10 +2,6 @@
 
 Setting up your own [PHP Composer](https://getcomposer.org) repository has never been easier. MyGet allows you to create your own public or private PHP Composer repositories in just a few clicks. This section will guide you through it.
 
-<p class="alert alert-info">
-    <strong>Note:</strong> PHP Composer support on MyGet is in prvate preview. Please reach out to us if you want this enabled on your account.
-</p>
-
 ## Creating a new MyGet feed
 
 1. **Browse to [MyGet.org][1] and log in** using your preferred identity provider. We currently support Microsoft Account, Google, GitHub, Facebook, StackExchange and OpenID.
@@ -35,7 +31,13 @@ Register the repository URL in the project's `composer.json` file by adding (or 
         }
     ]
 
-For public and community repositories, there's no need to add authentication details. For private repositories, you can either use the _pre-authenticated feed URL_ listed on your MyGet feed's _Details_ tab, or add your MyGet credentials to `auth.json`, either right next to `composer.json` or on `COMPOSER_HOME`:
+For public and community repositories, there's no need to add authentication details. For private repositories, you can use the _pre-authenticated feed URL_ listed on your MyGet feed's _Details_ tab.
+
+<p class="alert alert-info">
+    <strong>Note:</strong> Basic authentication is availe using our <a href="/downloads/composer.phar">composer.phar build</a>. This build includes <a href="https://github.com/composer/composer/pull/6717">a fix for basic authentication with redirects in PHP Composer</a> - please upvote this pull request!
+</p>
+
+We can add our MyGet credentials to `auth.json`, either right next to `composer.json` or on `COMPOSER_HOME`:
 
     {
         "http-basic": {

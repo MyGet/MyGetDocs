@@ -22,3 +22,13 @@ Note this element should be added right before:
     </PropertyGroup>
 
 Using this approach, the F# project system is led to use the correct path to find all required tools.
+
+## FSharp 4.1
+
+It may be needed to make use of the FSharp 4.1 package that is shipped on NuGet, as opposed to relying our build agents have all different flavours of FSharp compiler installed/available for the user under which our agents run.
+
+Example error messages during NuGet pack could be:
+
+`The value "" of the "Project" attribute in element <Import> is invalid.`
+
+Check [this answer on StackOverflow](https://stackoverflow.com/questions/42679193/install-f-4-1-sdk-on-build-server/43919448#43919448) on how to do this.

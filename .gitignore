@@ -22,3 +22,4 @@ App_Data
 packages/
 .vs/config/applicationhost.config
 .idea/
+.vs/

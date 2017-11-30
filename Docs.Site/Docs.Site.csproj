@@ -15,10 +15,10 @@
     <AssemblyName>Docs.Site</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
-    <IISExpressSSLPort />
-    <IISExpressAnonymousAuthentication />
-    <IISExpressWindowsAuthentication />
-    <IISExpressUseClassicPipelineMode />
+    <IISExpressSSLPort>16781</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
     <UseGlobalApplicationHostFile />
     <Use64BitIISExpress>true</Use64BitIISExpress>
   </PropertyGroup>
@@ -230,12 +230,15 @@
     <Content Include="Docs\Reference\Images\VSTS\Restore-from-MyGet.png" />
     <Content Include="Docs\Reference\Images\vulnerability-report.png" />
     <Content Include="Docs\Reference\Images\vulnerability.png" />
+    <Content Include="Docs\Release-Notes\Images\audit-entries.png" />
+    <Content Include="Docs\Release-Notes\Images\gh-marketplace.png" />
     <Content Include="Docs\Release-Notes\Images\host your packages on myget.gif" />
     <Content Include="Docs\Release-Notes\Images\install-VSIX.png" />
     <Content Include="Docs\Release-Notes\Images\MyGet-2.0-highlights.png" />
     <Content Include="Docs\Release-Notes\Images\MyGet-2.0-highlights2.png" />
     <Content Include="Docs\Release-Notes\Images\MyGet-2.2-logviewer.png" />
     <Content Include="Docs\Release-Notes\Images\myget-maven.png" />
+    <Content Include="Docs\Release-Notes\Images\myget-php-composer.svg" />
     <Content Include="Docs\Release-Notes\Images\myget-semver-explorer.png" />
     <Content Include="Docs\Release-Notes\Images\ossindex-vulnerabilities.png" />
     <Content Include="Docs\Walkthrough\Images\add-bower-fromfeed.png" />
@@ -361,6 +364,7 @@
     <Content Include="Docs\Release-Notes\MyGet-2017.1.markdown" />
     <Content Include="Docs\Reference\VSO-Integration.cshtml" />
     <Content Include="downloads\composer.phar" />
+    <Content Include="Docs\Release-Notes\MyGet-2017.2.markdown" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="googlef9ed0438b7b80b43.html" />
     <Content Include="Scripts\jquery-1.9.1.js" />

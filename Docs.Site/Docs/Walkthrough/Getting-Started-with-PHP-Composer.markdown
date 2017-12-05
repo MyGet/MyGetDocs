@@ -33,10 +33,6 @@ Register the repository URL in the project's `composer.json` file by adding (or 
 
 For public and community repositories, there's no need to add authentication details. For private repositories, you can use the _pre-authenticated feed URL_ listed on your MyGet feed's _Details_ tab.
 
-<p class="alert alert-info">
-    <strong>Note:</strong> Basic authentication is available using our <a href="/downloads/composer.phar"><code>composer.phar</code> build</a>. This build includes <a href="https://github.com/composer/composer/pull/6717">a fix for basic authentication with redirects in PHP Composer</a> - please upvote this pull request!
-</p>
-
 We can add our MyGet credentials to `auth.json`, either right next to `composer.json` or on `COMPOSER_HOME`:
 
     {

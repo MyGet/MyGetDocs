@@ -1,6 +1,6 @@
 # MyGet 2017.2 Release Notes
 
-MyGet 2017.2 was released on **TODO**, 2017.
+MyGet 2017.2 was released on December 13, 2017.
 
 ## Highlights
 

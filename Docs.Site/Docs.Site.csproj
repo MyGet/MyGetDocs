@@ -361,6 +361,7 @@
     <Content Include="Docs\Release-Notes\MyGet-2017.1.markdown" />
     <Content Include="Docs\Reference\VSO-Integration.cshtml" />
     <Content Include="downloads\composer.phar" />
+    <Content Include="Docs\Reference\Authentication-Modules.markdown" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="googlef9ed0438b7b80b43.html" />
     <Content Include="Scripts\jquery-1.9.1.js" />
@@ -469,7 +470,9 @@
     <Content Include="Scripts\prettify\lang-wiki.js" />
     <Content Include="Scripts\prettify\lang-yaml.js" />
     <Content Include="Scripts\prettify\prettify.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CassetteConfiguration.cs" />

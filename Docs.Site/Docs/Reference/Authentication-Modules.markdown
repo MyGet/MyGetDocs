@@ -1,6 +1,6 @@
 # Authentication Modules
 
-The [MyGet Enterprise plan](https://www.myget.org/enterprise) provides support for external authentication modules to log in to the web application. This document describes the available authentication modules and how to configure them.
+The [MyGet Enterprise plan](https://www.myget.org/enterprise) provides support for external authentication modules to Sign in to the web application. This document describes the available authentication modules and how to configure them.
 
 <p class="alert alert-info">
     <strong>Note:</strong> This feature is currently in preview. Please reach out to your account manager to enable it for your MyGet Enterprise account.
@@ -10,13 +10,13 @@ Lets look at the available authentication modules and instructions for setup and
 
 ## Auth0
 
-To allow users to login to MyGet using their Auth0 account, enable the Auth0 authentication module.
+To allow users to sign in to MyGet using their Auth0 account, enable the Auth0 authentication module.
 
 Once the **Add authentication module** dialog is shown, we can find **Settings for Auth0**. Make sure to keep this window open as we will need it for the remainder of the configuration steps.
 
 In a separate browser window:
 
-* Log in to your Auth0 account and open the dashboard under **[Clients](https://manage.auth0.com/#/clients)**.
+* Sign in to your Auth0 account and open the dashboard under **[Clients](https://manage.auth0.com/#/clients)**.
 * Click **Create client**, enter a client name (e.g. *MyGet*), and select **Regular Web Applications** as the client type.
 * Click **Create**.
 * In the client management dashboard, open the **Settings** tab. Note the *Domain*, * Client ID* and *Client Secret* values which we will need later on. But let's first configure the Auth0 side!
@@ -32,13 +32,13 @@ Back in the MyGet **Add authentication module** dialog:
 
 ## Azure Active Directory
 
-To allow users to login to MyGet using their Azure Active Directory account, enable the Azure Active Directory authentication module.
+To allow users to sign in to MyGet using their Azure Active Directory account, enable the Azure Active Directory authentication module.
 
 Once the **Add authentication module** dialog is shown, we can find **Settings for Azure Active Directory**. Make sure to keep this window open as we will need it for the remainder of the configuration steps.
 
 In a separate browser window:
 
-* Log in to your Microsoft Azure Portal account and open the **[Azure Active Directory](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview)** blade.
+* Sign in to your Microsoft Azure Portal account and open the **[Azure Active Directory](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview)** blade.
 * Under **App registrations**, click the **New application registration** button.
 * In the *Name* field, enter an application name (e.g. *MyGet*).
 * Under **Application type**, click **Web app / API**.
@@ -55,13 +55,13 @@ Back in the MyGet **Add authentication module** dialog:
 
 ## GitHub
 
-To allow users to login to MyGet using their GitHub account, enable the GitHub authentication module.
+To allow users to sign in to MyGet using their GitHub account, enable the GitHub authentication module.
 
 Once the **Add authentication module** dialog is shown, we can find **Settings for GitHub**. Make sure to keep this window open as we will need it for the remainder of the configuration steps.
 
 In a separate browser window:
 
-* Log in to your GitHub account and **[register a new OAuth application with GitHub](https://github.com/settings/applications/new)**.
+* Sign in to your GitHub account and **[register a new OAuth application with GitHub](https://github.com/settings/applications/new)**.
 * Specify the general parameters to register a new OAuth application: *Application name*, *Homepage URL*, and an optional *Application description*.
 * In the *Authorization callback URL*, paste the callback URL that is displayed in MyGet *Settings for GitHub*.
 * Click the **Register application** button. GitHub will generate the credentials required to configure MyGet.
@@ -74,13 +74,13 @@ Back in the MyGet **Add authentication module** dialog:
 
 ## Google
 
-To allow users to login to MyGet using their Google account, enable the Google authentication module.
+To allow users to sign in to MyGet using their Google account, enable the Google authentication module.
 
 Once the **Add authentication module** dialog is shown, we can find **Settings for Google**. Make sure to keep this window open as we will need it for the remainder of the configuration steps.
 
 In a separate browser window:
 
-* Log in to your Google account and open **[API credential management](https://console.developers.google.com/apis/credentials)**.
+* Sign in to your Google account and open **[API credential management](https://console.developers.google.com/apis/credentials)**.
 * From the **Create credentials** dropdown, select **OAuth client ID**.
 * Click **Create credentials**, then **OAuth Client ID**.
 * (optional) in the OAuth consent screen page, enter a product name (e.g. *MyGet*) and click **Save**.
@@ -95,13 +95,13 @@ Back in the MyGet **Add authentication module** dialog:
 
 ## Microsoft Account
 
-To allow users to login to MyGet using their Microsoft Account, enable the Microsoft Account authentication module.
+To allow users to sign in to MyGet using their Microsoft Account, enable the Microsoft Account authentication module.
 
 Once the **Add authentication module** dialog is shown, we can find **Settings for Microsoft Account**. Make sure to keep this window open as we will need it for the remainder of the configuration steps.
 
 In a separate browser window:
 
-* Log in to your Microsoft Account account and open **[My Applications](https://apps.dev.microsoft.com/)**.
+* Sign in to your Microsoft Account account and open **[My Applications](https://apps.dev.microsoft.com/)**.
 * Under **Converged appications**, click the **Add an app** button.
 * In the *Application Name* field, enter an application name (e.g. *MyGet*).
 * Make sure *Let us help you get started*  is **disabled** and click **Create**.
@@ -119,13 +119,13 @@ Back in the MyGet **Add authentication module** dialog:
 
 ## StackExchange
 
-To allow users to login to MyGet using their StackExchange account, enable the StackExchange authentication module.
+To allow users to sign in to MyGet using their StackExchange account, enable the StackExchange authentication module.
 
 Once the **Add authentication module** dialog is shown, we can find **Settings for StackExchange**. Make sure to keep this window open as we will need it for the remainder of the configuration steps.
 
 In a separate browser window:
 
-* Log in to your StackExchange account and open **[Register a new app](https://stackapps.com/apps/oauth/register)**.
+* Sign in to your StackExchange account and open **[Register a new app](https://stackapps.com/apps/oauth/register)**.
 * In the *Application Name* field, enter an application name (e.g. *MyGet*).
 * In the *Description* field, enter an description.
 * In the *OAuth domain* field, paste the domain that is displayed in MyGet *Settings for StackExchange*.
@@ -139,7 +139,7 @@ Back in the MyGet **Add authentication module** dialog:
 
 ## WS-Federation (ADFS)
 
-To allow users to login to MyGet using their ADFS account, enable the WS-Federation authentication module.
+To allow users to sign in to MyGet using their ADFS account, enable the WS-Federation authentication module.
 
 Once the **Add authentication module** dialog is shown, we can find **Settings for WS-Federation (ADFS)**. Make sure to keep this window open as we will need it for the remainder of the configuration steps.
 

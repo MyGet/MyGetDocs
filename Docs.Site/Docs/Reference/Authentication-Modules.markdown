@@ -1,6 +1,6 @@
 # Authentication Modules
 
-The [MyGet Enterprise plan](https://www.myget.org/enterprise) provides support for external authentication modules to Sign in to the web application. This document describes the available authentication modules and how to configure them.
+The [MyGet Enterprise plan](https://www.myget.org/enterprise) provides support for external authentication modules to sign in to the web application. This document describes the available authentication modules and how to configure them.
 
 <p class="alert alert-info">
     <strong>Note:</strong> This feature is currently in preview. Please reach out to your account manager to enable it for your MyGet Enterprise account.

@@ -50,6 +50,7 @@ In a separate browser window:
 Back in the MyGet **Add authentication module** dialog:
 
 * Copy/paste the *Azure Active Directory application id* and specify the *Azure AD tenant* (e.g. `contoso.microsoft.com`).
+* In the Azure portal, under *Keys*, create a new *Password* that never expires. Copy/paste the generated password in into the *Azure Active Directory application secret* in MyGet.
 * (optional) If Azure Active Directory is hosted in Germany, China or any other environment from the default, enter the *Azure AD instance* (e.g.: `https://login.microsoftonline.com/`).
 * Click **Add** to save the configuration.
 

@@ -29,6 +29,7 @@ The below screenshot shows the credential provider in action: when NuGet tries t
 ## Major releases
 
 v1.1 - 2018/01 - Added secure token cache and now also detecting and ignoring pre-authenticated endpoints, which reduces number of times a developer must authenticate a day.
+
 v1.0 - 2017/03 - Initial version sim-shipped during VS2017 launch event.
 
 # MyGet Credential Provider for Visual Studio 2015 ("Experimental")

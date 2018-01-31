@@ -1,10 +1,8 @@
 # Migrating to MyGet (or creating a feed from uploaded packages)
+MyGet เอกสารนี้จะแนะนำคุณตลอดหลักสูตรไม่ว่าคุณจะโยกย้ายจากกองไซต์หรือสื่อดูก่อน * NuGet.Server * หรือต้องทำกันที่อื่น ๆ จะได้รับ 
+เราจะใช้วิธีการอัปโหลดจำนวน มากโปรดทราบว่า [นำเข้าแพคเกจจากฟีด ที่มีอยู่แล้ว ] (/ เอกสาร / อ้างอิง / แพคเกจแหล่ง # สถานการณ์_-_ Add_package_from_feed) 
 
-If you have a large number of packages that you want to migrate to MyGet, this document will guide you through that process. Whether you are migrating from a file share or a *NuGet.Server* based feed or simply want to do a bulk upload to MyGet, the following tips will help.
-
-We will be using a bulk upload approach. Note that [importing packages from an existing feed](/docs/reference/package-sources#Scenario_-_Add_package_from_feed) is possible too, if the feed is available over the Internet. A bulk upload is typically the easiest way to migrate packages to a MyGet feed so we will focus on that one.
-
-## Bulk-uploading packages to MyGet
+## ชุดอัพโหลดเป็นกลุ่มเพื่อ MyGet
 
 Before being able to bulk-upload packages to MyGet, you will need the following:
 
@@ -17,10 +15,9 @@ Once you have these, open a command prompt and make sure *nuget.exe* is in the p
 
 	nuget push * <apikey> -Source <feed>
 
-An example of this, based on the screenshot earlier, would be:
-
-	nuget push * 4ca3e2c4-2094-4b38-abf0-1af71a62596a -Source https://www.myget.org/F/acmecompany-internal/
-
+ตัวอย่างนี้ขึ้นอยู่กับภาพหน้าจอก่อนหน้านี้จะเป็น:
+	nuget push* 4ca3e2c4-2094-4b38-abf0-1af71a62596a -Source https://www.myget.org/F/acmecompany-internal/
+api/v2/package
 This command will trigger the upload of all packages in the working directory to the MyGet feed.
 
 ## Where are my packages stored?
@@ -42,7 +39,7 @@ The [NuGet gallery](https://github.com/NuGet/NuGetGallery) stores its packages o
 ### ProGet
 
 By default, ProGet stores its packages in the *C:\ProgramData\ProGet\Packages* folder. The real path to where packages are stored can be found from the administration dashboard under **Advanced Settings**. The *PackagesRootPath* setting will provide the full path.
-
+Core packagesRootPath settings
 ![ProGet PackagesRootPath settings](Images/proget-settings.png)
 
 ProGet stores packages per feed. If you want to upload one specific feed, open a command prompt in the feed directory and make use of the command above to upload packages to MyGet. If you wish to upload all packages at once, use the following PowerShell command:

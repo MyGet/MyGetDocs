@@ -1,5 +1,4 @@
-﻿@using System.Configuration
-@using System.Globalization
+﻿@using System.Globalization
 
 @{
     Page.Title = "MyGet Documentation | Search";
@@ -9,7 +8,7 @@
     const int resultsPerPage = 10;
     const string searchUrlTemplate = "https://www.googleapis.com/customsearch/v1?key={0}&cx={1}&alt=json&q={2}&num={3}&start={4}";
     const string searchEngineId = "007192657988254065162:rqdc03j0uom";
-    var appId = ConfigurationManager.AppSettings["GOOGLE_SEARCH_APIKEY"];
+    var appId = Environment.GetEnvironmentVariable("GOOGLE_SEARCH_APIKEY");
 
     string query = Request.QueryString["q"];
     if (query.IsEmpty())

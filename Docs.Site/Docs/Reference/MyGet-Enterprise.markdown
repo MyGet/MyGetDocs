@@ -58,6 +58,12 @@ Creating feeds can be limited to Enterprise administrators/feed creators. When e
 
 Individual users can be assigned the *Administrator* or *Feed creator* role from the user management dashboard.
 
+## Authentication
+
+The [MyGet Enterprise plan](https://www.myget.org/enterprise) provides support for external authentication modules to sign in to the web application. 
+
+Have a look at the [authentication modules documentation](/docs/reference/authentication-modules) for more information about setting up integration with ADFS, Azure Active Directory, Google, GitHub, Microsoft Account, ....
+
 ## Users
 
 The users section allows for user management. It is possible to create new users, as well as manage roles, manage quota for a user, send a password reset e-mail or delete a user.

@@ -118,6 +118,10 @@ Back in the MyGet **Add authentication module** dialog:
 * Copy/paste the *Microsoft Account application id* that is displayed under **[My Applications - Converged applications](https://apps.dev.microsoft.com/)**.
 * Click **Add** to save the configuration.
 
+## Okta
+
+Refer the [Okta integration guidelines](/docs/reference/okta-integration) to integrate the Okta identity solution with MyGet.
+
 ## StackExchange
 
 To allow users to sign in to MyGet using their StackExchange account, enable the StackExchange authentication module.

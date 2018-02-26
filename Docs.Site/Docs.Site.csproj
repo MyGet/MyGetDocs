@@ -15,10 +15,14 @@
     <AssemblyName>Docs.Site</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
-    <IISExpressSSLPort>16781</IISExpressSSLPort>
-    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
-    <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
-    <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
+    <IISExpressSSLPort>
+    </IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication>
+    </IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>
+    </IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>
+    </IISExpressUseClassicPipelineMode>
     <UseGlobalApplicationHostFile />
     <Use64BitIISExpress>true</Use64BitIISExpress>
   </PropertyGroup>
@@ -189,6 +193,7 @@
     <Content Include="Docs\Reference\Images\add-package-source-button.png" />
     <Content Include="Docs\Reference\Images\add-package-source-MyGet-preset.png" />
     <Content Include="Docs\Reference\Images\add-package-source-options.png" />
+    <Content Include="Docs\Reference\Images\adfs-30-claims.png" />
     <Content Include="Docs\Reference\Images\assembly-pdb-match.png" />
     <Content Include="Docs\Reference\Images\Azure-AD\step1.png" />
     <Content Include="Docs\Reference\Images\Azure-AD\step2.png" />

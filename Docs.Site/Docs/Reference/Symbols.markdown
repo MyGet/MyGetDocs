@@ -86,8 +86,9 @@ On the package details page on MyGet, we can verify if for a given assembly debu
 In the Visual Studio Debugger options, you can disable the *Require source files to exactly match the original version* toggle if you are confident the `.dll` and `.pdb` can be different. We advise against this as the debugging symbols that will be loaded come from a different build than the one you are tying to debug, but it can be a last resort to get at least an idea of the source code for the assembly being debugged.
 
 <p class="alert alert-warning">
-    <strong>Note for users generating Portable PDB's (.NET Standard):</strong> MyGet can currently not rewrite the PDB file to allow linking to source code due to a limitation in how Portable PDB's work. We recommend using <a href="https://github.com/ctaggart/SourceLink">one of the SourceLink MSBuild tasks to embed sources</a>.
+    <strong>Note for users generating Portable PDB's (.NET Standard):</strong> MyGet <em>can</em> serve the <code>.pdb</code> file to Visual Studio, Rider, WinDBG etc., but we can not rewrite the PDB file to allow linking to source code. Portable PDB's work differently in this regard. To support source stepping, we recommend using <a href="https://github.com/ctaggart/SourceLink">one of the SourceLink MSBuild tasks to embed sources</a>. The <a href="https://github.com/NuGet/Home/issues/6104#issuecomment-361487296">symbols package discussion on NuGet's GitHub</a> may also provide additional tips and tricks. If you would like to see a better experience, <a href="https://github.com/NuGet/Home/issues/6104#issuecomment-361487296">tell the NuGet team</a>!
 </p>
+
 ### The source files are still in their original location
 
 When stepping into source code, Visual Studio or WinDbg uses the `.pdb` file to link the assembly with corresponding code. MyGet indexes the `.pdb` file after uploading a package. This indexing process adds a second path to the `.pdb` file, telling Visual Studio where to find the source files.
@@ -99,6 +100,15 @@ If the source code is still on the machine where a symbols package was created, 
 Symbols packages contain the `.pdb` files that link the assembly with source code. When only `.symbols.nupkg` packages are pushed to a feed, we can consume the package like any normal package and MyGet will properly recognize the package as a symbols package. When trying to debug using such package, Visual Studio will find the `.pdb` on disk instead of reaching out to MyGet to download it, and will fail stepping into code because of that. 
 
 The solution here is to always push `.nupkg` as well as `.symbols.nupkg` packages to a feed so that Visual Studio has to reach out to MyGet for fetching debugging information.
+
+### Make sure the .nupkg does not contain .pdb files
+
+When a `.nupkg` contains  `.pdb` files, Visual Studio will *never* reach out to MyGet to download symbols and sources. When trying to debug using such package, Visual Studio will find the `.pdb` on disk instead of reaching out to MyGet to download it, and will fail stepping into code because of that.
+
+Ensure proper packaging:
+
+* `.nupkg` **must** contain assemblies, content files, ..., but **never** `.pdb` files or a `src` folder.
+* `.symbols.nupkg` *may* contain assemblies, content files, ..., and **must** contain `.pdb` files and a `src` folder.
 
 ### Veryifying symbols package contents
 

@@ -1,5 +1,15 @@
 # Azure Active Directory integration
 
+The [MyGet Enterprise plan](https://www.myget.org/enterprise) provides support for external authentication modules to sign in to the web application. 
+
+Have a look at the [authentication modules documentation](/docs/reference/authentication-modules) for more information about setting up integration with ADFS, Azure Active Directory, Google, GitHub, Microsoft Account, ...
+
+<p class="alert alert-info">
+    <strong>Note:</strong> Refer the <a href="/docs/reference/authentication-modules">authentication modules documentation</a> for up to date information. The content below is deprecated and will be removed soon.
+</p>
+
+<hr />
+
 When requested, the [MyGet Enterprise plan](https://www.myget.org/enterprise) provides support for Azure Active Directory to log in. This document describes the required configuration steps on your Azure Active Directory tenant. Note that Azure Active Directory B2C is not currently supported.
 
 <p class="alert alert-info">

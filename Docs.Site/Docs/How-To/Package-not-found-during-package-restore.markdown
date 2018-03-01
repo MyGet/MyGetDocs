@@ -25,7 +25,7 @@ We can take this one step further and instead of configuring your MyGet feed glo
 	  </packageRestore>
 	  <packageSources>
 	    <add key="nuget.org" value="https://www.nuget.org/api/v2/" />
-	    <add key="MyGet" value="https://www.myget.org/F/chcuknorris/" />
+	    <add key="MyGet" value="https://www.myget.org/F/chucknorris/" />
 	  </packageSources>
 	  <disabledPackageSources />
 	  <activePackageSource>

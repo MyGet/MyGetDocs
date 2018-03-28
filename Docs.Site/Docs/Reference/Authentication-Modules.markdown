@@ -168,7 +168,7 @@ MyGet will need these claims to be present:
 
 In the *Edit Claim Rules* dialog box on your ADFS server, we will configure the claims to be sent to MyGet:
 
-* On the **Issuance Transform Rule**s tab, click **Add Rule**. 
+* On the **Issuance Transform Rules** tab, click **Add Rule**. 
 * Select **Send LDAP Attributes as Claims** as the template to use and click **Next**.
 * Enter a *Claim rule name*, for example `Send LDAP properties`.
 * As the **Attribute store**, select **Active Directory**.

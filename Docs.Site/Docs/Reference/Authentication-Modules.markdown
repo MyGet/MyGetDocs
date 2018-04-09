@@ -162,9 +162,9 @@ On your ADFS server (guide based on [Microsoft Docs - Create a Relying Party Tru
 
 MyGet will need these claims to be present:
 
-* NameIdentifier (`https://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier`) – you can use the AD user name for this claim, as long as it's unique per user.
-* Name (`https://schemas.xmlsoap.org/ws/2005/05/identity/claims/name`)
-* Email address (`https://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress`)
+* NameIdentifier (`http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier`) – you can use the AD user name for this claim, as long as it's unique per user.
+* Name (`http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name`)
+* Email address (`http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress`)
 
 In the *Edit Claim Rules* dialog box on your ADFS server, we will configure the claims to be sent to MyGet:
 

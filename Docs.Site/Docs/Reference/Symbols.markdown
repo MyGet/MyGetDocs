@@ -85,6 +85,8 @@ On the package details page on MyGet, we can verify if for a given assembly debu
 
 In the Visual Studio Debugger options, you can disable the *Require source files to exactly match the original version* toggle if you are confident the `.dll` and `.pdb` can be different. We advise against this as the debugging symbols that will be loaded come from a different build than the one you are tying to debug, but it can be a last resort to get at least an idea of the source code for the assembly being debugged.
 
+Portable PDB hashes will look different from Windows PDB hashes, because of the [SSQP Key Conventions for Portable PDB's](https://github.com/dotnet/symstore/blob/master/docs/specs/SSQP_Key_Conventions.md#portable-pdb-signature).
+
 <p class="alert alert-warning">
     <strong>Note for users generating Portable PDB's (.NET Standard):</strong> MyGet <em>can</em> serve the <code>.pdb</code> file to Visual Studio, Rider, WinDBG etc., but we can not rewrite the PDB file to allow linking to source code. Portable PDB's work differently in this regard. To support source stepping, we recommend using <a href="https://github.com/ctaggart/SourceLink">one of the SourceLink MSBuild tasks to embed sources</a>. The <a href="https://github.com/NuGet/Home/issues/6104#issuecomment-361487296">symbols package discussion on NuGet's GitHub</a> may also provide additional tips and tricks. If you would like to see a better experience, <a href="https://github.com/NuGet/Home/issues/6104#issuecomment-361487296">tell the NuGet team</a>!
 </p>

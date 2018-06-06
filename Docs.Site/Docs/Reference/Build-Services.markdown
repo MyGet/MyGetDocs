@@ -239,7 +239,7 @@ Both of these conventions can be overridden by editing the build source configur
 Build services supports the following frameworks and SDK's:
 
 * .NET 2.0, .NET 3.0, .NET 3.5, .NET 4.0, .NET 4.5, .NET 4.5.1, .NET 4.5.2, .NET 4.6, .NET 4.6.1, .NET 4.6.2, .NET 4.7
-* .NET Core 1.0, 1.1, 2.0, 2.1
+* .NET Core 1.0, 1.1, 2.0, 2.1 and SDK's (**Tip:** a [`global.json` file](https://www.microsoft.com/net/download/all) can be added to [specify the SDK version to use](https://www.microsoft.com/net/download/all), e.g. `2.1.200`)
 * Mono 2, Mono 3
 * Visual Studio 2013 Update 4
 * Visual Studio 2015 Update 3

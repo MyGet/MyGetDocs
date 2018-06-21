@@ -167,6 +167,10 @@ This setup will:
 * Use `https://www.myget.org/F/your-feed-name/npm/` for the `@acmecorp` scope.
 * Use `https://npm.example.com/` for the `@some-vendor` scope.
 
+## Fixing "403 Forbidden" while running npm login
+
+A common cause are special characters in your username or password. For special characters such as an `@` or a space, make sure to use the URL encoded value (e.g. `%40` for `@`, `%23` for `#`, `%2F` for `/` and so on).
+
 ## Fixing "401 Unauthorized" after running npm login
 
 When working with private npm registries, it is required to run `npm login` to store authentication details into a `.npmrc` file in your user profile folder. Some npm versions miss writing one specific setting, resulting in `401 Unauthorized` when working with MyGet npm registries.

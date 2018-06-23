@@ -4,15 +4,9 @@
 
 This page describes the available management options that are available to administrators of the Enterprise account.
 
-## Statistics
+## General
 
-The statistics page provides an overview of common metrics related to the Enterprise account:
-
-* Feed statistics, e.g. number of feeds
-* Package statistics, e.g. number of packages hosted
-* Storage statistics, e.g. how much storages consumed by the Enterprise account and feeds therein
-* Usage statistics, e.g. how many people are working with feeds
-* Build staticstics, covering usage of [MyGet Build Services](Build-Services)
+The general page allows setting the name for the MyGet Enterprise plan, as well as the logo displayed in the top navigation bar.
 
 ## Accounts
 
@@ -113,3 +107,13 @@ Configurable quota are:
 * Allowed package size
 * Allowed storage per user (over all feeds owned by the user)
 * Allowed storage per feed
+
+## Statistics
+
+The statistics page provides an overview of common metrics related to the Enterprise account:
+
+* Feed statistics, e.g. number of feeds
+* Package statistics, e.g. number of packages hosted
+* Storage statistics, e.g. how much storages consumed by the Enterprise account and feeds therein
+* Usage statistics, e.g. how many people are working with feeds
+* Build staticstics, covering usage of [MyGet Build Services](Build-Services)

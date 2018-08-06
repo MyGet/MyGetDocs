@@ -230,6 +230,10 @@
     <Content Include="Docs\Reference\Images\VSTS\Add-new-service-endpoint-NuGet.png" />
     <Content Include="Docs\Reference\Images\Security\Create-readonly-MyGet-access-token.png" />
     <Content Include="Docs\Reference\Images\VSTS\Add-NuGet-Build-Task.png" />
+    <Content Include="Docs\Reference\Images\VSTS\forbidden-step-1.png" />
+    <Content Include="Docs\Reference\Images\VSTS\forbidden-step-2.png" />
+    <Content Include="Docs\Reference\Images\VSTS\forbidden-step-4.png" />
+    <Content Include="Docs\Reference\Images\VSTS\forbiddne-step-3.png" />
     <Content Include="Docs\Reference\Images\VSTS\Navigate-to-Manage-Services.png" />
     <Content Include="Docs\Reference\Images\VSTS\Publish-to-MyGet.png" />
     <Content Include="Docs\Reference\Images\VSTS\Restore-from-MyGet.png" />

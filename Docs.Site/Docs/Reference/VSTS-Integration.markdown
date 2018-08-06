@@ -311,7 +311,7 @@ The second service connection should use API key authentication and have either 
 
 3) For restore tasks, use the service connection that has basic authentication configured
 	
-![Step 3](Images/VSTS/forbidden-step-3.png)
+![Step 3](Images/VSTS/forbiddne-step-3.png)
 
 4) For push, make sure to use the NuGet push task. In its configuration, use the service connection that has the API key configured
 	

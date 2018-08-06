@@ -276,3 +276,43 @@ Alternatively, you can also setup MyGet integration from within Visual Studio Te
 
 6.	Click **Test** if you want to test this service hook first, or click **Finish** to complete the wizard. The new service hook is now listed as shown below:
 	![Step 5](Images\vso-service-hook-step5.png)
+	
+## Pushing to MyGet from VSTS fails with "Forbidden"
+
+### Symptoms
+
+A MyGet service endpoint is defined in VSTS services with my username and access token as a password, [as per the documentation](http://docs.myget.org/docs/reference/vsts-integration#Using_nugetexe_CLI).
+
+Package restore works fine during the build, unfortunately when using the *NuGet push* task, no packages are pushed and the following information appears in the log file:
+
+<pre><code>"C:\Program Files\dotnet\dotnet.exe" nuget push d:\a\1\a\MyPackage.1.2.3.nupkg --source https://www.myget.org/F/myfeed/api/v2/package --api-key RequiredApiKey
+
+2017-12-25T13:32:19.8275867Z info : Pushing Evolita.MyPackage.1.2.3.nupkg to 'https://www.myget.org/F/myfeed/api/v2/package'...
+2017-12-25T13:32:19.8823758Z info : PUT https://www.myget.org/F/myfeed/api/v2/package/
+2017-12-25T13:32:20.5401058Z info : Forbidden https://www.myget.org/F/myfeed/api/v2/package/ 657ms
+2017-12-25T13:32:20.7479361Z error: Response status code does not indicate success: 403 (Forbidden).</pre></code>
+
+No packages are pushed to MyGet.
+
+### Cause and solution
+
+VSTS incorrectly does not correctly use the API key configured. Please reach out to Microsoft support to make them aware, and use the following workaround for this issue:
+
+1) Make sure the feed you are using is in `NuGet.config.`
+2) In VSTS, configure *two* service connections for the feed.
+
+The first service connection should use basic authentication using your username and an access token, and have the full feed URL that is also in `NuGet.config`. For example [https://www.myget.org/F/myfeed/api/v2](https://www.myget.org/F/myfeed/api/v2) or [https://www.myget.org/F/myfeed/api/v3/index.json](https://www.myget.org/F/myfeed/api/v3/index.json).
+
+	![Step 1](Images/VSTS/forbidden-step-1.png)
+	
+The second service connection should use API key authentication and have either the V2 push endpoint as the URL [(https://www.myget.org/F/myfeed/api/v2/package)](https://www.myget.org/F/myfeed/api/v2/package), or the V3 endpoint [(https://www.myget.org/F/myfeed/api/v3/index.json)](https://www.myget.org/F/myfeed/api/v3/index.json).
+
+	![Step 2](Images/VSTS/forbidden-step-2.png)
+
+3) For restore tasks, use the service connection that has basic authentication configured
+
+	![Step 3](Images/VSTS/forbidden-step-3.png)
+
+4) For push, make sure to use the NuGet push task. In its configuration, use the service connection that has the API key configured
+
+	![Step 4](Images/VSTS/forbidden-step4.png)

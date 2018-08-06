@@ -302,13 +302,17 @@ VSTS incorrectly does not correctly use the API key configured. Please reach out
 2) In VSTS, configure **two** service connections for the feed.
 
 The first service connection should use basic authentication using your username and an access token, and have the full feed URL that is also in `NuGet.config`. For example [https://www.myget.org/F/myfeed/api/v2](https://www.myget.org/F/myfeed/api/v2) or [https://www.myget.org/F/myfeed/api/v3/index.json](https://www.myget.org/F/myfeed/api/v3/index.json).
-	![Forbidden 1](Images\VSTS\forbidden-step-1.png)
+	
+![First Service Connection](Images/VSTS/forbidden-step-1.png)
 	
 The second service connection should use API key authentication and have either the V2 push endpoint as the URL [(https://www.myget.org/F/myfeed/api/v2/package)](https://www.myget.org/F/myfeed/api/v2/package), or the V3 endpoint [(https://www.myget.org/F/myfeed/api/v3/index.json)](https://www.myget.org/F/myfeed/api/v3/index.json).
-	![Forbidden 2](Images\VSTS\forbidden-step-2.png)
+	
+![Second Service Connection](Images/VSTS/forbidden-step-2.png)
 
 3) For restore tasks, use the service connection that has basic authentication configured
-	![Forbidden 3](Images\VSTS\forbidden-step-3.png)
+	
+![Step 3](Images/VSTS/forbidden-step-3.png)
 
 4) For push, make sure to use the NuGet push task. In its configuration, use the service connection that has the API key configured
-	![Forbidden 4](Images\VSTS\forbidden-step4.png)
+	
+![Step 4](Images/VSTS/forbidden-step4.png)

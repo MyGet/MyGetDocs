@@ -233,7 +233,7 @@
     <Content Include="Docs\Reference\Images\VSTS\forbidden-step-1.png" />
     <Content Include="Docs\Reference\Images\VSTS\forbidden-step-2.png" />
     <Content Include="Docs\Reference\Images\VSTS\forbidden-step-4.png" />
-    <Content Include="Docs\Reference\Images\VSTS\forbiddne-step-3.png" />
+    <Content Include="Docs\Reference\Images\VSTS\forbidden-step-3.png" />
     <Content Include="Docs\Reference\Images\VSTS\Navigate-to-Manage-Services.png" />
     <Content Include="Docs\Reference\Images\VSTS\Publish-to-MyGet.png" />
     <Content Include="Docs\Reference\Images\VSTS\Restore-from-MyGet.png" />

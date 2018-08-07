@@ -296,7 +296,7 @@ No packages are pushed to MyGet.
 
 ### Cause and solution
 
-VSTS incorrectly does not correctly use the API key configured. Please reach out to Microsoft support to make them aware, and use the following workaround for this issue:
+VSTS incorrectly uses the API key configured. Please reach out to Microsoft support to make them aware, and use the following workaround for this issue:
 
 1) Make sure the feed you are using is in `NuGet.config.`
 2) In VSTS, configure **two** service connections for the feed.

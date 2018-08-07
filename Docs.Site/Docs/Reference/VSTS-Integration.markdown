@@ -315,4 +315,4 @@ The second service connection should use API key authentication and have either 
 
 4) For push, make sure to use the NuGet push task. In its configuration, use the service connection that has the API key configured
 	
-![Step 4](Images/VSTS/forbidden-step4.png)
+![Step 4](Images/VSTS/forbidden-step-4.png)

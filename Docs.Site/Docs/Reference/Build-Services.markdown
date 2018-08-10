@@ -60,6 +60,10 @@ The following build steps will be run when building from batch or PowerShell scr
 
 When needed, the project files or scripts to build can be specified in the build source configuration. If this setting is omitted, the [default build process conventions](#The_Build_Process) will be used.
 
+<p class="alert alert-warning">
+    <strong>Warning:</strong> For .NET Core / .NET Standard builds, this setting may cause the build to fail. Reason is that MSBuild will search for assemblies in the wrong path. If after configuring projects to build, the build fails with messages similar to <code>error CS0400: The type or namespace name 'System' could not be found in the global namespace (are you missing an assembly reference?)</code> or <code>error CS0518: Predefined type 'System.String' is not defined or imported</code>, this setting should be reverted. Alternatively, a <code>MyGet.sln</code> can be added to your source repository, referencing only the projects that should be built.
+</p>
+
 This setting can contain projects, solutions and scripts (like .bat, .cmd and .ps1 files) but not mixed together (e.g. .csproj and .bat will result in only the .csproj to be built). Note that when configured, pre- and post-build scripts will be ignored unless manually added to this list.
 
 ![Configure Projects to Build](Images/configure-projects-to-build.png)

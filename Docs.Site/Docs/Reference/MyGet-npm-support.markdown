@@ -35,11 +35,13 @@ We recommend running the following commands to have full support for the proxied
 
 If you want to publish a node module to a registry, you usually run the `npm pack` command. This is not different with MyGet: `npm pack` will package your node module into a `.tgz` file.
 
-To publish the package to MyGet, you will have to run the `adduser` (or `login`) command once:
+### Authenticating interactively
+
+To publish the package to MyGet, you can run the `adduser` (or `login`) command once:
 
 	npm adduser --registry=https://www.myget.org/F/your-feed-name/npm/
 
-Provide your MyGet username and password to make sure authentication is setup.
+Provide your MyGet username and password to make sure authentication is set up.
 
 ![Specifying credentials to use the MyGet npm registry](Images/npm-adduser.png)
 
@@ -50,6 +52,18 @@ Provide your MyGet username and password to make sure authentication is setup.
 When this is done, any package can be published to the MyGet npm feed using the `publish` command:
 
 	npm publish  --registry=https://www.myget.org/F/your-feed-name/npm/
+
+### Authenticating using an API key
+
+Put the following lines in the .npmrc file:
+
+	registry=https://www.myget.org/F/your-feed-name/npm/
+	always-auth=true
+	//www.myget.org/F/your-feed-name/npm/:_authToken=your-api-key
+
+The following command will then publish to your MyGet feed:
+
+	npm publish 
 
 <p class="alert alert-warning">
     <strong>Important!</strong> As per the <a href="https://docs.npmjs.com/cli/publish">npm publish docs</a>, MyGet will add the <code>latest</code> tag to the published package, unless a different tag is specified using the <code>--tag</code> switch. In our UI, we will show the latest version by semantic version, whereas the npm client will make use of the tags to check for latest version.

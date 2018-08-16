@@ -88,7 +88,7 @@ In the Visual Studio Debugger options, you can disable the *Require source files
 Portable PDB hashes will look different from Windows PDB hashes, because of the [SSQP Key Conventions for Portable PDB's](https://github.com/dotnet/symstore/blob/master/docs/specs/SSQP_Key_Conventions.md#portable-pdb-signature).
 
 <p class="alert alert-warning">
-    <strong>Note for users generating Portable PDB's (.NET Standard):</strong> MyGet <em>can</em> serve the <code>.pdb</code> file to Visual Studio, Rider, WinDBG etc., but we can not rewrite the PDB file to allow linking to source code. Portable PDB's work differently in this regard. To support source stepping, we recommend using <a href="https://github.com/ctaggart/SourceLink">one of the SourceLink MSBuild tasks to embed sources</a>. The <a href="https://github.com/NuGet/Home/issues/6104#issuecomment-361487296">symbols package discussion on NuGet's GitHub</a> may also provide additional tips and tricks. If you would like to see a better experience, <a href="https://github.com/NuGet/Home/issues/6104#issuecomment-361487296">tell the NuGet team</a>!
+    <strong>Note for users generating Portable PDB's (.NET Standard / .NET Core):</strong> MyGet <em>can</em> serve the <code>.pdb</code> file to Visual Studio, Rider, WinDBG etc., but we can not rewrite the PDB file to allow linking to source code. Portable PDB's work differently in this regard. To support source stepping, we recommend using <a href="https://github.com/dotnet/sourcelink/blob/master/README.md">SourceLink</a>.
 </p>
 
 ### The source files are still in their original location

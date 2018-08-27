@@ -13,134 +13,57 @@
 
 /* Bootstrap overrides - navbar.less */
 .navbar {
-    .brand {
-        padding: 23px 0 0;
-        margin-right: 60px;
-        margin-left: 0;
+    font-size: 16px;
+}
 
-        h1 {
-            width: 120px;
-            height: 36px;
-            background: url('/Content/images/my-get-logo@2x.png') top left no-repeat;
-            background-size: 120px auto;
-            text-indent: -99999px;
-            margin: 0;
-            padding: 0;
-        }
-    }
+.navbar .brand {
+    display: block;
+    float: left;
+    width: 250px;
+    height: @navbarHeight;
+    background-image: url('/Content/images/myget/logo.png');
+    background-position: left center;
+    background-repeat: no-repeat;
+    -moz-background-size: auto (@navbarHeight / 2);
+    -o-background-size: auto (@navbarHeight / 2);
+    -webkit-background-size: auto (@navbarHeight / 2);
+    background-size: auto (@navbarHeight / 2);
+    padding: 0;
+    margin-left: 0;
 
-    .container {
-        display: flex;
-        padding: 0 20px;
-    }
-
-    .nav-collapse {
-        flex-grow: 1;
-    }
-
-    .nav-info {
-        margin-top: 27px;
-        float: left;
-        color: #fff;
-    }
-
-    .btn.btn-primary.pull-right {
-        margin-left: 20px;
-    }
-
-    .nav {
-        font-size: 13px;
-        font-weight: 600;
-
-        & > li > a {
-            text-shadow: none;
-            text-transform: uppercase;
-            color: #FFF;
-        }
-    }
-
-    .nav-grow {
-        flex-grow: 1;
-    }
-
-    .navbar-form {
-        .btn {
-            background: none;
-            color: #fff;
-            border: transparent;
-        }
-
-        .btn.btn-primary {
-            border: solid 2px #fff;
-        }
-    }
-
-    .btn,
-    .btn-group {
-        margin-top: 18px;
-    }
-
-    .navbar-inner {
-        background-color: #0495dc !important;
+    span {
+        display: none;
     }
 }
 
-.nav-list {
-    margin-top: 78px;
-    ul {
-        list-style-type: disc;
-        margin-bottom: 36px;
+.navbar > .navbar-form.pull-right {
+    margin-left: 20px;
+}
 
-        li {
-            a {
-                color: #4a4a4a !important;
-            }
-        }
-    }
+.navbar .nav > li > a.icon {
+    padding-left: 5px;
+    padding-right: 0;
+    padding-top: 32px;
+}
+
+.navbar .btn-navbar {
+  background-color: @white;
+}
+.navbar .btn-navbar .icon-bar {
+  background-color: #ccc;
 }
 
 /* Bootstrap overrides - type.less */
-
-// Headers
-// -------------------------
-
-h1, h2, h3, h4, h5, h6 {
-    color: #4a4a4a;
-    font-weight: 400;
-}
-
-h1 {
-    font-size: 50px;
-    line-height: 1.2;
-    margin: 0 0 100px;
-}
-
 h2 {
-    font-size: 42px;
-    line-height: 1.2;
-    margin: 0 0 70px;
+    font-weight: normal;
 }
 
 h3 {
-    font-size: 32px;
-    line-height: 1.2;
-    margin: 0 0 40px;
+    font-family: 'Segoe UI Light', Arial, Helvetica;
 }
 
-h4 {
-    font-size: 24px;
-    line-height: 1.2;
-    margin: 0 0 30px;
-}
-
-h5 {
-    font-size: 20px;
-    line-height: 1.3;
-    margin: 0 0 20px;
-}
-
-p {
-    margin-bottom: 20px;
+h3, h4, h5, h6 {
+    color: darken(@grayLight, 20%);
 }
 
 .label > a {
@@ -367,99 +290,48 @@ html, body {
     padding-bottom: 15px;
 }
 
-footer.footer {
-    padding: 80px 0 20px;
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: @footer_height;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    background-color: @grayDark;
+    color: @footer_color;
+    font-size: @fontSizeSmall + 1px;
+    line-height: normal;
 
-    .footer-logo {
-    }
+    a {
+        color: @footer_color;
 
-    .footer-links {
-        float: right;
-    }
-
-    .footer-col {
-        float: left;
-        margin-left: 30px;
-
-        h6 {
-            margin-bottom: 20px;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-
-            li {
-                padding: 0;
-                margin: 0 0 10px;
-            }
-
-            a {
-                color: #333;
-            }
+        &:hover {
+            color: @white;
         }
     }
 
-    .footer-secondary {
-        padding: 60px 0 20px;
-        color: #999;
-        font-size: 14px;
+    h2 {
+        color: @footer_color;
+        font-weight: bolder;
+        font-size: 16px;
+    }
 
-        a {
-            color: #999;
-            margin-right: 12px;
+    ul {
+        list-style-position: outside;
+        list-style-type: none;
+        margin: 0;
+
+        li {
+            margin: 5px 0;
+            line-height: 20px;
         }
     }
 
-    .secondary-links {
-        float: left;
-        margin-top: 8px;
-    }
-
-    .footer-socials {
-        float: right;
-        filter: brightness(40%)
+    .colofon {
+        padding-top: 10px;
+        font-size: @fontSizeMini;
     }
 }
-// Social icons
-// -------------------------
-
-a.share {
-    width: 35px;
-    height: 29px;
-    border: 0;
-    vertical-align: middle;
-    display: inline-block;
-}
-
-a.share-twitter {
-    background-image: url('/Content/images/sharing/twitter.png');
-    background-repeat: no-repeat;
-    width: 35px;
-}
-
-a.share-facebook {
-    background-image: url('/Content/images/sharing/facebook.png');
-    background-repeat: no-repeat;
-    width: 35px;
-}
-
-a.share-linkedin {
-    background-image: url('/Content/images/sharing/linkedin.png');
-    background-repeat: no-repeat;
-    width: 35px;
-}
-
-a.share-google {
-    background-image: url('/Content/images/sharing/google.png');
-    background-repeat: no-repeat;
-    width: 35px;
-}
-
-
-
-
 
 ul.highlightable {
     margin-top: 10px;
@@ -1380,116 +1252,4 @@ a.share-google {
 	
   /* "transparent" only works here because == rgba(0,0,0,0) */
   background-image: linear-gradient(to bottom, transparent, #fff);
-}
-
-// Buttons
-// -------------------------
-
-.btn {
-    font-size: 14px;
-    font-weight: 600;
-    text-shadow: none;
-    padding: 8px 22px;
-    border-radius: 5px;
-    border: solid 2px @secondBrandColor;
-    text-transform: uppercase;
-    color: @secondBrandColor;
-}
-
-.btn-primary {
-    border: transparent;
-    color: #fff;
-    background: #ff6c11;
-
-    &:hover {
-        color: #fff;
-        background-color: #ff6c11;
-    }
-}
-
-.btn-inverse {
-    border-color: #fff;
-    color: #fff;
-    background: none;
-
-    &:hover {
-        background: rgba(255,255,255,0.1);
-    }
-}
-
-.btn-blue {
-    background: @secondBrandColor;
-    color: #fff;
-
-    &:hover {
-        background: darken(@secondBrandColor, 2%);
-        color: #fff;
-    }
-}
-
-.btn-large {
-    padding: 18px 40px;
-    font-size: 16px;
-    margin-bottom: 11px;
-}
-
-a.white {
-    color: #fff;
-    text-decoration: underline;
-
-    &:hover {
-        opacity: 0.8;
-    }
-}
-
-
-// FORMS
-// -------------------------
-
-input[type="text"],
-input[type="password"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="week"],
-input[type="number"],
-input[type="email"],
-input[type="url"],
-input[type="search"],
-input[type="tel"],
-input[type="color"] {
-    font-size: 16px;
-    line-height: 1.4;
-    height: 38px;
-    padding: 0 16px;
-    display: inline-block;
-    width: auto;
-    max-width: 100%;
-    border-radius: 3px;
-}
-
-input.input-large {
-    height: 58px;
-    padding: 0 25px;
-    border-radius: 5px;
-}
-
-form .btn {
-    margin-bottom: 11px;
-}
-.alert {
-    color: #000;
-}
-#searchBoxInput {
-    height: 28px;
-    border-radius: 5px;
-    border: 1px solid gray;
-    padding: 5px;
-    margin-top: -11px;
-}
-
-#mainSearch {
-    margin: 42px auto 100px;
 }

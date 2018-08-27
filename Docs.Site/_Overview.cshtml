@@ -3,7 +3,7 @@
 <ul class="nav nav-list">
     @foreach (var topic in Topic.GetTopics("~/docs"))
     {
-        <li><h4>@topic.Title</h4>
+        <li><p><strong>@topic.Title</strong></p>
             @if (topic.SubTopics.Any())
             {
                 <ul>

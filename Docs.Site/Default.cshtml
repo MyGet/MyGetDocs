@@ -15,38 +15,39 @@
 
     <p><a href="https://www.myget.org">MyGet</a> allows you to create and host your own <a href="https://nuget.org">NuGet</a> feed. Include packages from the official NuGet feed or upload your own NuGet packages. We can also compile and package your source code from GitHub, BitBucket, CodePlex and more!</p>
 
-    <hr noshade="noshade"/>
-
-    <form action="" onsubmit="return submitQuery('#searchBoxInput2')" class="span8 centered">
-        <input name="q" id="searchBoxInput2" placeholder="How can we help?" class="input-xxlarge" /><br /><br />
-        <input id="searchBoxSubmit" type="submit" value="Search" class="btn btn-primary btn-large" />
-    </form>
-
-    <hr noshade="noshade" />
-
-    <div class="row">
-        <div class="span3">
-            <h3>Where to begin?</h3>
-            <p>Completely new to MyGet? It's probably best to start with <a href="/docs/walkthrough/overview">the overview</a> and head on to our technology-specific getting started guides for <a href="/docs/walkthrough/getting-started-with-nuget">NuGet</a>, <a href="/docs/walkthrough/getting-started-with-npm">npm</a>, <a href="/docs/walkthrough/getting-started-with-bower">Bower</a>, <a href="/docs/walkthrough/getting-started-with-maven">Maven</a> and <a href="/docs/walkthrough/getting-started-with-vsix">Vsix</a>.</p>
-            <p>If you're already using NuGet, check <a href="/docs/how-to/migrating-to-myget">how to migrate to MyGet</a>.</p>
+    
+        <div class="row">
+            <div class="text-center">
+                <form action="" onsubmit="return submitQuery('#searchBoxInput2')" id="mainSearch">
+                    <input class="input-large align-top va-top" type="text" placeholder="How can we help?" size="50" name="q" id="searchBoxInput2" />
+                    <button class="btn btn-large btn-primary va-top">SEARCH</button>
+                </form>
+            </div>
         </div>
-        <div class="span3">
-            <h3>Popular topics</h3>
-            <ul>
-                <li><a href="/docs/how-to/make-myget-list-and-automatically-mirror-packages-from-other-feeds">Mirror packages from other feeds</a></li>
-                <li><a href="/docs/how-to/consume-a-private-feed-in-teamcity">Consume a private feed in TeamCity</a></li>
-                <li><a href="/docs/reference/package-sources">Working with Package Sources</a></li>
-                <li><a href="/docs/reference/package-source-discovery">Package Source Discovery</a></li>
-            </ul>
-        </div>
-        <div class="span3">
-            <h3>Reference</h3>
-            <ul>
-                <li><a href="/docs/reference/build-services">Build Services</a></li>
-                <li><a href="/docs/reference/custom-build-scripts">Custom Build Scripts</a></li>
-                <li><a href="/docs/reference/symbols">Debugger Symbols</a></li>
-                <li><a href="/docs/reference/feed-endpoints">Feed endpoints</a></li>
-            </ul>
-        </div>
-    </div>
+
+            <div class="row">
+                <div class="span3">
+                    <h4>Where to begin?</h4>
+                    <p>Completely new to MyGet? It's probably best to start with <a href="/docs/walkthrough/overview">the overview</a> and head on to our technology-specific getting started guides for <a href="/docs/walkthrough/getting-started-with-nuget">NuGet</a>, <a href="/docs/walkthrough/getting-started-with-npm">npm</a>, <a href="/docs/walkthrough/getting-started-with-bower">Bower</a>, <a href="/docs/walkthrough/getting-started-with-maven">Maven</a> and <a href="/docs/walkthrough/getting-started-with-vsix">Vsix</a>.</p>
+                    <p>If you're already using NuGet, check <a href="/docs/how-to/migrating-to-myget">how to migrate to MyGet</a>.</p>
+                </div>
+                <div class="span3">
+                    <h4>Popular topics</h4>
+                    <ul>
+                        <li><a href="/docs/how-to/make-myget-list-and-automatically-mirror-packages-from-other-feeds">Mirror packages from other feeds</a></li>
+                        <li><a href="/docs/how-to/consume-a-private-feed-in-teamcity">Consume a private feed in TeamCity</a></li>
+                        <li><a href="/docs/reference/package-sources">Working with Package Sources</a></li>
+                        <li><a href="/docs/reference/package-source-discovery">Package Source Discovery</a></li>
+                    </ul>
+                </div>
+                <div class="span3">
+                    <h4>Reference</h4>
+                    <ul>
+                        <li><a href="/docs/reference/build-services">Build Services</a></li>
+                        <li><a href="/docs/reference/custom-build-scripts">Custom Build Scripts</a></li>
+                        <li><a href="/docs/reference/symbols">Debugger Symbols</a></li>
+                        <li><a href="/docs/reference/feed-endpoints">Feed endpoints</a></li>
+                    </ul>
+                </div>
+            </div>
 </article>

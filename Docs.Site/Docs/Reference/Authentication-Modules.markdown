@@ -35,7 +35,7 @@ Once the **Add authentication module** dialog is shown, we can find **Settings f
 In a separate browser window:
 
 * Sign in to your Microsoft Azure Portal account and open the **[Azure Active Directory](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview)** blade.
-* Under **App registrations**, click the **New application registration** button.
+* Under **App registrations**, click the **New application registration** button. (note this is *not* under the *Enterprise applications* tab!)
 * In the *Name* field, enter an application name (e.g. *MyGet*).
 * Under **Application type**, click **Web app / API**.
 * In the *Sign-on URL* field, paste the sign-on URL that is displayed in MyGet *Settings for Azure Active Directory*.

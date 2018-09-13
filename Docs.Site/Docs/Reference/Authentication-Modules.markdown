@@ -199,6 +199,16 @@ No, not directly. Authentication modules operate in a federated mode. MyGet neve
   
 MyGet credentials, including username and access tokens, remain on MyGet and therefore are not disabled when disabling the user account in the external authentication provider.
 
+### I have configured an authentication module, but am always redirected back to the login page
+
+The most common reason for this to happen is because [user self-registration is disabled](/docs/reference/myget-enterprise#Registration_and_Login) in your MyGet Enterprise account.
+
+When self-registration is disabled, first-time logins via an authentication module will fail - as they are essentially a registration.
+
+If you want to keep self-registration disabled, users will have to login once with MyGet credentials, adn then link their identity via their profile page (top-right menu, *View Profile*, then *Identities*, *Add one now*). After doing that, login via an authentication module will work.
+
+We recommend informing your new users about this workflow, so they can make use of the authentication module at hand.
+
 ### Do you recommend editing or removing authentication modules?
 
 When an authentication module is added and more than one user is registered using it, we recommend never editing or removing the authentication module. Doing so may break user association and cause confusion with users of your MyGet Enterprise account.

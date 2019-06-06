@@ -28,6 +28,7 @@
     <!--[if lt IE 9]>
         <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
     @Bundles.RenderScripts("head")
     @RenderSection("head", required: false)
 </head>
@@ -45,7 +46,7 @@
                         <a class="brand" href="/">
                             <h1><span>MyGet - Hosted Package Management Server for NuGet, symbols, Npm, Bower, Maven, PHP Composer and VSIX</span></h1>
                         </a>
-                        <div class="nav-collapse collapse pull-right">
+                        <div class="nav-collapse collapse">
                             <ul class="nav">
                                 <li><a href="https://www.myget.org/features/">Features</a></li>
                                 <li><a href="https://www.myget.org/plans/">Pricing</a></li>
@@ -138,60 +139,63 @@
             </div>
         </div>
 
-        <footer class="footer">
-            <div class="container">
-                <div class="clearfix">
-                    <a class="footer-logo" href="/">
-                        <img src="/Content/images/myget-logo.svg" width="180" />
-                    </a>
-                    <div class="footer-links">
-                        <div class="footer-col">
-                            <h6>LEARN MORE</h6>
-                            <ul>
-                                <li><a href="https://www.myget.org/features">Features</a></li>
-                                <li><a href="https://www.myget.org/testimonials">Customers</a></li>
-                                <li><a href="https://www.myget.org/pricing">Pricing</a></li>
-                                <li><a href="https://www.myget.org/partners">Partners &amp; resellers</a></li>
-                                <li><a href="https://www.myget.org/company">About us</a></li>
-                            </ul>
+            <footer class="footer">
+                <div class="container">
+                    <div class="content">
+                        <div class="clearfix">
+                            <a class="footer-logo" href="/">
+                                <img src="/Content/images/myget-logo.svg" width="180" />
+                            </a>
+                            <div class="footer-links">
+                                <div class="footer-col">
+                                    <h6>Learn More</h6>
+                                    <ul>
+                                        <li><a href="https://www.myget.org/features">Features</a></li>
+                                        <li><a href="https://www.myget.org/testimonials">Customers</a></li>
+                                        <li><a href="https://www.myget.org/pricing">Pricing</a></li>
+                                        <li><a href="https://www.myget.org/partners">Partners &amp; resellers</a></li>
+                                        <li><a href="https://www.myget.org/company">About us</a></li>
+                                    </ul>
+                                </div>
+                                <div class="footer-col">
+                                    <h6>Feeds</h6>
+                                    <ul>
+                                        <li><a href="https://docs.myget.org/docs/reference/faq">FAQ</a></li>
+                                        <li><a href="https://docs.myget.org">Documentation</a></li>
+                                        <li><a href="https://www.myget.org/Support">Support</a></li>
+                                    </ul>
+                                </div>
+                                <div class="footer-col">
+                                    <h6>Resources</h6>
+                                    <ul>
+                                        <li><a href="https://blog.myget.org">Our Blog</a></li>
+                                        <li><a href="https://twitter.com/mygetteam">Follow us on Twitter</a></li>
+                                        <li><a href="https://myget.uservoice.com">Feedback via UserVoice</a></li>
+                                        <li><a href="https://status.myget.org/">Status Page</a></li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                        <div class="footer-col">
-                            <h6>SUPPORT AND HELP</h6>
-                            <ul>
-                                <li><a href="https://docs.myget.org/docs/reference/faq">FAQ</a></li>
-                                <li><a href="https://docs.myget.org">Documentation</a></li>
-                                <li><a href="https://www.myget.org/Support">Support</a></li>
-                            </ul>
-                        </div>
-                        <div class="footer-col">
-                            <h6>NEWS AND UPDATES</h6>
-                            <ul>
-                                <li><a href="https://blog.myget.org">Our Blog</a></li>
-                                <li><a href="https://twitter.com/mygetteam">Follow us on Twitter</a></li>
-                                <li><a href="https://myget.uservoice.com">Feedback via UserVoice</a></li>
-                                <li><a href="https://status.myget.org/">Status Page</a></li>
-                            </ul>
+                        <div class="clearfix"></div>
+                        <div class="footer-secondary">
+                            <div class="secondary-links">
+                                <a href="https://www.myget.org/policies/terms">Terms of Service</a>
+                                <a href="https://www.myget.org/policies/disclaimer">Disclaimer</a>
+                                <a href="https://www.assembla.com/privacy-policy">Privacy (on Assembla)</a>
+                                <a href="https://www.myget.org/policies/security">Security</a>
+                            </div>
+                            <div class="footer-socials">
+                                <a class="share share-twitter" target="blank" href="https://twitter.com/share?url=http://www.myget.org/&text=Check %23MyGet, it's an online repository for private packages!"></a>
+                                <a class="share share-facebook" target="blank" href="https://www.facebook.com/sharer.php?u=http://www.myget.org/"></a>
+                                <a class="share share-linkedin" target="blank" href="https://www.linkedin.com/shareArticle?mini=true&url=http://www.myget.org/"></a>
+                                <a class="share share-google" target="blank" href="https://plus.google.com/share?url=http://www.myget.org/"></a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="footer-secondary">
-                    <div class="secondary-links">
-                        <a href="https://www.myget.org/policies/terms">Terms of Service</a>
-                        <a href="https://www.myget.org/policies/disclaimer">Disclaimer</a>
-                        <a href="https://www.myget.org/policies/privacy">Privacy</a>
-                        <a href="https://www.myget.org/policies/security">Security</a>
-                    </div>
-                    <div class="footer-socials">
-                        <a class="share share-twitter" target="blank" href="https://twitter.com/share?url=http://www.myget.org/&text=Check %23MyGet, it's an online repository for private packages!"></a>
-                        <a class="share share-facebook" target="blank" href="https://www.facebook.com/sharer.php?u=http://www.myget.org/"></a>
-                        <a class="share share-linkedin" target="blank" href="https://www.linkedin.com/shareArticle?mini=true&url=http://www.myget.org/"></a>
-                        <a class="share share-google" target="blank" href="https://plus.google.com/share?url=http://www.myget.org/"></a>
-                    </div>
-                </div>
-            </div>
+            </footer>
+        </div>
 
-        </footer>
-    </div>
 
     @Microsoft.Web.Helpers.Analytics.GetGoogleAsyncHtml("UA-576836-11")
 </body>

@@ -2,10 +2,11 @@
 @import "variables.less"; // Modify this for custom colors, font-sizes, etc
 
 /* New variables */
-
-// Footer
-@footer_height: 250px;
-@footer_color: #fefefe;
+body {
+    font-family: 'Oxygen', sans-serif;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
 
 .s-noclickonce .s-clickonce {
     display: none;
@@ -29,13 +30,13 @@
         }
     }
 
-    .container {
-        display: flex;
-        padding: 0 20px;
+    .btn-navbar {
+        background: transparent;
+        border: none;
     }
 
-    .nav-collapse {
-        flex-grow: 1;
+    .container {
+        padding: 0 20px;
     }
 
     .nav-info {
@@ -44,23 +45,21 @@
         color: #fff;
     }
 
-    .btn.btn-primary.pull-right {
+    .btn.btn-primary {
         margin-left: 20px;
     }
 
     .nav {
         font-size: 13px;
         font-weight: 600;
-
+        & > li {
+            text-align: center;
+        } 
         & > li > a {
             text-shadow: none;
             text-transform: uppercase;
             color: #FFF;
         }
-    }
-
-    .nav-grow {
-        flex-grow: 1;
     }
 
     .navbar-form {
@@ -72,21 +71,22 @@
 
         .btn.btn-primary {
             border: solid 2px #fff;
+            border-radius: 5px;
         }
     }
 
     .btn,
     .btn-group {
-        margin-top: 18px;
+        margin-top: 26px;
     }
 
     .navbar-inner {
-        background-color: #0495dc !important;
+        background: #0c79ce !important;
     }
 }
 
 .nav-list {
-    margin-top: 78px;
+    margin-top: 5px;
     ul {
         list-style-type: disc;
         margin-bottom: 36px;
@@ -96,6 +96,11 @@
                 color: #4a4a4a !important;
             }
         }
+    }
+}
+@media screen and (min-width: 768px) {
+    .nav-list {
+        margin-top: 78px;
     }
 }
 
@@ -365,12 +370,25 @@ html, body {
 
 .content {
     padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 footer.footer {
-    padding: 80px 0 20px;
+    padding: 50px 0 20px;
+    font-size: 12px;
+    line-height: 1.4;
+
+    .container {
+        border-top: solid 1px #0495dc;
+        padding-top: 80px;
+    }
 
     .footer-logo {
+        img {
+            margin-bottom: 50px;
+            margin-right: 40px;
+        }
     }
 
     .footer-links {
@@ -379,10 +397,15 @@ footer.footer {
 
     .footer-col {
         float: left;
-        margin-left: 30px;
+        margin-left: 80px;
+
+
 
         h6 {
+            font-size: 12px;
+            line-height: 1.4;
             margin-bottom: 20px;
+            font-weight: 600;
         }
 
         ul {
@@ -393,6 +416,7 @@ footer.footer {
             li {
                 padding: 0;
                 margin: 0 0 10px;
+                line-height: 1.4;
             }
 
             a {
@@ -405,7 +429,6 @@ footer.footer {
         padding: 60px 0 20px;
         color: #999;
         font-size: 14px;
-
         a {
             color: #999;
             margin-right: 12px;
@@ -413,6 +436,8 @@ footer.footer {
     }
 
     .secondary-links {
+        font-size: 12px;
+        line-height: 1.4;
         float: left;
         margin-top: 8px;
     }
@@ -456,6 +481,23 @@ a.share-google {
     background-repeat: no-repeat;
     width: 35px;
 }
+
+@media (max-width: 640px) {
+    footer.footer {
+        padding-left: 15px;
+        padding-right: 15px;
+        .footer-col {
+            margin-left: 0;
+            margin-right: 50px;
+        }
+
+        .footer-logo,
+        .footer-links {
+            float: left;
+        }
+    }
+}
+
 
 
 
@@ -1278,15 +1320,7 @@ a.share-google {
         line-height: 14px; // keeps the overall height an even number
     }
 
-    @footer_height_medium: @footer_height * 1.2;
 
-    .content {
-        padding-bottom: @footer_height_medium + 15px;
-    }
-
-    .footer {
-        height: @footer_height_medium;
-    }
 }
 
 @media (min-width: 768px) and (max-width: 979px) {
@@ -1316,15 +1350,7 @@ a.share-google {
         }
     }
 
-    @footer_height_large: @footer_height * 3;
-
-    .content {
-        padding-bottom: @footer_height_large + 15px;
-    }
-
-    .footer {
-        height: @footer_height_large;
-    }
+ 
 }
 
 .details-small {

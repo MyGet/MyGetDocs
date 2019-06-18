@@ -60,4 +60,4 @@ The request to make is an HTTP `POST`, towards https://www.myget.org/F/yourfeedn
 * Add request body: the ZIPped Bower package (basically a `ZIP` file containing your entire package + `package.json`)
 
 [1]: https://www.myget.org
-[2]: https://docs.myget.org/docs/reference/feed-security
+[2]: https://docs.myget.org/docs/reference/security#Inviting_other_users_to_your_feed

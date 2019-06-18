@@ -428,6 +428,7 @@
     <Content Include="Content\less_new\utilities.less" />
     <Content Include="Content\less_new\variables.less" />
     <Content Include="Content\less_new\wells.less" />
+    <Content Include="Docs\Walkthrough\Getting-Started-with-Python.markdown" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="googlef9ed0438b7b80b43.html" />
     <Content Include="Scripts\jquery-1.9.1.js" />

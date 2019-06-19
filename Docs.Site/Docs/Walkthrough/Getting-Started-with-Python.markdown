@@ -16,14 +16,14 @@
 
 ## Working with your Python registry
 
-1. **Add packages** to the feed by either uploading them through the web site, referencing/mirroring them from *[pypi.org][3]*
+1. **Add packages** to the feed by either uploading them through the web site, referencing/mirroring them from *<a href="https://pypi.org" target="_blank" rel="noopener">pypi.org</a>*
 
 	On each feed, packages can be added through the web UI.
 
 	Keep in mind that currently MyGet does not support hosting tar.gz packages. Hovewer package which as a dependency has some other package which is available only in tar.gz can still be installed with „pip” tool. 
 	If you type something in search field, the search is performed on pypi.org and returns all packages which names matches your term. Click on specific name and all .whl packages will be presented to you if they are available.
 
-2. (optional) **Enable upstream source proxy** to seamlessly blend your MyGet feed with the *[pypi.org][3]*  repository.
+2. (optional) **Enable upstream source proxy** to seamlessly blend your MyGet feed with the *<a href="https://pypi.org" target="_blank" rel="noopener">pypi.org</a>*  repository.
 
 	From the *Upstream Sources* tab, edit the *Python upstream source* and enable the *Make all upstream packages available in clients* option. If you prefer to have the package binaries downloaded to your feed for subsequent requests, also enable the *Automatically add downloaded upstream packages to the current feed (mirror)* option.
 
@@ -31,5 +31,5 @@
 
 
 [1]: https://www.myget.org
-[2]: https://docs.myget.org/docs/reference/feed-security
+[2]: https://docs.myget.org/docs/reference/security#Inviting_other_users_to_your_feed
 [3]: https://pypi.org

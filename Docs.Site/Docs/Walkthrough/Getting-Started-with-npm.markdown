@@ -52,5 +52,5 @@ Setting up your own npm registry has never been easier. MyGet allows you to crea
 	![Inspect package licenses](/docs/walkthrough/Images/npm-licenses.png)
 
 [1]: https://www.myget.org
-[2]: https://docs.myget.org/docs/reference/feed-security
+[2]: https://docs.myget.org/docs/reference/security#Inviting_other_users_to_your_feed
 [3]: https://docs.myget.org/docs/reference/license-analysis

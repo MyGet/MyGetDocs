@@ -124,5 +124,5 @@ If you plan on publishing packages using the `gradle publish` command, make sure
 	![Inspect package licenses](/docs/walkthrough/Images/maven-licenses.png)
 
 [1]: https://www.myget.org
-[2]: https://docs.myget.org/docs/reference/feed-security
+[2]: https://docs.myget.org/docs/reference/security#Inviting_other_users_to_your_feed
 [3]: https://docs.myget.org/docs/reference/license-analysis

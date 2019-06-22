@@ -342,7 +342,6 @@
     <Content Include="Docs\Walkthrough\Images\vsix-vs-options.png" />
     <Content Include="Docs\Walkthrough\Overview.markdown" />
     <Content Include="Docs\Walkthrough\Getting-Started-with-NuGet.markdown" />
-    <Content Include="Docs\Walkthrough\python-package-web-ui.png" />
     <Content Include="Docs\Walkthrough\_metadata" />
     <Content Include="Docs\_DocLayout.cshtml" />
     <Content Include="Docs\_metadata" />

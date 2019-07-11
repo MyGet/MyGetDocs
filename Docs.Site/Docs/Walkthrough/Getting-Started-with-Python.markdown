@@ -61,6 +61,15 @@ On the other hand, if dependencies are not available on your feed, pip will look
 
 Keep in mind that if you want pip to install your package from  feed, it must be mirrored on that feed
 
+##Installing specific version
+
+For installing specific version you can use the same commands which pip normally exposes. For example in order to install version 0.0.4 of package A:
+
+               pip install --index-url https://<your_myget_domain>/F/<your-feed-name>/python A==0.0.4
+
+If you don’t specify package version, the newest version of that package which is placed and mirrored on that feed will be installed.
+
+
 [1]: https://www.myget.org
 [2]: https://docs.myget.org/docs/reference/security#Inviting_other_users_to_your_feed
 [3]: https://pypi.org

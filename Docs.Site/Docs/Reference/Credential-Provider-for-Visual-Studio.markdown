@@ -1,4 +1,4 @@
-# MyGet Credential Provider for Visual Studio 2017
+# MyGet Credential Provider for Visual Studio 2017 and 2019
 
 The MyGet Credential Provider for Visual Studio provides an easy way to connect to secured NuGet package sources hosted on MyGet.
 

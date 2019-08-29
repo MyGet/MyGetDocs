@@ -47,3 +47,4 @@ To install the MyGet Credential Provider for Visual Studio 2015:
 <div class="alert alert-block">
   <strong>Note:</strong> The credential provider for Visual Studio 2015 as well as the custom build of the NuGet Package Manager extension are prerelease and are provided as-is. Please reach out to us if you are having issues with it.
 </div>
+

@@ -88,7 +88,7 @@ The following table lists which endpoint can be used with which client:
 
 MyGet has the following endpoints available for symbol server (debugging in Visual Studio and WinDbg):
 
-* /F/&lt;your-feed-name&gt;/api/v2/package - the symbols package publish endpoint
+* /F/&lt;your-feed-name&gt;/symbols/api/v2/package - the symbols package publish endpoint
 * /F/&lt;your-feed-name&gt;/symbols - the symbol server endpoint
 
 ### Npm-compatible feed endpoints

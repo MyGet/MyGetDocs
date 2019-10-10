@@ -130,9 +130,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="2fa-auth-code-sign-in-full.png" />
-    <Content Include="2fa-auth-code-sign-in.png" />
-    <Content Include="2fabasic.png" />
+    <Content Include="Docs\Reference\Images\2fa-auth-code-sign-in-full.png" />
+    <Content Include="Docs\Reference\Images\2fa-auth-code-sign-in.png" />
+    <Content Include="Docs\Reference\Images\2fabasic.png" />
     <Content Include="404.cshtml" />
     <Content Include="App_Code\PaginationHelper.cshtml" />
     <Content Include="Content\images\my-get-logo%402x.png" />
@@ -437,14 +437,14 @@
     <Content Include="Docs\Reference\MyGet-Two-Factor-Authentication-2FA.markdown" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="googlef9ed0438b7b80b43.html" />
-    <Content Include="recovery codes close.png" />
-    <Content Include="recovery-codes-open.png" />
+    <Content Include="Docs\Reference\Images\recovery codes close.png" />
+    <Content Include="Docs\Reference\Images\recovery-codes-open.png" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
     <Content Include="Search.cshtml" />
-    <Content Include="set2fa.png" />
-    <Content Include="tenant-obligatory-2fa-for-account-without-2fa-set.png" />
-    <Content Include="userecoverycodetosignin.png" />
+    <Content Include="Docs\Reference\Images\set2fa.png" />
+    <Content Include="Docs\Reference\Images\tenant-obligatory-2fa-for-account-without-2fa-set.png" />
+    <Content Include="Docs\Reference\Images\userecoverycodetosignin.png" />
     <Content Include="Views\Web.config" />
     <Content Include="packages.config" />
     <Content Include="Scripts\jquery-1.9.1.min.map" />

@@ -85,3 +85,4 @@ If you enable this option and click "Save", users invited to your MyGet Enterpri
 When they try to sign in, they will automatically be presented a QR code that they must use with a 2FA app to configure 2FA for their account. Once they have set up their 2FA app, they will be able to continue signing in. Any time they attempt to sign in after that, they will need to use their 2FA app to enter a one-time authentication code.
 
 [1]: https://www.myget.org/profile/Me#!/TwoFA
+

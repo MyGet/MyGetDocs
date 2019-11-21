@@ -42,7 +42,9 @@ a) **From Feed (upstream source).** To add a gem from RubyGems.org to your MyGet
 b) **Upload from your local machine.** If you already have the gem file you would like to add to your MyGet on your local machine, you can upload it directly to MyGet from the web UI. You can upload one package at a time, or upload multiple packages simultaneously.
 
 * **Naming structure.** If you want to add a gem from your machine, keep in mind that the package name has to follow the naming structure below:
-    <gem_name>-<gem_version>.gem
+
+                <gem_name>-<gem_version>.gem
+				
 * **Package metadata.** When you upload a package, MyGet will import most of its metadata from the .gemspec file. If your package does not include a .gemspec file, you will see much less information about that package displayed in your MyGet feed.
 Include Dependencies. You can also include dependencies when you upload packages from your local machine. If you choose to “Include dependencies,” MyGet will parse the .gemspec file in your gem to gather a list of all needed dependencies and try to fetch them from RubyGems.org. If MyGet cannot find the specified dependencies in the upstream source, only your primary gem will be added. You can always manually add dependencies from RubyGems.org or upload from your local machine later.
 * **Mirror Dependencies:** If you choose to mirror dependencies, MyGet will attempt to import the gem dependencies from RubyGems.org and host them for you on your MyGet feed. Otherwise, MyGet will add references to the dependencies on RubyGems.org so that you can view them in your MyGet feed without counting against your MyGet storage allotment.
@@ -63,7 +65,9 @@ From your new Feed page, click the *Upstream Sources* tab in the menu to the lef
 ## Pushing a gem package to your feed from the command line
 
 You can easily upload a gem package through the MyGet.org website, but you can also push a gem from your command line if you would like using the cUrl utility and API key from your MyGet account. 
+
     curl -k -X POST https://<your_myget_domain>/F/<your_feed_name>/gem/upload -H “Authorization: Bearer <your_api_key>” -F “data=@<gem_name>-<gem_version>.gem”
+	
 (You can find your API key under the “Feed details” tab from your feed homepage. This key is automatically generated for you while you are adding a new feed.)
 
 ## Working with your gems on MyGet
@@ -72,10 +76,12 @@ After adding gems to your MyGet feed repository, you can download the gems direc
 To fetch and install packages with gem tool you need to specify URL under which your repository (feed) can be found.
 
 a) If your MyGet feed is set to **public** or **community**, you need only to specify the URL associated with your feed as in the example below:
+
     gem install <gem_name> --source https://<your_myget_domain>/F/<your_feed_name>/geminstall
 IMPORTANT: for feeds hosted on MyGet.org, your MyGet domain is simply <myget.org>. However, if your MyGet feeds are hosted on a MyGet Enterprise instance, you will need to specify your MyGet Enterprise subdomain as well (i.e. <mycompany.myget.org>).
 
 b) If your MyGet Feed is **private**, you will need to include your MyGet username and password in URL specified during installation:
+
     gem install <gem_name> --source https://<username>:<password>@<your_myget_domain>/F/<your-feed-name>/geminstall
 
 MyGet doesn’t technically have gem server repository under the hood, but it emulates it. When you invoke the **gem install command**, MyGet will attempt to return the specified package as well as any specified dependencies in the gem’s .gemspec file. This means that your gem and all its dependencies should be uploaded or mirrored to your MyGet feed before installation so that the gem tool can correctly install them. 

@@ -353,7 +353,7 @@
     <Content Include="Docs\Walkthrough\Images\gem_docs_edit_upstream.jpg" />
     <Content Include="Docs\Walkthrough\Images\gem_docs_feed_details.png" />
     <Content Include="Docs\Walkthrough\Images\gem_docs_login.jpg" />
-    <Content Include="Docs\Walkthrough\Getting-Started-with-Ruby-Gems.md" />
+    <Content Include="Docs\Walkthrough\Getting-Started-with-Ruby-Gems.markdown" />
     <Content Include="Docs\_DocLayout.cshtml" />
     <Content Include="Docs\_metadata" />
     <Content Include="Docs\_PageStart.cshtml" />

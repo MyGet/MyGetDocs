@@ -5,6 +5,7 @@ Setting up your own Ruby gem repository has never been easier. MyGet allows you 
 Once uploaded, you can use industry-standard tools like RubyGems to install gems from MyGet in your local environment, as well as install/manage dependencies, scan your hosted gems for license compliance and vulnerabilities, and more.
 
 This article will guide you through the process of creating your Ruby gem repository in a MyGet feed and uploading your first gem.
+<br/>
 
 ## Creating a new feed for your Ruby Gem
 
@@ -26,6 +27,7 @@ In MyGet, Ruby gems live in repositories we call “feeds.” Feeds allow you to
 
 4. (optional) **Invite collaborators** through the feed security settings. If you have created a private feed, you will need to explicitly grant users access to contribute to (write) or consume (read) the gems in your feed.
 
+<br/>
 
 ## Add a gem to your MyGet feed
 
@@ -38,7 +40,6 @@ a) **From Feed (upstream source).** To add a gem from RubyGems.org to your MyGet
 * **Search options:** Type a package name or a related term in the search field to search gems published on RubyGems.org and return a list of all of the gems matching your term. You can specify whether you would like to return results for all published versions of the package or just the most recent published version, as well as versions marked as “prerelease.”
 * **Dependencies:** When you upload packages from an upstream source, you can also include dependencies (runtime). If the option is checked, all dependencies will be installed with the primary gem package. MyGet will try to fetch and add highest possible version of each dependency to satisfy the dependency requirements of the primary package you are uploading. If you choose to add an older version of a gem, MyGet will attempt to add the versions of the dependencies specified in the .gemspec file. You can also add package dependencies to your feed manually by independently adding them from RubyGems.org or your local machine just like you uploaded your primary package.
 * **Mirroring:** When you add a package to MyGet from an upstream source, you can select whether MyGet should mirror that package or not. If you select the mirror option, MyGet will import the .gem file and host it on your MyGet account. Otherwise, MyGet will display the gem on your feed, referencing the .gem file hosted on RubyGems.org without importing the actual .gem file to MyGet itself.
-
 
 
 b) **Upload from your local machine.** If you already have the gem file you would like to add to your MyGet on your local machine, you can upload it directly to MyGet from the web UI. You can upload one package at a time, or upload multiple packages simultaneously.
@@ -64,6 +65,8 @@ From your new Feed page, click the *Upstream Sources* tab in the menu to the lef
 
 ![Proxy upstream sources into MyGet.](/docs/walkthrough/Images/gem_docs_edit_upstream.jpg)
 
+<br/>
+
 ## Pushing a gem package to your feed from the command line
 
 You can easily upload a gem package through the MyGet.org website, but you can also push a gem from your command line if you would like using the cUrl utility and API key from your MyGet account. 
@@ -72,6 +75,7 @@ You can easily upload a gem package through the MyGet.org website, but you can a
 	
 (You can find your API key under the “Feed details” tab from your feed homepage. This key is automatically generated for you while you are adding a new feed.)
 
+<br/>
 ## Working with your gems on MyGet
 After adding gems to your MyGet feed repository, you can download the gems directly from MyGet.org, install them using the RubyGems installer, or publish new gems to MyGet from your local machine with Bundler. 
 
@@ -80,7 +84,7 @@ To fetch and install packages with gem tool you need to specify URL under which 
 a) If your MyGet feed is set to **public** or **community**, you need only to specify the URL associated with your feed as in the example below:
 
     gem install <gem_name> --source https://<your_myget_domain>/F/<your_feed_name>/geminstall
-IMPORTANT: for feeds hosted on MyGet.org, your MyGet domain is simply <myget.org>. However, if your MyGet feeds are hosted on a MyGet Enterprise instance, you will need to specify your MyGet Enterprise subdomain as well (i.e. <mycompany.myget.org>).
+IMPORTANT: for feeds hosted on MyGet.org, your MyGet domain is simply `myget.org`. However, if your MyGet feeds are hosted on a MyGet Enterprise instance, you will need to specify your MyGet Enterprise subdomain as well (i.e. `mycompany.myget.org`).
 
 b) If your MyGet Feed is **private**, you will need to include your MyGet username and password in URL specified during installation:
 
@@ -91,6 +95,8 @@ MyGet doesn’t technically have gem server repository under the hood, but it em
 If you haven’t installed your gem’s dependencies on MyGet but already have them installed in your local environment, installation will also be successful. 
 
 However, if you don’t have needed dependencies locally or in your MyGet feed, gem install will fail on request for specs files (so-called ‘gem index’).
+
+<br/>
 
 ## Next steps with MyGet Ruby gems
 In addition to hosting your own public or private Ruby gem repository feeds, once you have uploaded gems to your MyGet account you can take advantage of MyGet’s other package management features, such as:

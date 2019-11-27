@@ -44,6 +44,8 @@ a) **From Feed (upstream source).** To add a gem from RubyGems.org to your MyGet
 
 b) **Upload from your local machine.** If you already have the gem file you would like to add to your MyGet on your local machine, you can upload it directly to MyGet from the web UI. You can upload one package at a time, or upload multiple packages simultaneously.
 
+![Add packages from your local machine.](/docs/walkthrough/Images/gem_docs_add_package_upload.jpg)
+
 * **Naming structure.** If you want to add a gem from your machine, keep in mind that the package name has to follow the naming structure below:
 
                 <gem_name>-<gem_version>.gem

@@ -85,12 +85,28 @@ To fetch and install packages with gem tool you need to specify URL under which 
 
 a) If your MyGet feed is set to **public** or **community**, you need only to specify the URL associated with your feed as in the example below:
 
-    gem install <gem_name> --source https://<your_myget_domain>/F/<your_feed_name>/geminstall
+    gem install <gem_name> --source https://<your_myget_domain>/F/<your_feed_name>/geminstall/
 IMPORTANT: for feeds hosted on MyGet.org, your MyGet domain is simply `myget.org`. However, if your MyGet feeds are hosted on a MyGet Enterprise instance, you will need to specify your MyGet Enterprise subdomain as well (i.e. `mycompany.myget.org`).
 
 b) If your MyGet Feed is **private**, you will need to include your MyGet username and password in URL specified during installation:
 
-    gem install <gem_name> --source https://<username>:<password>@<your_myget_domain>/F/<your-feed-name>/geminstall
+    gem install <gem_name> --source https://<username>:<password>@<your_myget_domain>/F/<your-feed-name>/geminstall/
+
+or you can use your **api key** of your feed like this:
+
+    gem install <gem_name> --source https://<your_myget_domain>/F/<your_feed_name>/auth/<your_api_key>/geminstall/
+
+For your convinecne we recommend adding source to the **gem** tool:
+
+    gem sources -a https://<username>:<password>@<your_myget_domain>/F/<your-feed-name>/geminstall/
+
+or when you use source with **api key**:
+
+    gem sources -a https://<your_myget_domain>/F/<your_feed_name>/auth/<your_api_key>/geminstall/   
+
+After that you can install gems by simply invoking command:
+   
+    gem install <gem_name>
 
 MyGet doesn’t technically have gem server repository under the hood, but it emulates it. When you invoke the **gem install command**, MyGet will attempt to return the specified package as well as any specified dependencies in the gem’s .gemspec file. This means that your gem and all its dependencies should be uploaded or mirrored to your MyGet feed before installation so that the gem tool can correctly install them. 
 

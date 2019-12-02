@@ -1,6 +1,29 @@
 # Feed endpoints
 
-This page explains the different feed endpoints available on MyGet. Depending on the client you are using (NuGet.exe, Orchard CMS, npm, ...), these endpoints can be configured as the package source or as the publish endpoint.
+This page explains the different feed endpoints available on MyGet. Depending on the client you are using (NuGet.exe, Orchard CMS, npm, pip, rubygems, ...), these endpoints can be configured as the package source or as the publish endpoint.
+
+## Feed endpoint basic structure
+
+MyGet feed endpoints all share the same basic structure, regardless of what package management tool you are using with MyGet. You will need specify your MyGet domain, the name of your feed, and the correct endpoint for the package manager you are using (i.e. NuGet, npm, Python, etc.).
+
+* **Determining your MyGet domain.** If are using a non-enterprise MyGet.org account, your MyGet domain is simply `myget.org`. However, for users on the MyGet Enterprise plan, you will need to specify the custom subdomain used by your company for your MyGet Enterprise instance (i.e. `mycompany.myget.org`). You can find your company's MyGet Enterprise subdomain by copying the URL used to log into your MyGet Enterprise instance from the browser.
+
+### Public or Community feeds
+
+If your MyGet feed is set to *Public* or *Community* access, the feed endpoint structure for your feed will follow the basic format below:
+
+     https://<your_myget_domain>/F/<your-feed-name>/<feed_endpoint>
+
+### Private feeds
+
+If you have set your MyGet feed security settings to *Private*, then you will need to authenticate with MyGet using your username/password or API key to access any feed endpoints.
+
+**Username/password.** the following structure will allow you to access MyGet endpoints to work with your packages from your local machine or CI/CD system using username and password:
+
+     https://<username>:<password>@<your_myget_domain>/F/<your-feed-name>/<feed_endpoint>
+
+**API key.** In the event that you do not use a username/password to authenticate with your MyGet account, you can use a pre-authenticated endpoint URL with an API access key. See the section "Private feed endpoints and authentication" below.
+    
 
 ## Feed endpoints that can be used
 
@@ -112,10 +135,24 @@ MyGet has the following feed endpoints available for Vsix (Visual Studio extensi
 
 ### PHP Composer-compatible feed endpoints
 
-MyGet has the following feed endpoints available for Vsix (Visual Studio extensions):
+MyGet has the following feed endpoints available for PHP Composer packages:
 
 * /F/&lt;your-feed-name&gt;/composer - the PHP Composer registry API endpoint
 * /F/&lt;your-feed-name&gt;/composer/dist/lt;packageid&gt;/lt;packageversion&gt;.zip - the PHP Composer registry API endpoint to which a binary can be uploaded using `HTTP POST`
+
+### Python (PyPI)-compatible feed endpoints
+
+MyGet supports the following feed endpoints for interacting with Python PyPI and .whl packages on MyGet:
+
+* /F/&lt;your-feed-name&gt;/python - the MyGet API endpoint to install Python packages using tools like `pip`
+* /F/&lt;your_feed_name&gt;/python/upload - the MyGet API endpoint to upload binary .whl packages using `HTTP POST` or Twine 
+	
+### RubyGems-compatible feed endpoints
+
+MyGet supports the following feed endpoints for interacting with Ruby gems on MyGet:
+
+* /F/&lt;your_feed_name&gt;/geminstall - the MyGet feeds endpoint to install gems using tools like `rubygems`
+* /F/&lt;your_feed_name&gt;/gem/upload - the MyGet feeds endpoint to upload gems from the command line or your build system using `bundler` or `HTTP POST`
 
 ## Private feed endpoints and authentication
 

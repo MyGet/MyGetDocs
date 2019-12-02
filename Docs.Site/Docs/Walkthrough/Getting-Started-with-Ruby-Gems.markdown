@@ -73,7 +73,7 @@ From your new Feed page, click the *Upstream Sources* tab in the menu to the lef
 
 You can easily upload a gem package through the MyGet.org website, but you can also push a gem from your command line if you would like using the cUrl utility and API key from your MyGet account. 
 
-    curl -k -X POST https://<your_myget_domain>/F/<your_feed_name>/gem/upload -H “Authorization: Bearer <your_api_key>” -F “data=@<gem_name>-<gem_version>.gem”
+    $ curl -k -X POST https://<your_myget_domain>/F/<your_feed_name>/gem/upload -H “Authorization: Bearer <your_api_key>” -F “data=@<gem_name>-<gem_version>.gem”
 	
 (You can find your API key under the “Feed details” tab from your feed homepage. This key is automatically generated for you while you are adding a new feed.)
 
@@ -85,30 +85,33 @@ To fetch and install packages with gem tool you need to specify URL under which 
 
 a) If your MyGet feed is set to **public** or **community**, you need only to specify the URL associated with your feed as in the example below:
 
-    gem install <gem_name> --source https://<your_myget_domain>/F/<your_feed_name>/geminstall/
+    $ gem install <gem_name> --source https://<your_myget_domain>/F/<your_feed_name>/geminstall/
+    
 IMPORTANT: for feeds hosted on MyGet.org, your MyGet domain is simply `myget.org`. However, if your MyGet feeds are hosted on a MyGet Enterprise instance, you will need to specify your MyGet Enterprise subdomain as well (i.e. `mycompany.myget.org`).
 
 b) If your MyGet Feed is **private**, you will need to include your MyGet username and password in URL specified during installation:
 
-    gem install <gem_name> --source https://<username>:<password>@<your_myget_domain>/F/<your-feed-name>/geminstall/
+    $ gem install <gem_name> --source https://<username>:<password>@<your_myget_domain>/F/<your-feed-name>/geminstall/
 
 or you can use your **api key** of your feed like this:
 
-    gem install <gem_name> --source https://<your_myget_domain>/F/<your_feed_name>/auth/<your_api_key>/geminstall/
+    $ gem install <gem_name> --source https://<your_myget_domain>/F/<your_feed_name>/auth/<your_api_key>/geminstall/
 
-For your convinecne we recommend adding source to the **gem** tool:
+For your convenience, we recommend configuring MyGet as a `source` in your **rubygems** tool. You can set rubygems to authenticate with MyGet using a username/password or API key.
 
-    gem sources -a https://<username>:<password>@<your_myget_domain>/F/<your-feed-name>/geminstall/
+**Configuring rubygems to install from MyGet with a Username/Password:**
 
-or when you use source with **api key**:
+    $ gem sources -a https://<username>:<password>@<your_myget_domain>/F/<your-feed-name>/geminstall/
 
-    gem sources -a https://<your_myget_domain>/F/<your_feed_name>/auth/<your_api_key>/geminstall/   
+**Configuring rubygems to install gems from MyGet with an API key**:
 
-After that you can install gems by simply invoking command:
+    $ gem sources -a https://<your_myget_domain>/F/<your_feed_name>/auth/<your_api_key>/geminstall/   
+
+After that you can install gems from your MyGet feed by simply invoking command:
    
-    gem install <gem_name>
+    $ gem install <gem_name> 
 
-MyGet doesn’t technically have gem server repository under the hood, but it emulates it. When you invoke the **gem install command**, MyGet will attempt to return the specified package as well as any specified dependencies in the gem’s .gemspec file. This means that your gem and all its dependencies should be uploaded or mirrored to your MyGet feed before installation so that the gem tool can correctly install them. 
+MyGet doesn’t technically have gem server repository under the hood, but it emulates it. When you invoke the `gem install` command, MyGet will attempt to return the specified package as well as any specified dependencies in the gem’s .gemspec file. This means that your gem and all its dependencies should be uploaded or mirrored to your MyGet feed before installation so that the gem tool can correctly install them. 
 
 If you haven’t installed your gem’s dependencies on MyGet but already have them installed in your local environment, installation will also be successful. 
 

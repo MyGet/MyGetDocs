@@ -368,7 +368,7 @@
     <Content Include="Docs\Reference\License-Analysis.markdown" />
     <Content Include="Docs\Reference\Packaging-FSharp.markdown" />
     <Content Include="Docs\How-To\MyGet-and-GitHub-Two-Factor-Authentication.markdown" />
-    <Content Include="Docs\How-To\Publish-NuGet-Packages-Azure-DevOps-Pipelines.markdown" />
+    <Content Include="Docs\How-To\Publish-NuGet-Packages-from-Azure-DevOps-Pipelines.markdown" />
     <Content Include="Docs\Reference\Webhooks.markdown" />
     <Content Include="Docs\How-To\Using-Paket-with-MyGet-feeds.markdown" />
     <Content Include="Docs\Reference\Feed-State-API-Endpoint.markdown" />

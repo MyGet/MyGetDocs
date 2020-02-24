@@ -6,7 +6,7 @@ In this guide, we will cover how to publish a NuGet build artifact package from 
 
 You can configure your Azure DevOps Pipeline to publish packages to MyGet by adding NuGet build tasks to the pipeline configuration with the Azure DevOps UI or by adding a YAML file with the correct parameters to the root of your project’s source code repo.
 
-<p class="alert alert-info">Note: If you are building an app with .NET Core or .NET standard packages, you should use [.NET Core task](https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/build/dotnet-core-cli?view=azure-devops) instead of the NuGet task shown in the example below. The .NET Core task has full support for all package scenarios currently supported by dotnet, including restore, pack, and nuget push.</p>
+<p class="alert alert-info">Note: If you are building an app with .NET Core or .NET standard packages, you should use a <a href="https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/build/dotnet-core-cli?view=azure-devops" target="_blank" >.NET Core task</a> instead of the NuGet task shown in the example below. The .NET Core task has full support for all package scenarios currently supported by dotnet, including restore, pack, and nuget push.</p>
 
 
 ## NuGet build tasks
@@ -96,7 +96,7 @@ Click the package link to see detailed information about the package you just pu
 
 Alternatively, you can configure your Azure DevOps Pipelines to push your NuGet package to MyGet with a YAML configuration file. You can add your YAML file to the root of the source code repository for your project or add an empty one from your Azure DevOps Pipeline project. See below for an example YAML snippet configured to publish a .NET Desktop NuGet package to MyGet.
 
-<p class="alert alert-info">Note: you will need to set up a service connection to MyGet as seen in step 4 above before attempting to run your build. Replace `{MYGET_SERVICE_CONNECTION_NAME}`in the snippet below with the name of your MyGet service connection).</p>
+<p class="alert alert-info">Note: you will need to set up a service connection to MyGet as seen in step 4 above before attempting to run your build. Replace `{MYGET_SERVICE_CONNECTION_NAME}` in the snippet below with the name of your MyGet service connection).</p>
 
 ### YAML Snippet
 

@@ -1,8 +1,8 @@
 # Debugging, source code and symbols for NuGet packages
 
-MyGet symbols support lets consumers of our NuGet packages step through the source code and integrate with Visual Studio and tools like WinDbg.
+MyGet supports NuGet symbols packages to help MyGet users debug their NuGet packages, step through their source code, and integrate with Visual Studio and tools like WinDbg.
 
-MyGet comes with its own symbol server that supports pushing .snupkg and legacy .symbols.nupkg symbols, as well as consuming symbols and source indexing. Both managed and native assemblies and symbols are supported.
+MyGet comes with its own symbol server that supports .snupkg and legacy .symbols.nupkg symbols, as well as consuming symbols and source indexing. Both managed and native assemblies and symbols are supported.
 
 ## Creating symbols packages
 
@@ -14,12 +14,12 @@ To create your symbol package in the new .snupkg format, you must specify the `S
 If you're using dotnet CLI or MSBuild, you can specify `SymbolPackageFormat` in your .csproj file.
 
 * Either add this property to your .csproj file:
-
-    ```PropertyGroup>
-           <IncludeSymbols>true</IncludeSymbols>
-           <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-       </PropertyGroup>```
-
+			
+        <PropertyGroup> 
+            <IncludeSymbols>true</IncludeSymbols>
+            <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+        </PropertyGroup>
+     
 * Or in the command line:
     
     ```dotnet pack MyPackage.csproj -p:IncludeSymbols=true -p:SymbolPackageFormat=snupkg```

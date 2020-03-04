@@ -2,14 +2,17 @@
 
 MyGet symbols support lets consumers of our NuGet packages step through the source code and integrate with Visual Studio and tools like WinDbg.
 
-MyGet comes with its own symbol server that supports pushing .snupkg and legacy .symbol.nupkg symbols, as well as consuming symbols and source indexing. Both managed and native assemblies and symbols are supported.
+MyGet comes with its own symbol server that supports pushing .snupkg and legacy .symbols.nupkg symbols, as well as consuming symbols and source indexing. Both managed and native assemblies and symbols are supported.
 
 ## Creating symbols packages
 
 Using the nuget pack command, you can create a normal .nupkg and a symbol file for debugging. On MyGet you can push both your NuGet package and its symbol package to the same feed for easier management. 
 
 ### New .snupkg format
-To create your symbol package in the new .snupkg format, you must specify the `SymbolPackageFormat` property.
+To create your symbol package in the new .snupkg format, you must specify the `SymbolPackageFormat` property. The SymbolPackageFormat property can have one of two values: symbols.nupkg (the default) or snupkg. If this property is not specified, a legacy symbol package will be created.
+
+If you're using dotnet CLI or MSBuild, you can specify `SymbolPackageFormat` in your .csproj file.
+
 * Either add this property to your .csproj file:
 
     ```PropertyGroup>
@@ -25,17 +28,24 @@ To create your symbol package in the new .snupkg format, you must specify the `S
     
     ```msbuild MyPackage.csproj /t:pack /p:IncludeSymbols=true /p:SymbolPackageFormat=snupkg```
 
-### Legacy .symbol.nupkg format
-Using the `nuget pack` command, you can create a legacy .symbols.nupkg file with the `-symbols` option. *Legacy symbols packages must contain both the .dll and .pdb file, together with the source files*. 
+If you're using the NuGet.exe., you can use the following commands to create a .snupkg file in addition to the .nupkg file by specifying in the .csproj or .nuspec file, including the `-Symbols` option:
 
-Check the NuGet documentation for new <a href="https://docs.microsoft.com/en-us/nuget/create-packages/symbol-packages-snupkg" target="_blank">.snupkg</a> symbols or legacy <a href="https://docs.microsoft.com/en-us/nuget/create-packages/symbol-packages" target="_blank">.symbol.nupkg</a> symbols for more information and an example of a .nuspec file.
+    nuget pack MyPackage.nuspec -Symbols -SymbolPackageFormat snupkg
+
+    nuget pack MyPackage.csproj -Symbols -SymbolPackageFormat snupkg
+
+
+### Legacy .symbols.nupkg format
+Using the `nuget pack` command, you can create a legacy .symbols.nupkg file with the `-Symbols` option. *Legacy symbols packages must contain both the .dll and .pdb file, together with the source files*. 
+
+Check the NuGet documentation for new <a href="https://docs.microsoft.com/en-us/nuget/create-packages/symbol-packages-snupkg" target="_blank">.snupkg</a> symbols or legacy <a href="https://docs.microsoft.com/en-us/nuget/create-packages/symbol-packages" target="_blank">.symbols.nupkg</a> symbols for more information and an example of a .nuspec file.
 
 ## Pushing symbols packages to MyGet
 
 When working with [NuGet.org](https://www.nuget.org), the NuGet client automatically recognizes symbols packages and pushes them to NuGet server if they are in the new .snupkg format, or the default SymbolSource feed if they are legacy .symbols.nupkg packages. Since we want to ensure our packages end up on our own feed and securely host debugger symbols, we must explicitly push symbols to the MyGet symbol server.
 
 ### New .snupkg format
-The publish workflow to publish the SamplePackage.1.0.0.nupkg to a MyGet feed with new .snupkg symbols depends on whether your NuGet package and symbol package are located in the same folder.
+The publish workflow to publish the SamplePackage.1.0.0.nupkg to a MyGet feed with new .snupkg symbols depends on whether your NuGet package and symbol package are located in the same folder (replace the GUID with your MyGet API key).
 
 a) If .nupkg and .snupkg packages are in the same folder, you only need to us `push` command for nupkg (we will detect the .snupkg and push it for you):
    
@@ -46,12 +56,12 @@ b) If .nupkg and .snupkg packages are in different folders, you will need to man
     nuget push SamplePackage.1.0.0.nupkg 00000000-0000-0000-0000-00000000000 -Source https://www.myget.org/F/somefeed/api/v3/index.json
     nuget push SamplePackage.1.0.0.snupkg 00000000-0000-0000-0000-00000000000 -Source https://www.myget.org/F/somefeed/api/v3/index.json 
 
-c) Or if you .nupkg package is already in a MyGet feed and you need to add a .snupkg package:
+c) Or if your .nupkg package is already in a MyGet feed and you need to add a .snupkg package:
     
     nuget push SamplePackage.1.0.0.snupkg 00000000-0000-0000-0000-00000000000 -Source https://www.myget.org/F/somefeed/api/v3/index.json 
 
-### Legacy .symbol.nupkg format
-The publish workflow to publish the SamplePackage.1.0.0.nupkg to a MyGet feed with legacy .symbol.nupkg symbols would be issuing the following two commands from the console (replace the GUID with your MyGet API key):
+### Legacy .symbols.nupkg format
+The publish workflow to publish the SamplePackage.1.0.0.nupkg to a MyGet feed with legacy .symbols.nupkg symbols would be issuing the following two commands from the console (replace the GUID with your MyGet API key):
 
     nuget push SamplePackage.1.0.0.nupkg 00000000-0000-0000-0000-00000000000 -Source https://www.myget.org/F/somefeed/api/v2/package
     nuget push SamplePackage.1.0.0.Symbols.nupkg 00000000-0000-0000-0000-00000000000 -Source https://www.myget.org/F/somefeed/symbols/api/v2/package
@@ -71,12 +81,12 @@ To debug a NuGet package for which symbols are available, we will need the symbo
     <strong>Tip:</strong> MyGet provides two symbol server URLs: one that requires authentication and one that contains an authentication token in the URL. The first will prompt for credentials when used (Visual Studio 2015 and beyond). The latter one will not, as it contains an authentication token. It is recommended to keep the symbols URL to yourself at all time: it's a personal URL in which security information is embedded in the form of a guid. If for some reason this gets compromised, please <a href="https://www.myget.org/profile/Me#!/AccessTokens">reset your API key</a>.
 </p>
 
-Visual Studio typically will only debug our own source code, the source code of the project or projects that are currently opened in Visual Studio. To disable this behavior and to instruct Visual Studio to also try to debug code other than the projects that are currently opened, use the ***Tools | Options*** menu and find the *Debugging* node. COnfigure the following options:
+Visual Studio typically will only debug our own source code, the source code of the project or projects that are currently opened in Visual Studio. To disable this behavior and to instruct Visual Studio to also try to debug code other than the projects that are currently opened, use the ***Tools | Options*** menu and find the *Debugging* node. Configure the following options:
 
 * *Enable Just My Code* should be disabled.
 * *Enable source server support* should be enabled. This may trigger a warning message but it is safe to just click *Yes* and continue with the settings specified.
 
-Keep the Options dialog open and find the ***Debugging | Symbols*** node on the left. In the dialog shown, add the symbol server URL for your MyGet feed, for example `https://www.myget.org/F/somefeed/auth/11111111-1111-1111-1111-11111111111/api/v2/symbolpackage` (or for legacy .symbol.nupkg symbols, `https://www.myget.org/F/somefeed/auth/11111111-1111-1111-1111-11111111111/symbols`).
+Keep the Options dialog open and find the ***Debugging | Symbols*** node on the left. In the dialog shown, add the symbol server URL for your MyGet feed, for example `https://www.myget.org/F/somefeed/auth/11111111-1111-1111-1111-11111111111/api/v2/symbolpackage` (or for legacy .symbols.nupkg symbols, `https://www.myget.org/F/somefeed/auth/11111111-1111-1111-1111-11111111111/symbols`).
 
 ![Visual Studio symbol server settings](Images/debug-options-2015.png)
 
@@ -103,7 +113,7 @@ Here's a quick cheatsheet of the commands related to symbol feeds:
 
 ```nuget.exe push <symbols-package-file> <myget-key> -Source https://www.myget.org/F/<feed-name>/api/v3/index.json```
 
-### Legacy .symbol.nupkg.symbols
+### Legacy .symbols.nupkg.symbols
 * Create package and symbols
 
 	```nuget.exe pack <path_to_project_or_nuspec> -symbols```

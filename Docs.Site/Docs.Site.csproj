@@ -399,6 +399,7 @@
     <Content Include="downloads\composer.phar" />
     <Content Include="Docs\Reference\Authentication-Modules.markdown" />
     <Content Include="Docs\Release-Notes\MyGet-2017.2.markdown" />
+    <Content Include="Docs\Release-Notes\MyGet-2020.1.markdown" />
     <Content Include="Content\less_new\accordion.less" />
     <Content Include="Content\less_new\alerts.less" />
     <Content Include="Content\less_new\bootstrap.less" />

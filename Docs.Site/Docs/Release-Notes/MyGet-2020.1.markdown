@@ -15,26 +15,26 @@ This release supports the latest versions of the following **languages and frame
 * Visual Studio 2019 with MSBuild 16, supporting:
 
   * .Net Core:
-    * 1.1.14
-    * 2.1.202
-    * 2.1.805
-    * 2.2.207
-    * 2.2.402
-    * 3.0.103
-    * 3.1.201
+     * 1.1.14
+     * 2.1.202
+     * 2.1.805
+     * 2.2.207
+     * 2.2.402
+     * 3.0.103
+     * 3.1.201
   * .Net Framework:
-    * 3.5 Development Tools
-    * 4.0 Targeting Pack (TP)
-    * 4.5 TP
-    * 4.5.1 TP
-    * 4.5.2 TP
-    * 4.6 TP
-    * 4.6.1 SDK, 4.6.1 TP
-    * 4.6.2 SDK, 4.6.2 TP
-    * 4.7 SDK, 4.7 TP
-    * 4.7.1 TP
-    * 4.7.2 SDK, 4.7.2 TP
-    * 4.8 SDL, 4.8 TP
+     * 3.5 Development Tools
+     * 4.0 Targeting Pack (TP)
+     * 4.5 TP
+     * 4.5.1 TP
+     * 4.5.2 TP
+     * 4.6 TP
+     * 4.6.1 SDK, 4.6.1 TP
+     * 4.6.2 SDK, 4.6.2 TP
+     * 4.7 SDK, 4.7 TP
+     * 4.7.1 TP
+     * 4.7.2 SDK, 4.7.2 TP
+     * 4.8 SDL, 4.8 TP
   * NuGet 5.5.0
 * Python 2.7.16, Python 3.4.3
 * NodeJS 13.10.1

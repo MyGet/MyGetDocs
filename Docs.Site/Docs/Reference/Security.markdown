@@ -24,7 +24,7 @@ Additional access tokens can be generated [from your profile page](https://www.m
 The primary API key can be regenerated and new tokens can be easily created or revoked.
 
 * Access tokens can be given a short description: this will help keeping track of where you used the access token and revoke it if necessary.
-* Access tokens can be scoped to allow access only to a specific feed - limiting the surcace area to which a given access token can push packages.
+* Access tokens can be scoped to allow access only to a specific feed - limiting the surface area to which a given access token can push packages.
 * Access tokens can be given an optional expiration date, after which the token will no longer be valid.
 
 Access tokens can be used for all authentication purposes, except logging into the MyGet.org website. 

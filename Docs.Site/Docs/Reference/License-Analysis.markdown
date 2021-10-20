@@ -25,3 +25,4 @@ Whenever you have a package where the license analysis was incorrect or you want
 Editing the license will open a dialog in which you can specify a new license. MyGet provides autocompletion on known [OSI licenses](https://opensource.org/licenses/), but a proprietary license name can be entered here as well. Once a license has been overriden, new versions of the package will be assigned this overriden license.
 
 ![Edit NuGet package license information](Images/edit-license.png)
++

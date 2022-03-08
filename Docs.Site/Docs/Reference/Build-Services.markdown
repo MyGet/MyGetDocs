@@ -240,22 +240,20 @@ Both of these conventions can be overridden by editing the build source configur
 
 ## Supported project types and SDK
 
-Build services supports the following frameworks and SDK's:
+Build services supports the following frameworks and SDKs:
 
-* .NET 2.0, .NET 3.0, .NET 3.5, .NET 4.0, .NET 4.5, .NET 4.5.1, .NET 4.5.2, .NET 4.6, .NET 4.6.1, .NET 4.6.2, .NET 4.7
-* .NET Core 1.0, 1.1, 2.0, 2.1 and SDK's (**Tip:** a [`global.json` file](https://www.microsoft.com/net/download/all) can be added to [specify the SDK version to use](https://www.microsoft.com/net/download/all), e.g. `2.1.200`)
+* .NET 2.0, 3.0, 3.5, 3.5 Development Tools, 4.0, 4.0 Targeting Pack (TP), 4.5, 4.5 TP, 4.5.1, 4.5.1 TP, 4.5.2, 4.5.2 TP, 4.6, 4.6 TP, 4.6.1, 4.6.1 SDK, 4.6.1 TP, 4.6.2, 4.6.2 SDK, 4.6.2 TP, 4.7, 4.7 SDK, 4.7 TP, 4.7.1 TP, 4.7.2 SDK, 4.7.2 TP, 4.8 SDK, 4.8 TP
+* .NET Core 1.0, 1.1, 1.1.14, 2.0, 2.1, 2.1.202, 2.1.805, 2.2.207, 2.2.402, 3.0.103, 3.1.201, and SDKs (**Tip:** a [`global.json` file](https://www.microsoft.com/net/download/all) can be added to [specify the SDK version to use](https://www.microsoft.com/net/download/all), e.g. `2.1.200`)
+* NuGet 5.5.0
 * Mono 2, Mono 3
-* Visual Studio 2013 Update 4
-* Visual Studio 2015 Update 3
-* Visual Studio 2017
-* Visual Studio 2013 SDK
-* Visual Studio 2015 SDK
-* Visual Studio 2017 SDK
+* Visual Studio 2013 Update 4, 2013 SDK, 
+* Visual Studio 2015 Update 3, 2015 SDK
+* Visual Studio 2017, 2017 SDK
 * WinRT Class Libraries (Windows 8.0 and 8.1)
 * Universal Apps support
 * Xamarin support
 * PCL support
-* Azure SDK 2.0, 2.1, 2.4, 2.5, 2.6, 2.7, 2.8, 2.8.1, 2.8.2, 2.9)
+* Azure SDK 2.0, 2.1, 2.4, 2.5, 2.6, 2.7, 2.8, 2.8.1, 2.8.2, 2.9
 * Azure Service Fabric SDK
 * Windows Identity Foundation SDK
 * Silverlight 4, Silverlight 5
@@ -267,20 +265,24 @@ Build services supports the following frameworks and SDK's:
 * FSharp Tools 3.1.1
 * MSBuild Community Tasks
 * NAnt
-* Ruby 1.8.7, 1.9.2, 1.9.3
-* Python (2 and 3, [see documentation](https://docs.python.org/3/using/windows.html))
-* JDK 1.5, 1.6, 1.7, 1.8
+* Ruby 1.8.7, 1.9.2, 1.9.3, 2.7.0.1
+* PHP 7.4.3
+* Python 2.7.16 and 3.4.3, [see documentation](https://docs.python.org/3/using/windows.html))
+* JDK 1.5, 1.6, 1.7, 1.8, 1.8.0_241
 * Go
 * ScriptCS
 * psake
 * ripple
-* Git
-
-* node.js, npm
+* Git 2.25.1
+* GitVersion 1.0.0.0
+* Composer 1.10.5
+* Mercurial 5.0.2
+* SilkSVN 1.12.0
+* node.js 13.10.1, npm
 * Grunt
 * Gulp
 * Bower
-* Go programming language
+* GoLang 1.14
 
 The following test runners are supported:
 

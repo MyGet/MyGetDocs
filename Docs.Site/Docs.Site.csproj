@@ -368,6 +368,7 @@
     <Content Include="Docs\Reference\License-Analysis.markdown" />
     <Content Include="Docs\Reference\Packaging-FSharp.markdown" />
     <Content Include="Docs\How-To\MyGet-and-GitHub-Two-Factor-Authentication.markdown" />
+    <Content Include="Docs\How-To\Publish-NuGet-Packages-from-Azure-DevOps-Pipelines.markdown" />
     <Content Include="Docs\Reference\Webhooks.markdown" />
     <Content Include="Docs\How-To\Using-Paket-with-MyGet-feeds.markdown" />
     <Content Include="Docs\Reference\Feed-State-API-Endpoint.markdown" />
@@ -398,6 +399,7 @@
     <Content Include="downloads\composer.phar" />
     <Content Include="Docs\Reference\Authentication-Modules.markdown" />
     <Content Include="Docs\Release-Notes\MyGet-2017.2.markdown" />
+    <Content Include="Docs\Release-Notes\MyGet-2020.1.markdown" />
     <Content Include="Content\less_new\accordion.less" />
     <Content Include="Content\less_new\alerts.less" />
     <Content Include="Content\less_new\bootstrap.less" />
@@ -506,6 +508,20 @@
     <Content Include="Docs\How-To\Images\teamcity-private-feed.png" />
     <Content Include="Docs\How-To\Images\tfsonline-allowalternate.jpg" />
     <Content Include="Docs\How-To\Images\tfsonline-profile.jpg" />
+    <Content Include="Docs\How-To\Images\AzureDevOpsPipelinesHow-to0.png"/>
+    <Content Include="Docs\How-To\Images\AzureDevOpsPipelinesHow-to13.png"/>
+    <Content Include="Docs\How-To\Images\AzureDevOpsPipelinesHow-to12.png"/>
+    <Content Include="Docs\How-To\Images\AzureDevOpsPipelinesHow-to11.png"/>
+    <Content Include="Docs\How-To\Images\AzureDevOpsPipelinesHow-to10.png"/>
+    <Content Include="Docs\How-To\Images\AzureDevOpsPipelinesHow-to9.png"/>
+    <Content Include="Docs\How-To\Images\AzureDevOpsPipelinesHow-to8.png"/>
+    <Content Include="Docs\How-To\Images\AzureDevOpsPipelinesHow-to7.png"/>
+    <Content Include="Docs\How-To\Images\AzureDevOpsPipelinesHow-to6.png"/>
+    <Content Include="Docs\How-To\Images\AzureDevOpsPipelinesHow-to5.png"/>
+    <Content Include="Docs\How-To\Images\AzureDevOpsPipelinesHow-to4.png"/>
+    <Content Include="Docs\How-To\Images\AzureDevOpsPipelinesHow-to3.png"/>
+    <Content Include="Docs\How-To\Images\AzureDevOpsPipelinesHow-to2.png"/>
+    <Content Include="Docs\How-To\Images\AzureDevOpsPipelinesHow-to1.png"/>
     <Content Include="Docs\Reference\Images\access_token_management.png" />
     <Content Include="Docs\Reference\Images\build-badge.png" />
     <Content Include="Docs\Reference\Images\configure-packages-to-push.png" />

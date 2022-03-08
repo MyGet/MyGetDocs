@@ -1,0 +1,14 @@
+name: .NET
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:$higames1 cashapp 
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: cashapp-latest
+
+  

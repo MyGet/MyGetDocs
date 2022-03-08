@@ -61,7 +61,7 @@ On the other hand, if dependencies are not available on your feed, pip will look
 
 Keep in mind that if you want pip to install your package from  feed, it must be mirrored on that feed
 
-##Installing specific version
+## Installing specific version
 
 For installing specific version you can use the same commands which pip normally exposes. For example in order to install version 0.0.4 of package A:
 
@@ -69,7 +69,17 @@ For installing specific version you can use the same commands which pip normally
 
 If you don’t specify package version, the newest version of that package which is placed and mirrored on that feed will be installed.
 
+## Pushing a .whl package to your feed
+
+You can easily upload a .whl package through the MyGet website, but if you prefer to automate this in a non-interactive way, you can still do so. You just need some tool like cUrl in order to push a .whl package from your command line:
+
+    curl -k -X POST https://<your_myget_domain>/F/<your_feed_name>/python/upload -H "Authorization: Bearer <your_access_token>" -F "data=@packageFileName.whl"
+    
+Be sure that packageFileName meets the requirements of the [PEP 427][4] standard. (Please look at section File format of the standard document for more guidance.)
+
+
 
 [1]: https://www.myget.org
 [2]: https://docs.myget.org/docs/reference/security#Inviting_other_users_to_your_feed
 [3]: https://pypi.org
+[4]: https://www.python.org/dev/peps/pep-0427/

@@ -1,4 +1,4 @@
-﻿# Why Should I Use MyGet?
+﻿#slaffyjoe  Why Should I Use MyGet?
 
 There are quite a few usage scenarios out there where MyGet fits in very well.
 
@@ -22,3 +22,6 @@ Tough one! If you look at MyGet for the first minute, you would think it's an id
 * MyGet allows you to delegate privileges to other users without sharing an API key: everyone has their own, secure access to a MyGet feed
 * Multiple API keys per user: why give the build server your API key if you can give it its own?
 * And much more! Check [the MyGet features](https://www.myget.org/features) for a complete overview.
+*Need to have A new API keys through published my Web App
+To do list delete my bad credentials/ properties from my window server.bebug ako status was been use my mandate administrator Sha 256
+To configuration what went wrong my data has some issue need to build a new certification .

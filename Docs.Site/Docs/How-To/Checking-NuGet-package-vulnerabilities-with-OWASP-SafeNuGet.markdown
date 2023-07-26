@@ -26,14 +26,6 @@ When a library referencing a potential unsafe package is built using MyGet Build
 
 ![MyGet Build Services using OWASP SafeNuGet](Images/build-services-owasp.png)
 
-## Can my build fail when such packages are consumed?
+## Does my build fail when such packages are consumed?
 
-It would be great if the build would fail entirely when such package is found. This can be done with simple configuration parameter for the SafeNuGet package. Find the *SafeNuGet.targets* file and update its contents to:
-
-	<Project ToolsVersion="4.0" xmlns="https://schemas.microsoft.com/developer/msbuild/2003">
-	  <UsingTask AssemblyFile="SafeNuGet.dll" TaskName="SafeNuGet.AreNuGetPackagesSafe"  />
-	  <Target Name="AfterBuild">
-	    <AreNuGetPackagesSafe ProjectPath="$(MSBuildProjectDirectory)"
-	         CacheTimeInMinutes="10" DontBreakBuild="false" />
-	  </Target>
-	</Project>
+By default, the build will fail when such a package is found. If you only want warnings, find the *SafeNuGet.targets* file and change the setting `DontBreakBuild` to `true`.
